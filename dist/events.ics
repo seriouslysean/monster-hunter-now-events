@@ -1,6 +1,13 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Monster Hunter Now Events//EN
+URL:https://github.com/seriouslysean/monster-hunter-now-events
+NAME:Monster Hunter Now Events
+DESCRIPTION:Monster Hunter Now Events, see https
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+COLOR:255:179:25
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
 BEGIN:VEVENT
 UID:ad25cc3949d7be9d863f685f2fd70c75fab812eb
 DTSTAMP:20230923T170000

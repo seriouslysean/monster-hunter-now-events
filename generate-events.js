@@ -2,24 +2,6 @@ const crypto = require('crypto');
 const { writeFileSync } = require('fs');
 const { join } = require('path');
 
-const CALENDAR_TEMPLATE = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Monster Hunter Now Events//EN
-{{EVENTS}}
-END:VCALENDAR`;
-
-// TODO: Allow events to use repear rules instead of individual events (RRULE:FREQ=DAILY;COUNT=2)
-// Summary and description may wrap and need to take in to account the heading length so we can
-// wrap at the correct length
-const EVENT_TEMPLATE = `BEGIN:VEVENT
-UID:{{UID}}
-DTSTAMP:{{DTSTAMP}}
-DTSTART:{{DTSTART}}
-DTEND:{{DTEND}}
-{{SUMMARY}}
-{{DESCRIPTION}}
-END:VEVENT`;
-
 // Lines can not be longer than 75 characters
 // See https://icalendar.org/iCalendar-RFC-5545/3-1-content-lines.html
 function wordWrap(line) {
@@ -36,6 +18,31 @@ function wordWrap(line) {
 
     return `${heading}:${wrappedContent}`;
 }
+
+const CALENDAR_TEMPLATE = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Monster Hunter Now Events//EN
+URL:https://github.com/seriouslysean/monster-hunter-now-events
+NAME:Monster Hunter Now Events
+${wordWrap('DESCRIPTION:Monster Hunter Now Events, see https://github.com/seriouslysean/monster-hunter-now-events for more information.')}
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+COLOR:255:179:25
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{{EVENTS}}
+END:VCALENDAR`;
+
+// TODO: Allow events to use repear rules instead of individual events (RRULE:FREQ=DAILY;COUNT=2)
+// Summary and description may wrap and need to take in to account the heading length so we can
+// wrap at the correct length
+const EVENT_TEMPLATE = `BEGIN:VEVENT
+UID:{{UID}}
+DTSTAMP:{{DTSTAMP}}
+DTSTART:{{DTSTART}}
+DTEND:{{DTEND}}
+{{SUMMARY}}
+{{DESCRIPTION}}
+END:VEVENT`;
 
 function generateICSDatetime(str) {
     const pad = (i) => i < 10 ? `0${i}` : `${i}`;
