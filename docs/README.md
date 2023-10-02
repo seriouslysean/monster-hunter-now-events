@@ -1,3 +1,9 @@
+<p align="center">
+  <img
+    src="./assets/monster-hunter-now-logo.png"
+    alt="Monster Hunter Now Logo" />
+</p>
+
 # Monster Hunter Now Events Calendar
 
 This is a calendar subscription file for events that [Monster Hunter Now](https://monsterhunternow.com/) is running.
