@@ -47,12 +47,12 @@ END:VEVENT`;
 function generateICSDatetime(str) {
     const pad = (i) => i < 10 ? `0${i}` : `${i}`;
     const date = new Date(str);
-    const year = date.getUTCFullYear();
-    const month = pad(date.getUTCMonth() + 1);
-    const day = pad(date.getUTCDate());
-    const hour = pad(date.getUTCHours());
-    const minute = pad(date.getUTCMinutes());
-    const second = pad(date.getUTCSeconds());
+    const year = date.getFullYear();
+    const month = pad(date.getMonth() + 1);
+    const day = pad(date.getDate());
+    const hour = pad(date.getHours());
+    const minute = pad(date.getMinutes());
+    const second = pad(date.getSeconds());
     // Add a 'Z' to the end of the date if this date needs to be timezone aware
     // Without the 'Z', the date will be treated as a floating date (local to user)
     return `${year}${month}${day}T${hour}${minute}${second}`;
