@@ -6,6 +6,15 @@ The events still need to be manually added (albeit in an easier manner) to the [
 
 I created this because ultimately I'm lazy and wanted to subscribe to a feed instead of adding the events manually to my phone's calendar.
 
+## Subscribe to Calendar
+
+1. Add `https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics` to your calendar app
+
+## Run Locally
+
+1. Run `npm start`
+2. Open `dist/events.ics`
+
 ## References
 
 - https://monsterhunternow.com/news
