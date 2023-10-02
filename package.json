@@ -1,29 +1,34 @@
 {
   "name": "monster-hunter-now-events",
-  "version": "1.0.0",
   "description": "This is a calendar subscription file for events that [Monster Hunter Now](https://monsterhunternow.com/) is running.",
-  "main": "generate-events.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.0",
+  "author": "Sean Kennedy <sean@codeserious.com>",
+  "bugs": {
+    "url": "https://github.com/seriouslysean/monster-hunter-now-events/issues"
   },
+  "dependencies": {
+    "got": "^13.0.0",
+    "openai": "^4.11.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
+  "homepage": "https://github.com/seriouslysean/monster-hunter-now-events#readme",
+  "keywords": [
+    "Hunter",
+    "Javascript",
+    "Monster",
+    "Now"
+  ],
+  "license": "MIT",
+  "main": "generate-events.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seriouslysean/monster-hunter-now-events.git"
   },
-  "keywords": [
-    "Monster",
-    "Hunter",
-    "Now",
-    "Javascript"
-  ],
-  "author": "Sean Kennedy <sean@codeserious.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/seriouslysean/monster-hunter-now-events/issues"
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/seriouslysean/monster-hunter-now-events#readme",
-  "devDependencies": {
-    "husky": "^8.0.3"
-  }
+  "type": "module"
 }

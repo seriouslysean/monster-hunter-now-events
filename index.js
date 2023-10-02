@@ -1,1 +1,3 @@
-require('./src/generate-events');
+import { generateFeed } from './src/generate-feed.js';
+
+generateFeed();
