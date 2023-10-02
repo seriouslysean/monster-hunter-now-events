@@ -1,0 +1,29 @@
+{
+  "name": "monster-hunter-now-events",
+  "version": "1.0.0",
+  "description": "This is a calendar subscription file for events that [Monster Hunter Now](https://monsterhunternow.com/) is running.",
+  "main": "generate-events.js",
+  "scripts": {
+    "start": "node generate-events.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seriouslysean/monster-hunter-now-events.git"
+  },
+  "keywords": [
+    "Monster",
+    "Hunter",
+    "Now",
+    "Javascript"
+  ],
+  "author": "Sean Kennedy <sean@codeserious.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seriouslysean/monster-hunter-now-events/issues"
+  },
+  "homepage": "https://github.com/seriouslysean/monster-hunter-now-events#readme",
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}
