@@ -5,20 +5,37 @@ const { join } = require('path');
 const CALENDAR_TEMPLATE = `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Monster Hunter Now Events//EN
-
 {{EVENTS}}
-
 END:VCALENDAR`;
 
 // TODO: Allow events to use repear rules instead of individual events (RRULE:FREQ=DAILY;COUNT=2)
+// Summary and description may wrap and need to take in to account the heading length so we can
+// wrap at the correct length
 const EVENT_TEMPLATE = `BEGIN:VEVENT
 UID:{{UID}}
 DTSTAMP:{{DTSTAMP}}
 DTSTART:{{DTSTART}}
 DTEND:{{DTEND}}
-SUMMARY:{{SUMMARY}}
-DESCRIPTION:{{DESCRIPTION}}
+{{SUMMARY}}
+{{DESCRIPTION}}
 END:VEVENT`;
+
+// Lines can not be longer than 75 characters
+// See https://icalendar.org/iCalendar-RFC-5545/3-1-content-lines.html
+function wordWrap(line) {
+    const lineLength = 75;
+    const [heading, content] = line.split(':');
+
+    // Calculate the maximum content length after taking into account the heading and the colon
+    const maxContentLength = lineLength - heading.length - 1;
+
+    // Split the content at maxContentLength
+    const regex = new RegExp(`(.{1,${maxContentLength}})`, 'g');
+
+    const wrappedContent = content.match(regex).join('\r\n ');
+
+    return `${heading}:${wrappedContent}`;
+}
 
 function generateICSDatetime(str) {
     const pad = (i) => i < 10 ? `0${i}` : `${i}`;
@@ -45,13 +62,15 @@ function generateEvent(event, eventIndex, date, dateIndex) {
     const UID = generateEventUID(`${eventIndex}${dateIndex}${event.summary}`);
     const start = generateICSDatetime(date.start);
     const end = generateICSDatetime(date.end);
+    const SUMMARY = wordWrap(`SUMMARY:${event.summary}`);
+    const DESCRIPTION = wordWrap(`DESCRIPTION:${event.description}`);
     const adaptedEvent = {
         UID,
         DTSTAMP: start,
         DTSTART: start,
         DTEND: end,
-        SUMMARY: event.summary,
-        DESCRIPTION: event.description,
+        SUMMARY,
+        DESCRIPTION,
     };
     const icsEvent = EVENT_TEMPLATE.replace(/{{(\w+)}}/g, (match, key) => adaptedEvent[key]);
     return icsEvent;
@@ -71,7 +90,7 @@ function generateCalendar() {
                 return acc;
             }
             const datesString = dates.map((date, dateIndex) =>
-                generateEvent(event, eventIndex, date, dateIndex)).join('\n\n');
+                generateEvent(event, eventIndex, date, dateIndex)).join('\n');
             // Don't add spacing on the initial index to avoid multiple returns at the beginning of the file
             const joinStr = eventIndex > 0 ? '\n' : '';
             return [
