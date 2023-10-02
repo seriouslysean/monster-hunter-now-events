@@ -12,6 +12,8 @@ The events still need to be manually added (albeit in an easier manner) to the [
 
 I created this because ultimately I'm lazy and wanted to subscribe to a feed instead of adding the events manually to my phone's calendar.
 
+If you aren't playing yet, [feel free to join](https://apps.apple.com/us/app/monster-hunter-now/id6445906110) and use my referral code for free items and zenny, `89K5MKCF`.
+
 ## Subscribe to Calendar
 
 Add the [ICS file](https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics) to your calendar app.
