@@ -2,6 +2,13 @@ const crypto = require('crypto');
 const { writeFileSync } = require('fs');
 const { join } = require('path');
 
+const ROOT = join(__dirname, '..');
+
+const paths = {
+    root: ROOT,
+    dist: join(ROOT, 'dist'),
+};
+
 // Lines can not be longer than 75 characters
 // See https://icalendar.org/iCalendar-RFC-5545/3-1-content-lines.html
 function wordWrap(line) {
@@ -107,7 +114,7 @@ function generateCalendar() {
         }, '');
         const icsCalendar = CALENDAR_TEMPLATE.replace('{{EVENTS}}', icsEvents);
         writeFileSync(
-            join(__dirname, 'dist/events.ics'),
+            join(paths.dist, 'events.ics'),
             icsCalendar,
         );
     } catch (err) {
