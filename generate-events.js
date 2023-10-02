@@ -10,16 +10,14 @@ PRODID:-//Monster Hunter Now Events//EN
 
 END:VCALENDAR`;
 
-// Remove `X-` to re-enable the pair
+// TODO: Allow events to use repear rules instead of individual events (RRULE:FREQ=DAILY;COUNT=2)
 const EVENT_TEMPLATE = `BEGIN:VEVENT
 UID:{{UID}}
 DTSTAMP:{{DTSTAMP}}
 DTSTART:{{DTSTART}}
 DTEND:{{DTEND}}
-X-RRULE:FREQ=DAILY;COUNT=2
 SUMMARY:{{SUMMARY}}
 DESCRIPTION:{{DESCRIPTION}}
-X-LOCATION:{{LOCATION}}
 END:VEVENT`;
 
 function generateICSDatetime(str) {
@@ -34,16 +32,17 @@ function generateICSDatetime(str) {
     // Add a 'Z' to the end of the date if this date needs to be timezone aware
     // Without the 'Z', the date will be treated as a floating date (local to user)
     return `${year}${month}${day}T${hour}${minute}${second}`;
-  }
+}
 
-function generateUID(str) {
-    return crypto.createHash('sha1').update(str).digest('hex');
+function generateEventUID(eventIndex, dateIndex, summary) {
+    const uidString = `${eventIndex}${dateIndex}${summary}`;
+    return crypto.createHash('sha1').update(uidString).digest('hex');
 }
 
 // Pass index to be used as a unique identifier
 // Maybe switch to actual id later, or maybe just a UUID
-function generateEvent(event, date, idx) {
-    const UID = generateUID(`${idx}${event.summary}`);
+function generateEvent(event, eventIndex, date, dateIndex) {
+    const UID = generateEventUID(`${eventIndex}${dateIndex}${event.summary}`);
     const start = generateICSDatetime(date.start);
     const end = generateICSDatetime(date.end);
     const adaptedEvent = {
@@ -64,16 +63,21 @@ function generateCalendar() {
         if (!events.length) {
             throw new Error('No events found');
         }
-        const icsEvents = events.reduce((acc, event, idx) => {
+        const icsEvents = events.reduce((acc, event, eventIndex) => {
             console.debug(`Adding event: ${event.summary}`);
             const dates = event.dates || [];
             // If there aren't any event dates, get outta here
             if (!dates.length) {
                 return acc;
             }
-            acc += dates.map((date) => generateEvent(event, date, idx))
-                .join('\n\n');
-            return acc;
+            const datesString = dates.map((date, dateIndex) =>
+                generateEvent(event, eventIndex, date, dateIndex)).join('\n\n');
+            // Don't add spacing on the initial index to avoid multiple returns at the beginning of the file
+            const joinStr = eventIndex > 0 ? '\n' : '';
+            return [
+                acc,
+                datesString,
+            ].join(joinStr);
         }, '');
         const icsCalendar = CALENDAR_TEMPLATE.replace('{{EVENTS}}', icsEvents);
         writeFileSync(
