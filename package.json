@@ -21,13 +21,14 @@
     "Now"
   ],
   "license": "MIT",
-  "main": "generate-events.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seriouslysean/monster-hunter-now-events.git"
   },
   "scripts": {
     "start": "node index.js",
+    "get-events": "node src/generate-event-json.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module"
