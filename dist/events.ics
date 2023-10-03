@@ -4,6 +4,7 @@ PRODID:-//Monster Hunter Now Events//EN
 URL:https://github.com/seriouslysean/monster-hunter-now-events
 NAME:Monster Hunter Now Events
 DESCRIPTION:Monster Hunter Now Events, see https
+ 
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 COLOR:255:179:25
 CALSCALE:GREGORIAN
@@ -13,23 +14,28 @@ UID:ad25cc3949d7be9d863f685f2fd70c75fab812eb
 DTSTAMP:20230923T130000
 DTSTART:20230923T130000
 DTEND:20230923T160000
-SUMMARY:Diablos Invasion
+SUMMARY:MHN
+ 
 DESCRIPTION:Investigate an outbreak of Diablos in desert regions!
+ 
 END:VEVENT
 BEGIN:VEVENT
 UID:9c47e3bcb9de15a8b90649819ec4c0a8d5dec1a1
 DTSTAMP:20230924T130000
 DTSTART:20230924T130000
 DTEND:20230924T160000
-SUMMARY:Diablos Invasion
+SUMMARY:MHN
+ 
 DESCRIPTION:Investigate an outbreak of Diablos in desert regions!
+ 
 END:VEVENT
 BEGIN:VEVENT
 UID:9e78350af4b802a0f881f03372581ae5b153c7a7
 DTSTAMP:20231006T170000
 DTSTART:20231006T170000
 DTEND:20231006T200000
-SUMMARY:Tobi-Kadachi Weekend
+SUMMARY:MHN
+ 
 DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
  bitats for all hunters HR11 and above.
 END:VEVENT
@@ -38,7 +44,8 @@ UID:e953f47a75b8b255fdb5121e6ff5e4d8d45767af
 DTSTAMP:20231007T130000
 DTSTART:20231007T130000
 DTEND:20231007T160000
-SUMMARY:Tobi-Kadachi Weekend
+SUMMARY:MHN
+ 
 DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
  bitats for all hunters HR11 and above.
 END:VEVENT
@@ -47,7 +54,8 @@ UID:94f3ff1510715de58bb3c105d60e44ff18fd6df7
 DTSTAMP:20231008T130000
 DTSTART:20231008T130000
 DTEND:20231008T160000
-SUMMARY:Tobi-Kadachi Weekend
+SUMMARY:MHN
+ 
 DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
  bitats for all hunters HR11 and above.
 END:VEVENT
@@ -56,152 +64,167 @@ UID:edeeadc1ea64594a8fc32bdf68c576ba8e0770bc
 DTSTAMP:20231009T000000
 DTSTART:20231009T000000
 DTEND:20231009T235900
-SUMMARY:Rathian & Pink Rathian Week
+SUMMARY:MHN
+ 
 DESCRIPTION:This week marks your first chance to encounter Pink Rathian! On
-  top of that, both Rathian and Pink Rathian will appear more fr
- equently than usual during the weekend.
+  top of that, both Rathian and Pink Rathian will appear more frequently tha
+ n usual during the weekend.
 END:VEVENT
 BEGIN:VEVENT
 UID:9b74b2edceba598e09323689aeaa5115a01cee4b
 DTSTAMP:20231010T000000
 DTSTART:20231010T000000
 DTEND:20231010T235900
-SUMMARY:Rathian & Pink Rathian Week
+SUMMARY:MHN
+ 
 DESCRIPTION:This week marks your first chance to encounter Pink Rathian! On
-  top of that, both Rathian and Pink Rathian will appear more fr
- equently than usual during the weekend.
+  top of that, both Rathian and Pink Rathian will appear more frequently tha
+ n usual during the weekend.
 END:VEVENT
 BEGIN:VEVENT
 UID:5e93868f0fcdfaa75bbf9e2c003a5e00cc9f31d3
 DTSTAMP:20231011T000000
 DTSTART:20231011T000000
 DTEND:20231011T235900
-SUMMARY:Rathian & Pink Rathian Week
+SUMMARY:MHN
+ 
 DESCRIPTION:This week marks your first chance to encounter Pink Rathian! On
-  top of that, both Rathian and Pink Rathian will appear more fr
- equently than usual during the weekend.
+  top of that, both Rathian and Pink Rathian will appear more frequently tha
+ n usual during the weekend.
 END:VEVENT
 BEGIN:VEVENT
 UID:822f2b3af736c2557ea28926a7bc1826bc8ae205
 DTSTAMP:20231012T000000
 DTSTART:20231012T000000
 DTEND:20231012T235900
-SUMMARY:Rathian & Pink Rathian Week
+SUMMARY:MHN
+ 
 DESCRIPTION:This week marks your first chance to encounter Pink Rathian! On
-  top of that, both Rathian and Pink Rathian will appear more fr
- equently than usual during the weekend.
+  top of that, both Rathian and Pink Rathian will appear more frequently tha
+ n usual during the weekend.
 END:VEVENT
 BEGIN:VEVENT
 UID:1a2e24f175f66f72b6f419130df5565cc4a46680
 DTSTAMP:20231013T000000
 DTSTART:20231013T000000
 DTEND:20231013T165900
-SUMMARY:Rathian & Pink Rathian Week
+SUMMARY:MHN
+ 
 DESCRIPTION:This week marks your first chance to encounter Pink Rathian! On
-  top of that, both Rathian and Pink Rathian will appear more fr
- equently than usual during the weekend.
+  top of that, both Rathian and Pink Rathian will appear more frequently tha
+ n usual during the weekend.
 END:VEVENT
 BEGIN:VEVENT
 UID:e5424fd853cbbc35fc96c192b089abdf1a7b0aca
 DTSTAMP:20231013T170000
 DTSTART:20231013T170000
 DTEND:20231013T200000
-SUMMARY:Rathian & Pink Rathian Appearance Increase
+SUMMARY:MHN
+ 
 DESCRIPTION:During the specified times, Rathian and Pink Rathian will appea
- r more frequently than usual in Forest Habitats for all hunters
-  HR11 and above. Pink Rathian will no longer appear for a time 
- after this event ends on October 15.
+ r more frequently than usual in Forest Habitats for all hunters HR11 and ab
+ ove. Pink Rathian will no longer appear for a time after this event ends on
+  October 15.
 END:VEVENT
 BEGIN:VEVENT
 UID:ef554dc11d4c0521ad333319ac5aef22929c1d7b
 DTSTAMP:20231014T130000
 DTSTART:20231014T130000
 DTEND:20231014T160000
-SUMMARY:Rathian & Pink Rathian Appearance Increase
+SUMMARY:MHN
+ 
 DESCRIPTION:During the specified times, Rathian and Pink Rathian will appea
- r more frequently than usual in Forest Habitats for all hunters
-  HR11 and above. Pink Rathian will no longer appear for a time 
- after this event ends on October 15.
+ r more frequently than usual in Forest Habitats for all hunters HR11 and ab
+ ove. Pink Rathian will no longer appear for a time after this event ends on
+  October 15.
 END:VEVENT
 BEGIN:VEVENT
 UID:ea846cac6c32bdf9f5623163b15d1b201ecbcace
 DTSTAMP:20231015T130000
 DTSTART:20231015T130000
 DTEND:20231015T160000
-SUMMARY:Rathian & Pink Rathian Appearance Increase
+SUMMARY:MHN
+ 
 DESCRIPTION:During the specified times, Rathian and Pink Rathian will appea
- r more frequently than usual in Forest Habitats for all hunters
-  HR11 and above. Pink Rathian will no longer appear for a time 
- after this event ends on October 15.
+ r more frequently than usual in Forest Habitats for all hunters HR11 and ab
+ ove. Pink Rathian will no longer appear for a time after this event ends on
+  October 15.
 END:VEVENT
 BEGIN:VEVENT
 UID:3a1cabe7c622e5b2df0418ec500d3bce02a6930d
 DTSTAMP:20231025T000000
 DTSTART:20231025T000000
 DTEND:20231025T235900
-SUMMARY:Halloween Pumpkin Hunt
+SUMMARY:MHN
+ 
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… differe
- nt than usual?!
+ l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usua
+ l?!
 END:VEVENT
 BEGIN:VEVENT
 UID:919e85ca1db603712ade548eda1c97bda90f0b55
 DTSTAMP:20231026T000000
 DTSTART:20231026T000000
 DTEND:20231026T235900
-SUMMARY:Halloween Pumpkin Hunt
+SUMMARY:MHN
+ 
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… differe
- nt than usual?!
+ l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usua
+ l?!
 END:VEVENT
 BEGIN:VEVENT
 UID:26518fe5e39fd191f29f8a22f89d6db4cb550603
 DTSTAMP:20231027T000000
 DTSTART:20231027T000000
 DTEND:20231027T235900
-SUMMARY:Halloween Pumpkin Hunt
+SUMMARY:MHN
+ 
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… differe
- nt than usual?!
+ l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usua
+ l?!
 END:VEVENT
 BEGIN:VEVENT
 UID:ecb52e86f414051be157e519a44d0def2b9e07ea
 DTSTAMP:20231028T000000
 DTSTART:20231028T000000
 DTEND:20231028T235900
-SUMMARY:Halloween Pumpkin Hunt
+SUMMARY:MHN
+ 
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… differe
- nt than usual?!
+ l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usua
+ l?!
 END:VEVENT
 BEGIN:VEVENT
 UID:f06c3cb4a9374626658a6b33b92901e8e1721ea4
 DTSTAMP:20231029T000000
 DTSTART:20231029T000000
 DTEND:20231029T235900
-SUMMARY:Halloween Pumpkin Hunt
+SUMMARY:MHN
+ 
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… differe
- nt than usual?!
+ l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usua
+ l?!
 END:VEVENT
 BEGIN:VEVENT
 UID:6767657d957b50459598861ee8eacb7c3bc7bdea
 DTSTAMP:20231030T000000
 DTSTART:20231030T000000
 DTEND:20231030T235900
-SUMMARY:Halloween Pumpkin Hunt
+SUMMARY:MHN
+ 
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… differe
- nt than usual?!
+ l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usua
+ l?!
 END:VEVENT
 BEGIN:VEVENT
 UID:11f9d826be087ffb5682bb2a07500b78f790c109
 DTSTAMP:20231031T000000
 DTSTART:20231031T000000
 DTEND:20231031T235900
-SUMMARY:Halloween Pumpkin Hunt
+SUMMARY:MHN
+ 
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… differe
- nt than usual?!
+ l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usua
+ l?!
 END:VEVENT
 END:VCALENDAR

@@ -12,10 +12,20 @@ const { events } = require("../dist/events.json");
 const wordWrap = (line) => {
   const lineLength = 75;
   const [heading, content] = line.split(":");
-  const maxContentLength = lineLength - heading.length - 1;
-  const regex = new RegExp(`(.{1,${maxContentLength}})`, "g");
-  const wrappedContent = content.match(regex).join("\r\n ");
-  return `${heading}:${wrappedContent}`;
+
+  // Calculate the maximum content length for the first line
+  const firstLineMaxLength = lineLength - heading.length - 1;
+
+  // Take the portion of the content for the first line
+  const firstLineContent = content.slice(0, firstLineMaxLength);
+  let remainingContent = content.slice(firstLineMaxLength);
+
+  // Break the remaining content into 75 character chunks
+  const regex = new RegExp(`(.{1,${lineLength}})`, "g");
+  const continuationLines = remainingContent.match(regex) || [];
+  const wrappedContinuation = continuationLines.join("\r\n ");
+
+  return `${heading}:${firstLineContent}\r\n ${wrappedContinuation}`;
 };
 
 const CALENDAR_TEMPLATE = `BEGIN:VCALENDAR
@@ -64,7 +74,7 @@ const generateEvent = (event, eventIndex, date, dateIndex) => {
   const UID = generateEventUID(`${eventIndex}${dateIndex}${event.summary}`);
   const start = generateICSDatetime(date.start);
   const end = generateICSDatetime(date.end);
-  const SUMMARY = wordWrap(`SUMMARY:${event.summary}`);
+  const SUMMARY = wordWrap(`SUMMARY:MHN: ${event.summary}`);
   const DESCRIPTION = wordWrap(`DESCRIPTION:${event.description}`);
   const adaptedEvent = {
     UID,
