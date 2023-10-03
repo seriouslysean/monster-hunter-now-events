@@ -8,10 +8,16 @@
   },
   "dependencies": {
     "got": "^13.0.0",
+    "node-html-parser": "^6.1.10",
     "openai": "^4.11.0"
   },
   "devDependencies": {
-    "husky": "^8.0.3"
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "husky": "^8.0.3",
+    "prettier": "3.0.3"
   },
   "homepage": "https://github.com/seriouslysean/monster-hunter-now-events#readme",
   "keywords": [
@@ -27,8 +33,12 @@
     "url": "git+https://github.com/seriouslysean/monster-hunter-now-events.git"
   },
   "scripts": {
+    "_lint:js": "eslint src/* --ext .js",
+    "_lint:format": "prettier src --write",
     "start": "node index.js",
     "get-events": "node src/generate-event-json.js",
+    "lint": "npm run _lint:format",
+    "format": "npm run npm run lint:fix && npm run prettier:fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module"
