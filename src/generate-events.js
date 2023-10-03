@@ -1,70 +1,64 @@
-import { readFileSync } from "fs";
-import axios from "axios";
-import { parse } from "node-html-parser";
-import { resolve } from "path";
+import { parse } from 'node-html-parser';
 
-import askGPTChat from "./utils-gpt.js";
-import { paths } from "./utils.js";
+import { getEventsFromHTML } from './utils/chat-gpt.js';
+import {
+    getFormattedDate,
+    getHTMLFixture,
+    getPageHTML,
+    saveHTMLFixture,
+} from './utils/utils.js';
 
-const USE_LOCAL = true;
-// const REQUEST_DELAY = 1000;
-const USERAGENT =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36";
-const MHNRootUrl = "https://monsterhunternow.com";
+const MHNRootUrl = 'https://monsterhunternow.com';
 const MHNNewsUrl = `${MHNRootUrl}/news`;
 
-const getHTMLFixture = (file) => {
-  const data = readFileSync(resolve(paths.fixtures, file), {
-    encoding: "utf8",
-    flag: "r",
-  });
-  return { data };
-};
-
-const isValidEvent = async () => {
-  const { data: html } = getHTMLFixture("20231001_news-oct-2023.html");
-  const document = parse(html);
-  const content = document.querySelector("#main article")?.textContent.trim();
-  if (!content) {
-    console.log("!!! No content");
-    return false;
-  }
-  const question = `Given the content below, identify any in-game events referencing "local time" and specific dates and times. Provide the events in a consolidated JSON structure under the key "events". If no events are identified, return "INVALID". Event format should be:
-{
-  "summary": "Event Name",
-  "description": "Description of the event",
-  "dates": [
-    {
-      "start": "YYYY-MM-DD h:mm AM/PM",
-      "end": "YYYY-MM-DD h:mm AM/PM"
-    }
-  ]
+function getFilenameByArticle(article) {
+    const { date: rawDate, slug } = article;
+    const date = getFormattedDate(rawDate);
+    return `${date}_${slug}.html`;
 }
-Content:
-${content}`;
-  console.log(question);
-  const response = await askGPTChat(question);
-  console.log(response);
-  return response;
-};
-
-isValidEvent();
 
 async function getNewsHTML() {
-  const { data: html } = USE_LOCAL
-    ? getHTMLFixture("20231002_news-index.html")
-    : await axios.get(MHNNewsUrl, {
-        headers: {
-          "User-Agent": USERAGENT,
-        },
-        responseType: "document",
-      });
-  const document = parse(html);
-  const links = document.querySelectorAll('#news a[href^="/news/"]');
-  console.log(
-    "!!! links",
-    links.map((link) => `${MHNRootUrl}${link.getAttribute("href")}`),
-  );
+    let { data: html } = getHTMLFixture('news-index.html');
+    if (!html) {
+        console.log(`Downloading html for news index`);
+        // eslint-disable-next-line no-await-in-loop
+        ({ data: html } = await getPageHTML(MHNNewsUrl));
+        // Saving the fetched HTML data to the file system
+        saveHTMLFixture('news-index.html', html);
+    }
+    const document = parse(html);
+    const links = document.querySelectorAll('#news a[href^="/news/"]');
+    if (!links.length) {
+        console.log('No links found!');
+        return;
+    }
+    const articleEvents = [];
+    for (let i = 0; i < links.length; i += 1) {
+        const link = links[i];
+        const path = link.getAttribute('href') ?? '';
+        const article = {
+            path,
+            url: `${MHNRootUrl}${path}`,
+            date: parseInt(
+                link.querySelector('[timestamp]').getAttribute('timestamp'),
+                10,
+            ),
+            slug: path.substring(1).replace('/', '-'),
+        };
+        const filename = getFilenameByArticle(article);
+        let { data: articleHTML } = getHTMLFixture(filename);
+        if (!articleHTML) {
+            console.log(`Downloading html for ${article.url}`);
+            // eslint-disable-next-line no-await-in-loop
+            ({ data: articleHTML } = await getPageHTML(article.url));
+            // Saving the fetched HTML data to the file system
+            saveHTMLFixture(filename, articleHTML);
+        }
+        // eslint-disable-next-line no-await-in-loop
+        const events = await getEventsFromHTML(articleHTML);
+        articleEvents.push(events);
+    }
+    console.log(articleEvents);
 }
 
-// getNewsHTML();
+getNewsHTML();

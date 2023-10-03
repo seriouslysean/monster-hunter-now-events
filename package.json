@@ -43,6 +43,7 @@
     "lint:prettier": "prettier --check src",
     "lint": "npm run lint:js && npm run lint:prettier",
     "start": "npm run generate:feed",
+    "test:fixture": "node -r dotenv/config ./tools/test-fixture.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module"
