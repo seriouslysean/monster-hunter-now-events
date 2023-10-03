@@ -3,3 +3,4 @@ dist/*
 .env
 
 !dist/events.ics
+!dist/events.json
