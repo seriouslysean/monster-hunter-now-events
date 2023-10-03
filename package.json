@@ -34,9 +34,11 @@
   "scripts": {
     "_lint:format": "prettier src --write",
     "_lint:js": "eslint src/* --ext .js",
+    "generate:events": "node ./src/generate-events.js",
+    "generate:feed": "node index.js",
     "format": "npm run npm run lint:fix && npm run prettier:fix",
     "lint": "npm run _lint:format",
-    "start": "node index.js",
+    "start": "npm run generate:feed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module"

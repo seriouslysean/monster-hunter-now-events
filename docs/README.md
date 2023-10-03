@@ -24,8 +24,17 @@ https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics
 
 ## Run Locally
 
-1. Run `npm start`
-2. Open `dist/events.ics`
+### Generate Feed
+
+1. Run `npm start` or `npm run generate:feed`
+
+File is output to `dist/events.ics`.
+
+### Generate Events (JSON)
+
+1. `npm run generate:events`
+
+File is output to `dist/events.json`.
 
 ## References
 
