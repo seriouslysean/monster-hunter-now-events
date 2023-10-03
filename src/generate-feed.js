@@ -11,7 +11,8 @@ const { events } = require("../dist/events.json");
 
 const wordWrap = (line) => {
   const lineLength = 75;
-  const [heading, content] = line.split(":");
+  // Split at only the first occurance of the colon, in case the title has one
+  const [heading, content] = line.split(/:(.*)/s);
 
   // Calculate the maximum content length for the first line
   const firstLineMaxLength = lineLength - heading.length - 1;
