@@ -36,7 +36,6 @@
     "_lint:js": "eslint src/* --ext .js",
     "_lint:format": "prettier src --write",
     "start": "node index.js",
-    "get-events": "node src/generate-event-json.js",
     "lint": "npm run _lint:format",
     "format": "npm run npm run lint:fix && npm run prettier:fix",
     "test": "echo \"Error: no test specified\" && exit 1"
