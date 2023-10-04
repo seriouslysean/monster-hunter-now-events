@@ -40,6 +40,9 @@ async function testArticle() {
         console.log(`Downloading html for ${url}`);
         // eslint-disable-next-line no-await-in-loop
         const { data: articleHTML } = await getPageHTML(url);
+        if (!articleHTML) {
+            throw new Error('No HTML returned');
+        }
         const document = parse(articleHTML);
         // Saving the fetched HTML data to the file system
         const timestamp = parseInt(

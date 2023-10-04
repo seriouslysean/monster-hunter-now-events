@@ -20,12 +20,18 @@
         },
         {
             "summary": "Rathian & Pink Rathian Week",
-            "description": "Pink Rathian will appear in low numbers in Forest Habitats for all hunters HR11 and above. Rathian and Pink Rathian will appear more frequently in Forest Habitats during specific times.",
+            "description": "Pink Rathian will appear in low numbers in Forest Habitats for all hunters HR11 and above.",
             "dates": [
                 {
                     "start": "2023-10-09 12:00 AM",
                     "end": "2023-10-13 4:59 PM"
-                },
+                }
+            ]
+        },
+        {
+            "summary": "Rathian & Pink Rathian Weekend",
+            "description": "Rathian and Pink Rathian will appear more frequently in Forest Habitats for all hunters HR11 and above.",
+            "dates": [
                 {
                     "start": "2023-10-13 5:00 PM",
                     "end": "2023-10-13 8:00 PM"
@@ -42,11 +48,11 @@
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Halloween-themed field map and special Halloween-themed equipment. Kulu-Ya-Ku has a different appearance.",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment!",
             "dates": [
                 {
-                    "start": "2023-10-25 12:00 AM",
-                    "end": "2023-10-31 11:59 PM"
+                    "start": "2023-10-25",
+                    "end": "2023-10-31"
                 }
             ]
         }

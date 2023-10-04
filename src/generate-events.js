@@ -8,6 +8,15 @@ import {
     getHTMLFilename,
 } from './utils/utils.js';
 
+/*
+NEXT STEPS
+1. Abstract test-article logic in to shared utilities
+2. Use shared utilities to download and save the articles using the main news index
+    - Save news index HTML as a fixture?
+3. Use fixture json data to combine in to a single events.json file
+4. Use fixture json data to generate an ics file
+*/
+
 const MHNRootUrl = 'https://monsterhunternow.com';
 const MHNNewsUrl = `${MHNRootUrl}/news`;
 
