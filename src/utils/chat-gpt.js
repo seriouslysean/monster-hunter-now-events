@@ -4,7 +4,7 @@ import OpenAI from 'openai';
 export const OPENAI_CHAT_ENDPOINT =
     'https://api.openai.com/v1/chat/completions';
 
-export async function askGPTChat(question, debug) {
+async function askGPTChat(question, debug) {
     const apiKey = process.env.API_KEY_OPENAI;
     try {
         if (!apiKey) {
@@ -45,7 +45,7 @@ export async function getEventsFromHTML(html, debug = false) {
     // No content found, get outta here
     if (!html) {
         console.log('!!! No html');
-        return [];
+        return { events: [] };
     }
 
     const document = parse(html);
@@ -59,12 +59,18 @@ export async function getEventsFromHTML(html, debug = false) {
     const content = article.textContent.replace(/\n{2,}/g, '\n').trim();
 
     // Prompt AI to find events in the content from the news articles
-    const question = `Given the content below, identify ONLY the in-game events that occur strictly inside the digital application of "Monster Hunter Now". These could be events such as hunting specific monsters, joining time-limited quests, or participating in in-game challenges.
+    // This prompt has been tuned to work with the current GPT-3.5-turbo model by passing various
+    // prompts through the playground and tweaking the output to be able to parse in game events only
+    // while ignoring other content such as sales, promotions, and real world events
+    // Use `npm run test:article` to test the prompt on a single article and then adjust as needed
+    const question = `Identify ONLY the in-game events that occur strictly inside the digital application of "Monster Hunter Now". The events must have specific start and end times. These could be events such as hunting specific monsters, joining time-limited quests, or participating in in-game challenges.
 
 DO NOT identify:
+- Announcements about character introductions unless they are tied to specific time-bound in-game events.
 - Sales, promotions, or item announcements.
 - Any events or promotions that manifest in the real world, even if they pertain to the game.
-- Please provide the identified events in a consolidated JSON structure under the key "events". If no events are identified, return an empty array. The event format should be:
+
+Please provide the identified events in a consolidated JSON structure under the key "events". If no events are identified, return an empty array. The event format should be:
 
 {
     "summary": "Event Name",
@@ -80,5 +86,5 @@ DO NOT identify:
 Content:
 ${content}`;
     const response = await askGPTChat(question, debug);
-    return response?.events ?? [];
+    return response ?? { events: [] };
 }

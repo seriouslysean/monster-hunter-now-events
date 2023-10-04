@@ -1,0 +1,18 @@
+{
+    "events": [
+        {
+            "summary": "Diablos Invasion",
+            "description": "Investigate an outbreak of Diablos in desert regions!",
+            "dates": [
+                {
+                    "start": "2023-09-23 1:00 PM",
+                    "end": "2023-09-23 4:00 PM"
+                },
+                {
+                    "start": "2023-09-24 1:00 PM",
+                    "end": "2023-09-24 4:00 PM"
+                }
+            ]
+        }
+    ]
+}

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^1.5.1",
+    "commander": "^11.0.0",
     "node-html-parser": "^6.1.10",
     "openai": "^4.11.0"
   },
@@ -43,7 +44,7 @@
     "lint:prettier": "prettier --check src",
     "lint": "npm run lint:js && npm run lint:prettier",
     "start": "npm run generate:feed",
-    "test:fixture": "node -r dotenv/config ./tools/test-fixture.js",
+    "test:article": "node -r dotenv/config ./tools/test-article.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module"

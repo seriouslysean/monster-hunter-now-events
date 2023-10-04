@@ -24,6 +24,11 @@ https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics
 
 ## Run Locally
 
+### Open AI Key
+
+1. Sign up for an OpenAI API key, https://platform.openai.com/account/api-keys
+2. Add tokens if needed, https://platform.openai.com/account/billing/overview
+
 ### Generate Feed
 
 1. Run `npm start` or `npm run generate:feed`
@@ -36,7 +41,16 @@ File is output to `dist/events.ics`.
 
 File is output to `dist/events.json`.
 
+### Tools
+
+#### Test Article
+
+1. Run `npm run test:article -- -u <url>`
+
+`index.html` and `events.json` are output to `fixtures/{date}_news-{slug}`.
+
 ## References
 
 - https://monsterhunternow.com/news
 - https://en.wikipedia.org/wiki/ICalendar
+- https://chat.openai.com/
