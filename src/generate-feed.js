@@ -75,7 +75,7 @@ const generateEvent = (event, eventIndex, date, dateIndex) => {
     const UID = generateEventUID(`${eventIndex}${dateIndex}${event.summary}`);
     const start = generateICSDatetime(date.start);
     const end = generateICSDatetime(date.end);
-    const SUMMARY = wordWrap(`SUMMARY:${event.summary}`);
+    const SUMMARY = wordWrap(`SUMMARY:MHN:${event.summary}`);
     const DESCRIPTION = wordWrap(`DESCRIPTION:${event.description}`);
     const adaptedEvent = {
         UID,

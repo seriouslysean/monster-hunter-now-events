@@ -5,20 +5,7 @@ import axios from 'axios';
 
 import { paths } from './config.js';
 
-export function getHTMLFixture(filename) {
-    let data = null;
-    try {
-        data = readFileSync(resolve(paths.fixtures, filename), {
-            encoding: 'utf8',
-            flag: 'r',
-        });
-    } catch (err) {
-        console.error(`Unable to open ${filename}`);
-    }
-    return { data };
-}
-
-export function saveFixture(filename, content) {
+function getFilePathComponents(filename) {
     const [slug, extension] = filename.split(/\.(?=[^.]+$)/);
     const folderPath = resolve(paths.fixtures, slug);
     const fileName = {
@@ -26,6 +13,29 @@ export function saveFixture(filename, content) {
         json: 'events.json',
     }[extension];
     const filePath = resolve(folderPath, fileName);
+
+    return { slug, extension, folderPath, fileName, filePath };
+}
+
+export function getHTMLFixture(filename) {
+    let data = null;
+    const { filePath } = getFilePathComponents(filename);
+
+    try {
+        data = readFileSync(filePath, {
+            encoding: 'utf8',
+            flag: 'r',
+        });
+    } catch (err) {
+        console.error(`Unable to open ${filename}`);
+    }
+
+    return { data };
+}
+
+export function saveFixture(filename, content) {
+    const { extension, folderPath, filePath } = getFilePathComponents(filename);
+
     try {
         let adaptedContent = content;
         if (extension === 'json' && typeof content !== 'string') {

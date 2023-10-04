@@ -15,3 +15,10 @@ export const paths = {
     fixtures: join(ROOT, 'fixtures'),
     src: join(ROOT, 'src'),
 };
+
+const MHN_ROOT_URL = 'https://monsterhunternow.com';
+
+export const mhnUrls = {
+    root: MHN_ROOT_URL,
+    news: `${MHN_ROOT_URL}/news`,
+};

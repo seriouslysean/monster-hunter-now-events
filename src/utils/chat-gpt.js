@@ -63,24 +63,17 @@ export async function getEventsFromHTML(html, debug = false) {
     // prompts through the playground and tweaking the output to be able to parse in game events only
     // while ignoring other content such as sales, promotions, and real world events
     // Use `npm run test:article` to test the prompt on a single article and then adjust as needed
-    const question = `Identify ONLY the in-game events that occur strictly inside the digital application of "Monster Hunter Now". The events must have specific start and end times. These could be events such as hunting specific monsters, joining time-limited quests, or participating in in-game challenges.
+    const question = `Extract ONLY in-game, time-bound events from "Monster Hunter Now" content. Consider hunting specific monsters, timed quests, in-game challenges, HR levels, Chapter completions, and unlocks.
 
-DO NOT identify:
-- Announcements about character introductions unless they are tied to specific time-bound in-game events.
-- Sales, promotions, or item announcements.
-- Any events or promotions that manifest in the real world, even if they pertain to the game.
+Exclude: non-timed character intros, sales/promotions, real-world events.
 
-Please provide the identified events in a consolidated JSON structure under the key "events". If no events are identified, return an empty array. The event format should be:
+Return as JSON under "events" with Unix timestamps for dates. If none, return empty array.
 
+Event format:
 {
     "summary": "Event Name",
-    "description": "Description of the event",
-    "dates": [
-        {
-            "start": "YYYY-MM-DD h:mm AM/PM",
-            "end": "YYYY-MM-DD h:mm AM/PM"
-        }
-    ]
+    "description": "Event Description",
+    "dates": [{"start": "UNIX TIMESTAMP", "end": "UNIX TIMESTAMP"}]
 }
 
 Content:

@@ -1,6 +1,7 @@
 import { parse } from 'node-html-parser';
 
 import { getEventsFromHTML } from './utils/chat-gpt.js';
+import { mhnUrls } from './utils/config.js';
 import {
     getHTMLFixture,
     getPageHTML,
@@ -17,15 +18,54 @@ NEXT STEPS
 4. Use fixture json data to generate an ics file
 */
 
-const MHNRootUrl = 'https://monsterhunternow.com';
-const MHNNewsUrl = `${MHNRootUrl}/news`;
+const getSlugFromPath = (path) => path.substring(1).replace('/', '-');
+
+async function getNewArticleURLs() {
+    console.log(`Downloading html for ${mhnUrls.news}`);
+    // eslint-disable-next-line no-await-in-loop
+    const { data: newsHTML } = await getPageHTML(mhnUrls.news);
+    if (!newsHTML) {
+        throw new Error('No HTML returned');
+    }
+    const document = parse(newsHTML);
+    const links = document
+        .querySelectorAll('#news a[href^="/news/"]')
+        .reduce((acc, el) => {
+            const path = el.getAttribute('href');
+            // Is this link valid?
+            if (!path) {
+                return acc;
+            }
+            // Do we already have the fixture?
+            const url = `${mhnUrls.root}${path}`;
+            const timestamp = parseInt(
+                el.querySelector('[timestamp]').getAttribute('timestamp'),
+                10,
+            );
+            const slug = getSlugFromPath(path);
+            const filename = getHTMLFilename(timestamp, slug);
+            let { data: articleHTML } = getHTMLFixture(filename);
+            if (articleHTML) {
+                return acc;
+            }
+
+            // If this is a valid link and we don't have a fixture, queue it up!
+            return [...acc, url];
+        }, []);
+    // Get list of article links
+    console.log(links);
+}
+
+async function getArticles() {}
+
+getNewArticleURLs();
 
 async function getNewsHTML() {
     let { data: html } = getHTMLFixture('news-index.html');
     if (!html) {
         console.log(`Downloading html for news index`);
         // eslint-disable-next-line no-await-in-loop
-        ({ data: html } = await getPageHTML(MHNNewsUrl));
+        ({ data: html } = await getPageHTML(mhnUrls.news));
         // Saving the fetched HTML data to the file system
         saveFixture('news-index.html', html);
     }
@@ -61,4 +101,4 @@ async function getNewsHTML() {
     console.log(articleEvents);
 }
 
-getNewsHTML();
+// getNewsHTML();
