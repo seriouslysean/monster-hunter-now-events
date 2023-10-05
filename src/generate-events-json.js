@@ -26,7 +26,6 @@ function getFixtureDirectoryNames() {
 function mergeEventFixtures(directoryNames) {
     const events = directoryNames.reduce((acc, directoryName) => {
         const jsonFilename = join(directoryName, 'events.json');
-        console.log(jsonFilename);
         const eventData = getJSONFixture(jsonFilename);
         return [...acc, ...(eventData?.events || [])];
     }, []);
