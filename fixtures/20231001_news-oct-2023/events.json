@@ -1,0 +1,50 @@
+{
+    "events": [
+        {
+            "summary": "Tobi-Kadachi Weekend",
+            "description": "Tobi-Kadachi will appear more frequently in Swamp and Forest Habitats for all hunters HR11 and above.",
+            "dates": [
+                {
+                    "start": "1665079200",
+                    "end": "1665093600"
+                },
+                {
+                    "start": "1665151200",
+                    "end": "1665165600"
+                },
+                {
+                    "start": "1665237600",
+                    "end": "1665252000"
+                }
+            ]
+        },
+        {
+            "summary": "Rathian & Pink Rathian Week",
+            "description": "Pink Rathian will appear in low numbers in Forest Habitats. In addition, during specific times, Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
+            "dates": [
+                {
+                    "start": "1665340800",
+                    "end": "1665772740"
+                },
+                {
+                    "start": "1665832800",
+                    "end": "1665847200"
+                },
+                {
+                    "start": "1665919200",
+                    "end": "1665933600"
+                }
+            ]
+        },
+        {
+            "summary": "Halloween Pumpkin Hunt",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "dates": [
+                {
+                    "start": "1666744800",
+                    "end": "1667319600"
+                }
+            ]
+        }
+    ]
+}
