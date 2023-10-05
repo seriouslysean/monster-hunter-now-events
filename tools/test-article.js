@@ -7,7 +7,7 @@ import {
     getHTMLFilename,
     getJSONFilename,
     getPageHTML,
-    saveFixtureFile,
+    saveFixture,
 } from '../src/utils/utils.js';
 
 // Invoke via `npm run test:article -- -u <url>`
@@ -54,11 +54,11 @@ async function testArticle() {
         const urlObj = new URL(url);
         const slug = urlObj.pathname.substring(1).replace('/', '-');
         const htmlFilename = getHTMLFilename(timestamp, slug);
-        saveFixtureFile(htmlFilename, articleHTML);
+        saveFixture(htmlFilename, articleHTML);
 
         const articleJSON = await getEventsFromHTML(articleHTML, true);
         const jsonFilename = getJSONFilename(timestamp, slug);
-        saveFixtureFile(jsonFilename, articleJSON);
+        saveFixture(jsonFilename, articleJSON);
     } catch (err) {
         console.error('Unable to fetch article', err);
     }
