@@ -42,11 +42,11 @@
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "A Halloween-themed field map and special Halloween-themed equipment will be available in Monster Hunter Now. Look out for Kulu-Ya-Ku's unique appearance during this event.",
+            "description": "Halloween-themed field map and special Halloween-themed equipment. Kulu-Ya-Ku has a different appearance than usual.",
             "dates": [
                 {
-                    "start": "2023-10-25 00:00:00",
-                    "end": "2023-10-31 23:59:59"
+                    "start": "2023-10-25",
+                    "end": "2023-10-31"
                 }
             ]
         }

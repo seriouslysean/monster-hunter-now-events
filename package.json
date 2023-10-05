@@ -36,7 +36,7 @@
   },
   "scripts": {
     "_lint:format": "prettier src --write",
-    "fetch:articles": "node -r dotenv/config ./src/fetch-articles.js",
+    "fetch:articles": "node -r dotenv/config ./src/fetch-all-articles.js",
     "generate:events-json": "node -r dotenv/config ./src/generate-events-json.js",
     "generate:events-ics": "node -r dotenv/config index.js",
     "lint:fix": "prettier --write --list-different src && npm run lint:js --fix",
