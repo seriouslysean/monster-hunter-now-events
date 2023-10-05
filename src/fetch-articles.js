@@ -4,7 +4,7 @@ import { mhnUrls } from './utils/config.js';
 import {
     getHTMLFixture,
     getPageHTML,
-    saveFixture,
+    saveFixtureFile,
     getHTMLFilename,
     getJSONFilename,
     getJSONFixture,
@@ -68,13 +68,13 @@ async function getArticles() {
         // eslint-disable-next-line no-await-in-loop
         ({ data: articleHTML } = await getPageHTML(url));
         // Saving the fetched HTML data to the file system
-        saveFixture(htmlFilename, articleHTML);
+        saveFixtureFile(htmlFilename, articleHTML);
 
         // Also save the events output from ChatGPT
         console.log(`Downloading json for ${url}`);
         // eslint-disable-next-line no-await-in-loop
         articleJSON = await getEventsFromHTML(articleHTML, true);
-        saveFixture(jsonFilename, articleJSON);
+        saveFixtureFile(jsonFilename, articleJSON);
 
         // Add this url to the list of parsed events
         links.push(url);
