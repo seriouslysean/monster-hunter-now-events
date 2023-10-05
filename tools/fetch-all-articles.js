@@ -1,14 +1,14 @@
 import { parse } from 'node-html-parser';
-import { getEventsFromHTML } from './utils/chat-gpt.js';
-import { mhnUrls } from './utils/config.js';
+import { getEventsFromHTML } from '../src/utils/chat-gpt.js';
+import { mhnUrls } from '../src/utils/config.js';
 import {
+    getArticleId,
     getHTMLFixture,
     getPageHTML,
-    saveFixture,
-    getHTMLFilename,
-    getJSONFilename,
     getJSONFixture,
-} from './utils/utils.js';
+    saveHTMLFixture,
+    saveJSONFixture,
+} from '../src/utils/utils.js';
 
 /*
 NEXT STEPS
@@ -41,13 +41,12 @@ export async function fetchArticle(url) {
             10,
         );
         const urlObj = new URL(url);
-        const slug = urlObj.pathname.substring(1).replace('/', '-');
-        const htmlFilename = getHTMLFilename(timestamp, slug);
-        saveFixture(htmlFilename, articleHTML);
+        const slug = getSlugFromPath(urlObj.pathname);
+        const articleId = getArticleId(timestamp, slug);
+        saveHTMLFixture(articleId, articleHTML);
 
         const articleJSON = await getEventsFromHTML(articleHTML, true);
-        const jsonFilename = getJSONFilename(timestamp, slug);
-        saveFixture(jsonFilename, articleJSON);
+        saveJSONFixture(articleId, articleJSON);
     } catch (err) {
         console.error('Unable to fetch article', err);
     }
@@ -82,12 +81,11 @@ async function getArticles() {
 
         // Get HTML fixture
         const slug = getSlugFromPath(path);
-        const htmlFilename = getHTMLFilename(timestamp, slug);
-        const { data: articleHTML } = getHTMLFixture(htmlFilename);
+        const articleId = getArticleId(timestamp, slug);
+        const articleHTML = getHTMLFixture(articleId);
 
         // Get JSON fixture
-        const jsonFilename = getJSONFilename(timestamp, slug);
-        const articleJSON = getJSONFixture(jsonFilename);
+        const articleJSON = getJSONFixture(articleId);
 
         // If we have a fixture of these events we don't need to add them
         if (articleHTML && articleJSON) {

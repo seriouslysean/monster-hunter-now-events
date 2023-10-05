@@ -44,6 +44,7 @@
     "lint:prettier": "prettier --check src",
     "lint": "npm run lint:js && npm run lint:prettier",
     "start": "npm run generate:events-ics",
+    "fetch:all-articles": "node -r dotenv/config ./tools/fetch-all-articles.js",
     "fetch:article": "node -r dotenv/config ./tools/fetch-article.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

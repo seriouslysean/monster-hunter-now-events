@@ -89,7 +89,7 @@ Event format:
 {
     "summary": "Event Name",
     "description": "Event Description",
-    "dates": [{"start": "YYY-MM-DD HH:MM:SS", "end": "YYY-MM-DD HH:MM:SS"}]
+    "dates": [{"start": "YYYY-MM-DD HH:MM:SS", "end": "YYYY-MM-DD HH:MM:SS"}]
 }
 
 Content:

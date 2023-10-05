@@ -2,7 +2,7 @@ import { Command } from 'commander';
 
 import { version } from '../src/utils/config.js';
 
-import { fetchArticle } from '../src/fetch-all-articles.js';
+import { fetchArticle } from './fetch-all-articles.js';
 
 // Invoke via `npm run fetch:article -- -u <url>`
 // HAS EVENTS:

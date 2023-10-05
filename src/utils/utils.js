@@ -1,74 +1,32 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
-import { resolve } from 'path';
+import { basename, dirname, resolve } from 'path';
 
 import axios from 'axios';
 
 import { paths } from './config.js';
 
-function getFilePathComponents(filename) {
-    const [slug, extension] = filename.split(/\.(?=[^.]+$)/);
-    const folderPath = resolve(paths.fixtures, slug);
-    const fileName = {
-        html: 'index.html',
-        json: 'events.json',
-    }[extension];
-    const filePath = resolve(folderPath, fileName);
-
-    return { slug, extension, folderPath, fileName, filePath };
-}
-
-function getFixture(filename, processor) {
-    let data = null;
-    const { filePath } = getFilePathComponents(filename);
-
+function getFixture(filePath) {
     try {
-        const raw = readFileSync(filePath, {
+        return readFileSync(filePath, {
             encoding: 'utf8',
             flag: 'r',
         });
-        data = processor(raw);
     } catch (err) {
-        console.error(`Unable to open or process ${filename}`);
+        console.error(`Unable to open or process ${filePath}`);
     }
 
-    return data;
+    return null;
 }
 
-export function getHTMLFixture(filename) {
-    const data = getFixture(filename, (raw) => raw);
-    return { data };
+export function getHTMLFixture(articleId) {
+    const filePath = resolve(paths.fixtures, articleId, 'index.html');
+    return getFixture(filePath);
 }
 
-export function getJSONFixture(filename) {
-    return getFixture(filename, JSON.parse);
-}
-
-export function saveFixture(filename, content) {
-    const { extension, folderPath, filePath } = getFilePathComponents(filename);
-
-    try {
-        let adaptedContent = content;
-        if (extension === 'json' && typeof content !== 'string') {
-            adaptedContent = JSON.stringify(content, null, 4);
-            adaptedContent += '\n'; // Ensure new line at end of file :)
-        }
-        mkdirSync(folderPath, { recursive: true });
-        writeFileSync(filePath, adaptedContent, 'utf8');
-    } catch (err) {
-        console.error(`Unable to save ${filePath}`, err);
-    }
-}
-
-export function getFormattedDate(time) {
-    const date = new Date();
-    // Set the original time if we have it
-    if (time) {
-        date.setTime(time);
-    }
-    const yyyy = date.getFullYear();
-    const mm = String(date.getMonth() + 1).padStart(2, '0');
-    const dd = String(date.getDate()).padStart(2, '0');
-    return `${yyyy}${mm}${dd}`;
+export function getJSONFixture(articleId) {
+    const filePath = resolve(paths.fixtures, articleId, 'events.json');
+    const data = getFixture(filePath);
+    return data ? JSON.parse(data) : {};
 }
 
 export async function getPageHTML(url) {
@@ -87,15 +45,42 @@ export async function getPageHTML(url) {
     }
 }
 
-function getFilename(timestamp, slug, extension) {
+export function getFormattedDate(time) {
+    const date = new Date();
+    // Set the original time if we have it
+    if (time) {
+        date.setTime(time);
+    }
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const dd = String(date.getDate()).padStart(2, '0');
+    return `${yyyy}${mm}${dd}`;
+}
+
+export function getArticleId(timestamp, slug) {
     const date = getFormattedDate(timestamp);
-    return `${date}_${slug}.${extension}`;
+    return `${date}_${slug}`;
 }
 
-export function getHTMLFilename(timestamp, slug) {
-    return getFilename(timestamp, slug, 'html');
+function saveFixture(path, content) {
+    try {
+        const pathName = dirname(path);
+        const fileName = basename(path);
+        mkdirSync(pathName, { recursive: true });
+        writeFileSync(fileName, content, 'utf8');
+    } catch (err) {
+        console.error(`Unable to save ${path}`, err);
+    }
 }
 
-export function getJSONFilename(timestamp, slug) {
-    return getFilename(timestamp, slug, 'json');
+export function saveHTMLFixture(articleId, content) {
+    const filePath = resolve(paths.fixtures, articleId, 'index.html');
+    saveFixture(filePath, content);
+}
+
+export function saveJSONFixture(articleId, content) {
+    const filePath = resolve(paths.fixtures, articleId, 'events.json');
+    // This lets us direcly pass in json to be saved
+    const adaptedContent = JSON.stringify(content, null, 4);
+    saveFixture(filePath, adaptedContent);
 }
