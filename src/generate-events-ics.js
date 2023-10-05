@@ -55,8 +55,9 @@ END:VEVENT`;
 
 const pad = (i) => (i < 10 ? `0${i}` : `${i}`);
 
-const generateICSDatetime = (str) => {
-    const date = new Date(str);
+const generateICSDatetime = (timestamp) => {
+    const unixtime = parseInt(timestamp, 10);
+    const date = new Date(unixtime);
     const year = date.getFullYear();
     const month = pad(date.getMonth() + 1);
     const day = pad(date.getDate());
@@ -94,7 +95,7 @@ export default function generateFeed() {
             throw new Error('No events found');
         }
         const icsEvents = events.reduce((acc, event, eventIndex) => {
-            console.debug(`Adding event: ${event.summary}`);
+            console.log(`Adding event: ${event.summary}`);
             const dates = event.dates || [];
             if (!dates.length) {
                 return acc;
