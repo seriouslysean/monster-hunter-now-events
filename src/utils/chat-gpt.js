@@ -89,7 +89,7 @@ Event format:
 {
     "summary": "Event Name",
     "description": "Event Description",
-    "dates": [{"start": "UNIX TIMESTAMP", "end": "UNIX TIMESTAMP"}]
+    "dates": [{"start": "YYY-MM-DD HH:MM:SS", "end": "YYY-MM-DD HH:MM:SS"}]
 }
 
 Content:

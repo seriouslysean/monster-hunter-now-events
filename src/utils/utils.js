@@ -5,44 +5,30 @@ import axios from 'axios';
 
 import { paths } from './config.js';
 
-function saveFile(path, filename, content) {
-    const filePath = resolve(path, filename);
-    const { extension } = filename.split(/\.(?=[^.]+$)/);
+function getFilePathComponents(filename) {
+    const [slug, extension] = filename.split(/\.(?=[^.]+$)/);
+    const folderPath = resolve(paths.fixtures, slug);
+    const fileName = {
+        html: 'index.html',
+        json: 'events.json',
+    }[extension];
+    const filePath = resolve(folderPath, fileName);
 
-    try {
-        let adaptedContent = content;
-        if (extension === 'json' && typeof content !== 'string') {
-            adaptedContent = JSON.stringify(content, null, 4);
-            adaptedContent += '\n'; // Ensure new line at end of file :)
-        }
-        mkdirSync(resolve(filePath, '..'), { recursive: true });
-        writeFileSync(filePath, adaptedContent, 'utf8');
-    } catch (err) {
-        console.error(`Unable to save ${filePath}`, err);
-    }
-}
-
-export function saveFixtureFile(filename, content) {
-    // The name will always be in the format YYYMMDD_article-name
-    const [name] = filename.split(/\.(?=[^.]+$)/);
-    const adaptedPath = resolve(paths.fixtures, name);
-    saveFile(adaptedPath, filename, content);
-}
-
-export function saveDistFile(filename, content) {
-    saveFile(paths.dist, filename, content);
+    return { slug, extension, folderPath, fileName, filePath };
 }
 
 function getFixture(filename, processor) {
     let data = null;
+    const { filePath } = getFilePathComponents(filename);
+
     try {
-        const raw = readFileSync(resolve(paths.fixtures, filename), {
+        const raw = readFileSync(filePath, {
             encoding: 'utf8',
             flag: 'r',
         });
         data = processor(raw);
     } catch (err) {
-        console.error(`Unable to open or process ${filename}`, err);
+        console.error(`Unable to open or process ${filename}`);
     }
 
     return data;
@@ -55,6 +41,22 @@ export function getHTMLFixture(filename) {
 
 export function getJSONFixture(filename) {
     return getFixture(filename, JSON.parse);
+}
+
+export function saveFixture(filename, content) {
+    const { extension, folderPath, filePath } = getFilePathComponents(filename);
+
+    try {
+        let adaptedContent = content;
+        if (extension === 'json' && typeof content !== 'string') {
+            adaptedContent = JSON.stringify(content, null, 4);
+            adaptedContent += '\n'; // Ensure new line at end of file :)
+        }
+        mkdirSync(folderPath, { recursive: true });
+        writeFileSync(filePath, adaptedContent, 'utf8');
+    } catch (err) {
+        console.error(`Unable to save ${filePath}`, err);
+    }
 }
 
 export function getFormattedDate(time) {
