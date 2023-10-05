@@ -20,11 +20,11 @@
         },
         {
             "summary": "Rathian & Pink Rathian Week",
-            "description": "Pink Rathian will appear in low numbers in Forest Habitats for all hunters who have completed Chapter 9 and unlocked Rathian hunts. Rathian and Pink Rathian will also appear more frequently during specific timeframes.",
+            "description": "Pink Rathian will appear in low numbers in Forest Habitats for hunters who have completed Chapter 9 and unlocked Rathian hunts. Rathian and Pink Rathian will appear more frequently in Forest Habitats for all hunters HR11 and above during specific time slots.",
             "dates": [
                 {
                     "start": "2023-10-09 00:00:00",
-                    "end": "2023-10-13 16:59:59"
+                    "end": "2023-10-13 16:59:00"
                 },
                 {
                     "start": "2023-10-13 17:00:00",
@@ -42,7 +42,7 @@
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "From October 25 to October 31, enjoy a Halloween-themed field map and special Halloween-themed equipment. Kulu-Ya-Ku will also have a different appearance.",
+            "description": "A Halloween-themed field map and special Halloween-themed equipment will be available in Monster Hunter Now. Look out for Kulu-Ya-Ku's unique appearance during this event.",
             "dates": [
                 {
                     "start": "2023-10-25 00:00:00",

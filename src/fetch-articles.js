@@ -19,7 +19,39 @@ NEXT STEPS
 4. Use fixture json data to generate an ics file
 */
 
-const getSlugFromPath = (path) => path.substring(1).replace('/', '-');
+export const getSlugFromPath = (path) => path.substring(1).replace('/', '-');
+
+export async function fetchArticle(url) {
+    try {
+        if (!url) {
+            throw new Error('Article url not provided');
+        }
+        console.log(`Downloading html for ${url}`);
+        // eslint-disable-next-line no-await-in-loop
+        const { data: articleHTML } = await getPageHTML(url);
+        if (!articleHTML) {
+            throw new Error('No HTML returned');
+        }
+        const document = parse(articleHTML);
+        // Saving the fetched HTML data to the file system
+        const timestamp = parseInt(
+            document
+                .querySelector('[class^="_headline_"] [timestamp]')
+                .getAttribute('timestamp'),
+            10,
+        );
+        const urlObj = new URL(url);
+        const slug = urlObj.pathname.substring(1).replace('/', '-');
+        const htmlFilename = getHTMLFilename(timestamp, slug);
+        saveFixture(htmlFilename, articleHTML);
+
+        const articleJSON = await getEventsFromHTML(articleHTML, true);
+        const jsonFilename = getJSONFilename(timestamp, slug);
+        saveFixture(jsonFilename, articleJSON);
+    } catch (err) {
+        console.error('Unable to fetch article', err);
+    }
+}
 
 async function getArticles() {
     console.log(`Downloading html for ${mhnUrls.news}`);
@@ -51,11 +83,11 @@ async function getArticles() {
         // Get HTML fixture
         const slug = getSlugFromPath(path);
         const htmlFilename = getHTMLFilename(timestamp, slug);
-        let { data: articleHTML } = getHTMLFixture(htmlFilename);
+        const { data: articleHTML } = getHTMLFixture(htmlFilename);
 
         // Get JSON fixture
         const jsonFilename = getJSONFilename(timestamp, slug);
-        let articleJSON = getJSONFixture(jsonFilename);
+        const articleJSON = getJSONFixture(jsonFilename);
 
         // If we have a fixture of these events we don't need to add them
         if (articleHTML && articleJSON) {
@@ -64,17 +96,8 @@ async function getArticles() {
         }
 
         // If this is a valid link and we don't have a fixture, queue it up!
-        console.log(`Downloading html for ${url}`);
         // eslint-disable-next-line no-await-in-loop
-        ({ data: articleHTML } = await getPageHTML(url));
-        // Saving the fetched HTML data to the file system
-        saveFixture(htmlFilename, articleHTML);
-
-        // Also save the events output from ChatGPT
-        console.log(`Downloading json for ${url}`);
-        // eslint-disable-next-line no-await-in-loop
-        articleJSON = await getEventsFromHTML(articleHTML, true);
-        saveFixture(jsonFilename, articleJSON);
+        await fetchArticle(url);
 
         // Add this url to the list of parsed events
         links.push(url);
@@ -83,7 +106,10 @@ async function getArticles() {
     // Get list of article links
     if (!links.length) {
         console.log('No new news articles found');
+        return;
     }
+
+    console.log('News articles downloaded', links);
 }
 
 getArticles();
