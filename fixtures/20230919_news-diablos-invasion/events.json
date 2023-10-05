@@ -5,12 +5,12 @@
             "description": "Investigate an outbreak of Diablos in desert regions!",
             "dates": [
                 {
-                    "start": "2023-09-23 1:00 PM",
-                    "end": "2023-09-23 4:00 PM"
+                    "start": "1669225200",
+                    "end": "1669232400"
                 },
                 {
-                    "start": "2023-09-24 1:00 PM",
-                    "end": "2023-09-24 4:00 PM"
+                    "start": "1669311600",
+                    "end": "1669318800"
                 }
             ]
         }

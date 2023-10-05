@@ -17,20 +17,30 @@ function getFilePathComponents(filename) {
     return { slug, extension, folderPath, fileName, filePath };
 }
 
-export function getHTMLFixture(filename) {
+function getFixture(filename, processor) {
     let data = null;
     const { filePath } = getFilePathComponents(filename);
 
     try {
-        data = readFileSync(filePath, {
+        const raw = readFileSync(filePath, {
             encoding: 'utf8',
             flag: 'r',
         });
+        data = processor(raw);
     } catch (err) {
-        console.error(`Unable to open ${filename}`);
+        console.error(`Unable to open or process ${filename}`);
     }
 
+    return data;
+}
+
+export function getHTMLFixture(filename) {
+    const data = getFixture(filename, (raw) => raw);
     return { data };
+}
+
+export function getJSONFixture(filename) {
+    return getFixture(filename, JSON.parse);
 }
 
 export function saveFixture(filename, content) {
@@ -82,10 +92,10 @@ function getFilename(timestamp, slug, extension) {
     return `${date}_${slug}.${extension}`;
 }
 
-export function getHTMLFilename(...args) {
-    return getFilename(...args, 'html');
+export function getHTMLFilename(timestamp, slug) {
+    return getFilename(timestamp, slug, 'html');
 }
 
-export function getJSONFilename(...args) {
-    return getFilename(...args, 'json');
+export function getJSONFilename(timestamp, slug) {
+    return getFilename(timestamp, slug, 'json');
 }
