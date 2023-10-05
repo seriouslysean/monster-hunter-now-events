@@ -63,29 +63,30 @@ export async function getEventsFromHTML(html, debug = false) {
     // prompts through the playground and tweaking the output to be able to parse in game events only
     // while ignoring other content such as sales, promotions, and real world events
     // Use `npm run test:article` to test the prompt on a single article and then adjust as needed
-    const question = `Include ONLY in-game events that occur strictly inside the digital gameplay of "Monster Hunter Now". Separate distinct time-bound activities within broader events as individual events.
+    const question = `Question:
 
-Include:
-- Activities or challenges that players encounter inside the game environment.
-- Bound to specific start and end times.
+Identify time-specific in-game events from the provided content that take place strictly within the digital environment of "Monster Hunter Now." Disregard general feature announcements, game launches, and updates unless they specify a time-bound event or activity that players can actively participate in.
 
-May include:
-- Time-limited quests to hunt specific monsters.
-- Special in-game challenges available for a short duration.
-- Appearance frequency of monsters.
-- Increased drops.
-- Reference to minimum chapter (e.g., chapter 9).
-- Reference to HR level (e.g., HR11).
-- Forest, desert, or swamp habitats.
+Strict Inclusions:
+- Quests, challenges, or events within the game that players can engage in, which are tied to specific start and end dates.
+- Activities specific to the game's digital universe.
 
-Do NOT include:
-- Activities, promotions, or mentions related to real-world events or locations.
-- Announcements about game launches, character introductions, feature introductions, or general game updates unless tied to specific time-bound in-game events.
-- Sales, promotions, or item announcements.
+May Include:
+- Time-limited missions or quests targeting in-game entities.
+- Short-term in-game challenges or competitions.
+- Periods where specific in-game entities appear more frequently or rarely.
+- Bonus periods for in-game item drops.
+- References to in-game progression, such as chapter levels or HR levels.
+- Specific in-game habitats or locations.
 
-Put events in a JSON structure under the key "events". If no events are identified, return an empty array.
+Strict Exclusions:
+- Mentions of game updates, game launches, or feature unveilings that aren't associated with a specific, timed in-game event.
+- Pre-registrations, bonuses, or incentives tied to real-world actions or milestones, unless they specify a related in-game event.
+- Any real-world promotions, events, or general news announcements.
 
-Event format:
+Output the identified events in a JSON format under the key "events". If there are no events fitting the criteria, return "[]" in the events key.
+
+Event JSON Format:
 {
     "summary": "Event Name",
     "description": "Event Description",
