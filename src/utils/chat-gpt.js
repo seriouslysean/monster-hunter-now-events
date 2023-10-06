@@ -63,6 +63,7 @@ export async function getEventsFromHTML(html, debug = false) {
 The criteria are clear:
 - The event should take place within the virtual game environment, allowing for player interaction.
 - A clear start and end time for the event must be evident.
+- Events occurring in continuous time frames should be considered a single event. However, if the same event occurs during a continuous span and then separately at distinct times (like during the week and then separately on the weekend), treat them as two separate events. Discontinuities in time frames are important.
 - Assumptions or creative additions to the content should not be made.
 
 The content should be read carefully to identify:
