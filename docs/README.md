@@ -4,7 +4,7 @@
     alt="Monster Hunter Now Logo" />
 </p>
 
-# Monster Hunter Now Events Calendar
+# Monster Hunter Now Events
 
 This is a calendar subscription file for events that [Monster Hunter Now](https://monsterhunternow.com/) is running.
 
@@ -29,25 +29,27 @@ https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics
 1. Sign up for an OpenAI API key, https://platform.openai.com/account/api-keys
 2. Add tokens if needed, https://platform.openai.com/account/billing/overview
 
-### Generate Feed
+### Generate ICS File
 
-1. Run `npm start` or `npm run generate:feed`
+Run `npm start`
 
-File is output to `dist/events.ics`.
-
-### Generate Events (JSON)
-
-1. `npm run generate:events`
-
-File is output to `dist/events.json`.
+This will do three things:
+1. Look for new articles
+2. Download article HTML
+3. Parse the events from the content via ChatGPT
+4. Generate article events json
+5. Generate the `dist/events.json` file
+6. Generate the `dist/events.ics` file
 
 ### Tools
 
-#### Test Article
+Download, Parse and Save One Article
+- `npm run fetch:article -- -u <url>`
 
-1. Run `npm run test:article -- -u <url>`
+Download, Parse and Save ALL New Articles
+- `npm run fetch:all-articles`
 
-`index.html` and `events.json` are output to `fixtures/{date}_news-{slug}`.
+Article `index.html` and `events.json` are output to `fixtures/{date}_news-{slug}`.
 
 ## References
 
