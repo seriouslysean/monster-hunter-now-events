@@ -1,39 +1,33 @@
 module.exports = {
-  env: {
-    es2021: true,
-    node: true,
-  },
-  extends: [
-    'airbnb-base',
-    'prettier',
-  ],
-  plugins: [
-    'prettier',
-  ],
-  overrides: [
-    {
-      env: {
+    root: true,
+    env: {
+        es2021: true,
         node: true,
-      },
-      files: [
-        '.eslintrc.c?js',
-      ],
-      parserOptions: {
-        sourceType: 'script',
-      },
     },
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  rules: {
-    'import/extensions': [
-      'error',
-      'always',
-      {
-        ignorePackages: true,
-      }
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
+    extends: ['airbnb-base', 'plugin:prettier/recommended'],
+    overrides: [
+        {
+            env: {
+                node: true,
+            },
+            files: ['.eslintrc.c?js'],
+            parserOptions: {
+                sourceType: 'script',
+            },
+        },
+        {
+            files: ['tools/**/*.c?js'],
+            rules: {
+                'import/no-extraneous-dependencies': 'off',
+            },
+        },
     ],
-  },
+    rules: {
+        // Extensions for known files are always required when using type="module"
+        'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
+    },
 };
