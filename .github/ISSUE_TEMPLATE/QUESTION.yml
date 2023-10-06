@@ -1,0 +1,12 @@
+name: General Question
+description: Ask a question or seek clarification about the project.
+title: "[Question]: "
+labels: ['question']
+body:
+  - type: textarea
+    id: question_description
+    attributes:
+      label: Question Details
+      placeholder: "Provide more details or context about your question."
+    validations:
+      required: true
