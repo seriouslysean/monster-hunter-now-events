@@ -4,7 +4,7 @@ import OpenAI from 'openai';
 export const OPENAI_CHAT_ENDPOINT =
     'https://api.openai.com/v1/chat/completions';
 
-async function askGPTChat(question, debug) {
+async function askGPTChat(messages, debug) {
     const apiKey = process.env.API_KEY_OPENAI;
     const noEvents = { events: [] };
     try {
@@ -14,16 +14,18 @@ async function askGPTChat(question, debug) {
 
         if (debug) {
             console.log('-----Question-----');
-            console.log(question);
+            console.log(JSON.stringify(messages, null, 2));
             console.log('');
         }
 
         const openai = new OpenAI({ apiKey });
         const chatCompletion = await openai.chat.completions.create({
             model: 'gpt-3.5-turbo',
-            messages: [{ role: 'user', content: question }],
+            messages,
+            temperature: 0.5, // Adjust this value (0 to 1) to control randomness. Lower values make the output more deterministic.
         });
         const response = chatCompletion.choices?.[0]?.message?.content?.trim();
+
         if (!response) {
             throw new Error('No response sent');
         }
@@ -34,11 +36,7 @@ async function askGPTChat(question, debug) {
             console.log('');
         }
 
-        try {
-            return JSON.parse(response);
-        } catch (err) {
-            throw new Error('Invalid JSON returned!');
-        }
+        return JSON.parse(response);
     } catch (err) {
         console.error(err);
         return noEvents;
@@ -46,28 +44,21 @@ async function askGPTChat(question, debug) {
 }
 
 export async function getEventsFromHTML(html, debug = false) {
-    // No content found, get outta here
     if (!html) {
         console.log('!!! No html');
         return { events: [] };
     }
 
     const document = parse(html);
-    // Get main content for the blog post
     const article = document.querySelector('#main article');
-    // Remove share content
     article.querySelector('#share')?.remove();
-    // Remove next article content
     article.querySelector('#next-article')?.remove();
-    // Convert to text and remove extra whitespace
     const content = article.textContent.replace(/\n{2,}/g, '\n').trim();
 
-    // Prompt AI to find events in the content from the news articles
-    // This prompt has been tuned to work with the current GPT-3.5-turbo model by passing various
-    // prompts through the playground and tweaking the output to be able to parse in game events only
-    // while ignoring other content such as sales, promotions, and real world events
-    // Use `npm run test:article` to test the prompt on a single article and then adjust as needed
-    const question = `From the provided content, extract ONLY the events that occur STRICTLY within the game environment of "Monster Hunter Now".
+    const messages = [
+        {
+            role: 'system',
+            content: `From the provided content, extract ONLY the events that occur STRICTLY within the game environment of "Monster Hunter Now".
 
 The criteria are clear:
 - The event should take place within the virtual game environment, allowing for player interaction.
@@ -94,10 +85,18 @@ Use the JSON format provided:
 If the content doesn't reveal any qualifying in-game events, use the following format:
 {
     "events": []
-}
+}`,
+        },
+        {
+            role: 'user',
+            content: 'Identify in-game events from the following content:',
+        },
+        {
+            role: 'user',
+            content,
+        },
+    ];
 
-Content:
-${content}`;
-    const response = await askGPTChat(question, debug);
+    const response = await askGPTChat(messages, debug);
     return response ?? { events: [] };
 }
