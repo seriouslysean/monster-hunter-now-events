@@ -51,37 +51,34 @@ DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  tats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:576dce72ab7f4bf323606921ad47f492229123f1
+UID:a1946f4d008088b0cfe0d40bc08f464cb9044c15
 DTSTAMP:20231013T170000
 DTSTART:20231013T170000
 DTEND:20231013T200000
 
-SUMMARY:MHN:Rathian & Pink Rathian Week
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest Habi
- tats for all hunters HR11 and above.
+SUMMARY:MHN:Rathian & Pink Rathian Weekend
+DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
+  in Forest Habitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:db64c63abddbab9ec1e76457302b714c701a84b3
+UID:3b0ac1e96c254c8860f134210fae5cd158e3f3f9
 DTSTAMP:20231014T130000
 DTSTART:20231014T130000
 DTEND:20231014T160000
 RRULE:FREQ=DAILY;COUNT=2
-SUMMARY:MHN:Rathian & Pink Rathian Week
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest Habi
- tats for all hunters HR11 and above.
+SUMMARY:MHN:Rathian & Pink Rathian Weekend
+DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
+  in Forest Habitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:284b5ad37e4fddae17e17bb45943cd1c38e54182
+UID:02b7a198096b5e099317874be95735d3214a70ed
 DTSTAMP:20231015T130000
 DTSTART:20231015T130000
 DTEND:20231015T160000
 
-SUMMARY:MHN:Rathian & Pink Rathian Week
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest Habi
- tats for all hunters HR11 and above.
+SUMMARY:MHN:Rathian & Pink Rathian Weekend
+DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
+  in Forest Habitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
 UID:ab3755a02e07647dea7ded586714335540613c65
