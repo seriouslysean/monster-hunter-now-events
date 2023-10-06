@@ -63,7 +63,23 @@ export function getArticleId(timestamp, slug) {
     return `${date}_${slug}`;
 }
 
-function saveFixture(path, content) {
+export function getEventsJSON() {
+    const filePath = resolve(paths.dist, 'events.json');
+    try {
+        const data = readFileSync(filePath, {
+            encoding: 'utf8',
+            flag: 'r',
+        });
+        return JSON.parse(data);
+    } catch (err) {
+        const pathFromRoot = filePath.replace(paths.dist, '');
+        console.error(`Events not found: ${pathFromRoot}`);
+    }
+
+    return null;
+}
+
+function saveFile(path, content) {
     try {
         const pathName = dirname(path);
         mkdirSync(pathName, { recursive: true });
@@ -75,12 +91,24 @@ function saveFixture(path, content) {
 
 export function saveHTMLFixture(articleId, content) {
     const filePath = resolve(paths.fixtures, articleId, 'index.html');
-    saveFixture(filePath, content);
+    saveFile(filePath, content);
 }
 
 export function saveJSONFixture(articleId, content) {
     const filePath = resolve(paths.fixtures, articleId, 'events.json');
     // This lets us direcly pass in json to be saved
     const adaptedContent = JSON.stringify(content, null, 4);
-    saveFixture(filePath, adaptedContent);
+    saveFile(filePath, adaptedContent);
+}
+
+export function saveEventsJSON(content) {
+    const filePath = resolve(paths.dist, 'events.json');
+    // This lets us direcly pass in json to be saved
+    const adaptedContent = JSON.stringify(content, null, 4);
+    saveFile(filePath, adaptedContent);
+}
+
+export function saveEventsICS(content) {
+    const filePath = resolve(paths.dist, 'events.ics');
+    saveFile(filePath, content);
 }

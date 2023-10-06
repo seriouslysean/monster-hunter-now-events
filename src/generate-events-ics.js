@@ -1,13 +1,9 @@
 import crypto from 'crypto';
-import { writeFileSync } from 'fs';
-import { createRequire } from 'module';
-import { join } from 'path';
 
-import { paths } from './utils/config.js';
+import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
 // Get the events from the JSON file
-const require = createRequire(import.meta.url);
-const { events } = require('../dist/events.json');
+const { events } = getEventsJSON();
 
 const wordWrap = (line) => {
     const lineLength = 75;
@@ -26,7 +22,7 @@ const wordWrap = (line) => {
     const continuationLines = remainingContent.match(regex) || [];
     const wrappedContinuation = continuationLines.join('\r\n ');
 
-    return `${heading}:${firstLineContent}\r\n ${wrappedContinuation}`;
+    return `${heading}:${firstLineContent}\r\n ${wrappedContinuation}`.trimEnd();
 };
 
 const CALENDAR_TEMPLATE = `BEGIN:VCALENDAR
@@ -56,7 +52,8 @@ END:VEVENT`;
 const pad = (i) => (i < 10 ? `0${i}` : `${i}`);
 
 const generateICSDatetime = (str) => {
-    const date = new Date(str);
+    const time = Date.parse(str);
+    const date = new Date(time);
     const year = date.getFullYear();
     const month = pad(date.getMonth() + 1);
     const day = pad(date.getDate());
@@ -108,7 +105,7 @@ export default function generateFeed() {
             return `${acc}${joinStr}${datesString}`;
         }, '');
         const icsCalendar = CALENDAR_TEMPLATE.replace('{{EVENTS}}', icsEvents);
-        writeFileSync(join(paths.dist, 'events.ics'), icsCalendar);
+        saveEventsICS(icsCalendar);
         console.log('');
     } catch (err) {
         console.error(err);

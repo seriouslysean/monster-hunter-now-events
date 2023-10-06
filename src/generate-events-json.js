@@ -3,7 +3,7 @@
 import { readdirSync } from 'fs';
 
 import { paths } from './utils/config.js';
-import { getJSONFixture } from './utils/utils.js';
+import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
 
 function getFixtureDirectoryNames() {
     try {
@@ -39,9 +39,7 @@ function generateEventsJSON() {
     console.log('Generating events.json');
     const directoryNames = getFixtureDirectoryNames();
     const mergedEvents = mergeEventFixtures(directoryNames);
-    const eventsJSON = JSON.stringify(mergedEvents, null, 4);
-    console.log(eventsJSON);
-    // saveDistFile('events.json', eventsJSON);
+    saveEventsJSON(mergedEvents);
 }
 
 generateEventsJSON();

@@ -11,9 +11,9 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:ec6689df9698e6e2e193d8fbbb80c4c2db14e347
-DTSTAMP:19700120T013203
-DTSTART:19700120T013203
-DTEND:19700120T013214
+DTSTAMP:20231006T170000
+DTSTART:20231006T170000
+DTEND:20231006T200000
 SUMMARY:MHN:Tobi-Kadachi Weekend
  
 DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
@@ -21,9 +21,9 @@ DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
 END:VEVENT
 BEGIN:VEVENT
 UID:88c774cb9e4d8c787576715b939144ebe20b4d6c
-DTSTAMP:19700120T013320
-DTSTART:19700120T013320
-DTEND:19700120T013331
+DTSTAMP:20231007T130000
+DTSTART:20231007T130000
+DTEND:20231007T160000
 SUMMARY:MHN:Tobi-Kadachi Weekend
  
 DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
@@ -31,9 +31,9 @@ DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
 END:VEVENT
 BEGIN:VEVENT
 UID:f58582d0ebd090327354712627a4b6551bb7cb59
-DTSTAMP:19700120T013446
-DTSTART:19700120T013446
-DTEND:19700120T013457
+DTSTAMP:20231008T130000
+DTSTART:20231008T130000
+DTEND:20231008T160000
 SUMMARY:MHN:Tobi-Kadachi Weekend
  
 DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
@@ -41,9 +41,9 @@ DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
 END:VEVENT
 BEGIN:VEVENT
 UID:2848b26ac206a4ff15d73328be99c932a6095de7
-DTSTAMP:19700120T013600
-DTSTART:19700120T013600
-DTEND:19700120T014249
+DTSTAMP:20231009T000000
+DTSTART:20231009T000000
+DTEND:20231013T165900
 SUMMARY:MHN:Rathian & Pink Rathian Week
  
 DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
@@ -51,55 +51,67 @@ DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  tats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:01e18550538f1e7ffe4598d723ce9225d88521d5
-DTSTAMP:19700120T014249
-DTSTART:19700120T014249
-DTEND:19700120T014300
-SUMMARY:MHN:Rathian & Pink Rathian Week
+UID:8fe73d217c2e4ef715a29090c7cd2b73da2d7c9c
+DTSTAMP:20231013T170000
+DTSTART:20231013T170000
+DTEND:20231013T200000
+SUMMARY:MHN:Rathian & Pink Rathian Weekend
  
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest Habi
- tats for all hunters HR11 and above.
+DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
+  in Forest Habitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:79a54a75c337ddaa86a2461092b6f93b961415ab
-DTSTAMP:19700120T014416
-DTSTART:19700120T014416
-DTEND:19700120T014426
-SUMMARY:MHN:Rathian & Pink Rathian Week
+UID:f61440735db6087bffed4af0a9cbb78c15f75f06
+DTSTAMP:20231014T130000
+DTSTART:20231014T130000
+DTEND:20231014T160000
+SUMMARY:MHN:Rathian & Pink Rathian Weekend
  
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest Habi
- tats for all hunters HR11 and above.
+DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
+  in Forest Habitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:b0e2128cd2bfdae81332c9d9076b4a44c2980d04
-DTSTAMP:19700120T015934
-DTSTART:19700120T015934
-DTEND:19700120T020939
+UID:5ddee26bcc4681a16936bf77beddafb30653af22
+DTSTAMP:20231015T130000
+DTSTART:20231015T130000
+DTEND:20231015T160000
+SUMMARY:MHN:Rathian & Pink Rathian Weekend
+ 
+DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
+  in Forest Habitats for all hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:6188a500ae41627d8e5827ab8ff611fd27ae9b1b
+DTSTAMP:20231025T000000
+DTSTART:20231025T000000
+DTEND:20231031T235959
 SUMMARY:MHN:Halloween Pumpkin Hunt
  
 DESCRIPTION:A Halloween-themed field map and special Halloween-themed equip
- ment will be available. Kulu-Ya-Ku will have a different appearance.
+ ment. Kulu-Ya-Ku looks different than usual.
 END:VEVENT
 BEGIN:VEVENT
-UID:7e7e39a84f708f6ed82ee0436b7f65fd2bc6c6fb
-DTSTAMP:19700120T024025
-DTSTART:19700120T024025
-DTEND:19700120T024032
+UID:7b8cb648129135319d5ca6be67e4e23b6310bbe1
+DTSTAMP:20230923T130000
+DTSTART:20230923T130000
+DTEND:20230923T160000
 SUMMARY:MHN:Diablos Invasion
  
-DESCRIPTION:Investigate an outbreak of Diablos in desert regions!
- 
+DESCRIPTION:Investigate an outbreak of Diablos in desert regions! Diablos w
+ ill appear more frequently in desert regions. Time-limited Event Quests wil
+ l be available. Complete quests such as snapping a picture of Diablos in AR
+  mode to earn rewards.
 END:VEVENT
 BEGIN:VEVENT
-UID:6a7257b6c4aa9677b64e52271000579594ddd133
-DTSTAMP:19700120T024151
-DTSTART:19700120T024151
-DTEND:19700120T024158
+UID:4b6b3d45336bed9e60fa9fc1852670facf9eaf0b
+DTSTAMP:20230924T130000
+DTSTART:20230924T130000
+DTEND:20230924T160000
 SUMMARY:MHN:Diablos Invasion
  
-DESCRIPTION:Investigate an outbreak of Diablos in desert regions!
- 
+DESCRIPTION:Investigate an outbreak of Diablos in desert regions! Diablos w
+ ill appear more frequently in desert regions. Time-limited Event Quests wil
+ l be available. Complete quests such as snapping a picture of Diablos in AR
+  mode to earn rewards.
 END:VEVENT
 END:VCALENDAR
