@@ -1,6 +1,5 @@
 # https://github.com/github-linguist/linguist/blob/master/docs/overrides.md
 
-# Apply override to all fixtures so they don's show up in the repo languauge stats
-# There's probably a better type but I want to keep them in the diffs and for that purpose
-# documentation works well enough
-fixtures/* linguist-documentation
+# Mark all files in fixtures and dist as auto-generated
+fixtures/* linguist-generated
+dist/* linguist-generated
