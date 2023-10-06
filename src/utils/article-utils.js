@@ -23,8 +23,8 @@ export const getSlugFromPath = (path) => path.substring(1).replace('/', '-');
 
 export async function fetchArticle(url) {
     try {
-        if (!url) {
-            throw new Error('Article url not provided');
+        if (!url || !url.startsWith(mhnUrls.news)) {
+            throw new Error('Article url not valid', url);
         }
         console.log(`Downloading html for ${url}`);
         // eslint-disable-next-line no-await-in-loop
