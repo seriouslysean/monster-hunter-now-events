@@ -83,6 +83,8 @@ Use the JSON format provided:
     "dates": [{"start": "YYYY-MM-DD HH:MM:SS", "end": "YYYY-MM-DD HH:MM:SS"}]
 }
 
+Dates should be ordered from newest to oldest, ensuring that consecutive dates are next to each other.
+
 If the content doesn't reveal any qualifying in-game events, use the following format:
 {
     "events": []

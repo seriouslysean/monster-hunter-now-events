@@ -1,5 +1,4 @@
 import crypto from 'crypto';
-
 import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
 // Get the events from the JSON file
@@ -7,25 +6,18 @@ const { events } = getEventsJSON();
 
 const wordWrap = (line) => {
     const lineLength = 75;
-    // Split at only the first occurance of the colon, in case the title has one
     const [heading, content] = line.split(/:(.*)/s);
-
-    // Calculate the maximum content length for the first line
     const firstLineMaxLength = lineLength - heading.length - 1;
-
-    // Take the portion of the content for the first line
     const firstLineContent = content.slice(0, firstLineMaxLength);
     const remainingContent = content.slice(firstLineMaxLength);
-
-    // Break the remaining content into 75 character chunks
     const regex = new RegExp(`(.{1,${lineLength}})`, 'g');
     const continuationLines = remainingContent.match(regex) || [];
     const wrappedContinuation = continuationLines.join('\r\n ');
-
     return `${heading}:${firstLineContent}\r\n ${wrappedContinuation}`.trimEnd();
 };
 
-const CALENDAR_TEMPLATE = `BEGIN:VCALENDAR
+const CALENDAR_TEMPLATE = `
+BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Monster Hunter Now Events//EN
 URL:https://github.com/seriouslysean/monster-hunter-now-events
@@ -38,16 +30,20 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 {{EVENTS}}
-END:VCALENDAR`;
+END:VCALENDAR
+`.trim();
 
-const EVENT_TEMPLATE = `BEGIN:VEVENT
+const EVENT_TEMPLATE = `
+BEGIN:VEVENT
 UID:{{UID}}
 DTSTAMP:{{DTSTAMP}}
 DTSTART:{{DTSTART}}
 DTEND:{{DTEND}}
+{{RRULE}}
 {{SUMMARY}}
 {{DESCRIPTION}}
-END:VEVENT`;
+END:VEVENT
+`.trim();
 
 const pad = (i) => (i < 10 ? `0${i}` : `${i}`);
 
@@ -63,17 +59,61 @@ const generateICSDatetime = (str) => {
     return `${year}${month}${day}T${hour}${minute}${second}`;
 };
 
-const generateEventUID = (eventIndex, dateIndex, summary) => {
-    const uidString = `${eventIndex}${dateIndex}${summary}`;
+const generateEventUID = (start, end, summary, numberOfDays) => {
+    const uidString = `${start}${end}${summary}${numberOfDays}`;
     return crypto.createHash('sha1').update(uidString).digest('hex');
 };
 
-const generateEvent = (event, eventIndex, date, dateIndex) => {
-    const UID = generateEventUID(`${eventIndex}${dateIndex}${event.summary}`);
+const isConsecutiveDay = (date1, date2) => {
+    const d1 = new Date(date1);
+    const d2 = new Date(date2);
+    return (
+        d1.getFullYear() === d2.getFullYear() &&
+        d1.getMonth() === d2.getMonth() &&
+        d1.getDate() + 1 === d2.getDate() &&
+        d1.getHours() === d2.getHours() &&
+        d1.getMinutes() === d2.getMinutes()
+    );
+};
+
+const adaptEventWithDays = (event) => {
+    return {
+        ...event,
+        dates: event.dates.map((date, index) => {
+            let numberOfDays = 1;
+            while (
+                index + numberOfDays < event.dates.length &&
+                isConsecutiveDay(
+                    event.dates[index + numberOfDays - 1].start,
+                    event.dates[index + numberOfDays].start,
+                )
+            ) {
+                numberOfDays += 1;
+            }
+            return {
+                ...date,
+                numberOfDays,
+            };
+        }),
+    };
+};
+
+const generateEvent = (event, date) => {
+    const UID = generateEventUID(
+        date.start,
+        date.end,
+        event.summary,
+        date.numberOfDays,
+    );
     const start = generateICSDatetime(date.start);
     const end = generateICSDatetime(date.end);
     const SUMMARY = wordWrap(`SUMMARY:MHN:${event.summary}`);
     const DESCRIPTION = wordWrap(`DESCRIPTION:${event.description}`);
+    const RRULE =
+        date.numberOfDays && date.numberOfDays > 1
+            ? `RRULE:FREQ=DAILY;COUNT=${date.numberOfDays}`
+            : '';
+
     const adaptedEvent = {
         UID,
         DTSTAMP: start,
@@ -81,8 +121,13 @@ const generateEvent = (event, eventIndex, date, dateIndex) => {
         DTEND: end,
         SUMMARY,
         DESCRIPTION,
+        RRULE,
     };
-    return EVENT_TEMPLATE.replace(/{{(\w+)}}/g, (_, key) => adaptedEvent[key]);
+
+    return EVENT_TEMPLATE.replace(
+        /{{(\w+)}}/g,
+        (_, key) => adaptedEvent[key] || '',
+    ).trim();
 };
 
 export default function generateFeed() {
@@ -90,19 +135,17 @@ export default function generateFeed() {
         if (!events.length) {
             throw new Error('No events found');
         }
-        const icsEvents = events.reduce((acc, event, eventIndex) => {
+        const adaptedEvents = events.map(adaptEventWithDays);
+        const icsEvents = adaptedEvents.reduce((acc, event) => {
             console.debug(`Adding event: ${event.summary}`);
             const dates = event.dates || [];
             if (!dates.length) {
                 return acc;
             }
             const datesString = dates
-                .map((date, dateIndex) =>
-                    generateEvent(event, eventIndex, date, dateIndex),
-                )
+                .map((date) => generateEvent(event, date))
                 .join('\n');
-            const joinStr = eventIndex > 0 ? '\n' : '';
-            return `${acc}${joinStr}${datesString}`;
+            return acc ? `${acc}\n${datesString}` : datesString;
         }, '');
         const icsCalendar = CALENDAR_TEMPLATE.replace('{{EVENTS}}', icsEvents);
         saveEventsICS(icsCalendar);
