@@ -1,5 +1,5 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
-import { basename, dirname, resolve } from 'path';
+import { dirname, resolve } from 'path';
 
 import axios from 'axios';
 
@@ -26,7 +26,7 @@ export function getHTMLFixture(articleId) {
 export function getJSONFixture(articleId) {
     const filePath = resolve(paths.fixtures, articleId, 'events.json');
     const data = getFixture(filePath);
-    return data ? JSON.parse(data) : {};
+    return data ? JSON.parse(data) : { events: [] };
 }
 
 export async function getPageHTML(url) {
@@ -65,9 +65,8 @@ export function getArticleId(timestamp, slug) {
 function saveFixture(path, content) {
     try {
         const pathName = dirname(path);
-        const fileName = basename(path);
         mkdirSync(pathName, { recursive: true });
-        writeFileSync(fileName, content, 'utf8');
+        writeFileSync(path, content, 'utf8');
     } catch (err) {
         console.error(`Unable to save ${path}`, err);
     }

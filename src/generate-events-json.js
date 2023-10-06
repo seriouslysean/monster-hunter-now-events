@@ -1,7 +1,6 @@
 // https://github.com/seriouslysean/monster-hunter-now-events/pull/3/commits/c4427b13954b6d8182d414d1a1396a411abef2ca
 
 import { readdirSync } from 'fs';
-import { join } from 'path';
 
 import { paths } from './utils/config.js';
 import { getJSONFixture } from './utils/utils.js';
@@ -24,11 +23,13 @@ function getFixtureDirectoryNames() {
 }
 
 function mergeEventFixtures(directoryNames) {
-    const events = directoryNames.reduce((acc, directoryName) => {
-        const jsonFilename = join(directoryName, 'events.json');
-        const eventData = getJSONFixture(jsonFilename);
-        return [...acc, ...(eventData?.events || [])];
-    }, []);
+    const events = directoryNames.reduce(
+        (acc, directoryName) => [
+            ...acc,
+            ...getJSONFixture(directoryName).events,
+        ],
+        [],
+    );
     return {
         events,
     };
