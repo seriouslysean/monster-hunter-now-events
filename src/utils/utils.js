@@ -12,7 +12,8 @@ function getFixture(filePath) {
             flag: 'r',
         });
     } catch (err) {
-        console.error(`Unable to open or process ${filePath}`);
+        const pathFromRoot = filePath.replace(paths.fixtures, '');
+        console.error(`Fixture not found: ${pathFromRoot}`);
     }
 
     return null;

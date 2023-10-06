@@ -6,6 +6,7 @@ export const OPENAI_CHAT_ENDPOINT =
 
 async function askGPTChat(question, debug) {
     const apiKey = process.env.API_KEY_OPENAI;
+    const noEvents = { events: [] };
     try {
         if (!apiKey) {
             throw new Error('OPENAI_API_KEY env required');
@@ -24,7 +25,7 @@ async function askGPTChat(question, debug) {
         });
         const response = chatCompletion.choices?.[0]?.message?.content?.trim();
         if (!response) {
-            throw new Error('Invalid response');
+            throw new Error('No response sent');
         }
 
         if (debug) {
@@ -33,11 +34,14 @@ async function askGPTChat(question, debug) {
             console.log('');
         }
 
-        const events = JSON.parse(response);
-        return events;
+        try {
+            return JSON.parse(response);
+        } catch (err) {
+            throw new Error('Invalid JSON returned!');
+        }
     } catch (err) {
         console.error(err);
-        return { events: [] };
+        return noEvents;
     }
 }
 
@@ -63,34 +67,33 @@ export async function getEventsFromHTML(html, debug = false) {
     // prompts through the playground and tweaking the output to be able to parse in game events only
     // while ignoring other content such as sales, promotions, and real world events
     // Use `npm run test:article` to test the prompt on a single article and then adjust as needed
-    const question = `Question:
+    const question = `From the provided content, extract ONLY the events that occur STRICTLY within the game environment of "Monster Hunter Now".
 
-Identify time-specific in-game events from the provided content that take place strictly within the digital environment of "Monster Hunter Now." Disregard general feature announcements, game launches, and updates unless they specify a time-bound event or activity that players can actively participate in.
+The criteria are clear:
+- The event should take place within the virtual game environment, allowing for player interaction.
+- A clear start and end time for the event must be evident.
+- Assumptions or creative additions to the content should not be made.
 
-Strict Inclusions:
-- Quests, challenges, or events within the game that players can engage in, which are tied to specific start and end dates.
-- Activities specific to the game's digital universe.
+The content should be read carefully to identify:
+- Time-bound in-game quests, challenges, or missions that require player engagement.
+- Time-limited in-game bonuses or competitions with defined start and end times.
+- Specific in-game locations or settings tied to events.
 
-May Include:
-- Time-limited missions or quests targeting in-game entities.
-- Short-term in-game challenges or competitions.
-- Periods where specific in-game entities appear more frequently or rarely.
-- Bonus periods for in-game item drops.
-- References to in-game progression, such as chapter levels or HR levels.
-- Specific in-game habitats or locations.
+Exclude the following:
+- Wide-ranging game updates, announcements, or new feature additions without a specific in-game, time-bound challenge or activity.
+- Any event, bonus, promotion, or activity that takes place outside the game environment in the real world.
+- Statements or references that lack clear signals of a time-limited in-game event.
 
-Strict Exclusions:
-- Mentions of game updates, game launches, or feature unveilings that aren't associated with a specific, timed in-game event.
-- Pre-registrations, bonuses, or incentives tied to real-world actions or milestones, unless they specify a related in-game event.
-- Any real-world promotions, events, or general news announcements.
-
-Output the identified events in a JSON format under the key "events". If there are no events fitting the criteria, return "[]" in the events key.
-
-Event JSON Format:
+Use the JSON format provided:
 {
-    "summary": "Event Name",
-    "description": "Event Description",
+    "summary": "Name of the Event",
+    "description": "Description of the Event",
     "dates": [{"start": "YYYY-MM-DD HH:MM:SS", "end": "YYYY-MM-DD HH:MM:SS"}]
+}
+
+If the content doesn't reveal any qualifying in-game events, use the following format:
+{
+    "events": []
 }
 
 Content:
