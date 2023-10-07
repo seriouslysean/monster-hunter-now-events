@@ -3,9 +3,11 @@ import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
 const { events } = getEventsJSON();
 
+const LINE_BREAK = '\r\n';
+
 const wordWrap = (heading, content) => {
     const lineLength = 75;
-    const continuationPrefix = '\r\n ';
+    const continuationPrefix = `${LINE_BREAK} `;
     const continuationLineLength = lineLength - continuationPrefix.length;
 
     const combinedContent = `${heading}:${content}`;
@@ -103,7 +105,7 @@ const generateEvent = (event, date) => {
 
     const eventFields = Object.entries(eventObject)
         .map(([key, value]) => wordWrap(key, value))
-        .join('\n');
+        .join(LINE_BREAK);
 
     return [
         // Need to join with CSRF style line endings
@@ -111,7 +113,7 @@ const generateEvent = (event, date) => {
         eventFields,
         'END:VEVENT',
     ]
-        .join('\r\n')
+        .join(LINE_BREAK)
         .trim();
 };
 
@@ -145,7 +147,7 @@ const generateCalendar = (icsEvents) => {
         icsEvents,
         'END:VCALENDAR',
     ]
-        .join('\r\n')
+        .join(LINE_BREAK)
         .trim();
 };
 
@@ -160,9 +162,11 @@ export default function generateFeed() {
             console.debug(`Adding event: ${event.summary}`);
             const dates = event.dates || [];
             const datesString = dates.length
-                ? dates.map((date) => generateEvent(event, date)).join('\n')
+                ? dates
+                      .map((date) => generateEvent(event, date))
+                      .join(LINE_BREAK)
                 : '';
-            return acc ? `${acc}\n${datesString}` : datesString;
+            return acc ? [acc, datesString].join(LINE_BREAK) : datesString;
         }, '');
 
         const icsCalendar = generateCalendar(icsEvents);
