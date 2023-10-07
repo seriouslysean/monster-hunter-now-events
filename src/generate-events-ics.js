@@ -108,7 +108,7 @@ const generateEvent = (event, date) => {
         .join(LINE_BREAK);
 
     return [
-        // Need to join with CSRF style line endings
+        // Need to join with CR+LF style line endings
         'BEGIN:VEVENT',
         eventFields,
         'END:VEVENT',
