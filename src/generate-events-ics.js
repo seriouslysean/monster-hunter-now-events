@@ -105,11 +105,14 @@ const generateEvent = (event, date) => {
         .map(([key, value]) => wordWrap(key, value))
         .join('\n');
 
-    return `
-BEGIN:VEVENT
-${eventFields}
-END:VEVENT
-`.trim();
+    return [
+        // Need to join with CSRF style line endings
+        'BEGIN:VEVENT',
+        eventFields,
+        'END:VEVENT',
+    ]
+        .join('\r\n')
+        .trim();
 };
 
 const generateCalendar = (icsEvents) => {
@@ -135,13 +138,14 @@ const generateCalendar = (icsEvents) => {
     );
 
     return [
+        // Need to join with CSRF style line endings
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
         ...wrappedCalendarData,
-        icsEvents, // This ensures events are added without a prefix.
+        icsEvents,
         'END:VCALENDAR',
     ]
-        .join('\n')
+        .join('\r\n')
         .trim();
 };
 
