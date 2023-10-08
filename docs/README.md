@@ -6,13 +6,11 @@
 
 # Monster Hunter Now Events
 
-This is a calendar subscription file for events that [Monster Hunter Now](https://monsterhunternow.com/) is running.
-
-The events still need to be manually added (albeit in an easier manner) to the [events.txt](../events.txt) document, but when this file is modified it will automatically update the ICS file for anyone subscribed.
-
-I created this because ultimately I'm lazy and wanted to subscribe to a feed instead of adding the events manually to my phone's calendar.
+This is a calendar subscription file for events in [Monster Hunter Now](https://monsterhunternow.com/).
 
 If you aren't playing yet, [feel free to join](https://apps.apple.com/us/app/monster-hunter-now/id6445906110) and use my referral code for free items and zenny, `89K5MKCF`.
+
+I created this because I didn't want to add events to a shard calendar for my friends and I any longer and it's also a great way to test out how beneficial AI is in coding via dialoge with ChatGPT, and an excuse to utilize the OpenAI API.
 
 ## Subscribe to Calendar
 
