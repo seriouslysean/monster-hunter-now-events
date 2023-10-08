@@ -1,7 +1,7 @@
 {
   "name": "monster-hunter-now-events",
   "description": "A javascript powered calendar subscription for events that Monster Hunter Now is running.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Sean Kennedy <sean@codeserious.com>",
   "bugs": {
     "url": "https://github.com/seriouslysean/monster-hunter-now-events/issues"
