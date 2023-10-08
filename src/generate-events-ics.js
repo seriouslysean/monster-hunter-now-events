@@ -1,4 +1,3 @@
-import crypto from 'crypto';
 import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
 const { events } = getEventsJSON();
@@ -44,11 +43,6 @@ const generateICSDatetime = (str) => {
     return `${year}${month}${day}T${hour}${minute}${second}`;
 };
 
-const generateEventUID = (start, end, summary, numberOfDays) => {
-    const uidString = `${start}${end}${summary}${numberOfDays}`;
-    return crypto.createHash('sha1').update(uidString).digest('hex');
-};
-
 const isConsecutiveDay = (date1, date2) => {
     const d1 = new Date(date1);
     const d2 = new Date(date2);
@@ -87,12 +81,7 @@ const generateEvent = (event, date) => {
     const start = generateICSDatetime(date.start);
     const end = generateICSDatetime(date.end);
     const eventObject = {
-        UID: generateEventUID(
-            date.start,
-            date.end,
-            event.summary,
-            date.numberOfDays,
-        ),
+        UID: date.uid,
         DTSTAMP: start,
         DTSTART: start,
         DTEND: end,
