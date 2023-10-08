@@ -1,8 +1,9 @@
+import { generateICSDatetime } from './utils/date-utils.js';
 import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
-const { events } = getEventsJSON();
-
 const LINE_BREAK = '\r\n';
+
+const { events } = getEventsJSON();
 
 const wordWrap = (heading, content) => {
     const lineLength = 75;
@@ -29,57 +30,10 @@ const wordWrap = (heading, content) => {
     return segments.join(continuationPrefix).trimEnd();
 };
 
-const pad = (i) => (i < 10 ? `0${i}` : `${i}`);
-
-const generateICSDatetime = (str) => {
-    const time = Date.parse(str);
-    const date = new Date(time);
-    const year = date.getFullYear();
-    const month = pad(date.getMonth() + 1);
-    const day = pad(date.getDate());
-    const hour = pad(date.getHours());
-    const minute = pad(date.getMinutes());
-    const second = pad(date.getSeconds());
-    return `${year}${month}${day}T${hour}${minute}${second}`;
-};
-
-const isConsecutiveDay = (date1, date2) => {
-    const d1 = new Date(date1);
-    const d2 = new Date(date2);
-    return (
-        d1.getFullYear() === d2.getFullYear() &&
-        d1.getMonth() === d2.getMonth() &&
-        d1.getDate() + 1 === d2.getDate() &&
-        d1.getHours() === d2.getHours() &&
-        d1.getMinutes() === d2.getMinutes()
-    );
-};
-
-const adaptEventWithDays = (event) => {
-    return {
-        ...event,
-        dates: event.dates.map((date, index) => {
-            let numberOfDays = 1;
-            while (
-                index + numberOfDays < event.dates.length &&
-                isConsecutiveDay(
-                    event.dates[index + numberOfDays - 1].start,
-                    event.dates[index + numberOfDays].start,
-                )
-            ) {
-                numberOfDays += 1;
-            }
-            return {
-                ...date,
-                numberOfDays,
-            };
-        }),
-    };
-};
-
 const generateEvent = (event, date) => {
     const start = generateICSDatetime(date.start);
     const end = generateICSDatetime(date.end);
+
     const eventObject = {
         UID: date.uid,
         DTSTAMP: start,
@@ -87,10 +41,12 @@ const generateEvent = (event, date) => {
         DTEND: end,
         SUMMARY: `MHN:${event.summary}`,
         DESCRIPTION: event.description,
-        ...(date.numberOfDays && date.numberOfDays > 1
-            ? { RRULE: `FREQ=DAILY;COUNT=${date.numberOfDays}` }
-            : {}),
     };
+
+    // Add RRULE based on frequency if available
+    if (date.frequency && date.frequency.type === 'DAILY') {
+        eventObject.RRULE = `FREQ=${date.frequency.type};COUNT=${date.frequency.count}`;
+    }
 
     const eventFields = Object.entries(eventObject)
         .map(([key, value]) => wordWrap(key, value))
@@ -146,8 +102,7 @@ export default function generateFeed() {
             throw new Error('No events found');
         }
 
-        const adaptedEvents = events.map(adaptEventWithDays);
-        const icsEvents = adaptedEvents.reduce((acc, event) => {
+        const icsEvents = events.reduce((acc, event) => {
             console.debug(`Adding event: ${event.summary}`);
             const dates = event.dates || [];
             const datesString = dates.length

@@ -1,51 +1,70 @@
 import { readdirSync } from 'fs';
 import crypto from 'crypto';
-import { paths } from './utils/config.js';
-import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
 
-// Check if two dates are consecutive
-function isConsecutiveDay(date1, date2) {
-    const d1 = new Date(date1);
-    const d2 = new Date(date2);
-    return (
-        d1.getFullYear() === d2.getFullYear() &&
-        d1.getMonth() === d2.getMonth() &&
-        d1.getDate() + 1 === d2.getDate() &&
-        d1.getHours() === d2.getHours() &&
-        d1.getMinutes() === d2.getMinutes()
-    );
-}
+import { isSameDay, startOfDay, endOfDay, parse } from 'date-fns';
+
+import { paths } from './utils/config.js';
+import { isConsecutiveDay } from './utils/date-utils.js';
+import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
 
 const generateEventUID = (start, end, summary) => {
     const uidComponents = `${start}${end}${summary}`;
     return crypto.createHash('sha1').update(uidComponents).digest('hex');
 };
 
-// Adapt the events by merging consecutive dates and adding a numberOfDays key
 const adaptEventWithDays = (event) => {
     const adaptedDates = [];
 
     let i = 0;
     while (i < event.dates.length) {
         const date = { ...event.dates[i] };
-        let numberOfDays = 1;
+        let frequencyCount = date.frequency ? date.frequency.count : 1;
+
+        const hasSameTime = (index) => {
+            const currentEndTime = event.dates[index].end.split(' ')[1];
+            const currentStartTime = event.dates[index].start.split(' ')[1];
+            const nextEndTime = event.dates[index + 1]
+                ? event.dates[index + 1].end.split(' ')[1]
+                : null;
+            const nextStartTime = event.dates[index + 1]
+                ? event.dates[index + 1].start.split(' ')[1]
+                : null;
+
+            return (
+                currentEndTime === nextEndTime &&
+                currentStartTime === nextStartTime
+            );
+        };
 
         while (
-            i + numberOfDays < event.dates.length &&
+            i + frequencyCount < event.dates.length &&
             isConsecutiveDay(
-                event.dates[i + numberOfDays - 1].start,
-                event.dates[i + numberOfDays].start,
-            )
+                event.dates[i + frequencyCount - 1].start,
+                event.dates[i + frequencyCount].start,
+            ) &&
+            hasSameTime(i + frequencyCount - 1)
         ) {
-            numberOfDays += 1;
+            frequencyCount += 1;
         }
 
-        date.end = event.dates[i + numberOfDays - 1].end;
-        date.numberOfDays = numberOfDays;
+        if (frequencyCount > 1) {
+            date.frequency = {
+                type: 'DAILY',
+                count: frequencyCount,
+            };
+        }
+
         date.uid = generateEventUID(date.start, date.end, event.summary);
 
+        // Determine if it's an all-day event
+        const startDate = parse(date.start, 'yyyy-MM-dd HH:mm:ss', new Date());
+        const endDate = parse(date.end, 'yyyy-MM-dd HH:mm:ss', new Date());
+        date.isAllDay =
+            isSameDay(startDate, startOfDay(startDate)) &&
+            isSameDay(endDate, endOfDay(endDate));
+
         adaptedDates.push(date);
-        i += numberOfDays;
+        i += frequencyCount;
     }
 
     return {
@@ -79,6 +98,15 @@ function mergeEventFixtures(directoryNames) {
         ],
         [],
     );
+
+    // Sort events based on the start date in descending order (newest first)
+    events.sort((a, b) => {
+        const aStartDate = a.dates && a.dates[0] ? a.dates[0].start : '';
+        const bStartDate = b.dates && b.dates[0] ? b.dates[0].start : '';
+        // Sorts in descending order
+        return bStartDate.localeCompare(aStartDate);
+    });
+
     return {
         events,
     };

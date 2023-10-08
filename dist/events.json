@@ -1,32 +1,14 @@
 {
     "events": [
         {
-            "summary": "Tobi-Kadachi Weekend",
-            "description": "Tobi-Kadachi will appear more frequently in Swamp and Forest Habitats for all hunters HR11 and above.",
+            "summary": "Halloween Pumpkin Hunt",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
-                    "start": "2023-10-06 17:00:00",
-                    "end": "2023-10-06 20:00:00",
-                    "numberOfDays": 1,
-                    "uid": "f70a3c8655afecb7253deb981e6c8e9333fb5ad6"
-                },
-                {
-                    "start": "2023-10-07 13:00:00",
-                    "end": "2023-10-08 16:00:00",
-                    "numberOfDays": 2,
-                    "uid": "8b46df164f15129b9c82dae196449fa5293e1ec7"
-                }
-            ]
-        },
-        {
-            "summary": "Rathian & Pink Rathian Week",
-            "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
-            "dates": [
-                {
-                    "start": "2023-10-09 00:00:00",
-                    "end": "2023-10-13 16:59:00",
-                    "numberOfDays": 1,
-                    "uid": "eeac8f21e6079dd8b4e8d563f4e5fc49c07de7c4"
+                    "start": "2023-10-25 00:00:00",
+                    "end": "2023-10-31 23:59:59",
+                    "uid": "b4c128c5423ee48e965ab81a2361b33be6102f55",
+                    "isAllDay": true
                 }
             ]
         },
@@ -37,26 +19,52 @@
                 {
                     "start": "2023-10-13 17:00:00",
                     "end": "2023-10-13 20:00:00",
-                    "numberOfDays": 1,
-                    "uid": "ac4ad8a9c3063bd04c1636b084a09eaec55dbd7b"
+                    "uid": "ac4ad8a9c3063bd04c1636b084a09eaec55dbd7b",
+                    "isAllDay": true
                 },
                 {
                     "start": "2023-10-14 13:00:00",
-                    "end": "2023-10-15 16:00:00",
-                    "numberOfDays": 2,
-                    "uid": "5ce0a6c5234d516bbe1e62de827e8eede4a36850"
+                    "end": "2023-10-14 16:00:00",
+                    "frequency": {
+                        "type": "DAILY",
+                        "count": 2
+                    },
+                    "uid": "0007b56610f81930728792aa7e8ba025bcf8dc04",
+                    "isAllDay": true
                 }
             ]
         },
         {
-            "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "summary": "Rathian & Pink Rathian Week",
+            "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
             "dates": [
                 {
-                    "start": "2023-10-25 00:00:00",
-                    "end": "2023-10-31 23:59:59",
-                    "numberOfDays": 1,
-                    "uid": "b4c128c5423ee48e965ab81a2361b33be6102f55"
+                    "start": "2023-10-09 00:00:00",
+                    "end": "2023-10-13 16:59:00",
+                    "uid": "eeac8f21e6079dd8b4e8d563f4e5fc49c07de7c4",
+                    "isAllDay": true
+                }
+            ]
+        },
+        {
+            "summary": "Tobi-Kadachi Weekend",
+            "description": "Tobi-Kadachi will appear more frequently in Swamp and Forest Habitats for all hunters HR11 and above.",
+            "dates": [
+                {
+                    "start": "2023-10-06 17:00:00",
+                    "end": "2023-10-06 20:00:00",
+                    "uid": "f70a3c8655afecb7253deb981e6c8e9333fb5ad6",
+                    "isAllDay": true
+                },
+                {
+                    "start": "2023-10-07 13:00:00",
+                    "end": "2023-10-07 16:00:00",
+                    "frequency": {
+                        "type": "DAILY",
+                        "count": 2
+                    },
+                    "uid": "39c58e3db47dec60e4c222dc86be1e36213179d8",
+                    "isAllDay": true
                 }
             ]
         },
@@ -66,9 +74,13 @@
             "dates": [
                 {
                     "start": "2023-09-23 13:00:00",
-                    "end": "2023-09-24 16:00:00",
-                    "numberOfDays": 2,
-                    "uid": "766136d735b65cff4612978dbba2d6660e0bb993"
+                    "end": "2023-09-23 16:00:00",
+                    "frequency": {
+                        "type": "DAILY",
+                        "count": 2
+                    },
+                    "uid": "1e6d27f01eff658de0b3d173a192e18c6613337f",
+                    "isAllDay": true
                 }
             ]
         }
