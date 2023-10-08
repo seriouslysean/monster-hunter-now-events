@@ -1,17 +1,12 @@
-import { parse, addDays, isSameDay } from 'date-fns';
+import { addDays, format, parse, parseISO, isSameDay } from 'date-fns';
 
 export const pad = (i) => (i < 10 ? `0${i}` : `${i}`);
 
-export const generateICSDatetime = (str) => {
-    const time = Date.parse(str);
-    const date = new Date(time);
-    const year = date.getFullYear();
-    const month = pad(date.getMonth() + 1);
-    const day = pad(date.getDate());
-    const hour = pad(date.getHours());
-    const minute = pad(date.getMinutes());
-    const second = pad(date.getSeconds());
-    return `${year}${month}${day}T${hour}${minute}${second}`;
+export const generateICSDatetime = (str, allDay = false) => {
+    const date = parseISO(str);
+    return allDay
+        ? format(addDays(date, 1), 'yyyyMMdd')
+        : format(date, 'yyyyMMddTHHmmss');
 };
 
 // Check if two dates are consecutive

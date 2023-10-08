@@ -2,35 +2,13 @@
     "events": [
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment!",
             "dates": [
                 {
                     "start": "2023-10-25 00:00:00",
-                    "end": "2023-10-31 23:59:59",
-                    "uid": "b4c128c5423ee48e965ab81a2361b33be6102f55",
-                    "isAllDay": true
-                }
-            ]
-        },
-        {
-            "summary": "Rathian & Pink Rathian Weekend",
-            "description": "Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
-            "dates": [
-                {
-                    "start": "2023-10-13 17:00:00",
-                    "end": "2023-10-13 20:00:00",
-                    "uid": "ac4ad8a9c3063bd04c1636b084a09eaec55dbd7b",
-                    "isAllDay": true
-                },
-                {
-                    "start": "2023-10-14 13:00:00",
-                    "end": "2023-10-14 16:00:00",
-                    "frequency": {
-                        "type": "DAILY",
-                        "count": 2
-                    },
-                    "uid": "0007b56610f81930728792aa7e8ba025bcf8dc04",
-                    "isAllDay": true
+                    "end": "2023-10-31 23:59:00",
+                    "allDay": true,
+                    "uid": "8488f6a2917e9e86d3731836df135ace5001a0f4"
                 }
             ]
         },
@@ -41,8 +19,26 @@
                 {
                     "start": "2023-10-09 00:00:00",
                     "end": "2023-10-13 16:59:00",
-                    "uid": "eeac8f21e6079dd8b4e8d563f4e5fc49c07de7c4",
-                    "isAllDay": true
+                    "allDay": false,
+                    "uid": "eeac8f21e6079dd8b4e8d563f4e5fc49c07de7c4"
+                },
+                {
+                    "start": "2023-10-13 17:00:00",
+                    "end": "2023-10-13 20:00:00",
+                    "allDay": false,
+                    "uid": "239669fe3158d60f09a0044bb21ca7bd6eac6dc5"
+                },
+                {
+                    "start": "2023-10-14 13:00:00",
+                    "end": "2023-10-14 16:00:00",
+                    "allDay": false,
+                    "uid": "7d532d87a9d8501e294ea5da3a75000985a14102"
+                },
+                {
+                    "start": "2023-10-15 13:00:00",
+                    "end": "2023-10-15 16:00:00",
+                    "allDay": false,
+                    "uid": "39d0dbb7dd02557f9ebb504d97cf4269bcbc5946"
                 }
             ]
         },
@@ -53,18 +49,20 @@
                 {
                     "start": "2023-10-06 17:00:00",
                     "end": "2023-10-06 20:00:00",
-                    "uid": "f70a3c8655afecb7253deb981e6c8e9333fb5ad6",
-                    "isAllDay": true
+                    "allDay": false,
+                    "uid": "f70a3c8655afecb7253deb981e6c8e9333fb5ad6"
                 },
                 {
                     "start": "2023-10-07 13:00:00",
                     "end": "2023-10-07 16:00:00",
-                    "frequency": {
-                        "type": "DAILY",
-                        "count": 2
-                    },
-                    "uid": "39c58e3db47dec60e4c222dc86be1e36213179d8",
-                    "isAllDay": true
+                    "allDay": false,
+                    "uid": "39c58e3db47dec60e4c222dc86be1e36213179d8"
+                },
+                {
+                    "start": "2023-10-08 13:00:00",
+                    "end": "2023-10-08 16:00:00",
+                    "allDay": false,
+                    "uid": "12d9165b79f94122a7982bebd79bf4481ef36a3e"
                 }
             ]
         },
@@ -75,12 +73,14 @@
                 {
                     "start": "2023-09-23 13:00:00",
                     "end": "2023-09-23 16:00:00",
-                    "frequency": {
-                        "type": "DAILY",
-                        "count": 2
-                    },
-                    "uid": "1e6d27f01eff658de0b3d173a192e18c6613337f",
-                    "isAllDay": true
+                    "allDay": false,
+                    "uid": "1e6d27f01eff658de0b3d173a192e18c6613337f"
+                },
+                {
+                    "start": "2023-09-24 13:00:00",
+                    "end": "2023-09-24 16:00:00",
+                    "allDay": false,
+                    "uid": "11d596b2b61a2a1f82cd3cff48bdc92ee4e74d51"
                 }
             ]
         }

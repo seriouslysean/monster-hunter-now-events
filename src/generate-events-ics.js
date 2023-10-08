@@ -31,22 +31,21 @@ const wordWrap = (heading, content) => {
 };
 
 const generateEvent = (event, date) => {
-    const start = generateICSDatetime(date.start);
-    const end = generateICSDatetime(date.end);
+    const start = date.allDay
+        ? generateICSDatetime(date.start, false)
+        : generateICSDatetime(date.start);
+    const end = date.allDay
+        ? generateICSDatetime(date.end, true)
+        : generateICSDatetime(date.end);
 
     const eventObject = {
         UID: date.uid,
-        DTSTAMP: start,
+        DTSTAMP: generateICSDatetime(new Date().toISOString()), // This ensures DTSTAMP always has a valid timestamp.
         DTSTART: start,
         DTEND: end,
         SUMMARY: `MHN:${event.summary}`,
         DESCRIPTION: event.description,
     };
-
-    // Add RRULE based on frequency if available
-    if (date.frequency && date.frequency.type === 'DAILY') {
-        eventObject.RRULE = `FREQ=${date.frequency.type};COUNT=${date.frequency.count}`;
-    }
 
     const eventFields = Object.entries(eventObject)
         .map(([key, value]) => wordWrap(key, value))
@@ -101,7 +100,10 @@ export default function generateFeed() {
         if (!events.length) {
             throw new Error('No events found');
         }
-
+        // Note: Google Calendar stores timed events using UTC timestamps according to the ISO 8601
+        // standard (https://tools.ietf.org/html/rfc3339). This means that every timed event
+        // corresponds to a fixed point in time which prevents the use of RRULE due to our use of
+        // floating times. Big bummer, but it just means a larger ICS file at the end of the day.
         const icsEvents = events.reduce((acc, event) => {
             console.debug(`Adding event: ${event.summary}`);
             const dates = event.dates || [];

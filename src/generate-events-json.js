@@ -1,10 +1,7 @@
 import { readdirSync } from 'fs';
 import crypto from 'crypto';
 
-import { isSameDay, startOfDay, endOfDay, parse } from 'date-fns';
-
 import { paths } from './utils/config.js';
-import { isConsecutiveDay } from './utils/date-utils.js';
 import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
 
 const generateEventUID = (start, end, summary) => {
@@ -13,63 +10,14 @@ const generateEventUID = (start, end, summary) => {
 };
 
 const adaptEventWithDays = (event) => {
-    const adaptedDates = [];
-
-    let i = 0;
-    while (i < event.dates.length) {
-        const date = { ...event.dates[i] };
-        let frequencyCount = date.frequency ? date.frequency.count : 1;
-
-        const hasSameTime = (index) => {
-            const currentEndTime = event.dates[index].end.split(' ')[1];
-            const currentStartTime = event.dates[index].start.split(' ')[1];
-            const nextEndTime = event.dates[index + 1]
-                ? event.dates[index + 1].end.split(' ')[1]
-                : null;
-            const nextStartTime = event.dates[index + 1]
-                ? event.dates[index + 1].start.split(' ')[1]
-                : null;
-
-            return (
-                currentEndTime === nextEndTime &&
-                currentStartTime === nextStartTime
-            );
-        };
-
-        while (
-            i + frequencyCount < event.dates.length &&
-            isConsecutiveDay(
-                event.dates[i + frequencyCount - 1].start,
-                event.dates[i + frequencyCount].start,
-            ) &&
-            hasSameTime(i + frequencyCount - 1)
-        ) {
-            frequencyCount += 1;
-        }
-
-        if (frequencyCount > 1) {
-            date.frequency = {
-                type: 'DAILY',
-                count: frequencyCount,
-            };
-        }
-
-        date.uid = generateEventUID(date.start, date.end, event.summary);
-
-        // Determine if it's an all-day event
-        const startDate = parse(date.start, 'yyyy-MM-dd HH:mm:ss', new Date());
-        const endDate = parse(date.end, 'yyyy-MM-dd HH:mm:ss', new Date());
-        date.isAllDay =
-            isSameDay(startDate, startOfDay(startDate)) &&
-            isSameDay(endDate, endOfDay(endDate));
-
-        adaptedDates.push(date);
-        i += frequencyCount;
-    }
-
     return {
         ...event,
-        dates: adaptedDates,
+        dates: event.dates.map((date) => {
+            return {
+                ...date,
+                uid: generateEventUID(date.start, date.end, event.summary),
+            };
+        }),
     };
 };
 
@@ -112,7 +60,6 @@ function mergeEventFixtures(directoryNames) {
     };
 }
 
-// Main function to generate the events JSON file
 function generateEventsJSON() {
     console.log('Generating events.json');
     const directoryNames = getFixtureDirectoryNames();

@@ -60,32 +60,50 @@ export async function getEventsFromHTML(html, debug = false) {
             role: 'system',
             content: `From the provided content, extract ONLY the events that occur STRICTLY within the game environment of "Monster Hunter Now".
 
-The criteria are clear:
-- The event should take place within the virtual game environment, allowing for player interaction.
-- A clear start and end time for the event must be evident.
-- Events occurring in continuous time frames should be considered a single event. However, if the same event occurs during a continuous span and then separately at distinct times (like during the week and then separately on the weekend), treat them as two separate events. Discontinuities in time frames are important.
-- Assumptions or creative additions to the content should not be made.
+Criteria for Extraction:
 
-The content should be read carefully to identify:
-- Time-bound in-game quests, challenges, or missions that require player engagement.
-- Time-limited in-game bonuses or competitions with defined start and end times.
-- Specific in-game locations or settings tied to events.
+1. **Virtual Game Environment**:
+    - The event should take place strictly inside the "Monster Hunter Now" virtual game environment, enabling direct player interaction.
 
-Exclude the following:
-- Wide-ranging game updates, announcements, or new feature additions without a specific in-game, time-bound challenge or activity.
-- Any event, bonus, promotion, or activity that takes place outside the game environment in the real world.
-- Statements or references that lack clear signals of a time-limited in-game event.
+2. **Event Duration**:
+    - A clear and definite start and end time should be mentioned for the event.
+    - If an event lacks either a start or an end time, exclude it.
+    - For events covering an entire day without exact timings, indicate this with the "allDay" attribute set to true. In such cases, only provide the date in the format "YYYY-MM-DD".
 
-Use the JSON format provided:
+3. **Event Continuity**:
+    - Continuous events should be considered a singular event.
+    - If an event happens continuously but also occurs separately at distinct intervals (e.g., throughout the week and then separately on the weekend), catalog them as individual events. Ensure discontinuities are highlighted.
+
+4. **No Assumptions or Additions**:
+    - Refrain from making unfounded assumptions or adding anything to the content.
+
+What to Look for:
+- Time-limited quests, missions, or challenges within the game requiring player engagement.
+- In-game bonuses or competitions that have a defined start and end time.
+- Specific in-game locations linked to the events.
+
+What to Avoid:
+- Broad game updates, announcements, or new feature introductions without a clear time-limited in-game activity.
+- Events or promotions taking place outside of the virtual game environment.
+- Ambiguous statements that don’t clearly indicate a time-restricted in-game event.
+
+When Extracting Dates:
+- Sort the dates from the most recent to the oldest, ensuring consecutive dates are sequential.
+
+Required JSON Format:
 {
     "summary": "Name of the Event",
     "description": "Description of the Event",
-    "dates": [{"start": "YYYY-MM-DD HH:MM:SS", "end": "YYYY-MM-DD HH:MM:SS"}]
+    "dates": [
+        {
+            "start": "YYYY-MM-DD HH:MM:SS",
+            "end": "YYYY-MM-DD HH:MM:SS",
+            "allDay": true/false
+        }
+    ]
 }
 
-Dates should be ordered from newest to oldest, ensuring that consecutive dates are next to each other.
-
-If the content doesn't reveal any qualifying in-game events, use the following format:
+If the content doesn't contain any suitable in-game events, adhere to this format:
 {
     "events": []
 }`,

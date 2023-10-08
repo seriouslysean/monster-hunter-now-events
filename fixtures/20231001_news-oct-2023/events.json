@@ -6,15 +6,18 @@
             "dates": [
                 {
                     "start": "2023-10-06 17:00:00",
-                    "end": "2023-10-06 20:00:00"
+                    "end": "2023-10-06 20:00:00",
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-07 13:00:00",
-                    "end": "2023-10-07 16:00:00"
+                    "end": "2023-10-07 16:00:00",
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-08 13:00:00",
-                    "end": "2023-10-08 16:00:00"
+                    "end": "2023-10-08 16:00:00",
+                    "allDay": false
                 }
             ]
         },
@@ -24,35 +27,34 @@
             "dates": [
                 {
                     "start": "2023-10-09 00:00:00",
-                    "end": "2023-10-13 16:59:00"
-                }
-            ]
-        },
-        {
-            "summary": "Rathian & Pink Rathian Weekend",
-            "description": "Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
-            "dates": [
+                    "end": "2023-10-13 16:59:00",
+                    "allDay": false
+                },
                 {
                     "start": "2023-10-13 17:00:00",
-                    "end": "2023-10-13 20:00:00"
+                    "end": "2023-10-13 20:00:00",
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-14 13:00:00",
-                    "end": "2023-10-14 16:00:00"
+                    "end": "2023-10-14 16:00:00",
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-15 13:00:00",
-                    "end": "2023-10-15 16:00:00"
+                    "end": "2023-10-15 16:00:00",
+                    "allDay": false
                 }
             ]
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment!",
             "dates": [
                 {
                     "start": "2023-10-25 00:00:00",
-                    "end": "2023-10-31 23:59:59"
+                    "end": "2023-10-31 23:59:00",
+                    "allDay": true
                 }
             ]
         }
