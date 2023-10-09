@@ -1,19 +1,25 @@
 {
     "events": [
         {
-            "summary": "Investigate Cherry-colored Rathian",
-            "description": "Cherry-colored Rathian scales have been discovered in Forest Habitats. Hunters are encouraged to investigate.",
+            "summary": "Cherry-colored Rathian Investigation",
+            "description": "Cherry-colored Rathian scales, different from those of a normal Rathian, have been discovered in Forest Habitats! Investigate the change in the ecosystem.",
             "dates": [
                 {
                     "start": "2023-10-09T09:00:00",
                     "end": "2023-10-15T16:00:00",
                     "allDay": false
                 }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathian"
             ]
         },
         {
             "summary": "Boosted Appearance Rates for Rathian and Pink Rathian",
-            "description": "Rathian and Pink Rathian will appear more frequently in Forest Habitats during specific times.",
+            "description": "Rathian and Pink Rathian will appear more frequently in Forest Habitats during specific time frames.",
             "dates": [
                 {
                     "start": "2023-10-13T17:00:00",
@@ -30,6 +36,13 @@
                     "end": "2023-10-15T16:00:00",
                     "allDay": false
                 }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathian",
+                "Pink Rathian"
             ]
         }
     ]

@@ -60,52 +60,54 @@ export async function getEventsFromHTML(html, debug = false) {
     const messages = [
         {
             role: 'system',
-            content: `Extract events from the provided content that are STRICTLY occurring within the virtual game "Monster Hunter Now". Ensure your extraction adheres to the following:
+            content: `**Event Extraction Guidelines: Monster Hunter Now**
+
+Extract in-game events occurring STRICTLY within the virtual game "Monster Hunter Now". Ensure your extraction adheres to the following criteria:
 
 1. **Game Environment**:
-    - Events must ONLY be inside the "Monster Hunter Now" game. Exclude any external promotions or updates.
+    - Events should ONLY occur inside "Monster Hunter Now". Exclude any external promotions, updates, or non-game events.
 
 2. **Event Duration**:
-    - Must have both a start and end time.
-    - If it's an all-day event without specific times, use "allDay": true, with 00:00:00 as the start and 23:59:59 as the end.
+    - Must include both a start and end time.
+    - For all-day events without specific times, set "allDay": true with 00:00:00 as the start and 23:59:59 as the end.
 
 3. **Event Continuity**:
-    - Treat continuous events as one. If they have specific additional intervals, list those separately.
+    - If multiple instances of the same event are found in different content, combine them as one, ensuring all details are captured.
+    - List additional intervals or time frames separately within the event details.
 
 4. **Avoid Assumptions/Additions**:
-    - Your extraction should be purely based on the provided content.
+    - Extract based solely on the provided content. No outside information should be incorporated.
 
-**Specifically Focus On**:
-- Player-engaging quests, missions, or challenges that are time-bound.
-- In-game bonuses or competitions with clear start and end times.
-- Locations within the game tied to events.
+**Focus On**:
+- Player-centric quests, missions, challenges that are time-bound.
+- In-game bonuses, competitions with clear start/end times.
+- Game locations associated with events.
 
-**Avoid**:
-- Broad updates or features without a time-bound game activity.
-- Anything outside the game environment.
-- Vague references without clear time-bound in-game context.
+**Exclude**:
+- Generic game updates or features without a specific in-game activity timeframe.
+- Events or mentions external to the game environment.
+- Ambiguous events lacking a clear time-bound in-game context.
 
-When you list dates, arrange them from recent to oldest. Ensure consecutive dates follow each other.
+When listing dates, organize them from recent to oldest. Ensure consecutive dates follow consecutively.
 
-Output format:
+Ensure to return valid JSON.
+
+**Output Format**:
 {
-    "summary": "Event Name",
-    "description": "Event Details",
-    "dates": [
-        {
-            "start": "YYYY-MM-DDTHH:mm:ss",
-            "end": "YYYY-MM-DDTHH:mm:ss",
-            "allDay": true/false
-        }
-    ]
-}
-
-If no in-game events match these criteria, return:
-{
-    "events": []
-}
-
-Ensure to cross-check your extracted data against the above guidelines before finalizing your output.`,
+    events: [{
+        "summary": "Event Name",
+        "description": "Event Details",
+        "dates": [
+            {
+                "start": "YYYY-MM-DDTHH:mm:ss",
+                "end": "YYYY-MM-DDTHH:mm:ss",
+                "allDay": true/false
+            }
+        ],
+        "habitat": ["Desert", "Forest", "Swamp", etc],
+        "monsters": ["Rathalos", "Rathian", "Diablos", etc],
+    }],
+}`,
         },
         {
             role: 'user',
@@ -130,26 +132,42 @@ export async function getDedupedJSON(json, debug = false) {
     const messages = [
         {
             role: 'system',
-            content: `Based on the provided JSON:
+            content: `**Event Combination Guidelines: Monster Hunter Now**
 
-1. **Merge Only Identical Timed Events**: Merge events ONLY if they have the exact same start and end dates and times. Overlapping dates without exact match should not be merged.
-2. **Generate Coherent Summaries**: Summaries should be a combination of both events only if they are closely related in theme or content. Generate a new summary that encapsulates the essence of both events without using " | ".
-3. **Combine Descriptions Carefully**: Integrate the event descriptions to ensure the final combined description is coherent and retains the essence of both original descriptions.
+Given the provided JSON:
 
-Return the events in this format:
+1. **Criteria for Merging**:
+    - **Same Dates and Time**: Only merge events that share exact start and end times.
+    - **Similar Themes**: Merge events if they involve identical monsters and habitats.
+
+2. **Generate Coherent Summaries**:
+    - If two events are merged based on the criteria above, generate a new summary that encompasses the theme of both without using " | ".
+
+3. **Combine Descriptions Carefully**:
+    - When merging, integrate the descriptions to ensure the combined version is clear and retains essential information from both originals.
+
+**Output Format**:
 {
-    "summary": "Generated Event Name",
-    "description": "Merged Event Details",
-    "dates": [
+    "events": [
         {
-            "start": "YYYY-MM-DDTHH:mm:ss",
-            "end": "YYYY-MM-DDTHH:mm:ss",
-            "allDay": true/false
+            "summary": "Generated Event Name",
+            "description": "Merged Event Details",
+            "dates": [
+                {
+                    "start": "YYYY-MM-DDTHH:mm:ss",
+                    "end": "YYYY-MM-DDTHH:mm:ss",
+                    "allDay": true/false
+                }
+            ],
+            "habitat": ["Desert", "Forest", "Swamp", etc],
+            "monsters": ["Rathalos", "Rathian", "Diablos", etc]
         }
     ]
 }
 
-Events that don't meet the above strict criteria for merging should remain as separate items in the returned list. Ensure individual timed events with unique times remain separate within the 'dates' array.`,
+Note:
+- Events that don't meet the strict criteria for merging should remain as separate items in the returned list.
+- If multiple events share the exact date and time but differ in other details, they should remain distinct.`,
         },
         {
             role: 'user',

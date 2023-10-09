@@ -16,7 +16,7 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:edb6c4f48fd38bfd068b1520c9adc05ea55ade82
+UID:undefined
 DTSTAMP:20231025
 DTSTART:20231025
 DTEND:20231101
@@ -26,53 +26,54 @@ DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
  sual?!
 END:VEVENT
 BEGIN:VEVENT
-UID:de09394b11042be261e6ea01f7be528d10b64a47
+UID:undefined
 DTSTAMP:20231013T170000
 DTSTART:20231013T170000
 DTEND:20231013T200000
 SUMMARY:MHN: Boosted Appearance Rates for Rathian and Pink Rathian
 DESCRIPTION:Rathian and Pink Rathian will appear more frequently in Forest 
- Habitats during specific times.
+ Habitats during specific time frames.
 END:VEVENT
 BEGIN:VEVENT
-UID:420f67dd003d4cd9226481b0173b128dd4b4883b
+UID:undefined
 DTSTAMP:20231014T130000
 DTSTART:20231014T130000
 DTEND:20231014T160000
 SUMMARY:MHN: Boosted Appearance Rates for Rathian and Pink Rathian
 DESCRIPTION:Rathian and Pink Rathian will appear more frequently in Forest 
- Habitats during specific times.
+ Habitats during specific time frames.
 END:VEVENT
 BEGIN:VEVENT
-UID:2fe48a8fd219fab91877791042c4ee63234f2191
+UID:undefined
 DTSTAMP:20231015T130000
 DTSTART:20231015T130000
 DTEND:20231015T160000
 SUMMARY:MHN: Boosted Appearance Rates for Rathian and Pink Rathian
 DESCRIPTION:Rathian and Pink Rathian will appear more frequently in Forest 
- Habitats during specific times.
+ Habitats during specific time frames.
 END:VEVENT
 BEGIN:VEVENT
-UID:6d300544493491c3f785a3c27861f06e90576501
+UID:undefined
 DTSTAMP:20231009T090000
 DTSTART:20231009T090000
 DTEND:20231015T160000
-SUMMARY:MHN: Investigate Cherry-colored Rathian
-DESCRIPTION:Cherry-colored Rathian scales have been discovered in Forest Ha
- bitats. Hunters are encouraged to investigate.
+SUMMARY:MHN: Cherry-colored Rathian Investigation
+DESCRIPTION:Cherry-colored Rathian scales, different from those of a normal
+  Rathian, have been discovered in Forest Habitats! Investigate the chang
+ e in the ecosystem.
 END:VEVENT
 BEGIN:VEVENT
-UID:b97b76ad828872f9fc9be2bf369f1692ec276e44
+UID:undefined
 DTSTAMP:20231009T090000
 DTSTART:20231009T090000
-DTEND:20231013T165900
+DTEND:20231013T165959
 SUMMARY:MHN: Rathian & Pink Rathian Week
 DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  hian and Pink Rathian will appear more frequently than usual in Forest H
  abitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:c81d1fcaa72a9be2f9a3191ca4cb541e310bde48
+UID:undefined
 DTSTAMP:20231013T170000
 DTSTART:20231013T170000
 DTEND:20231013T200000
@@ -82,7 +83,7 @@ DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  abitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:291f82f123859422f56f8b6a0a9338c13475a533
+UID:undefined
 DTSTAMP:20231014T130000
 DTSTART:20231014T130000
 DTEND:20231014T160000
@@ -92,7 +93,7 @@ DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  abitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:885807f0916bc95424b110e66a2b6b8a72b71bdd
+UID:undefined
 DTSTAMP:20231015T130000
 DTSTART:20231015T130000
 DTEND:20231015T160000
@@ -102,7 +103,7 @@ DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  abitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:b7556f061c4af13b663fadebe225ae28430e374d
+UID:undefined
 DTSTAMP:20231006T170000
 DTSTART:20231006T170000
 DTEND:20231006T200000
@@ -111,7 +112,7 @@ DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
  bitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:558156bbb6be4557593beb9b08e20f6fc2fe8d8c
+UID:undefined
 DTSTAMP:20231007T130000
 DTSTART:20231007T130000
 DTEND:20231007T160000
@@ -120,7 +121,7 @@ DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
  bitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:916d53805029184ea236fd3a4fa7e1298140f771
+UID:undefined
 DTSTAMP:20231008T130000
 DTSTART:20231008T130000
 DTEND:20231008T160000
@@ -129,7 +130,7 @@ DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
  bitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:be65b6247969e34b9dae7520d7c1c8f2af2b2227
+UID:undefined
 DTSTAMP:20230923T130000
 DTSTART:20230923T130000
 DTEND:20230923T160000
@@ -140,7 +141,7 @@ DESCRIPTION:Investigate an outbreak of Diablos in desert regions! Diablos w
   in AR mode to earn rewards.
 END:VEVENT
 BEGIN:VEVENT
-UID:513c5a4943cedd357435882de56975b5c1ab9e7a
+UID:undefined
 DTSTAMP:20230924T130000
 DTSTART:20230924T130000
 DTEND:20230924T160000
