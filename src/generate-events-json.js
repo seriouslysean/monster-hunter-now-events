@@ -2,7 +2,7 @@ import { readdirSync } from 'fs';
 import crypto from 'crypto';
 
 import { paths } from './utils/config.js';
-// import { getDedupedJSON } from './utils/chat-gpt.js';
+import { getDedupedJSON } from './utils/chat-gpt.js';
 import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
 
 const generateEventUID = (start, end, summary) => {
@@ -16,7 +16,9 @@ const adaptEventWithDays = (event) => {
         dates: event.dates.map((date) => {
             return {
                 ...date,
-                uid: generateEventUID(date.start, date.end, event.summary),
+                // TODO: Move this to the ICS generation file which will take place after the
+                // event deduping via GPT
+                // uid: generateEventUID(date.start, date.end, event.summary),
             };
         }),
     };
@@ -65,11 +67,11 @@ async function generateEventsJSON() {
     console.log('Generating events.json');
     const directoryNames = getFixtureDirectoryNames();
     const mergedEvents = mergeEventFixtures(directoryNames);
-    saveEventsJSON(mergedEvents);
+    saveEventsJSON(mergedEvents, true);
     // TODO: Dedupe events.json by combining similar events, maybe via ChatGPT?
-    // console.log('Deduping events.json');
-    // const dedupedJSON = await getDedupedJSON(mergedEvents, true);
-    // saveEventsJSON(dedupedJSON);
+    console.log('Deduping events.json');
+    const dedupedJSON = await getDedupedJSON(mergedEvents, true);
+    saveEventsJSON(dedupedJSON);
 }
 
 generateEventsJSON();

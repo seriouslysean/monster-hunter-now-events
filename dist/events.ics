@@ -27,80 +27,55 @@ DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
-DTSTAMP:20231013T170000
-DTSTART:20231013T170000
-DTEND:20231013T200000
-SUMMARY:MHN: Boosted Appearance Rates for Rathian and Pink Rathian
-DESCRIPTION:Rathian and Pink Rathian will appear more frequently in Forest 
- Habitats during specific time frames.
-END:VEVENT
-BEGIN:VEVENT
-UID:undefined
-DTSTAMP:20231014T130000
-DTSTART:20231014T130000
-DTEND:20231014T160000
-SUMMARY:MHN: Boosted Appearance Rates for Rathian and Pink Rathian
-DESCRIPTION:Rathian and Pink Rathian will appear more frequently in Forest 
- Habitats during specific time frames.
-END:VEVENT
-BEGIN:VEVENT
-UID:undefined
-DTSTAMP:20231015T130000
-DTSTART:20231015T130000
-DTEND:20231015T160000
-SUMMARY:MHN: Boosted Appearance Rates for Rathian and Pink Rathian
-DESCRIPTION:Rathian and Pink Rathian will appear more frequently in Forest 
- Habitats during specific time frames.
-END:VEVENT
-BEGIN:VEVENT
-UID:undefined
-DTSTAMP:20231009T090000
-DTSTART:20231009T090000
-DTEND:20231015T160000
-SUMMARY:MHN: Cherry-colored Rathian Investigation
-DESCRIPTION:Cherry-colored Rathian scales, different from those of a normal
-  Rathian, have been discovered in Forest Habitats! Investigate the chang
- e in the ecosystem.
-END:VEVENT
-BEGIN:VEVENT
-UID:undefined
 DTSTAMP:20231009T090000
 DTSTART:20231009T090000
 DTEND:20231013T165959
-SUMMARY:MHN: Rathian & Pink Rathian Week
+SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
+ igation
 DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above.
+ abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
+ hian scales, different from those of a normal Rathian, have been discove
+ red in Forest Habitats! Investigate the change in the ecosystem.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
 DTSTAMP:20231013T170000
 DTSTART:20231013T170000
 DTEND:20231013T200000
-SUMMARY:MHN: Rathian & Pink Rathian Week
+SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
+ igation
 DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above.
+ abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
+ hian scales, different from those of a normal Rathian, have been discove
+ red in Forest Habitats! Investigate the change in the ecosystem.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
 DTSTAMP:20231014T130000
 DTSTART:20231014T130000
 DTEND:20231014T160000
-SUMMARY:MHN: Rathian & Pink Rathian Week
+SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
+ igation
 DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above.
+ abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
+ hian scales, different from those of a normal Rathian, have been discove
+ red in Forest Habitats! Investigate the change in the ecosystem.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
 DTSTAMP:20231015T130000
 DTSTART:20231015T130000
 DTEND:20231015T160000
-SUMMARY:MHN: Rathian & Pink Rathian Week
+SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
+ igation
 DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
  hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above.
+ abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
+ hian scales, different from those of a normal Rathian, have been discove
+ red in Forest Habitats! Investigate the change in the ecosystem.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined

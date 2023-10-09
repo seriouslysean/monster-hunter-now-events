@@ -20,7 +20,7 @@ async function askGPTChat(messages, debug) {
 
         const openai = new OpenAI({ apiKey });
         const chatCompletion = await openai.chat.completions.create({
-            model: 'gpt-3.5-turbo',
+            model: 'gpt-4',
             messages,
             // Adjust this value (0 to 1) to control randomness. Lower values make the output more deterministic.
             // https://platform.openai.com/docs/guides/gpt/how-should-i-set-the-temperature-parameter
@@ -137,16 +137,16 @@ export async function getDedupedJSON(json, debug = false) {
 Given the provided JSON:
 
 1. **Criteria for Merging**:
-    - **Same Dates and Time**: Only merge events that share exact start and end times.
-    - **Similar Themes**: Merge events if they involve identical monsters and habitats.
+    - **Overlapping Dates & Times**: Merge events that share a time frame or overlap within the same habitat and involve similar monsters. If the times are identical, merge them into one; if they overlap but aren't identical, maintain them separately within the 'dates' array.
+    - **Habitat & Monsters**: Events in the same habitat, involving the same monsters, during overlapping or identical times should be considered for merging.
 
-2. **Generate Coherent Summaries**:
-    - If two events are merged based on the criteria above, generate a new summary that encompasses the theme of both without using " | ".
+2. **Generate Coherent Summaries**: For events that are closely related in theme or content, create a combined summary that encapsulates the essence of both events without using " | ".
 
-3. **Combine Descriptions Carefully**:
-    - When merging, integrate the descriptions to ensure the combined version is clear and retains essential information from both originals.
+3. **Combine Descriptions Carefully**: Integrate the event descriptions to ensure the final combined description is coherent and retains the essence of both original descriptions.
 
-**Output Format**:
+4. **Remove Extraneous Keys**: After merging, monsters and habitat keys should be removed from the final JSON.
+
+Return the events in this format:
 {
     "events": [
         {
@@ -159,15 +159,15 @@ Given the provided JSON:
                     "allDay": true/false
                 }
             ],
-            "habitat": ["Desert", "Forest", "Swamp", etc],
-            "monsters": ["Rathalos", "Rathian", "Diablos", etc]
         }
     ]
 }
 
-Note:
-- Events that don't meet the strict criteria for merging should remain as separate items in the returned list.
-- If multiple events share the exact date and time but differ in other details, they should remain distinct.`,
+Notes:
+- Events that don't meet the above strict criteria for merging should remain as separate items in the returned list.
+- Ensure individual timed events with unique times remain separate within the 'dates' array.
+
+Return ONLY valid JSON in the format requested as the final output.`,
         },
         {
             role: 'user',

@@ -9,58 +9,11 @@
                     "end": "2023-10-31T23:59:59",
                     "allDay": true
                 }
-            ],
-            "habitat": [],
-            "monsters": []
-        },
-        {
-            "summary": "Boosted Appearance Rates for Rathian and Pink Rathian",
-            "description": "Rathian and Pink Rathian will appear more frequently in Forest Habitats during specific time frames.",
-            "dates": [
-                {
-                    "start": "2023-10-13T17:00:00",
-                    "end": "2023-10-13T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-14T13:00:00",
-                    "end": "2023-10-14T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-15T13:00:00",
-                    "end": "2023-10-15T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Forest"
-            ],
-            "monsters": [
-                "Rathian",
-                "Pink Rathian"
             ]
         },
         {
-            "summary": "Cherry-colored Rathian Investigation",
-            "description": "Cherry-colored Rathian scales, different from those of a normal Rathian, have been discovered in Forest Habitats! Investigate the change in the ecosystem.",
-            "dates": [
-                {
-                    "start": "2023-10-09T09:00:00",
-                    "end": "2023-10-15T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Forest"
-            ],
-            "monsters": [
-                "Rathian"
-            ]
-        },
-        {
-            "summary": "Rathian & Pink Rathian Week",
-            "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
+            "summary": "Rathian & Pink Rathian Week with Cherry-colored Rathian Investigation",
+            "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above. Additionally, Cherry-colored Rathian scales, different from those of a normal Rathian, have been discovered in Forest Habitats! Investigate the change in the ecosystem.",
             "dates": [
                 {
                     "start": "2023-10-09T09:00:00",
@@ -82,13 +35,6 @@
                     "end": "2023-10-15T16:00:00",
                     "allDay": false
                 }
-            ],
-            "habitat": [
-                "Forest"
-            ],
-            "monsters": [
-                "Rathian",
-                "Pink Rathian"
             ]
         },
         {
@@ -110,13 +56,6 @@
                     "end": "2023-10-08T16:00:00",
                     "allDay": false
                 }
-            ],
-            "habitat": [
-                "Swamp",
-                "Forest"
-            ],
-            "monsters": [
-                "Tobi-Kadachi"
             ]
         },
         {
@@ -133,12 +72,6 @@
                     "end": "2023-09-24T16:00:00",
                     "allDay": false
                 }
-            ],
-            "habitat": [
-                "Desert"
-            ],
-            "monsters": [
-                "Diablos"
             ]
         }
     ]
