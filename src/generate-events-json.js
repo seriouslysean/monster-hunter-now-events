@@ -2,6 +2,7 @@ import { readdirSync } from 'fs';
 import crypto from 'crypto';
 
 import { paths } from './utils/config.js';
+// import { getDedupedJSON } from './utils/chat-gpt.js';
 import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
 
 const generateEventUID = (start, end, summary) => {
@@ -60,11 +61,15 @@ function mergeEventFixtures(directoryNames) {
     };
 }
 
-function generateEventsJSON() {
+async function generateEventsJSON() {
     console.log('Generating events.json');
     const directoryNames = getFixtureDirectoryNames();
     const mergedEvents = mergeEventFixtures(directoryNames);
     saveEventsJSON(mergedEvents);
+    // TODO: Dedupe events.json by combining similar events, maybe via ChatGPT?
+    // console.log('Deduping events.json');
+    // const dedupedJSON = await getDedupedJSON(mergedEvents, true);
+    // saveEventsJSON(dedupedJSON);
 }
 
 generateEventsJSON();

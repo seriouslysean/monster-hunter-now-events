@@ -2,13 +2,49 @@
     "events": [
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
-                    "start": "2023-10-25 00:00:00",
-                    "end": "2023-10-31 23:59:00",
+                    "start": "2023-10-25T00:00:00",
+                    "end": "2023-10-31T23:59:59",
                     "allDay": true,
-                    "uid": "8488f6a2917e9e86d3731836df135ace5001a0f4"
+                    "uid": "edb6c4f48fd38bfd068b1520c9adc05ea55ade82"
+                }
+            ]
+        },
+        {
+            "summary": "Boosted Appearance Rates for Rathian and Pink Rathian",
+            "description": "Rathian and Pink Rathian will appear more frequently in Forest Habitats during specific times.",
+            "dates": [
+                {
+                    "start": "2023-10-13T17:00:00",
+                    "end": "2023-10-13T20:00:00",
+                    "allDay": false,
+                    "uid": "de09394b11042be261e6ea01f7be528d10b64a47"
+                },
+                {
+                    "start": "2023-10-14T13:00:00",
+                    "end": "2023-10-14T16:00:00",
+                    "allDay": false,
+                    "uid": "420f67dd003d4cd9226481b0173b128dd4b4883b"
+                },
+                {
+                    "start": "2023-10-15T13:00:00",
+                    "end": "2023-10-15T16:00:00",
+                    "allDay": false,
+                    "uid": "2fe48a8fd219fab91877791042c4ee63234f2191"
+                }
+            ]
+        },
+        {
+            "summary": "Investigate Cherry-colored Rathian",
+            "description": "Cherry-colored Rathian scales have been discovered in Forest Habitats. Hunters are encouraged to investigate.",
+            "dates": [
+                {
+                    "start": "2023-10-09T09:00:00",
+                    "end": "2023-10-15T16:00:00",
+                    "allDay": false,
+                    "uid": "6d300544493491c3f785a3c27861f06e90576501"
                 }
             ]
         },
@@ -17,28 +53,28 @@
             "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
             "dates": [
                 {
-                    "start": "2023-10-09 00:00:00",
-                    "end": "2023-10-13 16:59:00",
+                    "start": "2023-10-09T09:00:00",
+                    "end": "2023-10-13T16:59:00",
                     "allDay": false,
-                    "uid": "eeac8f21e6079dd8b4e8d563f4e5fc49c07de7c4"
+                    "uid": "b97b76ad828872f9fc9be2bf369f1692ec276e44"
                 },
                 {
-                    "start": "2023-10-13 17:00:00",
-                    "end": "2023-10-13 20:00:00",
+                    "start": "2023-10-13T17:00:00",
+                    "end": "2023-10-13T20:00:00",
                     "allDay": false,
-                    "uid": "239669fe3158d60f09a0044bb21ca7bd6eac6dc5"
+                    "uid": "c81d1fcaa72a9be2f9a3191ca4cb541e310bde48"
                 },
                 {
-                    "start": "2023-10-14 13:00:00",
-                    "end": "2023-10-14 16:00:00",
+                    "start": "2023-10-14T13:00:00",
+                    "end": "2023-10-14T16:00:00",
                     "allDay": false,
-                    "uid": "7d532d87a9d8501e294ea5da3a75000985a14102"
+                    "uid": "291f82f123859422f56f8b6a0a9338c13475a533"
                 },
                 {
-                    "start": "2023-10-15 13:00:00",
-                    "end": "2023-10-15 16:00:00",
+                    "start": "2023-10-15T13:00:00",
+                    "end": "2023-10-15T16:00:00",
                     "allDay": false,
-                    "uid": "39d0dbb7dd02557f9ebb504d97cf4269bcbc5946"
+                    "uid": "885807f0916bc95424b110e66a2b6b8a72b71bdd"
                 }
             ]
         },
@@ -47,22 +83,22 @@
             "description": "Tobi-Kadachi will appear more frequently in Swamp and Forest Habitats for all hunters HR11 and above.",
             "dates": [
                 {
-                    "start": "2023-10-06 17:00:00",
-                    "end": "2023-10-06 20:00:00",
+                    "start": "2023-10-06T17:00:00",
+                    "end": "2023-10-06T20:00:00",
                     "allDay": false,
-                    "uid": "f70a3c8655afecb7253deb981e6c8e9333fb5ad6"
+                    "uid": "b7556f061c4af13b663fadebe225ae28430e374d"
                 },
                 {
-                    "start": "2023-10-07 13:00:00",
-                    "end": "2023-10-07 16:00:00",
+                    "start": "2023-10-07T13:00:00",
+                    "end": "2023-10-07T16:00:00",
                     "allDay": false,
-                    "uid": "39c58e3db47dec60e4c222dc86be1e36213179d8"
+                    "uid": "558156bbb6be4557593beb9b08e20f6fc2fe8d8c"
                 },
                 {
-                    "start": "2023-10-08 13:00:00",
-                    "end": "2023-10-08 16:00:00",
+                    "start": "2023-10-08T13:00:00",
+                    "end": "2023-10-08T16:00:00",
                     "allDay": false,
-                    "uid": "12d9165b79f94122a7982bebd79bf4481ef36a3e"
+                    "uid": "916d53805029184ea236fd3a4fa7e1298140f771"
                 }
             ]
         },
@@ -71,16 +107,16 @@
             "description": "Investigate an outbreak of Diablos in desert regions! Diablos will appear more frequently in desert regions. Time-limited Event Quests will be available. Complete quests such as snapping a picture of Diablos in AR mode to earn rewards.",
             "dates": [
                 {
-                    "start": "2023-09-23 13:00:00",
-                    "end": "2023-09-23 16:00:00",
+                    "start": "2023-09-23T13:00:00",
+                    "end": "2023-09-23T16:00:00",
                     "allDay": false,
-                    "uid": "1e6d27f01eff658de0b3d173a192e18c6613337f"
+                    "uid": "be65b6247969e34b9dae7520d7c1c8f2af2b2227"
                 },
                 {
-                    "start": "2023-09-24 13:00:00",
-                    "end": "2023-09-24 16:00:00",
+                    "start": "2023-09-24T13:00:00",
+                    "end": "2023-09-24T16:00:00",
                     "allDay": false,
-                    "uid": "11d596b2b61a2a1f82cd3cff48bdc92ee4e74d51"
+                    "uid": "513c5a4943cedd357435882de56975b5c1ab9e7a"
                 }
             ]
         }
