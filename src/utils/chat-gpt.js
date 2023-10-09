@@ -124,62 +124,66 @@ Ensure to return valid JSON.
 }
 
 export async function getDedupedJSON(json, debug = false) {
-    if (!json) {
+    if (!json || !json.events || json.events.length === 0) {
         console.log('!!! No json');
         return { events: [] };
     }
 
-    const messages = [
+    const { events } = json;
+    const dedupedEvents = [];
+
+    const systemMessages = [
         {
             role: 'system',
             content: `**Event Combination Guidelines: Monster Hunter Now**
 
-Given the provided JSON:
+You will receive a series of individual events. After all the events have been provided, deduplicate and logically combine these events based on the provided guidelines and send back the consolidated events one by one in a valid JSON format.
 
 1. **Criteria for Merging**:
     - **Overlapping Dates & Times**: Merge events that share a time frame or overlap within the same habitat and involve similar monsters. If the times are identical, merge them into one; if they overlap but aren't identical, maintain them separately within the 'dates' array.
     - **Habitat & Monsters**: Events in the same habitat, involving the same monsters, during overlapping or identical times should be considered for merging.
 
-2. **Generate Coherent Summaries**: For events that are closely related in theme or content, create a combined summary that encapsulates the essence of both events without using " | ".
+2. **Generate Coherent Summaries**: For events that are closely related in theme or content, create a combined summary that encapsulates the essence of both events without using " | ". The summary should be concise, suitable for calendar applications.
 
 3. **Combine Descriptions Carefully**: Integrate the event descriptions to ensure the final combined description is coherent and retains the essence of both original descriptions.
 
-4. **Remove Extraneous Keys**: After merging, monsters and habitat keys should be removed from the final JSON.
-
-Return the events in this format:
-{
-    "events": [
-        {
-            "summary": "Generated Event Name",
-            "description": "Merged Event Details",
-            "dates": [
-                {
-                    "start": "YYYY-MM-DDTHH:mm:ss",
-                    "end": "YYYY-MM-DDTHH:mm:ss",
-                    "allDay": true/false
-                }
-            ],
-        }
-    ]
-}
+4. **Return All Consolidated Events**: Based on the events provided, return all consolidated events in order. Format the result as valid JSON.
 
 Notes:
 - Events that don't meet the above strict criteria for merging should remain as separate items in the returned list.
-- Ensure individual timed events with unique times remain separate within the 'dates' array.
-
-Return ONLY valid JSON in the format requested as the final output.`,
+- Ensure individual timed events with unique times remain separate within the 'dates' array.`,
         },
         {
             role: 'user',
             content:
-                'Merge events with identical timings and closely related content:',
-        },
-        {
-            role: 'user',
-            content: JSON.stringify(json, null, 4),
+                'Merge events with identical timings and closely related content, then return consolidated events one by one:',
         },
     ];
 
-    const response = await askGPTChat(messages, debug);
-    return response ?? { events: [] };
+    // Calculate the number of batches
+    const EVENT_BATCH_COUNT = 4;
+    const numBatches = Math.ceil(events.length / EVENT_BATCH_COUNT);
+
+    for (let i = 0; i < numBatches; i += 1) {
+        const batchedEvents = events.slice(
+            i * EVENT_BATCH_COUNT,
+            (i + 1) * EVENT_BATCH_COUNT,
+        );
+
+        const messages = [
+            ...systemMessages,
+            ...batchedEvents.map((event) => ({
+                role: 'user',
+                content: JSON.stringify({ events: [event] }, null, 4),
+            })),
+        ];
+
+        // eslint-disable-next-line no-await-in-loop
+        const response = await askGPTChat(messages, debug);
+        if (response && response.events) {
+            dedupedEvents.push(...response.events);
+        }
+    }
+
+    return { events: dedupedEvents };
 }
