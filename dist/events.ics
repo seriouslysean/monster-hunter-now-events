@@ -22,60 +22,107 @@ DTSTART:20231025
 DTEND:20231101
 SUMMARY:MHN: Halloween Pumpkin Hunt
 DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than u
- sual?!
+ l Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
 DTSTAMP:20231009T090000
 DTSTART:20231009T090000
-DTEND:20231013T165959
-SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
- igation
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
- hian scales, different from those of a normal Rathian, have been discove
- red in Forest Habitats! Investigate the change in the ecosystem.
+DTEND:20231015T160000
+SUMMARY:MHN: A cherry-colored season: Investigate a new subspecies!
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
 DTSTAMP:20231013T170000
 DTSTART:20231013T170000
 DTEND:20231013T200000
-SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
- igation
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
- hian scales, different from those of a normal Rathian, have been discove
- red in Forest Habitats! Investigate the change in the ecosystem.
+SUMMARY:MHN: A cherry-colored season: Investigate a new subspecies!
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
 DTSTAMP:20231014T130000
 DTSTART:20231014T130000
 DTEND:20231014T160000
-SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
- igation
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
- hian scales, different from those of a normal Rathian, have been discove
- red in Forest Habitats! Investigate the change in the ecosystem.
+SUMMARY:MHN: A cherry-colored season: Investigate a new subspecies!
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
 DTSTAMP:20231015T130000
 DTSTART:20231015T130000
 DTEND:20231015T160000
-SUMMARY:MHN: Rathian & Pink Rathian Week with Cherry-colored Rathian Invest
- igation
-DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Rat
- hian and Pink Rathian will appear more frequently than usual in Forest H
- abitats for all hunters HR11 and above. Additionally, Cherry-colored Rat
- hian scales, different from those of a normal Rathian, have been discove
- red in Forest Habitats! Investigate the change in the ecosystem.
+SUMMARY:MHN: A cherry-colored season: Investigate a new subspecies!
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:undefined
+DTSTAMP:20231009T090000
+DTSTART:20231009T090000
+DTEND:20231013T165900
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Dur
+ ing specific times, Rathian and Pink Rathian will appear more frequently
+  than usual in Forest Habitats for all hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:undefined
+DTSTAMP:20231013T170000
+DTSTART:20231013T170000
+DTEND:20231013T200000
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Dur
+ ing specific times, Rathian and Pink Rathian will appear more frequently
+  than usual in Forest Habitats for all hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:undefined
+DTSTAMP:20231014T130000
+DTSTART:20231014T130000
+DTEND:20231014T160000
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Dur
+ ing specific times, Rathian and Pink Rathian will appear more frequently
+  than usual in Forest Habitats for all hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:undefined
+DTSTAMP:20231015T130000
+DTSTART:20231015T130000
+DTEND:20231015T160000
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:Pink Rathian will appear in low numbers in Forest Habitats. Dur
+ ing specific times, Rathian and Pink Rathian will appear more frequently
+  than usual in Forest Habitats for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
@@ -106,14 +153,41 @@ DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
+DTSTAMP:20230925
+DTSTART:20230925
+DTEND:20230926
+SUMMARY:MHN: Pre-registration Rewards Availability
+DESCRIPTION:Pre-registration rewards are now available for all players who 
+ install and log in before Monday, September 25, 2023, at 11:59 p.m. (UTC
+ ). Rewards must be claimed from the in-game shop before Thursday, Novemb
+ er 30, 2023, at 11:59 p.m. (local time). Rewards include Potion x10, Pai
+ ntball x3, Wander Droplet x3, Special Pre-order Makeup x4, Item Box Expa
+ nsion x500, and Special Carving Knife x3.
+END:VEVENT
+BEGIN:VEVENT
+UID:undefined
+DTSTAMP:20230926
+DTSTART:20230926
+DTEND:20231201
+SUMMARY:MHN: Pre-registration Rewards Availability
+DESCRIPTION:Pre-registration rewards are now available for all players who 
+ install and log in before Monday, September 25, 2023, at 11:59 p.m. (UTC
+ ). Rewards must be claimed from the in-game shop before Thursday, Novemb
+ er 30, 2023, at 11:59 p.m. (local time). Rewards include Potion x10, Pai
+ ntball x3, Wander Droplet x3, Special Pre-order Makeup x4, Item Box Expa
+ nsion x500, and Special Carving Knife x3.
+END:VEVENT
+BEGIN:VEVENT
+UID:undefined
 DTSTAMP:20230923T130000
 DTSTART:20230923T130000
 DTEND:20230923T160000
 SUMMARY:MHN: Diablos Invasion
-DESCRIPTION:Investigate an outbreak of Diablos in desert regions! Diablos w
+DESCRIPTION:Investigate an outbreak of Diablos in desert regions. Diablos w
  ill appear more frequently in desert regions. Time-limited Event Quests 
  will be available. Complete quests such as snapping a picture of Diablos
-  in AR mode to earn rewards.
+  in AR mode to earn rewards. Event Quests will automatically be made ava
+ ilable to hunters HR11 and over in the Special Quests tab in-game.
 END:VEVENT
 BEGIN:VEVENT
 UID:undefined
@@ -121,9 +195,22 @@ DTSTAMP:20230924T130000
 DTSTART:20230924T130000
 DTEND:20230924T160000
 SUMMARY:MHN: Diablos Invasion
-DESCRIPTION:Investigate an outbreak of Diablos in desert regions! Diablos w
+DESCRIPTION:Investigate an outbreak of Diablos in desert regions. Diablos w
  ill appear more frequently in desert regions. Time-limited Event Quests 
  will be available. Complete quests such as snapping a picture of Diablos
-  in AR mode to earn rewards.
+  in AR mode to earn rewards. Event Quests will automatically be made ava
+ ilable to hunters HR11 and over in the Special Quests tab in-game.
+END:VEVENT
+BEGIN:VEVENT
+UID:undefined
+DTSTAMP:20230923
+DTSTART:20230923
+DTEND:20230925
+SUMMARY:MHN: Diablos Invasion
+DESCRIPTION:Investigate an outbreak of Diablos in desert regions. Diablos w
+ ill appear more frequently in desert regions. Time-limited Event Quests 
+ will be available. Complete quests such as snapping a picture of Diablos
+  in AR mode to earn rewards. Event Quests will automatically be made ava
+ ilable to hunters HR11 and over in the Special Quests tab in-game.
 END:VEVENT
 END:VCALENDAR

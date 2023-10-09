@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 import { parse } from 'node-html-parser';
 import { getEventsFromHTML } from './chat-gpt.js';
 import { mhnUrls } from './config.js';
@@ -21,7 +23,34 @@ NEXT STEPS
 
 export const getSlugFromPath = (path) => path.substring(1).replace('/', '-');
 
-export async function fetchArticle(url) {
+export const generateEventUID = (start, end, summary) => {
+    const uidComponents = `${start}${end}${summary}`;
+    return crypto.createHash('sha1').update(uidComponents).digest('hex');
+};
+
+const fetchAndParse = async (url) => {
+    console.log(`Downloading html for ${url}`);
+    const { data: pageHTML } = await getPageHTML(url);
+    return parse(pageHTML);
+};
+
+const getArticlePages = (document, currentPage = 1) => {
+    const pages = new Set();
+    document
+        .querySelectorAll('#news [class^="_pagination"] a[href^="/news?page="]')
+        .forEach((el) => {
+            const page = parseInt(el.getAttribute('href').split('=')[1], 10);
+            const href = el.getAttribute('href');
+            if (page <= currentPage || !href) {
+                return;
+            }
+            const url = `${mhnUrls.root}${href}`;
+            pages.add(url);
+        });
+    return Array.from(pages);
+};
+
+export async function getArticleByURL(url) {
     try {
         if (!url || !url.startsWith(mhnUrls.news)) {
             throw new Error('Article url not valid', url);
@@ -52,39 +81,50 @@ export async function fetchArticle(url) {
     }
 }
 
-export async function getArticles() {
-    console.log(`Downloading html for ${mhnUrls.news}`);
-    const { data: newsHTML } = await getPageHTML(mhnUrls.news);
-    if (!newsHTML) {
-        throw new Error('No HTML returned');
-    }
-    const links = [];
+export async function getArticles(force = false) {
+    const downloadedLinks = [];
     const promiseFunctions = [];
-    const document = parse(newsHTML);
-    const anchors = document.querySelectorAll('#news a[href^="/news/"]');
-    anchors.forEach((el) => {
-        const path = el.getAttribute('href');
-        if (!path) {
-            return;
-        }
 
-        const url = `${mhnUrls.root}${path}`;
-        const timestamp = parseInt(
-            el.querySelector('[timestamp]').getAttribute('timestamp'),
-            10,
+    // Get news page index
+    const document = await fetchAndParse(mhnUrls.news);
+    const pageUrls = getArticlePages(document);
+    const pageDocuments = [document];
+
+    // Gather all news pages
+    for (let i = 0; i < pageUrls.length; i += 1) {
+        // eslint-disable-next-line no-await-in-loop
+        const pageDocument = await fetchAndParse(pageUrls[i]);
+        pageDocuments.push(pageDocument);
+    }
+
+    pageDocuments.forEach((pageDocument) => {
+        const anchors = pageDocument.querySelectorAll(
+            '#news a[href^="/news/"]',
         );
+        anchors.forEach((el) => {
+            const path = el.getAttribute('href');
+            if (!path) {
+                return;
+            }
 
-        const slug = getSlugFromPath(path);
-        const articleId = getArticleId(timestamp, slug);
-        const articleHTML = getHTMLFixture(articleId);
-        const articleJSON = getJSONFixture(articleId);
+            const url = `${mhnUrls.root}${path}`;
+            const timestamp = parseInt(
+                el.querySelector('[timestamp]').getAttribute('timestamp'),
+                10,
+            );
 
-        if (articleHTML && articleJSON) {
-            return;
-        }
+            const slug = getSlugFromPath(path);
+            const articleId = getArticleId(timestamp, slug);
+            const articleHTML = getHTMLFixture(articleId);
+            const articleJSON = getJSONFixture(articleId);
 
-        promiseFunctions.push(async () => fetchArticle(url));
-        links.push(url);
+            if (!force && articleHTML && articleJSON) {
+                return;
+            }
+
+            promiseFunctions.push(async () => getArticleByURL(url));
+            downloadedLinks.push(url);
+        });
     });
 
     for (let i = 0; i < promiseFunctions.length; i += 1) {
@@ -92,10 +132,10 @@ export async function getArticles() {
         await promiseFunctions[i]();
     }
 
-    if (!links.length) {
+    if (!downloadedLinks.length) {
         console.log('No new news articles found');
         return;
     }
 
-    console.log('News articles downloaded', links);
+    console.log('News articles downloaded', downloadedLinks);
 }

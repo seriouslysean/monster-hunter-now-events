@@ -2,22 +2,26 @@
     "events": [
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
                     "start": "2023-10-25T00:00:00",
                     "end": "2023-10-31T23:59:59",
                     "allDay": true
                 }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Kulu-Ya-Ku"
             ]
         },
         {
-            "summary": "Rathian & Pink Rathian Week with Cherry-colored Rathian Investigation",
-            "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above. Additionally, Cherry-colored Rathian scales, different from those of a normal Rathian, have been discovered in Forest Habitats! Investigate the change in the ecosystem.",
+            "summary": "A cherry-colored season: Investigate a new subspecies!",
+            "description": "From Monday, October 9, at 9:00 a.m. until Sunday, October 15, at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats. Pink Rathian will appear as long as you have unlocked Rathian hunts (by completing Chapter 9). While appearance rates are boosted between Friday, October 13, and Sunday, October 15, in Forest Habitats, Rathian will appear more frequently than usual and Pink Rathian will also be easier to find. Rathian and Pink Rathian will appear in Forest Habitats for all hunters HR11 and above.",
             "dates": [
                 {
                     "start": "2023-10-09T09:00:00",
-                    "end": "2023-10-13T16:59:59",
+                    "end": "2023-10-15T16:00:00",
                     "allDay": false
                 },
                 {
@@ -35,6 +39,46 @@
                     "end": "2023-10-15T16:00:00",
                     "allDay": false
                 }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathian",
+                "Pink Rathian"
+            ]
+        },
+        {
+            "summary": "Rathian & Pink Rathian Week",
+            "description": "Pink Rathian will appear in low numbers in Forest Habitats. During specific times, Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
+            "dates": [
+                {
+                    "start": "2023-10-09T09:00:00",
+                    "end": "2023-10-13T16:59:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-10-13T17:00:00",
+                    "end": "2023-10-13T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-10-14T13:00:00",
+                    "end": "2023-10-14T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-10-15T13:00:00",
+                    "end": "2023-10-15T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathian",
+                "Pink Rathian"
             ]
         },
         {
@@ -56,11 +100,36 @@
                     "end": "2023-10-08T16:00:00",
                     "allDay": false
                 }
+            ],
+            "habitat": [
+                "Swamp",
+                "Forest"
+            ],
+            "monsters": [
+                "Tobi-Kadachi"
             ]
         },
         {
+            "summary": "Pre-registration Rewards Availability",
+            "description": "Pre-registration rewards are now available for all players who install and log in before Monday, September 25, 2023, at 11:59 p.m. (UTC). Rewards must be claimed from the in-game shop before Thursday, November 30, 2023, at 11:59 p.m. (local time). Rewards include Potion x10, Paintball x3, Wander Droplet x3, Special Pre-order Makeup x4, Item Box Expansion x500, and Special Carving Knife x3.",
+            "dates": [
+                {
+                    "start": "2023-09-25T00:00:00",
+                    "end": "2023-09-25T23:59:59",
+                    "allDay": true
+                },
+                {
+                    "start": "2023-09-26T00:00:00",
+                    "end": "2023-11-30T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        },
+        {
             "summary": "Diablos Invasion",
-            "description": "Investigate an outbreak of Diablos in desert regions! Diablos will appear more frequently in desert regions. Time-limited Event Quests will be available. Complete quests such as snapping a picture of Diablos in AR mode to earn rewards.",
+            "description": "Investigate an outbreak of Diablos in desert regions. Diablos will appear more frequently in desert regions. Time-limited Event Quests will be available. Complete quests such as snapping a picture of Diablos in AR mode to earn rewards. Event Quests will automatically be made available to hunters HR11 and over in the Special Quests tab in-game.",
             "dates": [
                 {
                     "start": "2023-09-23T13:00:00",
@@ -71,7 +140,18 @@
                     "start": "2023-09-24T13:00:00",
                     "end": "2023-09-24T16:00:00",
                     "allDay": false
+                },
+                {
+                    "start": "2023-09-23T00:00:00",
+                    "end": "2023-09-24T23:59:59",
+                    "allDay": true
                 }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Diablos"
             ]
         }
     ]
