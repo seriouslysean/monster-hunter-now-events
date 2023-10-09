@@ -22,7 +22,9 @@ async function askGPTChat(messages, debug) {
         const chatCompletion = await openai.chat.completions.create({
             model: 'gpt-3.5-turbo',
             messages,
-            temperature: 0.5, // Adjust this value (0 to 1) to control randomness. Lower values make the output more deterministic.
+            // Adjust this value (0 to 1) to control randomness. Lower values make the output more deterministic.
+            // https://platform.openai.com/docs/guides/gpt/how-should-i-set-the-temperature-parameter
+            temperature: 0.2,
         });
         const response = chatCompletion.choices?.[0]?.message?.content?.trim();
 
@@ -58,55 +60,52 @@ export async function getEventsFromHTML(html, debug = false) {
     const messages = [
         {
             role: 'system',
-            content: `From the provided content, extract ONLY the events that occur STRICTLY within the game environment of "Monster Hunter Now".
+            content: `Extract events from the provided content that are STRICTLY occurring within the virtual game "Monster Hunter Now". Ensure your extraction adheres to the following:
 
-Criteria for Extraction:
-
-1. **Virtual Game Environment**:
-    - The event should take place strictly inside the "Monster Hunter Now" virtual game environment, enabling direct player interaction.
+1. **Game Environment**:
+    - Events must ONLY be inside the "Monster Hunter Now" game. Exclude any external promotions or updates.
 
 2. **Event Duration**:
-    - A clear and definite start and end time should be mentioned for the event.
-    - If an event lacks either a start or an end time, exclude it.
-    - For events covering an entire day without exact timings, indicate this with the "allDay" attribute set to true. In such cases, only provide the date in the format "YYYY-MM-DD".
+    - Must have both a start and end time.
+    - If it's an all-day event without specific times, use "allDay": true, with 00:00:00 as the start and 23:59:59 as the end.
 
 3. **Event Continuity**:
-    - Continuous events should be considered a singular event.
-    - If an event happens continuously but also occurs separately at distinct intervals (e.g., throughout the week and then separately on the weekend), catalog them as individual events. Ensure discontinuities are highlighted.
+    - Treat continuous events as one. If they have specific additional intervals, list those separately.
 
-4. **No Assumptions or Additions**:
-    - Refrain from making unfounded assumptions or adding anything to the content.
+4. **Avoid Assumptions/Additions**:
+    - Your extraction should be purely based on the provided content.
 
-What to Look for:
-- Time-limited quests, missions, or challenges within the game requiring player engagement.
-- In-game bonuses or competitions that have a defined start and end time.
-- Specific in-game locations linked to the events.
+**Specifically Focus On**:
+- Player-engaging quests, missions, or challenges that are time-bound.
+- In-game bonuses or competitions with clear start and end times.
+- Locations within the game tied to events.
 
-What to Avoid:
-- Broad game updates, announcements, or new feature introductions without a clear time-limited in-game activity.
-- Events or promotions taking place outside of the virtual game environment.
-- Ambiguous statements that don’t clearly indicate a time-restricted in-game event.
+**Avoid**:
+- Broad updates or features without a time-bound game activity.
+- Anything outside the game environment.
+- Vague references without clear time-bound in-game context.
 
-When Extracting Dates:
-- Sort the dates from the most recent to the oldest, ensuring consecutive dates are sequential.
+When you list dates, arrange them from recent to oldest. Ensure consecutive dates follow each other.
 
-Required JSON Format:
+Output format:
 {
-    "summary": "Name of the Event",
-    "description": "Description of the Event",
+    "summary": "Event Name",
+    "description": "Event Details",
     "dates": [
         {
-            "start": "YYYY-MM-DD HH:MM:SS",
-            "end": "YYYY-MM-DD HH:MM:SS",
+            "start": "YYYY-MM-DDTHH:mm:ss",
+            "end": "YYYY-MM-DDTHH:mm:ss",
             "allDay": true/false
         }
     ]
 }
 
-If the content doesn't contain any suitable in-game events, adhere to this format:
+If no in-game events match these criteria, return:
 {
     "events": []
-}`,
+}
+
+Ensure to cross-check your extracted data against the above guidelines before finalizing your output.`,
         },
         {
             role: 'user',
@@ -115,6 +114,51 @@ If the content doesn't contain any suitable in-game events, adhere to this forma
         {
             role: 'user',
             content,
+        },
+    ];
+
+    const response = await askGPTChat(messages, debug);
+    return response ?? { events: [] };
+}
+
+export async function getDedupedJSON(json, debug = false) {
+    if (!json) {
+        console.log('!!! No json');
+        return { events: [] };
+    }
+
+    const messages = [
+        {
+            role: 'system',
+            content: `Based on the provided JSON:
+
+1. **Merge Only Identical Timed Events**: Merge events ONLY if they have the exact same start and end dates and times. Overlapping dates without exact match should not be merged.
+2. **Generate Coherent Summaries**: Summaries should be a combination of both events only if they are closely related in theme or content. Generate a new summary that encapsulates the essence of both events without using " | ".
+3. **Combine Descriptions Carefully**: Integrate the event descriptions to ensure the final combined description is coherent and retains the essence of both original descriptions.
+
+Return the events in this format:
+{
+    "summary": "Generated Event Name",
+    "description": "Merged Event Details",
+    "dates": [
+        {
+            "start": "YYYY-MM-DDTHH:mm:ss",
+            "end": "YYYY-MM-DDTHH:mm:ss",
+            "allDay": true/false
+        }
+    ]
+}
+
+Events that don't meet the above strict criteria for merging should remain as separate items in the returned list. Ensure individual timed events with unique times remain separate within the 'dates' array.`,
+        },
+        {
+            role: 'user',
+            content:
+                'Merge events with identical timings and closely related content:',
+        },
+        {
+            role: 'user',
+            content: JSON.stringify(json, null, 4),
         },
     ];
 

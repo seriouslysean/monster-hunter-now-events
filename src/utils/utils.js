@@ -101,8 +101,8 @@ export function saveJSONFixture(articleId, content) {
     saveFile(filePath, adaptedContent);
 }
 
-export function saveEventsJSON(content) {
-    const filePath = resolve(paths.dist, 'events.json');
+export function saveEventsJSON(content, raw = false) {
+    const filePath = resolve(paths.dist, `events${raw ? '.raw' : ''}.json`);
     // This lets us direcly pass in json to be saved
     const adaptedContent = JSON.stringify(content, null, 4);
     saveFile(filePath, adaptedContent);

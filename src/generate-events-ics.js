@@ -1,3 +1,5 @@
+import { addDays } from 'date-fns';
+
 import { generateICSDatetime } from './utils/date-utils.js';
 import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
@@ -31,19 +33,17 @@ const wordWrap = (heading, content) => {
 };
 
 const generateEvent = (event, date) => {
-    const start = date.allDay
-        ? generateICSDatetime(date.start, false)
-        : generateICSDatetime(date.start);
-    const end = date.allDay
-        ? generateICSDatetime(date.end, true)
-        : generateICSDatetime(date.end);
+    const start = generateICSDatetime(date.start, date.allDay);
+    const end = generateICSDatetime(date.end, date.allDay, (d) =>
+        date.allDay ? addDays(d, 1) : d,
+    );
 
     const eventObject = {
         UID: date.uid,
-        DTSTAMP: generateICSDatetime(new Date().toISOString()), // This ensures DTSTAMP always has a valid timestamp.
+        DTSTAMP: start,
         DTSTART: start,
         DTEND: end,
-        SUMMARY: `MHN:${event.summary}`,
+        SUMMARY: `MHN: ${event.summary}`,
         DESCRIPTION: event.description,
     };
 

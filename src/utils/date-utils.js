@@ -2,11 +2,16 @@ import { addDays, format, parse, parseISO, isSameDay } from 'date-fns';
 
 export const pad = (i) => (i < 10 ? `0${i}` : `${i}`);
 
-export const generateICSDatetime = (str, allDay = false) => {
+export const generateICSDatetime = (
+    str,
+    allDay = false,
+    dateModifier = (date) => date,
+) => {
     const date = parseISO(str);
+    const adaptedDate = dateModifier(date);
     return allDay
-        ? format(addDays(date, 1), 'yyyyMMdd')
-        : format(date, 'yyyyMMddTHHmmss');
+        ? format(adaptedDate, 'yyyyMMdd')
+        : format(adaptedDate, "yyyyMMdd'T'HHmmss");
 };
 
 // Check if two dates are consecutive
