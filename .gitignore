@@ -4,3 +4,4 @@ dist/*
 
 !dist/events.ics
 !dist/events.json
+!dist/events.raw.json
