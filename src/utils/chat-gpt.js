@@ -133,32 +133,23 @@ export async function getDedupedJSON(json, debug = false) {
     const messages = [
         {
             role: 'system',
-            content: `**Event Deduplication & Consolidation Guidelines: Monster Hunter Now**
+            content: `**Event Combination Guidelines: Monster Hunter Now**
 
-You will receive a JSON file of in-game events, your mission is to identify overlaps, merge them logically, and return the streamlined list of events in a pure JSON structure.
+You will receive a JSON payload containing an array of events within the "events" key. Deduplicate and logically combine these events based on the following guidelines, and return the consolidated events in a valid JSON format.
 
-**Instructions**:
+1. **Criteria for Merging**:
+    - **Overlapping Dates & Times**: Merge events that share a time frame or overlap within the same habitat and involve similar monsters. If the times are identical, merge them into one; if they overlap but aren't identical, maintain them separately within the 'dates' array.
+    - **Habitat & Monsters**: Events in the same habitat, involving the same monsters, during overlapping or identical times should be considered for merging.
 
-1. **Merging Guidelines**:
-    - **Time Overlap**: If events overlap or share the exact timeframe within the same habitat with similar monsters, they're candidates for merging.
-        - **Identical**: Merge into one.
-        - **Partial Overlap**: Retain both but within the same 'dates' array.
-    - **Habitat & Monster Match**: This is your key to consider events for merging. Same habitat, same monsters.
+2. **Generate Coherent Summaries**: Create a concise and clear summary for events that are closely related in theme or content. The summary should be short yet informative, suitable for calendar applications. Avoid including date details in the summary.
 
-2. **Creating Summaries**:
-    - Combine event summaries that have a similar theme or essence.
-    - Ensure they're concise and perfect for calendar applications.
-    - Avoid using characters like " | ".
+3. **Combine Descriptions Carefully**: Integrate the event descriptions to ensure the final combined description is coherent and retains the essence of both original descriptions. Do not include any date details in the description.
 
-3. **Description Synthesis**:
-    - Merge the event descriptions so the final form is coherent and encapsulates both events.
+4. **Return All Consolidated Events**: Based on the events provided, return all consolidated events in order.
 
-4. **Clean Output**:
-    - The outcome must be neatly structured.
-    - Ensure no residue: remove the 'habitat' and 'monster' keys post deduplication.
+5. **Remove Unnecessary Keys**: Remove the habitat and monster keys as they are no longer needed once deduped.
 
-5. **Response Format**:
-All your responses should be STRICTLY in this JSON format:
+**Output Format**:
 {
     events: [{
         "summary": "Event Name",
@@ -169,16 +160,16 @@ All your responses should be STRICTLY in this JSON format:
                 "end": "YYYY-MM-DDTHH:mm:ss",
                 "allDay": true/false
             }
-        ]
-    }]
+        ],
+    }],
 }
 
-**Additional Notes**:
-- Always prioritize events' individuality unless they CLEARLY meet the merge criteria.
-- Your final output should only be clean, valid JSON.
-
-**Next Steps**:
-Based on the guidelines, merge events that match in timings and context and sequentially return the refined events.`,
+Notes:
+- Focus on short, clear, and precise event summaries that convey the essence of the event without redundancy.
+- Dates are NOT to be included in the summary or description fields since they have their designated place in the 'dates' array.
+- Events that don't meet the above strict criteria for merging should remain as separate items in the returned list.
+- Ensure individual timed events with unique times remain separate within the 'dates' array.
+- Return ONLY valid JSON in your response.`,
         },
         {
             role: 'user',
