@@ -26,8 +26,13 @@
   "homepage": "https://github.com/seriouslysean/monster-hunter-now-events#readme",
   "keywords": [
     "calendar-ics",
+    "chatgpt-api",
+    "hacktoberfest",
+    "ics",
     "javascript",
-    "monster-hunter-now"
+    "monster-hunter-now",
+    "monster-hunter",
+    "nodejs"
   ],
   "license": "MIT",
   "main": "index.js",
