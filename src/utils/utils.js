@@ -1,4 +1,10 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'fs';
+import {
+    existsSync,
+    mkdirSync,
+    readFileSync,
+    unlinkSync,
+    writeFileSync,
+} from 'fs';
 import { dirname, resolve } from 'path';
 
 import axios from 'axios';
@@ -82,6 +88,12 @@ export function getEventsJSON() {
 function saveFile(path, content) {
     try {
         const pathName = dirname(path);
+
+        // Check if the file already exists, if so, delete it
+        if (existsSync(path)) {
+            unlinkSync(path);
+        }
+
         mkdirSync(pathName, { recursive: true });
         writeFileSync(path, content, 'utf8');
     } catch (err) {
@@ -101,10 +113,11 @@ export function saveJSONFixture(articleId, content) {
     saveFile(filePath, adaptedContent);
 }
 
-export function saveEventsJSON(content, raw = false) {
+export function saveEventsJSON(content, raw = true) {
     const filePath = resolve(paths.dist, `events${raw ? '.raw' : ''}.json`);
     // This lets us direcly pass in json to be saved
     const adaptedContent = JSON.stringify(content, null, 4);
+    console.log(`Saving ${filePath}`, adaptedContent);
     saveFile(filePath, adaptedContent);
 }
 

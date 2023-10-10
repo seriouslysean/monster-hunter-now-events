@@ -2,7 +2,7 @@ import { Command } from 'commander';
 
 import { version } from '../src/utils/config.js';
 
-import { fetchArticle } from '../src/utils/article-utils.js';
+import { getArticleByURL } from '../src/utils/article-utils.js';
 
 // Invoke via `npm run fetch:article -- -u <url>`
 // HAS EVENTS:
@@ -16,8 +16,8 @@ import { fetchArticle } from '../src/utils/article-utils.js';
 const program = new Command();
 
 program
-    .name('mhne-test-article')
-    .description('Test event parsing on an individual article by url')
+    .name('fetch-article')
+    .description('Fetch and process a single article by url')
     .option(
         '-u, --url <article>',
         'URL to the article from the Monster Hunter Now news website',
@@ -27,4 +27,4 @@ program
 program.parse();
 const { url } = program.opts();
 
-fetchArticle(url);
+getArticleByURL(url);

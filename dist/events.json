@@ -2,79 +2,38 @@
     "events": [
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
                     "start": "2023-10-25T00:00:00",
                     "end": "2023-10-31T23:59:59",
-                    "allDay": true,
-                    "uid": "edb6c4f48fd38bfd068b1520c9adc05ea55ade82"
+                    "allDay": true
                 }
             ]
         },
         {
-            "summary": "Boosted Appearance Rates for Rathian and Pink Rathian",
-            "description": "Rathian and Pink Rathian will appear more frequently in Forest Habitats during specific times.",
-            "dates": [
-                {
-                    "start": "2023-10-13T17:00:00",
-                    "end": "2023-10-13T20:00:00",
-                    "allDay": false,
-                    "uid": "de09394b11042be261e6ea01f7be528d10b64a47"
-                },
-                {
-                    "start": "2023-10-14T13:00:00",
-                    "end": "2023-10-14T16:00:00",
-                    "allDay": false,
-                    "uid": "420f67dd003d4cd9226481b0173b128dd4b4883b"
-                },
-                {
-                    "start": "2023-10-15T13:00:00",
-                    "end": "2023-10-15T16:00:00",
-                    "allDay": false,
-                    "uid": "2fe48a8fd219fab91877791042c4ee63234f2191"
-                }
-            ]
-        },
-        {
-            "summary": "Investigate Cherry-colored Rathian",
-            "description": "Cherry-colored Rathian scales have been discovered in Forest Habitats. Hunters are encouraged to investigate.",
+            "summary": "Rathian & Pink Rathian Special Appearance",
+            "description": "Rathian and Pink Rathian will appear more frequently than usual, especially during the weekend. Pink Rathian will appear in low numbers in Forest Habitats for all hunters HR11 and above. While appearance rates are boosted, Rathian will appear more frequently than usual and Pink Rathian will also be easier to find.",
             "dates": [
                 {
                     "start": "2023-10-09T09:00:00",
                     "end": "2023-10-15T16:00:00",
-                    "allDay": false,
-                    "uid": "6d300544493491c3f785a3c27861f06e90576501"
-                }
-            ]
-        },
-        {
-            "summary": "Rathian & Pink Rathian Week",
-            "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
-            "dates": [
-                {
-                    "start": "2023-10-09T09:00:00",
-                    "end": "2023-10-13T16:59:00",
-                    "allDay": false,
-                    "uid": "b97b76ad828872f9fc9be2bf369f1692ec276e44"
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-13T17:00:00",
                     "end": "2023-10-13T20:00:00",
-                    "allDay": false,
-                    "uid": "c81d1fcaa72a9be2f9a3191ca4cb541e310bde48"
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-14T13:00:00",
                     "end": "2023-10-14T16:00:00",
-                    "allDay": false,
-                    "uid": "291f82f123859422f56f8b6a0a9338c13475a533"
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-15T13:00:00",
                     "end": "2023-10-15T16:00:00",
-                    "allDay": false,
-                    "uid": "885807f0916bc95424b110e66a2b6b8a72b71bdd"
+                    "allDay": false
                 }
             ]
         },
@@ -85,38 +44,17 @@
                 {
                     "start": "2023-10-06T17:00:00",
                     "end": "2023-10-06T20:00:00",
-                    "allDay": false,
-                    "uid": "b7556f061c4af13b663fadebe225ae28430e374d"
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-07T13:00:00",
                     "end": "2023-10-07T16:00:00",
-                    "allDay": false,
-                    "uid": "558156bbb6be4557593beb9b08e20f6fc2fe8d8c"
+                    "allDay": false
                 },
                 {
                     "start": "2023-10-08T13:00:00",
                     "end": "2023-10-08T16:00:00",
-                    "allDay": false,
-                    "uid": "916d53805029184ea236fd3a4fa7e1298140f771"
-                }
-            ]
-        },
-        {
-            "summary": "Diablos Invasion",
-            "description": "Investigate an outbreak of Diablos in desert regions! Diablos will appear more frequently in desert regions. Time-limited Event Quests will be available. Complete quests such as snapping a picture of Diablos in AR mode to earn rewards.",
-            "dates": [
-                {
-                    "start": "2023-09-23T13:00:00",
-                    "end": "2023-09-23T16:00:00",
-                    "allDay": false,
-                    "uid": "be65b6247969e34b9dae7520d7c1c8f2af2b2227"
-                },
-                {
-                    "start": "2023-09-24T13:00:00",
-                    "end": "2023-09-24T16:00:00",
-                    "allDay": false,
-                    "uid": "513c5a4943cedd357435882de56975b5c1ab9e7a"
+                    "allDay": false
                 }
             ]
         }

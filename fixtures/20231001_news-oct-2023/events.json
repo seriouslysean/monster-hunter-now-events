@@ -19,15 +19,22 @@
                     "end": "2023-10-08T16:00:00",
                     "allDay": false
                 }
+            ],
+            "habitat": [
+                "Swamp",
+                "Forest"
+            ],
+            "monsters": [
+                "Tobi-Kadachi"
             ]
         },
         {
             "summary": "Rathian & Pink Rathian Week",
-            "description": "Pink Rathian will appear in low numbers in Forest Habitats. Rathian and Pink Rathian will appear more frequently than usual in Forest Habitats for all hunters HR11 and above.",
+            "description": "Rathian and Pink Rathian will appear more frequently than usual during the weekend. Pink Rathian will appear in low numbers in Forest Habitats.",
             "dates": [
                 {
                     "start": "2023-10-09T09:00:00",
-                    "end": "2023-10-13T16:59:00",
+                    "end": "2023-10-13T16:59:59",
                     "allDay": false
                 },
                 {
@@ -45,17 +52,28 @@
                     "end": "2023-10-15T16:00:00",
                     "allDay": false
                 }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathian",
+                "Pink Rathian"
             ]
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
                     "start": "2023-10-25T00:00:00",
                     "end": "2023-10-31T23:59:59",
                     "allDay": true
                 }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Kulu-Ya-Ku"
             ]
         }
     ]

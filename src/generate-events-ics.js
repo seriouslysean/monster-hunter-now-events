@@ -1,11 +1,15 @@
 import { addDays } from 'date-fns';
 
+import { generateEventUID } from './utils/article-utils.js';
 import { generateICSDatetime } from './utils/date-utils.js';
 import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
 const LINE_BREAK = '\r\n';
 
 const { events } = getEventsJSON();
+
+const DATE_TODAY = new Date().toISOString();
+const DATE_CREATED = generateICSDatetime(DATE_TODAY);
 
 const wordWrap = (heading, content) => {
     const lineLength = 75;
@@ -38,9 +42,11 @@ const generateEvent = (event, date) => {
         date.allDay ? addDays(d, 1) : d,
     );
 
+    const UID = generateEventUID(start, end, event.summary);
+
     const eventObject = {
-        UID: date.uid,
-        DTSTAMP: start,
+        UID,
+        DTSTAMP: DATE_CREATED,
         DTSTART: start,
         DTEND: end,
         SUMMARY: `MHN: ${event.summary}`,
@@ -105,7 +111,7 @@ export default function generateFeed() {
         // corresponds to a fixed point in time which prevents the use of RRULE due to our use of
         // floating times. Big bummer, but it just means a larger ICS file at the end of the day.
         const icsEvents = events.reduce((acc, event) => {
-            console.debug(`Adding event: ${event.summary}`);
+            console.log(`Adding event: ${event.summary}`);
             const dates = event.dates || [];
             const datesString = dates.length
                 ? dates
@@ -117,6 +123,7 @@ export default function generateFeed() {
 
         const icsCalendar = generateCalendar(icsEvents);
         saveEventsICS(icsCalendar);
+        console.log('');
         console.log('Events saved successfully!');
     } catch (err) {
         console.error(err);

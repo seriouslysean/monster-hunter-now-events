@@ -2,7 +2,7 @@
     "events": [
         {
             "summary": "Diablos Invasion",
-            "description": "Investigate an outbreak of Diablos in desert regions! Diablos will appear more frequently in desert regions. Time-limited Event Quests will be available. Complete quests such as snapping a picture of Diablos in AR mode to earn rewards.",
+            "description": "Investigate an outbreak of Diablos in desert regions. Diablos will appear more frequently in desert regions. Time-limited Event Quests will be available. Complete quests such as snapping a picture of Diablos in AR mode to earn rewards. Event Quests will automatically be made available to hunters HR11 and over in the Special Quests tab in-game.",
             "dates": [
                 {
                     "start": "2023-09-23T13:00:00",
@@ -13,7 +13,18 @@
                     "start": "2023-09-24T13:00:00",
                     "end": "2023-09-24T16:00:00",
                     "allDay": false
+                },
+                {
+                    "start": "2023-09-23T00:00:00",
+                    "end": "2023-09-24T23:59:59",
+                    "allDay": true
                 }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Diablos"
             ]
         }
     ]
