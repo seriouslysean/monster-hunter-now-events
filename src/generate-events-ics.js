@@ -1,5 +1,6 @@
 import { addDays } from 'date-fns';
 
+import { generateEventUID } from './utils/article-utils.js';
 import { generateICSDatetime } from './utils/date-utils.js';
 import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
@@ -38,8 +39,10 @@ const generateEvent = (event, date) => {
         date.allDay ? addDays(d, 1) : d,
     );
 
+    const UID = generateEventUID(start, end, event.summary);
+
     const eventObject = {
-        UID: date.uid,
+        UID,
         DTSTAMP: start,
         DTSTART: start,
         DTEND: end,
