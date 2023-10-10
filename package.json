@@ -1,6 +1,6 @@
 {
   "name": "monster-hunter-now-events",
-  "description": "An automated calendar event generator for Monster Hunter Now that extracts event details from news articles and provides them as an ICS feed.",
+  "description": "A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.",
   "version": "1.1.0",
   "author": "Sean Kennedy <sean@codeserious.com>",
   "bugs": {
