@@ -8,6 +8,9 @@ const LINE_BREAK = '\r\n';
 
 const { events } = getEventsJSON();
 
+const DATE_TODAY = new Date().toISOString();
+const DATE_CREATED = generateICSDatetime(DATE_TODAY);
+
 const wordWrap = (heading, content) => {
     const lineLength = 75;
     const continuationPrefix = `${LINE_BREAK} `;
@@ -43,7 +46,7 @@ const generateEvent = (event, date) => {
 
     const eventObject = {
         UID,
-        DTSTAMP: start,
+        DTSTAMP: DATE_CREATED,
         DTSTART: start,
         DTEND: end,
         SUMMARY: `MHN: ${event.summary}`,

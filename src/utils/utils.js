@@ -1,4 +1,10 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'fs';
+import {
+    existsSync,
+    mkdirSync,
+    readFileSync,
+    unlinkSync,
+    writeFileSync,
+} from 'fs';
 import { dirname, resolve } from 'path';
 
 import axios from 'axios';
@@ -82,6 +88,12 @@ export function getEventsJSON() {
 function saveFile(path, content) {
     try {
         const pathName = dirname(path);
+
+        // Check if the file already exists, if so, delete it
+        if (existsSync(path)) {
+            unlinkSync(path);
+        }
+
         mkdirSync(pathName, { recursive: true });
         writeFileSync(path, content, 'utf8');
     } catch (err) {
