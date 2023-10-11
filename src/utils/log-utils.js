@@ -12,6 +12,8 @@ function getLogger() {
             payload: {
                 code_version: version,
             },
+            // Also log to the console
+            verbose: true,
         });
     }
 
@@ -22,6 +24,6 @@ const logger = getLogger();
 
 export const log = (...args) => logger.log(...args);
 
-export const warn = (...args) => logger.log(...args);
+export const warn = (...args) => logger.warn(...args);
 
-export const error = (...args) => logger.log(...args);
+export const error = (...args) => logger.error(...args);
