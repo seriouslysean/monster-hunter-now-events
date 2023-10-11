@@ -32,12 +32,18 @@ https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics
 Run `npm start`
 
 This will do three things:
-1. Look for new articles
-2. Download article HTML
-3. Parse the events from the content via ChatGPT
-4. Generate article events json
-5. Generate the `dist/events.json` file
-6. Generate the `dist/events.ics` file
+1. `npm run fetch:all-articles`
+  - Look for new articles
+  - Download article HTML
+  - Parse events from the article content
+  - Save article JSON
+2. `npm run generate:events-json`
+  - Loop through all `fixtures/**/events.json` files
+  - Generate a combined `dist/events.raw.json` file
+  - Combine similar events from the raw JSON file
+  - Generate a deduped `dist/events.json` file
+3. `npm run generate:events-ics`
+  - Generate the `dist/events.ics` file
 
 ### Tools
 
