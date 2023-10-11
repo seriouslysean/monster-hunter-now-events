@@ -48,7 +48,7 @@
     "lint:fix": "prettier --write --list-different src && npm run lint:js --fix",
     "lint:js": "eslint --ext .js --ignore-path .gitignore src/*",
     "lint:prettier": "prettier --check src",
-    "lint": "npm run lint:js && npm run  lint:prettier",
+    "lint": "npm run lint:js && npm run lint:prettier",
     "start": "npm run fetch:all-articles && npm run generate:events-json && npm run generate:events-ics",
     "fetch:all-articles": "node -r dotenv/config ./tools/fetch-all-articles.js",
     "fetch:article": "node -r dotenv/config ./tools/fetch-article.js",
