@@ -1,7 +1,7 @@
 {
   "name": "monster-hunter-now-events",
   "description": "A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Sean Kennedy <sean@codeserious.com>",
   "bugs": {
     "url": "https://github.com/seriouslysean/monster-hunter-now-events/issues"
@@ -11,7 +11,8 @@
     "commander": "^11.0.0",
     "date-fns": "^2.30.0",
     "node-html-parser": "^6.1.10",
-    "openai": "^4.11.0"
+    "openai": "^4.11.0",
+    "rollbar": "^2.26.2"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
@@ -52,6 +53,7 @@
     "start": "npm run fetch:all-articles && npm run generate:events-json && npm run generate:events-ics",
     "fetch:all-articles": "node -r dotenv/config ./tools/fetch-all-articles.js",
     "fetch:article": "node -r dotenv/config ./tools/fetch-article.js",
+    "test:logger": "node -r dotenv/config ./tools/test-logger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module"
