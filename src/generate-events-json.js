@@ -3,7 +3,13 @@ import { readdirSync } from 'fs';
 import { paths } from './utils/config.js';
 import { getDedupedJSON } from './utils/chat-gpt.js';
 import { isEventRecent } from './utils/date-utils.js';
-import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
+import {
+    getHash,
+    getEventsJSONHash,
+    getJSONFixture,
+    saveEventsJSON,
+    stringifyJSON,
+} from './utils/utils.js';
 
 function getFixtureDirectoryNames() {
     try {
@@ -48,8 +54,22 @@ async function generateEventsJSON() {
     const mergedEvents = mergeEventFixtures(directoryNames);
     console.log('mergedEvents', mergedEvents);
     saveEventsJSON(mergedEvents);
+
+    // Get a hash of the merged events
+    const mergedEventsString = stringifyJSON(mergedEvents);
+    const mergedEventsHash = getHash(mergedEventsString);
+
+    // Get the current deduped events list
+    const currentEventsHash = getEventsJSONHash();
+    if (currentEventsHash === mergedEventsHash) {
+        console.log('events.json is already up to date');
+        return;
+    }
+
     console.log('Deduping events.json');
     const dedupedJSON = await getDedupedJSON(mergedEvents, true);
+    // Add hash from the merged events
+    dedupedJSON.hash = mergedEventsHash;
     console.log('dedupedJSON', dedupedJSON);
     saveEventsJSON(dedupedJSON, false);
 }
