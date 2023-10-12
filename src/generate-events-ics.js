@@ -6,8 +6,6 @@ import { getEventsJSON, saveEventsICS } from './utils/utils.js';
 
 const LINE_BREAK = '\r\n';
 
-const { events } = getEventsJSON();
-
 const DATE_TODAY = new Date().toISOString();
 const DATE_CREATED = generateICSDatetime(DATE_TODAY);
 
@@ -103,6 +101,7 @@ const generateCalendar = (icsEvents) => {
 
 export default function generateFeed() {
     try {
+        const { events } = getEventsJSON();
         if (!events.length) {
             throw new Error('No events found');
         }

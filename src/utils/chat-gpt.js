@@ -1,6 +1,8 @@
 import { parse } from 'node-html-parser';
 import OpenAI from 'openai';
 
+import { stringifyJSON } from './utils.js';
+
 export const OPENAI_CHAT_ENDPOINT =
     'https://api.openai.com/v1/chat/completions';
 
@@ -13,7 +15,7 @@ async function askGPTChat(messages, debug) {
 
         if (debug) {
             console.log('-----Question-----');
-            console.log(JSON.stringify(messages, null, 2));
+            console.log(stringifyJSON(messages));
             console.log('');
         }
 
@@ -178,7 +180,7 @@ Notes:
         },
         {
             role: 'user',
-            content: JSON.stringify(json, null, 4),
+            content: stringifyJSON(json),
         },
     ];
 
