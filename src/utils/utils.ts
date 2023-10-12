@@ -9,7 +9,7 @@ import { dirname, resolve } from 'path';
 
 import axios from 'axios';
 
-import { paths } from './config.js';
+import { paths } from './config';
 
 function getFixture(filePath) {
     try {

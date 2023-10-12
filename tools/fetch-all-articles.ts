@@ -1,8 +1,8 @@
 import { Command } from 'commander';
 
-import { version } from '../src/utils/config.js';
+import { version } from '../src/utils/config';
 
-import { getArticles } from '../src/utils/article-utils.js';
+import { getArticles } from '../src/utils/article-utils';
 
 // Invoke via `npm run fetch:all-articles`
 // Invoke via `npm run fetch:article -- --force` to force process all articles

@@ -1,9 +1,9 @@
 import { readdirSync } from 'fs';
 
-import { paths } from './utils/config.js';
-import { getDedupedJSON } from './utils/chat-gpt.js';
-import { isEventRecent } from './utils/date-utils.js';
-import { getJSONFixture, saveEventsJSON } from './utils/utils.js';
+import { paths } from './utils/config';
+import { getDedupedJSON } from './utils/chat-gpt';
+import { isEventRecent } from './utils/date-utils';
+import { getJSONFixture, saveEventsJSON } from './utils/utils';
 
 function getFixtureDirectoryNames() {
     try {

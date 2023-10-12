@@ -1,8 +1,8 @@
 import crypto from 'crypto';
 
 import { parse } from 'node-html-parser';
-import { getEventsFromHTML } from './chat-gpt.js';
-import { mhnUrls } from './config.js';
+import { getEventsFromHTML } from './chat-gpt';
+import { mhnUrls } from './config';
 import {
     getArticleId,
     getHTMLFixture,
@@ -10,7 +10,7 @@ import {
     getJSONFixture,
     saveHTMLFixture,
     saveJSONFixture,
-} from './utils.js';
+} from './utils';
 
 /*
 NEXT STEPS

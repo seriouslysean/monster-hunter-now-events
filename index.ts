@@ -1,4 +1,4 @@
-import generateFeed from './src/generate-events-ics.js';
+import generateFeed from './src/generate-events-ics';
 
 /*
 

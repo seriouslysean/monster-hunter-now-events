@@ -1,8 +1,8 @@
 import { addDays } from 'date-fns';
 
-import { generateEventUID } from './utils/article-utils.js';
-import { generateICSDatetime } from './utils/date-utils.js';
-import { getEventsJSON, saveEventsICS } from './utils/utils.js';
+import { generateEventUID } from './utils/article-utils';
+import { generateICSDatetime } from './utils/date-utils';
+import { getEventsJSON, saveEventsICS } from './utils/utils';
 
 const LINE_BREAK = '\r\n';
 

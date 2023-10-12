@@ -26,8 +26,10 @@ module.exports = {
             },
         },
     ],
+    plugins: ['prettier'],
     rules: {
         // Extensions for known files are always required when using type="module"
         'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
+        'prettier/prettier': ['error', { endOfLine: 'auto' }],
     },
 };
