@@ -35,10 +35,7 @@ jobs:
     name: "Check Lint Status"
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/_setup-and-cache.yml
-        with:
-          runner-type: ubuntu-latest
-          CACHE_KEY: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - uses: ./_setup-and-cache.yml
 
       - name: Lint
         run: npm run lint
