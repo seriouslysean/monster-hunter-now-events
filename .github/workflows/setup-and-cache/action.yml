@@ -4,9 +4,6 @@ description: 'Sets up Node.js environment and caches dependencies'
 runs:
   using: "composite"
   steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
-
     - name: Set up Node.js 18
       uses: actions/setup-node@v3
       with:
