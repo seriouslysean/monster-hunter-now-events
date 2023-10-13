@@ -1,9 +1,9 @@
 name: Daily Run
 
 on:
-  schedule:
-    # Runs every day at 6am
-    - cron:  '0 6 * * *'
+  # schedule:
+  #   # Runs every day at 6am
+  #   - cron:  '0 6 * * *'
   # Allows manual triggering
   workflow_dispatch:
 
