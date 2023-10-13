@@ -129,7 +129,22 @@ Ensure the output is valid JSON.
     return response ?? { events: [] };
 }
 
-export async function getDedupedJSON(json, debug = false) {
+interface Event {
+    summary: string;
+    description: string;
+    dates: {
+        start: string;
+        end: string;
+        allDay: boolean;
+    }[];
+    habitat: string[];
+    monsters: string[];
+}
+
+export async function getDedupedJSON(
+    json,
+    debug = false,
+): Promise<{ events: Event[]; hash?: string }> {
     if (!json || !json.events || json.events.length === 0) {
         console.log('!!! No json');
         return { events: [] };
