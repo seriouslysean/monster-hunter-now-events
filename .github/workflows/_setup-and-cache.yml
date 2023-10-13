@@ -2,22 +2,15 @@ name: Setup and Cache
 
 on:
   workflow_call:
-    inputs:
-      runner-type:
-        required: true
-        type: string
-    secrets:
-      CACHE_KEY:
-        required: true
 
 jobs:
   setup-and-cache:
-    runs-on: ${{ inputs.runner-type }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js 18.x
+      - name: Set up Node.js 18
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -27,7 +20,7 @@ jobs:
         id: cache
         with:
           path: ~/.npm
-          key: ${{ secrets.CACHE_KEY }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 

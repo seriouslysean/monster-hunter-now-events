@@ -17,9 +17,6 @@ jobs:
 
     steps:
       - uses: ./.github/workflows/_setup-and-cache.yml
-        with:
-          runner-type: ubuntu-latest
-          CACHE_KEY: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Run Start Script
         run: npm run fetch:all-articles
