@@ -1,0 +1,36 @@
+name: Setup and Cache
+
+on:
+  workflow_call:
+    inputs:
+      runner-type:
+        required: true
+        type: string
+    secrets:
+      CACHE_KEY:
+        required: true
+
+jobs:
+  setup-and-cache:
+    runs-on: ${{ inputs.runner-type }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: ~/.npm
+          key: ${{ secrets.CACHE_KEY }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci

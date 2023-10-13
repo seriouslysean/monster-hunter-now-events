@@ -1,0 +1,30 @@
+name: Daily Run
+
+on:
+  schedule:
+    # Runs every day at 6am
+    - cron:  '0 6 * * *'
+  # Allows manual triggering
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: daily-run
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: "Daily Run"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./.github/workflows/_setup-and-cache.yml
+        with:
+          runner-type: ubuntu-latest
+          CACHE_KEY: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Run Start Script
+        run: npm start

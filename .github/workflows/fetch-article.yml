@@ -1,0 +1,29 @@
+name: Fetch Article
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Article URL'
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fetch-article-${{ github.event.inputs.url }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: "Fetch Article"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./.github/workflows/_setup-and-cache.yml
+        with:
+          runner-type: ubuntu-latest
+          CACHE_KEY: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Run Start Script
+        run: npm run fetch:article -- -u ${{ github.event.inputs.url }}
