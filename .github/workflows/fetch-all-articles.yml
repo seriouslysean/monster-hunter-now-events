@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: ./.github/workflows/_setup-and-cache.yml
+      - uses: ./.github/actions/setup-and-cache
 
       - name: Run Start Script
         run: npm run fetch:all-articles
