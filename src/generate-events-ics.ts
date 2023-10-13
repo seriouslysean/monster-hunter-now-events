@@ -18,7 +18,7 @@ const wordWrap = (heading, content) => {
 
     const combinedContent = `${heading}:${content}`;
 
-    const segments = [];
+    const segments: string[] = [];
 
     // Add the initial text, which can use the full amount of characters
     segments.push(combinedContent.substring(0, lineLength));

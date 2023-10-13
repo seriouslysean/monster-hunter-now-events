@@ -1,0 +1,16 @@
+{
+  "include": ["index.ts","src/**/*", "node.d.ts"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es2021",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    },
+    "ts-node": {
+      "files": true,
+      "esModuleInterop": true,
+    },
+  }

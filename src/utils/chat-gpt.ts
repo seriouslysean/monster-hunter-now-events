@@ -53,9 +53,11 @@ export async function getEventsFromHTML(html, debug = false) {
 
     const document = parse(html);
     const article = document.querySelector('#main article');
-    article.querySelector('#share')?.remove();
-    article.querySelector('#next-article')?.remove();
-    const content = article.textContent.replace(/\n{2,}/g, '\n').trim();
+    if (article !== null) {
+        article.querySelector('#share')?.remove();
+        article.querySelector('#next-article')?.remove();
+    }
+    const content = article?.textContent.replace(/\n{2,}/g, '\n').trim() ?? '';
 
     const messages = [
         {
