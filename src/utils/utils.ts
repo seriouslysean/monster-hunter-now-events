@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 import {
     existsSync,
     mkdirSync,
@@ -11,29 +13,59 @@ import axios from 'axios';
 
 import { paths } from './config';
 
-function getFixture(filePath) {
+export function stringifyJSON(data) {
+    return JSON.stringify(data, null, 4);
+}
+
+export function getHash(str) {
+    return crypto.createHash('sha1').update(str).digest('base64');
+}
+
+function getFile(filePath) {
     try {
         return readFileSync(filePath, {
             encoding: 'utf8',
             flag: 'r',
         });
     } catch (err) {
-        const pathFromRoot = filePath.replace(paths.fixtures, '');
-        console.error(`Fixture not found: ${pathFromRoot}`);
+        const pathFromRoot = filePath.replace(paths.root, '');
+        console.error(`File not found: ${pathFromRoot}`);
     }
 
     return null;
 }
 
+function saveFile(path, content) {
+    try {
+        const pathName = dirname(path);
+
+        // Check if the file already exists, if so, delete it
+        if (existsSync(path)) {
+            unlinkSync(path);
+        }
+
+        mkdirSync(pathName, { recursive: true });
+        writeFileSync(path, content, 'utf8');
+    } catch (err) {
+        console.error(`Unable to save ${path}`, err);
+    }
+}
+
 export function getHTMLFixture(articleId) {
     const filePath = resolve(paths.fixtures, articleId, 'index.html');
-    return getFixture(filePath);
+    return getFile(filePath);
 }
 
 export function getJSONFixture(articleId) {
     const filePath = resolve(paths.fixtures, articleId, 'events.json');
-    const data = getFixture(filePath);
+    const data = getFile(filePath);
     return data ? JSON.parse(data) : { events: [] };
+}
+
+export function getRawJSONHash() {
+    const filePath = resolve(paths.dist, 'events.raw.json');
+    const fileContents = getFile(filePath);
+    return getHash(fileContents);
 }
 
 export async function getPageHTML(url) {
@@ -85,20 +117,15 @@ export function getEventsJSON() {
     return null;
 }
 
-function saveFile(path, content) {
+export function getEventsJSONHash() {
     try {
-        const pathName = dirname(path);
-
-        // Check if the file already exists, if so, delete it
-        if (existsSync(path)) {
-            unlinkSync(path);
-        }
-
-        mkdirSync(pathName, { recursive: true });
-        writeFileSync(path, content, 'utf8');
+        const { hash } = getEventsJSON();
+        return hash;
     } catch (err) {
-        console.error(`Unable to save ${path}`, err);
+        console.error(`Event hash not found`);
     }
+
+    return '';
 }
 
 export function saveHTMLFixture(articleId, content) {
@@ -109,14 +136,14 @@ export function saveHTMLFixture(articleId, content) {
 export function saveJSONFixture(articleId, content) {
     const filePath = resolve(paths.fixtures, articleId, 'events.json');
     // This lets us direcly pass in json to be saved
-    const adaptedContent = JSON.stringify(content, null, 4);
+    const adaptedContent = stringifyJSON(content);
     saveFile(filePath, adaptedContent);
 }
 
 export function saveEventsJSON(content, raw = true) {
     const filePath = resolve(paths.dist, `events${raw ? '.raw' : ''}.json`);
     // This lets us direcly pass in json to be saved
-    const adaptedContent = JSON.stringify(content, null, 4);
+    const adaptedContent = stringifyJSON(content);
     console.log(`Saving ${filePath}`, adaptedContent);
     saveFile(filePath, adaptedContent);
 }

@@ -1,24 +1,27 @@
 import { parse } from 'node-html-parser';
 import OpenAI from 'openai';
 
+import { stringifyJSON } from './utils.js';
+
 export const OPENAI_CHAT_ENDPOINT =
     'https://api.openai.com/v1/chat/completions';
 
 async function askGPTChat(messages, debug) {
-    const apiKey = process.env.API_KEY_OPENAI;
     const noEvents = { events: [] };
     try {
-        if (!apiKey) {
+        if (!process.env.OPENAI_API_KEY) {
             throw new Error('OPENAI_API_KEY env required');
         }
 
         if (debug) {
             console.log('-----Question-----');
-            console.log(JSON.stringify(messages, null, 2));
+            console.log(stringifyJSON(messages));
             console.log('');
         }
 
-        const openai = new OpenAI({ apiKey });
+        const openai = new OpenAI({
+            apiKey: process.env.OPENAI_API_KEY,
+        });
         const chatCompletion = await openai.chat.completions.create({
             model: 'gpt-4',
             messages,
@@ -179,7 +182,7 @@ Notes:
         },
         {
             role: 'user',
-            content: JSON.stringify(json, null, 4),
+            content: stringifyJSON(json),
         },
     ];
 
