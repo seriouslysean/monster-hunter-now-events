@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: ./_setup-and-cache.yml
+      - uses: ./.github/actions/setup-and-cache
 
       - name: Run Start Script
         run: npm run fetch:article -- -u ${{ github.event.inputs.url }}

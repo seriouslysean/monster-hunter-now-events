@@ -35,7 +35,7 @@ jobs:
     name: "Check Lint Status"
     runs-on: ubuntu-latest
     steps:
-      - uses: ./_setup-and-cache.yml
+      - uses: ./.github/actions/setup-and-cache
 
       - name: Lint
         run: npm run lint
