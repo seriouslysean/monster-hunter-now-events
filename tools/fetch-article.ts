@@ -1,8 +1,8 @@
 import { Command } from 'commander';
 
-import { version } from '../src/utils/config';
+import { version } from '../src/utils/config.js';
 
-import { getArticleByURL } from '../src/utils/article-utils';
+import { getArticleByURL } from '../src/utils/article-utils.js';
 
 // Invoke via `npm run fetch:article -- -u <url>`
 // HAS EVENTS:

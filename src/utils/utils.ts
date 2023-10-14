@@ -11,7 +11,7 @@ import { dirname, resolve } from 'path';
 
 import axios from 'axios';
 
-import { paths } from './config';
+import { paths } from './config.js';
 
 export function stringifyJSON(data) {
     return JSON.stringify(data, null, 4);

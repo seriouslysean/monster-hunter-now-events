@@ -1,5 +1,5 @@
-import { environment, version } from '../src/utils/config';
-import { log, warn, error } from '../src/utils/log-utils';
+import { environment, version } from '../src/utils/config.js';
+import { log, warn, error } from '../src/utils/log-utils.js';
 
 // Invoke via `npm run test:logger`
 

@@ -42,7 +42,7 @@
     "web-scraping"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seriouslysean/monster-hunter-now-events.git"
@@ -58,7 +58,7 @@
     "start": "npm run fetch:all-articles && npm run generate:events-json && npm run generate:events-ics",
     "fetch:all-articles": "ts-node --esm -r dotenv/config ./tools/fetch-all-articles.ts",
     "fetch:article": "ts-node --esm -r dotenv/config ./tools/fetch-article.ts",
-    "test:logger": "node -r dotenv/config ./tools/test-logger.js",
+    "test:logger": "ts-node --esm -r dotenv/config ./tools/test-logger.ts",
     "ts-node": "ts-node",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
