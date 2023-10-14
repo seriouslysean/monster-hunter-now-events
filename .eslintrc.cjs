@@ -12,7 +12,6 @@ module.exports = {
     extends: [
         'airbnb-base',
         'airbnb-typescript/base',
-        'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
     ],
     overrides: [
@@ -34,6 +33,8 @@ module.exports = {
     ],
     plugins: ['prettier', '@typescript-eslint'],
     rules: {
+        // Extensions for known files are always required when using type="module"
+        'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
         'no-console': 'off',
         'prettier/prettier': ['error', { endOfLine: 'auto' }],
     },
