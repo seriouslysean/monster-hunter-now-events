@@ -56,9 +56,11 @@ export async function getEventsFromHTML(html, debug = false) {
 
     const document = parse(html);
     const article = document.querySelector('#main article');
-    article.querySelector('#share')?.remove();
-    article.querySelector('#next-article')?.remove();
-    const content = article.textContent.replace(/\n{2,}/g, '\n').trim();
+    if (article !== null) {
+        article.querySelector('#share')?.remove();
+        article.querySelector('#next-article')?.remove();
+    }
+    const content = article?.textContent.replace(/\n{2,}/g, '\n').trim() ?? '';
 
     const messages = [
         {
@@ -127,7 +129,22 @@ Ensure the output is valid JSON.
     return response ?? { events: [] };
 }
 
-export async function getDedupedJSON(json, debug = false) {
+interface Event {
+    summary: string;
+    description: string;
+    dates: {
+        start: string;
+        end: string;
+        allDay: boolean;
+    }[];
+    habitat: string[];
+    monsters: string[];
+}
+
+export async function getDedupedJSON(
+    json,
+    debug = false,
+): Promise<{ events: Event[]; hash?: string }> {
     if (!json || !json.events || json.events.length === 0) {
         console.log('!!! No json');
         return { events: [] };

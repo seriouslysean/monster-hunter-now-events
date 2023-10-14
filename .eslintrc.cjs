@@ -4,11 +4,16 @@ module.exports = {
         es2021: true,
         node: true,
     },
+    parser: '@typescript-eslint/parser',
     parserOptions: {
+        project: './tsconfig.json',
         ecmaVersion: 'latest',
-        sourceType: 'module',
     },
-    extends: ['airbnb-base', 'plugin:prettier/recommended'],
+    extends: [
+        'airbnb-base',
+        'airbnb-typescript/base',
+        'plugin:prettier/recommended',
+    ],
     overrides: [
         {
             env: {
@@ -26,8 +31,11 @@ module.exports = {
             },
         },
     ],
+    plugins: ['prettier', '@typescript-eslint'],
     rules: {
         // Extensions for known files are always required when using type="module"
         'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
+        'no-console': 'off',
+        'prettier/prettier': ['error', { endOfLine: 'auto' }],
     },
 };

@@ -53,7 +53,7 @@ const getArticlePages = (document, currentPage = 1) => {
 export async function getArticleByURL(url) {
     try {
         if (!url || !url.startsWith(mhnUrls.news)) {
-            throw new Error('Article url not valid', url);
+            throw new Error(`Article url not valid: ${url}`);
         }
         console.log(`Downloading html for ${url}`);
         // eslint-disable-next-line no-await-in-loop
@@ -63,12 +63,20 @@ export async function getArticleByURL(url) {
         }
         const document = parse(articleHTML);
         // Saving the fetched HTML data to the file system
+
         const timestamp = parseInt(
             document
                 .querySelector('[class^="_headline_"] [timestamp]')
-                .getAttribute('timestamp'),
+                ?.getAttribute('timestamp') ?? '',
             10,
         );
+
+        if (!timestamp) {
+            throw new Error(
+                'Timestamp was empty or could not be parsed to integer',
+            );
+        }
+
         const urlObj = new URL(url);
         const slug = getSlugFromPath(urlObj.pathname);
         const articleId = getArticleId(timestamp, slug);
@@ -82,8 +90,8 @@ export async function getArticleByURL(url) {
 }
 
 export async function getArticles(force = false) {
-    const downloadedLinks = [];
-    const promiseFunctions = [];
+    const downloadedLinks: string[] = [];
+    const promiseFunctions: (() => Promise<void>)[] = [];
 
     // Get news page index
     const document = await fetchAndParse(mhnUrls.news);
@@ -108,10 +116,18 @@ export async function getArticles(force = false) {
             }
 
             const url = `${mhnUrls.root}${path}`;
+
             const timestamp = parseInt(
-                el.querySelector('[timestamp]').getAttribute('timestamp'),
+                el.querySelector('[timestamp]')?.getAttribute('timestamp') ??
+                    '',
                 10,
             );
+
+            if (!timestamp) {
+                throw new Error(
+                    'Timestamp was empty or could not be parsed to integer',
+                );
+            }
 
             const slug = getSlugFromPath(path);
             const articleId = getArticleId(timestamp, slug);

@@ -19,7 +19,11 @@ function getFixtureDirectoryNames() {
         const directoryNames = directoryEntries
             .filter((entry) => entry.isDirectory())
             .map((directory) => directory.name)
-            .sort((a, b) => b.split('_')[0] - a.split('_')[0]);
+            .sort(
+                (a, b) =>
+                    parseInt(b.split('_')[0], 10) -
+                    parseInt(a.split('_')[0], 10),
+            );
         return directoryNames;
     } catch (error) {
         console.error('Error reading the fixtures directory:', error);
