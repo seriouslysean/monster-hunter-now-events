@@ -1,38 +1,22 @@
-name: PR Checks
+name: Fetch Article
 
 on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Article URL'
+        required: true
 
 permissions:
   contents: read
-  pull-requests: read
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: fetch-article-${{ github.event.inputs.url }}
   cancel-in-progress: true
 
 jobs:
-  draft:
-    name: "Check Draft Status"
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Fail draft PRs"
-        if: github.event.pull_request.draft == true
-        run: |
-          echo "Skipping execution for draft PR"
-          exit 1
-
-      - run: echo "PR is not Draft"
-
-  lint:
-    name: "Check Lint Status"
+  build:
+    name: "Fetch Article"
     runs-on: ubuntu-latest
 
     steps:
@@ -57,5 +41,5 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
+      - name: Run Start Script
+        run: npm run fetch:article -- -u ${{ github.event.inputs.url }}
