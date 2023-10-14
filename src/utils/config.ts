@@ -9,7 +9,7 @@ const ROOT = join(DIRNAME, '..', '..');
 
 export const environment = process.env.NODE_ENV || 'development';
 
-export const version = import.meta.npm_package_version;
+export const version = process.env.npm_package_version;
 
 export const paths = {
     root: ROOT,
