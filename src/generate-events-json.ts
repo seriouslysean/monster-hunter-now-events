@@ -10,6 +10,7 @@ import {
     saveEventsJSON,
     stringifyJSON,
 } from './utils/utils.js';
+import logger from './utils/log-utils.js';
 
 function getFixtureDirectoryNames() {
     try {
@@ -26,7 +27,7 @@ function getFixtureDirectoryNames() {
             );
         return directoryNames;
     } catch (error) {
-        console.error('Error reading the fixtures directory:', error);
+        logger.error('Error reading the fixtures directory:', error);
         return [];
     }
 }
@@ -53,10 +54,10 @@ function mergeEventFixtures(directoryNames) {
 }
 
 async function generateEventsJSON() {
-    console.log('Generating events.json');
+    logger.info('Generating events.json');
     const directoryNames = getFixtureDirectoryNames();
     const mergedEvents = mergeEventFixtures(directoryNames);
-    console.log('mergedEvents', mergedEvents);
+    logger.info('mergedEvents', mergedEvents);
     saveEventsJSON(mergedEvents);
 
     // Get a hash of the merged events
@@ -66,15 +67,15 @@ async function generateEventsJSON() {
     // Get the current deduped events list
     const currentEventsHash = getEventsJSONHash();
     if (currentEventsHash === mergedEventsHash) {
-        console.log('events.json is already up to date');
+        logger.info('events.json is already up to date');
         return;
     }
 
-    console.log('Deduping events.json');
+    logger.info('Deduping events.json');
     const dedupedJSON = await getDedupedJSON(mergedEvents, true);
     // Add hash from the merged events
     dedupedJSON.hash = mergedEventsHash;
-    console.log('dedupedJSON', dedupedJSON);
+    logger.info('dedupedJSON', dedupedJSON);
     saveEventsJSON(dedupedJSON, false);
 }
 

@@ -11,6 +11,7 @@ import {
     saveHTMLFixture,
     saveJSONFixture,
 } from './utils.js';
+import logger from './log-utils.js';
 
 /*
 NEXT STEPS
@@ -29,7 +30,7 @@ export const generateEventUID = (start, end, summary) => {
 };
 
 const fetchAndParse = async (url) => {
-    console.log(`Downloading html for ${url}`);
+    logger.info(`Downloading html for ${url}`);
     const { data: pageHTML } = await getPageHTML(url);
     return parse(pageHTML);
 };
@@ -55,7 +56,7 @@ export async function getArticleByURL(url) {
         if (!url || !url.startsWith(mhnUrls.news)) {
             throw new Error(`Article url not valid: ${url}`);
         }
-        console.log(`Downloading html for ${url}`);
+        logger.info(`Downloading html for ${url}`);
         // eslint-disable-next-line no-await-in-loop
         const { data: articleHTML } = await getPageHTML(url);
         if (!articleHTML) {
@@ -85,7 +86,7 @@ export async function getArticleByURL(url) {
         const articleJSON = await getEventsFromHTML(articleHTML, true);
         saveJSONFixture(articleId, articleJSON);
     } catch (err) {
-        console.error('Unable to fetch article', err);
+        logger.error('Unable to fetch article', err);
     }
 }
 
@@ -149,9 +150,9 @@ export async function getArticles(force = false) {
     }
 
     if (!downloadedLinks.length) {
-        console.log('No new news articles found');
+        logger.info('No new news articles found');
         return;
     }
 
-    console.log('News articles downloaded', downloadedLinks);
+    logger.info('News articles downloaded', downloadedLinks);
 }

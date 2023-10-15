@@ -16,7 +16,8 @@
     "date-fns": "^2.30.0",
     "node-html-parser": "^6.1.10",
     "openai": "^4.11.0",
-    "rollbar": "^2.26.2"
+    "rollbar": "^2.26.2",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.5",
