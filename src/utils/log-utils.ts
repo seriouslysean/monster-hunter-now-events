@@ -33,7 +33,7 @@ function getWinstonLogger() {
         level: 'info',
         transports: [
             new winston.transports.Console({}),
-            // TODO: Evalute if we want to add rollbard a transport from winston or call it from the facade
+            // TODO: Evalute if we want to add Rollbar a transport from Winston or call it from the facade
         ],
         format: winston.format.combine(
             winston.format.colorize(),
