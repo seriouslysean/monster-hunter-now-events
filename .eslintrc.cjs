@@ -35,7 +35,7 @@ module.exports = {
     rules: {
         // Extensions for known files are always required when using type="module"
         'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
-        'no-console': 'off',
+        'no-console': 'warn',
         'prettier/prettier': ['error', { endOfLine: 'auto' }],
     },
 };

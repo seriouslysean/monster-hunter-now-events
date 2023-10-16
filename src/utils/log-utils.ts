@@ -1,8 +1,10 @@
 import Rollbar from 'rollbar';
+import winston from 'winston';
 
 import { environment, version } from './config.js';
 
-function getLogger() {
+/* eslint consistent-return: off */
+function getRollbarLogger(): Rollbar {
     if (process.env.ROLLBAR_ACCESS_TOKEN) {
         return new Rollbar({
             accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
@@ -12,18 +14,66 @@ function getLogger() {
             payload: {
                 code_version: version,
             },
-            // Also log to the console
-            verbose: true,
         });
     }
-
-    return console;
 }
 
-const logger = getLogger();
+function getWinstonLogger() {
+    const formatMetadata = (metadata) => {
+        const splat = metadata[Symbol.for('splat')];
+        if (splat && splat.length) {
+            return splat.length === 1
+                ? JSON.stringify(splat[0])
+                : JSON.stringify(splat);
+        }
+        return '';
+    };
 
-export const log = (...args) => logger.log(...args);
+    return winston.createLogger({
+        level: 'info',
+        transports: [
+            new winston.transports.Console({}),
+            // TODO: Evalute if we want to add Rollbar a transport from Winston or call it from the facade
+        ],
+        format: winston.format.combine(
+            winston.format.colorize(),
+            winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
+            winston.format.printf(
+                ({ level, message, label, timestamp, ...metadata }) =>
+                    `${timestamp} ${
+                        label || '-'
+                    } ${level}: ${message} ${formatMetadata(metadata)}`,
+            ),
+            winston.format.splat(),
+        ),
+    });
+}
 
-export const warn = (...args) => logger.warn(...args);
+class LoggingFacade {
+    private rollbar: Rollbar;
 
-export const error = (...args) => logger.error(...args);
+    private logger: winston.Logger;
+
+    constructor() {
+        this.rollbar = getRollbarLogger();
+        this.logger = getWinstonLogger();
+    }
+
+    error(message: string, ...args) {
+        this.logger.error(message, ...args);
+    }
+
+    warn(message: string, ...args) {
+        this.logger.warn(message, ...args);
+    }
+
+    info(message: string, ...args) {
+        this.logger.info(message, ...args);
+    }
+
+    debug(message: string, ...args) {
+        this.logger.debug(message, ...args);
+    }
+}
+
+export default new LoggingFacade();

@@ -3,6 +3,7 @@ import { addDays } from 'date-fns';
 import { generateEventUID } from './utils/article-utils.js';
 import { generateICSDatetime } from './utils/date-utils.js';
 import { getEventsJSON, saveEventsICS } from './utils/utils.js';
+import logger from './utils/log-utils.js';
 
 const LINE_BREAK = '\r\n';
 
@@ -110,7 +111,7 @@ export default function generateFeed() {
         // corresponds to a fixed point in time which prevents the use of RRULE due to our use of
         // floating times. Big bummer, but it just means a larger ICS file at the end of the day.
         const icsEvents = events.reduce((acc, event) => {
-            console.log(`Adding event: ${event.summary}`);
+            logger.info(`Adding event: ${event.summary}`);
             const dates = event.dates || [];
             const datesString = dates.length
                 ? dates
@@ -122,9 +123,9 @@ export default function generateFeed() {
 
         const icsCalendar = generateCalendar(icsEvents);
         saveEventsICS(icsCalendar);
-        console.log('');
-        console.log('Events saved successfully!');
+        logger.info('');
+        logger.info('Events saved successfully!');
     } catch (err) {
-        console.error(err);
+        logger.error(err);
     }
 }

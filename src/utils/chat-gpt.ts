@@ -1,5 +1,6 @@
 import { parse } from 'node-html-parser';
 import OpenAI from 'openai';
+import logger from './log-utils.js';
 
 import { stringifyJSON } from './utils.js';
 
@@ -14,9 +15,9 @@ async function askGPTChat(messages, debug) {
         }
 
         if (debug) {
-            console.log('-----Question-----');
-            console.log(stringifyJSON(messages));
-            console.log('');
+            logger.info('-----Question-----');
+            logger.info(stringifyJSON(messages));
+            logger.info('');
         }
 
         const openai = new OpenAI({
@@ -36,21 +37,21 @@ async function askGPTChat(messages, debug) {
         }
 
         if (debug) {
-            console.log('-----Response-----');
-            console.log(response);
-            console.log('');
+            logger.info('-----Response-----');
+            logger.info(response);
+            logger.info('');
         }
 
         return JSON.parse(response);
     } catch (err) {
-        console.error(err);
+        logger.error(err);
         return noEvents;
     }
 }
 
 export async function getEventsFromHTML(html, debug = false) {
     if (!html) {
-        console.log('!!! No html');
+        logger.info('!!! No html');
         return { events: [] };
     }
 
@@ -146,7 +147,7 @@ export async function getDedupedJSON(
     debug = false,
 ): Promise<{ events: Event[]; hash?: string }> {
     if (!json || !json.events || json.events.length === 0) {
-        console.log('!!! No json');
+        logger.info('!!! No json');
         return { events: [] };
     }
 

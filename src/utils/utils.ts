@@ -12,6 +12,7 @@ import { dirname, resolve } from 'path';
 import axios from 'axios';
 
 import { paths } from './config.js';
+import logger from './log-utils.js';
 
 export function stringifyJSON(data) {
     return JSON.stringify(data, null, 4);
@@ -29,7 +30,7 @@ function getFile(filePath) {
         });
     } catch (err) {
         const pathFromRoot = filePath.replace(paths.root, '');
-        console.error(`File not found: ${pathFromRoot}`);
+        logger.error(`File not found: ${pathFromRoot}`);
     }
 
     return null;
@@ -47,7 +48,7 @@ function saveFile(path, content) {
         mkdirSync(pathName, { recursive: true });
         writeFileSync(path, content, 'utf8');
     } catch (err) {
-        console.error(`Unable to save ${path}`, err);
+        logger.error(`Unable to save ${path}`, err);
     }
 }
 
@@ -79,7 +80,7 @@ export async function getPageHTML(url) {
             responseType: 'text',
         });
     } catch (err) {
-        console.error(err);
+        logger.error(err);
         return { data: '' };
     }
 }
@@ -111,7 +112,7 @@ export function getEventsJSON() {
         return JSON.parse(data);
     } catch (err) {
         const pathFromRoot = filePath.replace(paths.dist, '');
-        console.error(`Events not found: ${pathFromRoot}`);
+        logger.error(`Events not found: ${pathFromRoot}`);
     }
 
     return null;
@@ -122,7 +123,7 @@ export function getEventsJSONHash() {
         const { hash } = getEventsJSON();
         return hash;
     } catch (err) {
-        console.error(`Event hash not found`);
+        logger.error(`Event hash not found`);
     }
 
     return '';
@@ -144,7 +145,7 @@ export function saveEventsJSON(content, raw = true) {
     const filePath = resolve(paths.dist, `events${raw ? '.raw' : ''}.json`);
     // This lets us direcly pass in json to be saved
     const adaptedContent = stringifyJSON(content);
-    console.log(`Saving ${filePath}`, adaptedContent);
+    logger.info(`Saving ${filePath}`, adaptedContent);
     saveFile(filePath, adaptedContent);
 }
 
