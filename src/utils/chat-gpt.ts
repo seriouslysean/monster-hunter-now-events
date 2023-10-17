@@ -18,13 +18,22 @@ async function askGPTChat(messages, debug) {
             logger.info('-----Question-----');
             logger.info(stringifyJSON(messages));
             logger.info('');
+            logger.info('-----OpenAI Config-----');
+            logger.info(
+                stringifyJSON({
+                    model: process.env.GPT_MODEL ?? 'gpt-4',
+                    // Adjust this value (0 to 1) to control randomness. Lower values make the output more deterministic.
+                    // https://platform.openai.com/docs/guides/gpt/how-should-i-set-the-temperature-parameter
+                    temperature: 0.2,
+                }),
+            );
         }
 
         const openai = new OpenAI({
             apiKey: process.env.OPENAI_API_KEY,
         });
         const chatCompletion = await openai.chat.completions.create({
-            model: 'gpt-4',
+            model: process.env.GPT_MODEL ?? 'gpt-4',
             messages,
             // Adjust this value (0 to 1) to control randomness. Lower values make the output more deterministic.
             // https://platform.openai.com/docs/guides/gpt/how-should-i-set-the-temperature-parameter
