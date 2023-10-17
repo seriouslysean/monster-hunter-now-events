@@ -1,26 +1,30 @@
-import http from 'http';
-import url from 'url';
-import fs from 'fs';
+import { createServer } from 'http';
+import { parse, fileURLToPath } from 'url';
+import { readFileSync, readdir } from 'fs';
+import { configDotenv } from 'dotenv';
+import { extname, dirname, join } from 'path';
 
-const PORT = 8080;
-const index = fs.readFileSync('index.html');
-const events = fs.readFileSync('./dist/events.json');
-
-function createServer(req, res) {
-    const path = url.parse(req.url).pathname;
+const port = process.env.PORT || 8080;
+function initServer(req, res) {
+    const path = parse(req.url).pathname;
+    console.log('current path: ', path);
 
     res.writeHead(200);
 
     switch (path) {
-        case '/json':
-            res.end(events);
+        case '/index.html':
+            res.end(readFileSync('index.html'));
+            break;
+        case '/dist/events.json':
+            res.end(readFileSync('dist/events.json'));
             break;
         default:
-            res.end(index);
+            res.end('No file found.');
             break;
     }
 }
 
-const server = http.createServer(createServer);
-server.listen(PORT);
-console.log('Server listeninng on port', PORT);
+const server = createServer(initServer);
+server.listen(port, () => {
+    console.log('Server listeninng on port', port);
+});

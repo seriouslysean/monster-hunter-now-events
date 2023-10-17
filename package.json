@@ -1,74 +1,74 @@
 {
-  "name": "monster-hunter-now-events",
-  "description": "A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.",
-  "version": "1.1.2",
-  "author": "Sean Kennedy <sean@codeserious.com>",
-  "bugs": {
-    "url": "https://github.com/seriouslysean/monster-hunter-now-events/issues"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.6.0"
-  },
-  "dependencies": {
-    "axios": "^1.5.1",
-    "commander": "^11.0.0",
-    "date-fns": "^2.30.0",
-    "node-html-parser": "^6.1.10",
-    "nodemon": "^3.0.1",
-    "openai": "^4.11.0",
-    "rollbar": "^2.26.2",
-    "winston": "^3.11.0"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "dotenv": "^16.3.1",
-    "eslint": "^8.50.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "husky": "^8.0.3",
-    "prettier": "^3.0.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
-  },
-  "homepage": "https://github.com/seriouslysean/monster-hunter-now-events#readme",
-  "keywords": [
-    "calendar",
-    "hacktoberfest",
-    "ics",
-    "javascript",
-    "monster-hunter",
-    "monster-hunter-now",
-    "nodejs",
-    "openai",
-    "web-scraping"
-  ],
-  "license": "MIT",
-  "main": "index.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seriouslysean/monster-hunter-now-events.git"
-  },
-  "scripts": {
-    "_lint:format": "prettier src --write",
-    "generate:events-json": "ts-node --esm -r dotenv/config ./src/generate-events-json.ts",
-    "generate:events-ics": "ts-node --esm -r dotenv/config index.ts",
-    "lint:fix": "prettier --write --list-different src && npm run lint:ts --fix",
-    "lint:ts": "eslint --ext .ts --ignore-path .gitignore src/*",
-    "lint:prettier": "prettier --check src",
-    "lint": "npm run lint:ts && npm run lint:prettier",
-    "start": "npm run fetch:all-articles && npm run generate:events-json && npm run generate:events-ics",
-    "fetch:all-articles": "ts-node --esm -r dotenv/config ./tools/fetch-all-articles.ts",
-    "fetch:article": "ts-node --esm -r dotenv/config ./tools/fetch-article.ts",
-    "test:logger": "ts-node --esm -r dotenv/config ./tools/test-logger.ts",
-    "ts-node": "ts-node",
-    "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
-  },
-  "type": "module"
+    "name": "monster-hunter-now-events",
+    "description": "A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.",
+    "version": "1.1.2",
+    "author": "Sean Kennedy <sean@codeserious.com>",
+    "bugs": {
+        "url": "https://github.com/seriouslysean/monster-hunter-now-events/issues"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.6.0"
+    },
+    "dependencies": {
+        "axios": "^1.5.1",
+        "commander": "^11.0.0",
+        "date-fns": "^2.30.0",
+        "node-html-parser": "^6.1.10",
+        "nodemon": "^3.0.1",
+        "openai": "^4.11.0",
+        "rollbar": "^2.26.2",
+        "winston": "^3.11.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.7.5",
+        "@typescript-eslint/parser": "^6.7.5",
+        "dotenv": "^16.3.1",
+        "eslint": "^8.50.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^17.1.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-import": "^2.28.1",
+        "eslint-plugin-prettier": "^5.0.0",
+        "husky": "^8.0.3",
+        "prettier": "^3.0.3",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    },
+    "homepage": "https://github.com/seriouslysean/monster-hunter-now-events#readme",
+    "keywords": [
+        "calendar",
+        "hacktoberfest",
+        "ics",
+        "javascript",
+        "monster-hunter",
+        "monster-hunter-now",
+        "nodejs",
+        "openai",
+        "web-scraping"
+    ],
+    "license": "MIT",
+    "main": "index.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/seriouslysean/monster-hunter-now-events.git"
+    },
+    "scripts": {
+        "_lint:format": "prettier src --write",
+        "generate:events-json": "ts-node --esm -r dotenv/config ./src/generate-events-json.ts",
+        "generate:events-ics": "ts-node --esm -r dotenv/config index.ts",
+        "lint:fix": "prettier --write --list-different src && npm run lint:ts --fix",
+        "lint:ts": "eslint --ext .ts --ignore-path .gitignore src/*",
+        "lint:prettier": "prettier --check src",
+        "lint": "npm run lint:ts && npm run lint:prettier",
+        "start": "npm run fetch:all-articles && npm run generate:events-json && npm run generate:events-ics",
+        "fetch:all-articles": "ts-node --esm -r dotenv/config ./tools/fetch-all-articles.ts",
+        "fetch:article": "ts-node --esm -r dotenv/config ./tools/fetch-article.ts",
+        "test:logger": "ts-node --esm -r dotenv/config ./tools/test-logger.ts",
+        "ts-node": "ts-node",
+        "tsc": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "serve": "nodemon -r dotenv/config server.js"
+    },
+    "type": "module"
 }
