@@ -1,11 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://github.com/seriouslysean/monster-hunter-now-events">
-    <title>Redirecting...</title>
+    <title>Monster Hunter Events Today</title>
 </head>
-<body>
-    If you are not redirected, <a href="https://github.com/seriouslysean/monster-hunter-now-events">click here</a>.
+
+<body style="
+        background-color:#F6F4E4;
+        color: #222;
+        padding: 0px;
+        margin: auto;
+        display: flex;
+        flex-direction:column;
+        row-gap: 15px;
+        align-items: center;
+        text-align: center;
+        overflow-x: hidden;">
+    <!-- Page Heading -->
+    <div style="
+        font-size: 60px;
+        font-style: italic;
+        font-weight: 700;
+    ">Monster Hunter Events Today</div>
+
+    <!-- Date -->
+    <div style="
+        font-size: 40px;
+        font-style: italic;
+        font-weight: 700;" id="tag_display_date">
+
+    </div>
+
+    <!-- Display Event Cards Here -->
+    <div style="
+        display:flex;
+        flex-direction:column;
+        gap:20px;" id="tag_display_events">
+    </div>
+
+    <script type="text/javascript">
+
+        let eventsTodayList = [];
+        const TODAY = new Date();
+
+        function appendData(data) {
+            data.events.forEach((event) => {
+                // console.log("event: ", event);
+                let flag = 0;
+                event.dates.forEach((date) => {
+                    // console.log("date: ", date);
+                    if (new Date(date.start) <= TODAY && new Date(date.end) >= TODAY) {
+                        flag = 1;
+                    }
+                })
+                if (flag == 1) {
+                    // The Event Occurs Today
+                    eventsTodayList.push({
+                        name: event.summary,
+                        desc: event.description,
+                    });
+                }
+            });
+
+            return eventsTodayList;
+        }
+
+
+        fetch('/json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                eventsTodayList = appendData(data);
+                // console.log("events: ", eventsTodayList);
+                document.getElementById("tag_display_date").innerHTML = TODAY.getDate() + "/" + TODAY.getMonth() + "/" + TODAY.getFullYear();
+
+                let tag_display = document.getElementById("tag_display_events");
+                console.log(eventsTodayList.length);
+                if (eventsTodayList.length === 0) {
+                    tag_display.innerHTML +=
+                        `<div style="
+                                    font-size: 32px;
+                                    font-weight: 700;
+                                ">
+                            No events scheduled for today!
+                        </div>`;
+                } else {
+                    eventsTodayList.forEach((event) => {
+                        tag_display.innerHTML +=
+                            `<div style="
+                                width: 566px;
+                                display: flex;
+                                flex-direction:column;
+                                row-gap:15px;
+                                border-radius: 10px;
+                                background: #222;
+                                color:#F6F4E4;
+                                padding: 10px 20px;
+                                font-style: italic;
+                            ">
+                                <div style="
+                                    font-size: 32px;
+                                    font-weight: 700;
+                                ">${event.name}</div>
+                                <div style="
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                ">${event.desc}</div>
+                            </div>`
+                    });
+                }
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+    </script>
+
+
+    <!-- Footer -->
+    <div style="
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+        position:absolute;
+        bottom:0px;
+        margin:0px;
+        padding: 40px;
+        background: #222;
+        color: #F6F4E4;
+    ">
+        <span>Repository:
+            <a href="https://github.com/seriouslysean/monster-hunter-now-events" target="_blank">Link</a>
+        </span>
+        <span>Download the ICS Subscription File:
+            <a href="https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics" target="_blank">Link</a>
+        </span>
+    </div>
 </body>
+
 </html>
