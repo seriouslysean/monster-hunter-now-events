@@ -14,12 +14,6 @@ function initServer(req: any, res: any) {
     } else {
         res.end(readFileSync('./index.html'));
     }
-
-    // if (path == '/dist/events.json') {
-    //     res.end(readFileSync(eventsFile));
-    // } else {
-    //     res.end(readFileSync(defaultFile));
-    // }
 }
 
 const server = createServer(initServer);

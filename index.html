@@ -30,7 +30,7 @@
             font-weight: 700;
         }
 
-        .eventsSection {
+        .events-section {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -48,12 +48,12 @@
             font-style: italic;
         }
 
-        .cardHeading {
+        .card-heading {
             font-size: 32px;
             font-weight: 700;
         }
 
-        .cardContent {
+        .card-content {
             font-size: 16px;
             font-weight: 400;
         }
@@ -81,7 +81,7 @@
     <div class="heading" id="tag_display_date"></div>
 
     <!-- Display Event Cards Here -->
-    <div class="eventsSection" id="tag_display_events"></div>
+    <div class="events-section" id="tag_display_events"></div>
 
     <script type="text/javascript">
 
@@ -125,15 +125,15 @@
         // console.log(eventsTodayList.length);
         if (eventsTodayList.length === 0) {
             tagDisplay.innerHTML +=
-                `<div class="cardHeading">
+                `<div class="card-heading">
                             No events scheduled for today!
                         </div>`;
         } else {
             eventsTodayList.forEach((event) => {
                 tagDisplay.innerHTML +=
                     `<div class="card">
-                                <div class="cardHeading">${event.name}</div>
-                                <div class="cardContent">${event.desc}</div>
+                                <div class="card-heading">${event.name}</div>
+                                <div class="card-content">${event.desc}</div>
                             </div>`
             });
         }
@@ -149,11 +149,7 @@
         </p>
         <p>Save the date in my Calendar:
             <a href="/dist/events.ics">Link</a>
-            <!-- <a href="https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics" target="_blank">Link</a> -->
         </p>
-        <!-- <p>Download the ICS Subscription File:
-            <a href="https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics" target="_blank">Link</a>
-        </p> -->
     </div>
 
 </body>
