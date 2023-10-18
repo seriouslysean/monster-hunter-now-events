@@ -15,6 +15,7 @@
     "commander": "^11.0.0",
     "date-fns": "^2.30.0",
     "node-html-parser": "^6.1.10",
+    "nodemon": "^3.0.1",
     "openai": "^4.11.0",
     "rollbar": "^2.26.2",
     "winston": "^3.11.0"
@@ -66,7 +67,8 @@
     "test:logger": "ts-node --esm -r dotenv/config ./tools/test-logger.ts",
     "ts-node": "ts-node",
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "ts-node --esm -r dotenv/config ./server.ts"
   },
   "type": "module"
 }
