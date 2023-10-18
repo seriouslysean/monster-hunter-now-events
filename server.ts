@@ -1,12 +1,8 @@
 import { createServer } from 'http';
 import { parse } from 'url';
 import { readFileSync } from 'fs';
-// import { paths } from './src/utils/config';
-// import { join } from 'path';
 
 const port = process.env.PORT || 8080;
-// const eventsFile = join(paths['dist'], 'events.json');
-// const defaultFile = join(paths['root'], 'index.html');
 
 function initServer(req: any, res: any) {
     const path = parse(req.url).pathname;
