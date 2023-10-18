@@ -7,7 +7,6 @@ import { stringifyJSON } from './utils.js';
 export const OPENAI_CHAT_ENDPOINT =
     'https://api.openai.com/v1/chat/completions';
 
-
 export const OPENAI_GPT_MODEL = process.env.OPENAI_GPT_MODEL ?? 'gpt-4';
 
 export const OPENAI_CONFIG = {
@@ -15,7 +14,7 @@ export const OPENAI_CONFIG = {
     // Adjust this value (0 to 1) to control randomness. Lower values make the output more deterministic.
     // https://platform.openai.com/docs/guides/gpt/how-should-i-set-the-temperature-parameter
     temperature: 0.2,
-}
+};
 
 async function askGPTChat(messages, debug) {
     const noEvents = { events: [] };
@@ -29,9 +28,7 @@ async function askGPTChat(messages, debug) {
             logger.info(stringifyJSON(messages));
             logger.info('');
             logger.info('-----OpenAI Config-----');
-            logger.info(
-                stringifyJSON(OPENAI_CONFIG),
-            );
+            logger.info(stringifyJSON(OPENAI_CONFIG));
         }
 
         const openai = new OpenAI({
@@ -39,7 +36,7 @@ async function askGPTChat(messages, debug) {
         });
         const chatCompletion = await openai.chat.completions.create({
             messages,
-            ...OPENAI_CONFIG
+            ...OPENAI_CONFIG,
         });
         const response = chatCompletion.choices?.[0]?.message?.content?.trim();
 
