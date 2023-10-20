@@ -1,63 +1,33 @@
 {
     "events": [
         {
-            "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!",
+            "summary": "Halloween Pumpkin Hunt & Medal Acquisition Quest",
+            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment! Additionally, a Halloween Medal Acquisition Quest will be distributed on October 28. Complete this to receive the Halloween Pumpkin Hunt Medal.",
             "dates": [
                 {
-                    "start": "2023-10-25T00:00:00",
+                    "start": "2023-10-25T09:00:00",
                     "end": "2023-10-31T23:59:59",
-                    "allDay": true
+                    "allDay": false
                 }
-            ]
+            ],
+            "habitat": [],
+            "monsters": []
         },
         {
-            "summary": "Rathian & Pink Rathian Special Appearance",
-            "description": "Rathian and Pink Rathian will appear more frequently than usual, especially during the weekend. Pink Rathian will appear in low numbers in Forest Habitats for all hunters HR11 and above. While appearance rates are boosted, Rathian will appear more frequently than usual and Pink Rathian will also be easier to find.",
+            "summary": "Appearance of Kulu-Ya-Ku with pumpkin-like rock",
+            "description": "Between these dates, Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying them will reward you with Pumpkin Tickets.",
             "dates": [
                 {
-                    "start": "2023-10-09T09:00:00",
-                    "end": "2023-10-15T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-13T17:00:00",
-                    "end": "2023-10-13T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-14T13:00:00",
-                    "end": "2023-10-14T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-15T13:00:00",
-                    "end": "2023-10-15T16:00:00",
+                    "start": "2023-10-28T09:00:00",
+                    "end": "2023-10-31T23:59:59",
                     "allDay": false
                 }
-            ]
-        },
-        {
-            "summary": "Tobi-Kadachi Weekend",
-            "description": "Tobi-Kadachi will appear more frequently in Swamp and Forest Habitats for all hunters HR11 and above.",
-            "dates": [
-                {
-                    "start": "2023-10-06T17:00:00",
-                    "end": "2023-10-06T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-07T13:00:00",
-                    "end": "2023-10-07T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-08T13:00:00",
-                    "end": "2023-10-08T16:00:00",
-                    "allDay": false
-                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Kulu-Ya-Ku"
             ]
         }
     ],
-    "hash": "TWpLk+Ao7Sz3WbRJBr5virt2Q34="
+    "hash": "jtRfcdO+0FD5+Q/dOfeiAQTmLZ8="
 }

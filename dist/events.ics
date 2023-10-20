@@ -16,87 +16,26 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:b6c13d483cc9cdc7f308c837b365d14688fe4330
-DTSTAMP:20231017T143138
-DTSTART:20231025
-DTEND:20231101
-SUMMARY:MHN: Halloween Pumpkin Hunt
-DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!
+UID:72eab13b5a66449dee207f1ce9cb54ce248e68aa
+DTSTAMP:20231020T021702
+DTSTART:20231025T090000
+DTEND:20231031T235959
+SUMMARY:MHN: Halloween Pumpkin Hunt & Medal Acquisition Quest
+DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
+ sts that involve gathering special items or slaying certain large monste
+ rs to receive Pumpkin Tickets which can be used to forge and upgrade you
+ r Jack-o’-Head equipment! Additionally, a Halloween Medal Acquisition Qu
+ est will be distributed on October 28. Complete this to receive the Hall
+ oween Pumpkin Hunt Medal.
 END:VEVENT
 BEGIN:VEVENT
-UID:894f52ceda095c072f1226ba184f266bf32fe4d0
-DTSTAMP:20231017T143138
-DTSTART:20231009T090000
-DTEND:20231015T160000
-SUMMARY:MHN: Rathian & Pink Rathian Special Appearance
-DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
- , especially during the weekend. Pink Rathian will appear in low numbers
-  in Forest Habitats for all hunters HR11 and above. While appearance rat
- es are boosted, Rathian will appear more frequently than usual and Pink 
- Rathian will also be easier to find.
-END:VEVENT
-BEGIN:VEVENT
-UID:3de065b55419466e9109876a1d7ea5541d5c6099
-DTSTAMP:20231017T143138
-DTSTART:20231013T170000
-DTEND:20231013T200000
-SUMMARY:MHN: Rathian & Pink Rathian Special Appearance
-DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
- , especially during the weekend. Pink Rathian will appear in low numbers
-  in Forest Habitats for all hunters HR11 and above. While appearance rat
- es are boosted, Rathian will appear more frequently than usual and Pink 
- Rathian will also be easier to find.
-END:VEVENT
-BEGIN:VEVENT
-UID:b621fcbe2318c4063a487babd6fc4e91656ba51d
-DTSTAMP:20231017T143138
-DTSTART:20231014T130000
-DTEND:20231014T160000
-SUMMARY:MHN: Rathian & Pink Rathian Special Appearance
-DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
- , especially during the weekend. Pink Rathian will appear in low numbers
-  in Forest Habitats for all hunters HR11 and above. While appearance rat
- es are boosted, Rathian will appear more frequently than usual and Pink 
- Rathian will also be easier to find.
-END:VEVENT
-BEGIN:VEVENT
-UID:f50d6e4b1c2343043958d5a8248f83cc05358c57
-DTSTAMP:20231017T143138
-DTSTART:20231015T130000
-DTEND:20231015T160000
-SUMMARY:MHN: Rathian & Pink Rathian Special Appearance
-DESCRIPTION:Rathian and Pink Rathian will appear more frequently than usual
- , especially during the weekend. Pink Rathian will appear in low numbers
-  in Forest Habitats for all hunters HR11 and above. While appearance rat
- es are boosted, Rathian will appear more frequently than usual and Pink 
- Rathian will also be easier to find.
-END:VEVENT
-BEGIN:VEVENT
-UID:7e0033e38ad38f0084518f2e50fdd60e87b81c50
-DTSTAMP:20231017T143138
-DTSTART:20231006T170000
-DTEND:20231006T200000
-SUMMARY:MHN: Tobi-Kadachi Weekend
-DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
- bitats for all hunters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
-UID:f5db82a64ac69ff1a80898fddb6ef3a1a71ff407
-DTSTAMP:20231017T143138
-DTSTART:20231007T130000
-DTEND:20231007T160000
-SUMMARY:MHN: Tobi-Kadachi Weekend
-DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
- bitats for all hunters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
-UID:cd38d2488f6c2eba20a4c3cfa0c3145657229314
-DTSTAMP:20231017T143138
-DTSTART:20231008T130000
-DTEND:20231008T160000
-SUMMARY:MHN: Tobi-Kadachi Weekend
-DESCRIPTION:Tobi-Kadachi will appear more frequently in Swamp and Forest Ha
- bitats for all hunters HR11 and above.
+UID:d348c858ac8b96a39807ad635a6f321fd8047616
+DTSTAMP:20231020T021702
+DTSTART:20231028T090000
+DTEND:20231031T235959
+SUMMARY:MHN: Appearance of Kulu-Ya-Ku with pumpkin-like rock
+DESCRIPTION:Between these dates, Kulu-Ya-Ku holding a pumpkin-like rock wil
+ l appear in larger numbers than usual. Slaying them will reward you with
+  Pumpkin Tickets.
 END:VEVENT
 END:VCALENDAR
