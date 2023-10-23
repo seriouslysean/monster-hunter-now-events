@@ -23,7 +23,6 @@ I created this because I didn't want to add events to a shared calendar for my f
 
 Add the [ICS file](https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics) to your calendar app.
 
-
 ```
 https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics
 ```
