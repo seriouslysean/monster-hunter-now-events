@@ -6,13 +6,6 @@
 
 # Monster Hunter Now Events
 
-* Subscribe to Calendar
-* Run Locally
-  - Open AI Key
-  - Generate ICS File
-  - Tools
-* References
-
 This is a calendar subscription file for events in [Monster Hunter Now](https://monsterhunternow.com/).
 
 If you aren't playing yet, [feel free to join](https://apps.apple.com/us/app/monster-hunter-now/id6445906110) and use my referral code for free items and zenny, `89K5MKCF`.
