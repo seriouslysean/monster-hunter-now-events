@@ -6,11 +6,18 @@
 
 # Monster Hunter Now Events
 
+* Subscribe to Calendar
+* Run Locally
+  - Open AI Key
+  - Generate ICS File
+  - Tools
+* References
+
 This is a calendar subscription file for events in [Monster Hunter Now](https://monsterhunternow.com/).
 
 If you aren't playing yet, [feel free to join](https://apps.apple.com/us/app/monster-hunter-now/id6445906110) and use my referral code for free items and zenny, `89K5MKCF`.
 
-I created this because I didn't want to add events to a shard calendar for my friends and I any longer and it's also a great way to test out how beneficial AI is in coding via dialoge with ChatGPT, and an excuse to utilize the OpenAI API.
+I created this because I didn't want to add events to a shared calendar for my friends and I any longer and it's also a great way to test out how beneficial AI is in coding via dialogue with ChatGPT, and an excuse to utilize the OpenAI API.
 
 ## Subscribe to Calendar
 
