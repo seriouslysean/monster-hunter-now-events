@@ -55,6 +55,7 @@
   },
   "scripts": {
     "_lint:format": "prettier src --write",
+    "publish": "npm start && ./tools/commit-articles.sh",
     "generate:events-json": "ts-node --esm -r dotenv/config ./src/generate-events-json.ts",
     "generate:events-ics": "ts-node --esm -r dotenv/config index.ts",
     "lint:fix": "prettier --write --list-different src && npm run lint:ts --fix",
@@ -65,7 +66,6 @@
     "fetch:all-articles": "ts-node --esm -r dotenv/config ./tools/fetch-all-articles.ts",
     "fetch:article": "ts-node --esm -r dotenv/config ./tools/fetch-article.ts",
     "test:logger": "ts-node --esm -r dotenv/config ./tools/test-logger.ts",
-    "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "ts-node --esm -r dotenv/config ./server.ts"
   },

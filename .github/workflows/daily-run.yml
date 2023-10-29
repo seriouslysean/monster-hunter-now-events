@@ -1,9 +1,9 @@
 name: Daily Run
 
 on:
-  # schedule:
-  #   # Runs every day at 6am
-  #   - cron:  '0 6 * * *'
+  schedule:
+    # Runs every day at 6am
+    - cron:  '0 6 * * *'
   # Allows manual triggering
   workflow_dispatch:
 
@@ -29,18 +29,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Cache node modules
-        uses: actions/cache@v3
-        id: cache
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Run Start Script
-        run: npm start
+      - name: Publish Feed
+        run: npm run publish
