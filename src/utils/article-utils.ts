@@ -151,7 +151,8 @@ export async function getArticles(force = false) {
 
     if (!downloadedLinks.length) {
         logger.info('No new news articles found');
-        return;
+        // Exit with error code to stop future jobs from running
+        process.exit(1);
     }
 
     logger.info('News articles downloaded', downloadedLinks);

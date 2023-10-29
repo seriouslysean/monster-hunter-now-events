@@ -127,5 +127,7 @@ export default function generateFeed() {
         logger.info('Events saved successfully!');
     } catch (err) {
         logger.error(err);
+        // Exit with error code to stop future jobs from running
+        process.exit(1);
     }
 }
