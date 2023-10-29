@@ -16,26 +16,116 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:72eab13b5a66449dee207f1ce9cb54ce248e68aa
-DTSTAMP:20231020T021702
-DTSTART:20231025T090000
-DTEND:20231031T235959
-SUMMARY:MHN: Halloween Pumpkin Hunt & Medal Acquisition Quest
+UID:607922e3ad8250773d525a2f7ace3757677ce393
+DTSTAMP:20231029T142655
+DTSTART:20231103T170000
+DTEND:20231103T200000
+SUMMARY:MHN: A Muddy Escapade: Jyuratodus Hunt
+DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
+ g the event, monsters in all Habitats will reappear in shorter intervals
+  than usual. Jyuratodus will appear more frequently than usual for all h
+ unters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:c46617fef2855b89b33b56014428fa7934c29a3c
+DTSTAMP:20231029T142655
+DTSTART:20231104T130000
+DTEND:20231104T160000
+SUMMARY:MHN: A Muddy Escapade: Jyuratodus Hunt
+DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
+ g the event, monsters in all Habitats will reappear in shorter intervals
+  than usual. Jyuratodus will appear more frequently than usual for all h
+ unters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:312c50b2b7652483e19a8e49132c3cacf3f4e08b
+DTSTAMP:20231029T142655
+DTSTART:20231105T130000
+DTEND:20231105T160000
+SUMMARY:MHN: A Muddy Escapade: Jyuratodus Hunt
+DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
+ g the event, monsters in all Habitats will reappear in shorter intervals
+  than usual. Jyuratodus will appear more frequently than usual for all h
+ unters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:a4e7be0179e8eb9e5c559e5d6603a0c76026f949
+DTSTAMP:20231029T142655
+DTSTART:20231025
+DTEND:20231101
+SUMMARY:MHN: Halloween Pumpkin Hunt & Medal Acquisition
 DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
  sts that involve gathering special items or slaying certain large monste
  rs to receive Pumpkin Tickets which can be used to forge and upgrade you
- r Jack-o’-Head equipment! Additionally, a Halloween Medal Acquisition Qu
- est will be distributed on October 28. Complete this to receive the Hall
- oween Pumpkin Hunt Medal.
+ r Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be di
+ stributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Ku
+ lu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than 
+ usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you wi
+ th Pumpkin Tickets! Introducing the Halloween-exclusive Jack-o’-Head arm
+ or! Skill: Solidarity (Pumpkin Hunt) Increases attack power the more of 
+ your fellow hunters have this skill activated. If active during the Hall
+ oween Pumpkin Hunt event, the effect is multiplied by 5! Look forward to
+  a Halloween-themed field map, as well as special Halloween-themed equip
+ ment! Kulu-Ya-Ku looks… different than usual?!
 END:VEVENT
 BEGIN:VEVENT
-UID:d348c858ac8b96a39807ad635a6f321fd8047616
-DTSTAMP:20231020T021702
-DTSTART:20231028T090000
-DTEND:20231031T235959
-SUMMARY:MHN: Appearance of Kulu-Ya-Ku with pumpkin-like rock
-DESCRIPTION:Between these dates, Kulu-Ya-Ku holding a pumpkin-like rock wil
- l appear in larger numbers than usual. Slaying them will reward you with
-  Pumpkin Tickets.
+UID:4caf746b2b12ce28463db771bd8fdb545abd5efe
+DTSTAMP:20231029T142655
+DTSTART:20231009T090000
+DTEND:20231015T160000
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:225a9f98e7c7e766c834c0e784d84f74aee7ea25
+DTSTAMP:20231029T142655
+DTSTART:20231013T170000
+DTEND:20231013T200000
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:48292e93df93586c4097dcefced40f32d0326ba3
+DTSTAMP:20231029T142655
+DTSTART:20231014T130000
+DTEND:20231014T160000
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:af83e9dd4a9d41b23a3063490f0467b47b47b6dd
+DTSTAMP:20231029T142655
+DTSTART:20231015T130000
+DTEND:20231015T160000
+SUMMARY:MHN: Rathian & Pink Rathian Week
+DESCRIPTION:From Monday, October 9, at 9:00 a.m. until Sunday, October 15, 
+ at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats
+ . Pink Rathian will appear as long as you have unlocked Rathian hunts (b
+ y completing Chapter 9). While appearance rates are boosted between Frid
+ ay, October 13, and Sunday, October 15, in Forest Habitats, Rathian will
+  appear more frequently than usual and Pink Rathian will also be easier 
+ to find. Rathian and Pink Rathian will appear in Forest Habitats for all
+  hunters HR11 and above.
 END:VEVENT
 END:VCALENDAR

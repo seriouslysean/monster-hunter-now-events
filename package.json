@@ -65,7 +65,6 @@
     "fetch:all-articles": "ts-node --esm -r dotenv/config ./tools/fetch-all-articles.ts",
     "fetch:article": "ts-node --esm -r dotenv/config ./tools/fetch-article.ts",
     "test:logger": "ts-node --esm -r dotenv/config ./tools/test-logger.ts",
-    "ts-node": "ts-node",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "ts-node --esm -r dotenv/config ./server.ts"
