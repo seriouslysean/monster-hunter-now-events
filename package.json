@@ -55,7 +55,6 @@
   },
   "scripts": {
     "_lint:format": "prettier src --write",
-    "publish": "npm start && ./tools/commit-articles.sh",
     "generate:events-json": "ts-node --esm -r dotenv/config ./src/generate-events-json.ts",
     "generate:events-ics": "ts-node --esm -r dotenv/config index.ts",
     "lint:fix": "prettier --write --list-different src && npm run lint:ts --fix",

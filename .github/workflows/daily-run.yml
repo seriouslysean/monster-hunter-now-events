@@ -19,7 +19,8 @@ jobs:
   # Using a PAT with repo push access due to branch protection rules which are not supported with
   # the automatic token provided by GitHub Actions at this time
   # https://docs.github.com/en/actions/security-guides/automatic-token-authentication
-  check_secret:
+  validate_pat:
+    name: "Validate PAT"
     runs-on: ubuntu-latest
     outputs:
       has_gh_pat: ${{ steps.check.outputs.has_gh_pat }}
@@ -36,8 +37,8 @@ jobs:
   build:
     name: "Daily Run"
     runs-on: ubuntu-latest
-    if: needs.check_secret.outputs.has_gh_pat == 'true'
-    needs: check_secret
+    if: needs.validate_pat.outputs.has_gh_pat == 'true'
+    needs: validate_pat
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -52,9 +53,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Publish Feed
+      - name: Generate
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          WORKFLOW_GIT_EMAIL: ${{ github.repository_owner }}@users.noreply.github.com
-          WORKFLOW_GIT_NAME: "MHN Events Workflow"
-        run: npm run publish
+        run: npm start
+
+      - name: Commit
+        run: git add . && git commit -m "Update feed $(date +'%Y-%m-%d')"
+
+      - name: Publish
+        run: git push origin main && git push origin main --tags
