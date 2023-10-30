@@ -3,12 +3,13 @@ name: Daily Run
 on:
   schedule:
     # Runs every day at 6am
-    - cron:  '0 6 * * *'
+    - cron: '0 6 * * *'
   # Allows manual triggering
   workflow_dispatch:
 
 permissions:
-  contents: read
+  # The WRITE permisson here is required to save the files, and push the new tag to the repo
+  contents: write
   pull-requests: read
 
 concurrency:
@@ -19,10 +20,11 @@ jobs:
   build:
     name: "Daily Run"
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the GITHUB_TOKEN here.
 
       - name: Set up Node.js 18
         uses: actions/setup-node@v3
