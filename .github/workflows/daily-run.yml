@@ -35,4 +35,6 @@ jobs:
       - name: Publish Feed
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          WORKFLOW_GIT_EMAIL: ${{ github.repository_owner }}@users.noreply.github.com
+          WORKFLOW_GIT_NAME: "MHN Events Workflow"
         run: npm run publish
