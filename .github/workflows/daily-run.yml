@@ -8,8 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  # The WRITE permisson here is required to save the files, and push the new tag to the repo
-  contents: write
+  contents: read
   pull-requests: read
 
 concurrency:
@@ -17,14 +16,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check_secret:
+    runs-on: ubuntu-latest
+    outputs:
+      has_gh_pat: ${{ steps.check.outputs.has_gh_pat }}
+    steps:
+      - name: Check if PAT is set
+        id: check
+        run: |
+          if [ -n "${{ secrets.GH_PAT }}" ]; then
+            echo "::set-output name=has_gh_pat::true"
+          else
+            echo "::set-output name=has_gh_pat::false"
+          fi
+
   build:
     name: "Daily Run"
     runs-on: ubuntu-latest
+    if: needs.check_secret.outputs.has_gh_pat == 'true'
+    needs: check_secret
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # Use the GITHUB_TOKEN here.
+          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Node.js 18
         uses: actions/setup-node@v3
