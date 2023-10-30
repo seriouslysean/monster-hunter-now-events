@@ -13,15 +13,6 @@ import {
 } from './utils.js';
 import logger from './log-utils.js';
 
-/*
-NEXT STEPS
-1. Abstract test-article logic in to shared utilities
-2. Use shared utilities to download and save the articles using the main news index
-    - Save news index HTML as a fixture?
-3. Use fixture json data to combine in to a single events.json file
-4. Use fixture json data to generate an ics file
-*/
-
 export const getSlugFromPath = (path) => path.substring(1).replace('/', '-');
 
 export const generateEventUID = (start, end, summary) => {
@@ -51,7 +42,7 @@ const getArticlePages = (document, currentPage = 1) => {
     return Array.from(pages);
 };
 
-export async function getArticleByURL(url) {
+export async function getArticleByURL(url: string) {
     try {
         if (!url || !url.startsWith(mhnUrls.news)) {
             throw new Error(`Article url not valid: ${url}`);
@@ -84,6 +75,8 @@ export async function getArticleByURL(url) {
         saveHTMLFixture(articleId, articleHTML);
 
         const articleJSON = await getEventsFromHTML(articleHTML, true);
+        articleJSON.meta = { timestamp, url };
+
         saveJSONFixture(articleId, articleJSON);
     } catch (err) {
         logger.error('Unable to fetch article', err);

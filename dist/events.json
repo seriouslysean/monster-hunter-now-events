@@ -22,8 +22,30 @@
             ]
         },
         {
+            "summary": "Halloween Medal Acquisition Quest",
+            "description": "A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal!",
+            "dates": [
+                {
+                    "start": "2023-10-28T09:00:00",
+                    "end": "2023-10-31T23:59:59",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Increased Kulu-Ya-Ku Appearance",
+            "description": "Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
+            "dates": [
+                {
+                    "start": "2023-10-28T09:00:00",
+                    "end": "2023-10-31T23:59:59",
+                    "allDay": false
+                }
+            ]
+        },
+        {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Between Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 2023, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets! Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment! Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
                     "start": "2023-10-25T00:00:00",
@@ -34,14 +56,9 @@
                     "start": "2023-10-25T09:00:00",
                     "end": "2023-10-31T23:59:59",
                     "allDay": false
-                },
-                {
-                    "start": "2023-10-28T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
                 }
             ]
         }
     ],
-    "hash": "ngxLSbJk2uIPgAzhKNv93pIJiz8="
+    "hash": "I4d6INTDw87oS17g1zAd4XFqjCk="
 }

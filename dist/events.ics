@@ -17,7 +17,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:444d6e9da0b31986bd989ff5138226dcb3a2550d
-DTSTAMP:20231030T012007
+DTSTAMP:20231030T122324
 DTSTART:20231103T170000
 DTEND:20231103T200000
 SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
@@ -28,7 +28,7 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
 END:VEVENT
 BEGIN:VEVENT
 UID:731fb511c0b151ceaa05f24d1c4ceea80bc836c3
-DTSTAMP:20231030T012007
+DTSTAMP:20231030T122324
 DTSTART:20231104T130000
 DTEND:20231104T160000
 SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
@@ -39,7 +39,7 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
 END:VEVENT
 BEGIN:VEVENT
 UID:8a93aa2024bbae376eba586c57319ca81afe099a
-DTSTAMP:20231030T012007
+DTSTAMP:20231030T122324
 DTSTART:20231105T130000
 DTEND:20231105T160000
 SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
@@ -49,57 +49,48 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
  unters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
+UID:6ff170fd766748073c63f15f8ab5faa7711d5183
+DTSTAMP:20231030T122324
+DTSTART:20231028T090000
+DTEND:20231031T235959
+SUMMARY:MHN: Halloween Medal Acquisition Quest
+DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
+ te this to receive the Halloween Pumpkin Hunt Medal!
+END:VEVENT
+BEGIN:VEVENT
+UID:284acd2d0821f56f32798baf0e281cc2e73aa709
+DTSTAMP:20231030T122324
+DTSTART:20231028T090000
+DTEND:20231031T235959
+SUMMARY:MHN: Increased Kulu-Ya-Ku Appearance
+DESCRIPTION:Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger nu
+ mbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will re
+ ward you with Pumpkin Tickets!
+END:VEVENT
+BEGIN:VEVENT
 UID:b6c13d483cc9cdc7f308c837b365d14688fe4330
-DTSTAMP:20231030T012007
+DTSTAMP:20231030T122324
 DTSTART:20231025
 DTEND:20231101
 SUMMARY:MHN: Halloween Pumpkin Hunt
 DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
  sts that involve gathering special items or slaying certain large monste
  rs to receive Pumpkin Tickets which can be used to forge and upgrade you
- r Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be di
- stributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Be
- tween Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 202
- 3, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in lar
- ger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock w
- ill reward you with Pumpkin Tickets! Look forward to a Halloween-themed 
- field map, as well as special Halloween-themed equipment! Oh, and Kulu-Y
- a-Ku looks… different than usual?!
+ r Jack-o’-Head equipment! Look forward to a Halloween-themed field map, 
+ as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… differe
+ nt than usual?!
 END:VEVENT
 BEGIN:VEVENT
 UID:e9f41d3bb7136a3b5faf412280ba8d12990c66e8
-DTSTAMP:20231030T012007
+DTSTAMP:20231030T122324
 DTSTART:20231025T090000
 DTEND:20231031T235959
 SUMMARY:MHN: Halloween Pumpkin Hunt
 DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
  sts that involve gathering special items or slaying certain large monste
  rs to receive Pumpkin Tickets which can be used to forge and upgrade you
- r Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be di
- stributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Be
- tween Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 202
- 3, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in lar
- ger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock w
- ill reward you with Pumpkin Tickets! Look forward to a Halloween-themed 
- field map, as well as special Halloween-themed equipment! Oh, and Kulu-Y
- a-Ku looks… different than usual?!
-END:VEVENT
-BEGIN:VEVENT
-UID:369e3389badd42ec9f3801dbca15343e95ebcb0b
-DTSTAMP:20231030T012007
-DTSTART:20231028T090000
-DTEND:20231031T235959
-SUMMARY:MHN: Halloween Pumpkin Hunt
-DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
- sts that involve gathering special items or slaying certain large monste
- rs to receive Pumpkin Tickets which can be used to forge and upgrade you
- r Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be di
- stributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Be
- tween Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 202
- 3, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in lar
- ger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock w
- ill reward you with Pumpkin Tickets! Look forward to a Halloween-themed 
- field map, as well as special Halloween-themed equipment! Oh, and Kulu-Y
- a-Ku looks… different than usual?!
+ r Jack-o’-Head equipment! Look forward to a Halloween-themed field map, 
+ as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… differe
+ nt than usual?!
 END:VEVENT
 END:VCALENDAR
