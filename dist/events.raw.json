@@ -1,49 +1,14 @@
 {
     "events": [
         {
-            "summary": "A Muddy Escapade: Join the hunt for Jyuratodus!",
-            "description": "Jyuratodus will appear more frequently in Swamp Habitats. During the event, monsters in all Habitats will reappear in shorter intervals than usual. Jyuratodus will appear more frequently than usual for all hunters HR11 and above.",
+            "summary": "Halloween Pumpkin Hunt",
+            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Between Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 2023, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
             "dates": [
                 {
-                    "start": "2023-11-03T17:00:00",
-                    "end": "2023-11-03T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-04T13:00:00",
-                    "end": "2023-11-04T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-05T13:00:00",
-                    "end": "2023-11-05T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Swamp"
-            ],
-            "monsters": [
-                "Jyuratodus"
-            ]
-        },
-        {
-            "summary": "Halloween Medal Acquisition Quest",
-            "description": "A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal!",
-            "dates": [
-                {
-                    "start": "2023-10-28T09:00:00",
+                    "start": "2023-10-25T09:00:00",
                     "end": "2023-10-31T23:59:59",
                     "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": []
-        },
-        {
-            "summary": "Appearance of Kulu-Ya-Ku with pumpkin-like rock",
-            "description": "Between these dates, Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying them will reward you with Pumpkin Tickets.",
-            "dates": [
+                },
                 {
                     "start": "2023-10-28T09:00:00",
                     "end": "2023-10-31T23:59:59",
@@ -57,35 +22,7 @@
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment!",
-            "dates": [
-                {
-                    "start": "2023-10-25T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": []
-        },
-        {
-            "summary": "Halloween Pumpkin Hunt",
-            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets! Introducing the Halloween-exclusive Jack-o’-Head armor! Skill: Solidarity (Pumpkin Hunt) Increases attack power the more of your fellow hunters have this skill activated. If active during the Halloween Pumpkin Hunt event, the effect is multiplied by 5!",
-            "dates": [
-                {
-                    "start": "2023-10-25T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Kulu-Ya-Ku"
-            ]
-        },
-        {
-            "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
                     "start": "2023-10-25T00:00:00",
@@ -96,72 +33,6 @@
             "habitat": [],
             "monsters": [
                 "Kulu-Ya-Ku"
-            ]
-        },
-        {
-            "summary": "A cherry-colored season: Investigate a new subspecies!",
-            "description": "From Monday, October 9, at 9:00 a.m. until Sunday, October 15, at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats. Pink Rathian will appear as long as you have unlocked Rathian hunts (by completing Chapter 9). While appearance rates are boosted between Friday, October 13, and Sunday, October 15, in Forest Habitats, Rathian will appear more frequently than usual and Pink Rathian will also be easier to find. Rathian and Pink Rathian will appear in Forest Habitats for all hunters HR11 and above.",
-            "dates": [
-                {
-                    "start": "2023-10-09T09:00:00",
-                    "end": "2023-10-15T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-13T17:00:00",
-                    "end": "2023-10-13T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-14T13:00:00",
-                    "end": "2023-10-14T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-15T13:00:00",
-                    "end": "2023-10-15T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Forest"
-            ],
-            "monsters": [
-                "Rathian",
-                "Pink Rathian"
-            ]
-        },
-        {
-            "summary": "Rathian & Pink Rathian Week",
-            "description": "Rathian and Pink Rathian will appear more frequently than usual during the weekend. Pink Rathian will appear in low numbers in Forest Habitats.",
-            "dates": [
-                {
-                    "start": "2023-10-09T09:00:00",
-                    "end": "2023-10-13T16:59:59",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-13T17:00:00",
-                    "end": "2023-10-13T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-14T13:00:00",
-                    "end": "2023-10-14T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-10-15T13:00:00",
-                    "end": "2023-10-15T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Forest"
-            ],
-            "monsters": [
-                "Rathian",
-                "Pink Rathian"
             ]
         }
     ]
