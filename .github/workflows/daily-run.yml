@@ -16,6 +16,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Using a PAT with repo push access due to branch protection rules which are not supported with
+  # the automatic token provided by GitHub Actions at this time
+  # https://docs.github.com/en/actions/security-guides/automatic-token-authentication
   check_secret:
     runs-on: ubuntu-latest
     outputs:
