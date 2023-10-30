@@ -16,8 +16,41 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
+UID:444d6e9da0b31986bd989ff5138226dcb3a2550d
+DTSTAMP:20231030T012007
+DTSTART:20231103T170000
+DTEND:20231103T200000
+SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
+DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
+ g the event, monsters in all Habitats will reappear in shorter intervals
+  than usual. Jyuratodus will appear more frequently than usual for all h
+ unters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:731fb511c0b151ceaa05f24d1c4ceea80bc836c3
+DTSTAMP:20231030T012007
+DTSTART:20231104T130000
+DTEND:20231104T160000
+SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
+DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
+ g the event, monsters in all Habitats will reappear in shorter intervals
+  than usual. Jyuratodus will appear more frequently than usual for all h
+ unters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:8a93aa2024bbae376eba586c57319ca81afe099a
+DTSTAMP:20231030T012007
+DTSTART:20231105T130000
+DTEND:20231105T160000
+SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
+DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
+ g the event, monsters in all Habitats will reappear in shorter intervals
+  than usual. Jyuratodus will appear more frequently than usual for all h
+ unters HR11 and above.
+END:VEVENT
+BEGIN:VEVENT
 UID:b6c13d483cc9cdc7f308c837b365d14688fe4330
-DTSTAMP:20231029T200654
+DTSTAMP:20231030T012007
 DTSTART:20231025
 DTEND:20231101
 SUMMARY:MHN: Halloween Pumpkin Hunt
@@ -35,7 +68,7 @@ DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
 END:VEVENT
 BEGIN:VEVENT
 UID:e9f41d3bb7136a3b5faf412280ba8d12990c66e8
-DTSTAMP:20231029T200654
+DTSTAMP:20231030T012007
 DTSTART:20231025T090000
 DTEND:20231031T235959
 SUMMARY:MHN: Halloween Pumpkin Hunt
@@ -53,7 +86,7 @@ DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
 END:VEVENT
 BEGIN:VEVENT
 UID:369e3389badd42ec9f3801dbca15343e95ebcb0b
-DTSTAMP:20231029T200654
+DTSTAMP:20231030T012007
 DTSTART:20231028T090000
 DTEND:20231031T235959
 SUMMARY:MHN: Halloween Pumpkin Hunt
