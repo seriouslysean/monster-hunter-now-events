@@ -29,9 +29,9 @@ jobs:
         id: check
         run: |
           if [ -n "${{ secrets.GH_PAT }}" ]; then
-            echo "::set-output name=has_gh_pat::true"
+            echo "has_gh_pat=true" >> $GITHUB_ENV
           else
-            echo "::set-output name=has_gh_pat::false"
+            echo "has_gh_pat=false" >> $GITHUB_ENV
           fi
 
   build:
