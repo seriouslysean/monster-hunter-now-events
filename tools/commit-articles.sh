@@ -9,4 +9,5 @@ git config --global user.name "$WORKFLOW_GIT_NAME"
 
 git add . && \
 git commit -m "Article fetch $CURRENTDATE" && \
-npm version patch
+npm version patch && \
+git push && git push --tags;
