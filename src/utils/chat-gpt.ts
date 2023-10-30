@@ -168,45 +168,53 @@ export async function getDedupedJSON(
             role: 'system',
             content: `**Event Combination Guidelines: Monster Hunter Now**
 
-You will receive a JSON payload containing an array of events within the "events" key, as well as a "meta" field indicating the URL and date of the post. Deduplicate and logically combine these events based on the guidelines below. Use the "meta" field to prioritize newer posts, as they are likely to contain more accurate information for the scheduled events. Your task is to accurately identify overlapping or adjacent events with the same summary and merge them into a single event entry, ensuring the integrity of the event details is maintained without introducing redundant date ranges.
+Given an input JSON payload with an array of events within the "events" key, your task is to merge and consolidate these events based on the following rules:
 
-1. **Meta Field Priority**:
-    - When merging events from different sources, prioritize the details from the post with a newer timestamp in the "meta" field.
+1. **Date Priority**:
+    - When merging events from different sources, always prioritize the details from the event with a newer timestamp provided in the "timestamp" field.
 
-2. **Criteria for Merging**:
-    - Exact Title Match: If two events share the exact same title, they should be considered for merging.
-    - Overlapping & Adjacent Dates: Merge events that share a time frame or are adjacent (consecutive dates) within the same habitat and involve similar monsters. If two events have exactly the same date range, merge them into one; if their date ranges are adjacent or overlapping but not identical, combine these date ranges and list them chronologically in the 'dates' array, ensuring there's no repetition of the same date range.
-    - Habitat & Monsters: Events in the same habitat, involving the same monsters, during overlapping, identical, or adjacent times should be merged.
+2. **Unique Titles Requirement**:
+    - Events must have unique titles. If events share identical titles, inspect their description, habitat, monsters, and dates to determine if they should be merged.
 
-3. **Generate Coherent Summaries**: Create a concise and clear summary for events that are closely related in theme or content. The summary should be short yet informative, suitable for calendar applications. Avoid including date details in the summary.
+3. **Overlapping & Adjacent Dates**:
+    - Merge events with shared or consecutive date ranges, especially if they are in the same habitat or involve the same monsters.
+    - If events have the exact same date range, combine them into a single date range entry.
+    - If one event's date range is an all-day event and another is a timed event on the same dates, retain only the timed event's date range. The all-day event's date range should be removed.
+    - Ensure there are no repeated or redundant date ranges in the merged 'dates' array.
 
-4. **Combine Descriptions Carefully**: Integrate the event descriptions to ensure the final combined description is coherent and retains the essence of both original descriptions. Do not include any date details in the description.
+4. **Habitat & Monsters**:
+    - Merge events that occur in the same habitat with the same monsters, especially if their dates overlap, are identical, or consecutive.
 
-5. **Return All Consolidated Events**: Based on the events provided, return all consolidated events in order.
+5. **Coherent Summaries**:
+    - Generate concise and clear summaries for merged events. Avoid including date details in the summary.
 
-6. **Remove Unnecessary Keys**: Remove the habitat, monster, and meta keys as they are no longer needed post deduplication.
+6. **Description**:
+    - Carefully combine event descriptions to preserve the essence of the original descriptions. Ensure no redundancy or repetition.
 
-**Output Format**:
+7. **Cleaning Up**:
+    - After merging, discard the habitat, monster, and timestamp keys.
+    - Return all consolidated events in chronological order based on their start date.
+
+Output Format:
+Provide a JSON with the following structure:
 {
-    events: [{
+    "events": [{
         "summary": "Event Name",
-        "description": "Event Details",
+        "description": "Detailed Description",
         "dates": [
             {
                 "start": "YYYY-MM-DDTHH:mm:ss",
                 "end": "YYYY-MM-DDTHH:mm:ss",
                 "allDay": true/false
             }
-        ],
-    }],
+        ]
+    }]
 }
 
-**Notes**:
-- Focus on short, clear, and precise event summaries that convey the essence of the event without redundancy.
-- Dates are NOT to be included in the summary or description fields since they have their designated place in the 'dates' array.
-- Events that don't meet the above strict criteria for merging should remain as separate items in the returned list.
-- Ensure individual timed events with unique times remain separate within the 'dates' array.
-- Return ONLY valid JSON in your response and ensure no repetition of the same date range in the merged event.`,
+Important Notes:
+- The goal is to return concise event summaries without redundancy.
+- Do not include date specifics in the summary or description; use the 'dates' array for that.
+- If events cannot be logically merged, they should remain separate in the output.`,
         },
         {
             role: 'user',

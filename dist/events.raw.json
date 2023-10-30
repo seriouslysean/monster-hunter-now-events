@@ -25,7 +25,8 @@
             ],
             "monsters": [
                 "Jyuratodus"
-            ]
+            ],
+            "timestamp": 1698397200000
         },
         {
             "summary": "Halloween Medal Acquisition Quest",
@@ -38,7 +39,8 @@
                 }
             ],
             "habitat": [],
-            "monsters": []
+            "monsters": [],
+            "timestamp": 1697594400000
         },
         {
             "summary": "Increased Kulu-Ya-Ku Appearance",
@@ -53,7 +55,8 @@
             "habitat": [],
             "monsters": [
                 "Kulu-Ya-Ku"
-            ]
+            ],
+            "timestamp": 1697594400000
         },
         {
             "summary": "Halloween Pumpkin Hunt",
@@ -66,7 +69,8 @@
                 }
             ],
             "habitat": [],
-            "monsters": []
+            "monsters": [],
+            "timestamp": 1697594400000
         },
         {
             "summary": "Halloween Pumpkin Hunt",
@@ -81,7 +85,8 @@
             "habitat": [],
             "monsters": [
                 "Kulu-Ya-Ku"
-            ]
+            ],
+            "timestamp": 1696212000000
         }
     ]
 }

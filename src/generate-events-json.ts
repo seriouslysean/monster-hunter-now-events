@@ -35,8 +35,12 @@ function getFixtureDirectoryNames() {
 // Merge all event fixtures into one array
 function mergeEventFixtures(directoryNames) {
     const events = directoryNames.reduce((acc, directoryName) => {
-        const fixtureEvents = getJSONFixture(directoryName).events;
-        const recentEvents = fixtureEvents.filter(isEventRecent);
+        const jsonFixture = getJSONFixture(directoryName);
+        const { events: fixtureEvents, meta } = jsonFixture;
+        const recentEvents = fixtureEvents.filter(isEventRecent).map((e) => ({
+            ...e,
+            timestamp: meta.timestamp,
+        }));
         return [...acc, ...recentEvents];
     }, []);
 
