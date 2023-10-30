@@ -1,28 +1,6 @@
 {
     "events": [
         {
-            "summary": "Halloween Pumpkin Hunt & Increased Kulu-Ya-Ku Appearance",
-            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment! Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?! Additionally, Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
-            "dates": [
-                {
-                    "start": "2023-10-25T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "Halloween Medal Acquisition Quest",
-            "description": "A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal!",
-            "dates": [
-                {
-                    "start": "2023-10-28T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ]
-        },
-        {
             "summary": "A Muddy Escapade: Join the hunt for Jyuratodus!",
             "description": "Jyuratodus will appear more frequently in Swamp Habitats. During the event, monsters in all Habitats will reappear in shorter intervals than usual. Jyuratodus will appear more frequently than usual for all hunters HR11 and above.",
             "dates": [
@@ -39,6 +17,39 @@
                 {
                     "start": "2023-11-05T13:00:00",
                     "end": "2023-11-05T16:00:00",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Halloween Pumpkin Hunt",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment!",
+            "dates": [
+                {
+                    "start": "2023-10-25T00:00:00",
+                    "end": "2023-10-31T23:59:59",
+                    "allDay": true
+                }
+            ]
+        },
+        {
+            "summary": "Halloween Medal Acquisition Quest",
+            "description": "A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal!",
+            "dates": [
+                {
+                    "start": "2023-10-28T09:00:00",
+                    "end": "2023-10-31T23:59:59",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Increased Kulu-Ya-Ku Appearance",
+            "description": "Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
+            "dates": [
+                {
+                    "start": "2023-10-28T09:00:00",
+                    "end": "2023-10-31T23:59:59",
                     "allDay": false
                 }
             ]

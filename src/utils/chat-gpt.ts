@@ -166,41 +166,46 @@ export async function getDedupedJSON(
     const messages = [
         {
             role: 'system',
-            content: `**Event Combination Guidelines: Monster Hunter Now**
+            content: `**Event Consolidation Guide: Monster Hunter Now**
 
-Given an input JSON payload with an array of events within the "events" key, your task is to merge and consolidate these events based on the following rules:
+Given a JSON with events under the "events" key, consolidate them using the following rules:
 
-1. **Date Priority**:
-    - When merging events from different sources, always prioritize the details from the event with a newer timestamp provided in the "timestamp" field.
+1. Date Priority:
+    - Prefer details from newer "timestamp" events when merging.
 
-2. **Unique Titles Requirement**:
-    - Events must have unique titles. If events share identical titles, inspect their description, habitat, monsters, and dates to determine if they should be merged.
+2. Distinct Events:
+    - Maintain distinctiveness for events on the same date that relate to different quests, tasks, or primary objectives. They must be kept as separate events, even if their time ranges overlap. Overlapping dates should not automatically merge events; content and context are key.
 
-3. **Overlapping & Adjacent Dates**:
-    - Merge events with shared or consecutive date ranges, especially if they are in the same habitat or involve the same monsters.
-    - If events have the exact same date range, combine them into a single date range entry.
-    - If one event's date range is an all-day event and another is a timed event on the same dates, retain only the timed event's date range. The all-day event's date range should be removed.
-    - Ensure there are no repeated or redundant date ranges in the merged 'dates' array.
+3. Uniqueness:
+    - For event titles that match, evaluate their description, habitat, monsters, and dates for potential merging. Merge only if the content is complementary. If their content is distinct, especially in the context of quests or tasks, keep them separate.
 
-4. **Habitat & Monsters**:
-    - Merge events that occur in the same habitat with the same monsters, especially if their dates overlap, are identical, or consecutive.
+4. Dates:
+    - For overlapping or consecutive date ranges with matching habitat or monsters, consider merging.
+    - For exact date matches, set "allDay" to true.
+    - When two events have overlapping dates, one being all-day and the other with specific times that encompass the full day, merge them under "allDay": true.
+    - Reduce redundant date entries.
 
-5. **Coherent Summaries**:
-    - Generate concise and clear summaries for merged events. Avoid including date details in the summary.
+5. Habitat & Monsters:
+    - If events occur in similar habitats with the same monsters and have overlapping or consecutive dates, consider merging.
 
-6. **Description**:
-    - Carefully combine event descriptions to preserve the essence of the original descriptions. Ensure no redundancy or repetition.
+6. Summaries:
+    - Generate summaries that are clear and without date specifics. For merged events, produce a cohesive summary.
 
-7. **Cleaning Up**:
-    - After merging, discard the habitat, monster, and timestamp keys.
-    - Return all consolidated events in chronological order based on their start date.
+7. Description:
+    - Combine descriptions avoiding redundancy. For overarching events, integrate details from more specific events without being repetitive.
 
-Output Format:
-Provide a JSON with the following structure:
+8. Cleanup:
+    - Remove the habitat, monster, and timestamp fields.
+    - Retain the order from the raw JSON, unless dictated otherwise by merges.
+
+9. Overarching Events:
+    - Preserve events labeled as all-day, even if there are overlapping timed events. Overarching events that encompass specific event details should be marked as "allDay": true.
+
+Output:
 {
     "events": [{
         "summary": "Event Name",
-        "description": "Detailed Description",
+        "description": "Description",
         "dates": [
             {
                 "start": "YYYY-MM-DDTHH:mm:ss",
@@ -211,10 +216,10 @@ Provide a JSON with the following structure:
     }]
 }
 
-Important Notes:
-- The goal is to return concise event summaries without redundancy.
-- Do not include date specifics in the summary or description; use the 'dates' array for that.
-- If events cannot be logically merged, they should remain separate in the output.`,
+Notes:
+- Prioritize concise and non-redundant summaries.
+- Separate events if their activities, quests, or tasks differ, even when they share the same date.
+- Always ensure events are represented, whether individually or merged, in the output.`,
         },
         {
             role: 'user',
