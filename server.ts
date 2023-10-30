@@ -1,22 +1,37 @@
-import { createServer } from 'http';
-import { parse } from 'url';
+import express from 'express';
 import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import path from 'path';
 
 const port = process.env.PORT || 8080;
+const app = express();
 
-function initServer(req: any, res: any) {
-    const path = parse(req.url).pathname;
-    console.log('current path: ', path);
+// Get the current directory path
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-    res.writeHead(200);
-    if (path == '/dist/events.json') {
-        res.end(readFileSync('dist/events.json'));
-    } else {
-        res.end(readFileSync('./index.html'));
-    }
-}
+app.get('/dist/events.json', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(readFileSync('dist/events.json', 'utf8'));
+});
 
-const server = createServer(initServer);
-server.listen(port, () => {
-    console.log('Server listeninng on port', port);
+app.get('/docs/assets/monster-hunter-now-logo.png', (req, res) => {
+    res.sendFile(path.join(__dirname, 'docs/assets/monster-hunter-now-logo.png'));
+});
+
+app.get('/', (req, res) => {
+    res.setHeader('Content-Type', 'text/html');
+    res.send(readFileSync('./index.html', 'utf8'));
+});
+
+app.listen(port, () => {
+    console.log(`
+
+                           __
+                          / _)  - Listening on port ${port}
+                 _/|/|/|_/ /
+               _|         /
+             _|  (  | (  |
+            /__.-'|_|--|_|
+
+`);
 });

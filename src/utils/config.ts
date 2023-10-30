@@ -14,6 +14,7 @@ export const version = process.env.npm_package_version;
 export const paths = {
     root: ROOT,
     dist: join(ROOT, 'dist'),
+    docs: join(ROOT, 'docs'),
     fixtures: join(ROOT, 'fixtures'),
     src: join(ROOT, 'src'),
 };
