@@ -100,14 +100,9 @@
                 const eventsList = [];
                 data.events.forEach((event) => {
                     event.dates.every((date) => {
-                        const startDate = new Date(date.start).setHours(
-                            0,
-                            0,
-                            0,
-                            0,
-                        );
-                        const endDate = new Date(date.end).setHours(0, 0, 0, 0);
-                        const currentDate = new Date().setHours(0, 0, 0, 0);
+                        const startDate = new Date(date.start);
+                        const endDate = new Date(date.end);
+                        const currentDate = new Date();
 
                         if (
                             startDate <= currentDate &&
@@ -116,6 +111,8 @@
                             eventsList.push({
                                 name: event.summary,
                                 desc: event.description,
+                                startTime: startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                                endTime: endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                             });
                             return false;
                         }
@@ -159,7 +156,7 @@
                 } else {
                     eventsTodayList.forEach((event) => {
                         tagDisplay.innerHTML += `<div class="card">
-                            <div class="card-heading">${event.name}</div>
+                            <div class="card-heading">${event.name} (${event.startTime} - ${event.endTime})</div>
                             <div class="card-content">${event.desc}</div>
                         </div>`;
                     });
