@@ -22,22 +22,17 @@ jobs:
   validate_pat:
     name: "Validate PAT"
     runs-on: ubuntu-latest
-    outputs:
-      has_gh_pat: ${{ steps.check.outputs.has_gh_pat }}
     steps:
       - name: Check if PAT is set
-        id: check
         run: |
-          if [ -n "${{ secrets.GH_PAT }}" ]; then
-            echo "has_gh_pat=true" >> $GITHUB_ENV
-          else
-            echo "has_gh_pat=false" >> $GITHUB_ENV
+          if [ -z "${{ secrets.GH_PAT }}" ]; then
+            echo "GH_PAT is not set!"
+            exit 1
           fi
 
   build:
     name: "Daily Run"
     runs-on: ubuntu-latest
-    if: needs.validate_pat.outputs.has_gh_pat == 'true'
     needs: validate_pat
     steps:
       - name: Checkout
