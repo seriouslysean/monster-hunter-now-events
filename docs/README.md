@@ -20,6 +20,8 @@ Add the [ICS file](https://seriouslysean.github.io/monster-hunter-now-events/dis
 https://seriouslysean.github.io/monster-hunter-now-events/dist/events.ics
 ```
 
+You can also view today's events at https://seriouslysean.github.io/monster-hunter-now-events/.
+
 ## Run Locally
 
 ### Open AI Key
