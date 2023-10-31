@@ -1,385 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Monster Hunter Events Today</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        background-color: #f6f4e4;
-        color: #222;
-        margin: 0;
-        padding-bottom: 6em;
-        text-align: center;
-        overflow-x: hidden;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <title>Monster Hunter Events Today</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            body {
+                background-color: #333;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                color: #222;
+                margin: 0;
+                padding-bottom: 6em;
+                text-align: center;
+                overflow-x: hidden;
+            }
 
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
+            .container {
+                background-color: #f6f4e4;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
 
+            .header {
+                font-weight: bold;
+            }
 
-      .header {
-        font-weight: bold;
-      }
+            .header__logo {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
 
-      .header__logo {
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
+            .header__date {
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
 
-      .header__date {
-        font-size: 1.75em;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
+            .header__heading {
+                font-size: 1.5em;
+                font-weight: 600;
+                margin-top: 0;
+            }
 
-      .header__heading {
-        font-size: 1.5em;
-        font-weight: 600;
-        margin-top: 0;
-      }
+            main {
+                text-align: left;
+            }
 
-      main {
-        text-align: left;
-      }
+            section {
+                margin: 20px 0;
+            }
 
-      section {
-        margin: 20px 0;
-      }
+            .event-card {
+                border-radius: 10px;
+                background: #333;
+                color: #f6f4e4;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+                margin: 20px 0;
+            }
 
-      .event-card {
-        border-radius: 10px;
-        background: #222;
-        color: #f6f4e4;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        margin: 20px 0;
-      }
+            .event-card__header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
 
-      .event-card__header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px;
-      }
+            .event-card__time {
+                font-size: 18px;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
 
-      .event-card__time {
-        font-size: 18px;
-        font-weight: 400;
-        margin-bottom: 10px;
-      }
+            .event-card__title {
+                font-size: 20px; /* Adjusted font size */
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
 
-      .event-card__title {
-        font-size: 20px; /* Adjusted font size */
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
+            .event-card__description {
+                font-size: 18px;
+            }
 
-      .event-card__description {
-        font-size: 18px;
-      }
+            footer {
+                background: #333;
+                color: #ccc;
+                text-align: center;
+                padding: 10px;
+            }
 
-      footer {
-        color: #ccc;
-        text-align: center;
-        padding: 10px;
-      }
+            footer ul {
+                list-style: none;
+                padding: 0;
+            }
 
-      footer ul {
-        list-style: none;
-        padding: 0;
-      }
+            footer ul li {
+                display: inline-block;
+                margin: 0 10px;
 
-      footer ul li {
-        display: inline-block;
-        margin: 0 10px;
+                @media (max-width: 599px) {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
 
-        @media (min-width:600px) {
-          display: block;
-          margin-bottom: 10px;
-        }
-      }
+            footer a {
+                color: #4a90e2;
+                text-decoration: none;
+            }
 
-      footer a {
-        color: #4a90e2;
-        text-decoration: none;
-      }
-    </style>
-  </head>
+            .heart {
+                color: #bb0000;
+            }
+        </style>
+    </head>
 
-  <body>
-    <div class="container">
-      <header class="header">
-        <img
-          src="docs/assets/monster-hunter-now-logo.png"
-          alt="Monster Hunter Now Logo"
-          class="header__logo"
-        />
+    <body>
+        <div class="container">
+            <header class="header">
+                <img
+                    src="docs/assets/monster-hunter-now-logo.png"
+                    alt="Monster Hunter Now Logo"
+                    class="header__logo"
+                />
 
-        <div class="header__date" id="tag-display-date"></div>
-        <h1 class="header__heading">Monster Hunter Now Events</h1>
-      </header>
-      <main>
-        <section id="all-day-events-container">
-          <!-- All Day Events -->
-        </section>
-        <section id="timed-events-container">
-          <!-- Timed Events -->
-        </section>
-        <section id="earlier-events-container">
-          <!-- Earlier Events -->
-        </section>
-      </main>
-    </div>
+                <div class="header__date" id="tag-display-date"></div>
+                <h1 class="header__heading">Monster Hunter Now Events</h1>
+            </header>
+            <main>
+                <section id="all-day-events-container">
+                    <!-- All Day Events -->
+                </section>
+                <section id="timed-events-container">
+                    <!-- Timed Events -->
+                </section>
+                <section id="earlier-events-container">
+                    <!-- Earlier Events -->
+                </section>
+            </main>
+        </div>
 
-    <footer>
-      <ul>
-        <li>
-          Made with <span style="color: red">&hearts;</span> by Sean
-        </li>
-        <li>
-          <a
-            href="https://github.com/seriouslysean/monster-hunter-now-events"
-            target="_blank"
-            >View on GitHub</a
-          >
-        </li>
-        <li>
-          <a href="dist/events.ics">Subscribe to the ICS file</a>
-        </li>
-      </ul>
-    </footer>
+        <footer>
+            <ul>
+                <li>Made with <span class="heart">&hearts;</span> by Sean</li>
+                <li>
+                    <a
+                        href="https://github.com/seriouslysean/monster-hunter-now-events"
+                        target="_blank"
+                        >GitHub</a
+                    >
+                </li>
+                <li>
+                    <a href="dist/events.ics">Calendar Subscription</a>
+                </li>
+            </ul>
+        </footer>
 
-    <script type="text/javascript">
-      // Function to check if a date is within a date range
-      const isDateInRange = (date, startDate, endDate) => {
-          return date >= startDate && date <= endDate;
-      };
+        <script type="text/javascript">
+            // Function to check if a date is within a date range
+            const isDateInRange = (date, startDate, endDate) => {
+                return date >= startDate && date <= endDate;
+            };
 
-      // Function to format a date as a time string
-      const formatTime = (date) => {
-          if (date.getHours() === 0 && date.getMinutes() === 0) {
-              return 'All Day';
-          } else if (date.getHours() === 0) {
-              return `Ends at ${date.toLocaleTimeString([], {
-                  hour: 'numeric',
-                  minute: '2-digit',
-              })}`;
-          } else if (date.getMinutes() === 0) {
-              return `Starts at ${date.toLocaleTimeString([], {
-                  hour: 'numeric',
-              })}`;
-          } else {
-              return `${date.toLocaleTimeString([], {
-                  hour: 'numeric',
-                  minute: '2-digit',
-              })} - ${date.toLocaleTimeString([], {
-                  hour: 'numeric',
-                  minute: '2-digit',
-              })}`;
-          }
-      };
+            // Function to format a date as a time string
+            const formatTime = (date) => {
+                if (date.getHours() === 0 && date.getMinutes() === 0) {
+                    return 'All Day';
+                } else if (date.getHours() === 0) {
+                    return `Ends at ${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                    })}`;
+                } else if (date.getMinutes() === 0) {
+                    return `Starts at ${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                    })}`;
+                } else {
+                    return `${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                    })} - ${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                    })}`;
+                }
+            };
 
-      // Function to format a date as a date string
-      const formatDate = (date) => {
-          return date.toLocaleDateString();
-      };
+            // Function to format a date as a date string
+            const formatDate = (date) => {
+                return date.toLocaleDateString();
+            };
 
-      // Function to adapt event objects with required keys
-      const adaptEvents = (events) => {
-          return events.map((event) => {
-              if (event.dates && event.dates.length > 0) {
-                  const firstDate = event.dates[0];
+            // Function to adapt event objects with required keys
+            const adaptEvents = (events) => {
+                return events.map((event) => {
+                    if (event.dates && event.dates.length > 0) {
+                        const firstDate = event.dates[0];
 
-                  if (firstDate.start && firstDate.end) {
-                      event.startTime = new Date(firstDate.start);
-                      event.endTime = new Date(firstDate.end);
-                      event.dateString = formatDate(event.startTime);
-                      event.isAllDay =
-                          event.startTime.getHours() === 0 &&
-                          event.startTime.getMinutes() === 0 &&
-                          event.endTime.getHours() === 23 &&
-                          event.endTime.getMinutes() === 59;
-                  }
-              }
-              return event;
-          });
-      };
+                        if (firstDate.start && firstDate.end) {
+                            event.startTime = new Date(firstDate.start);
+                            event.endTime = new Date(firstDate.end);
+                            event.dateString = formatDate(event.startTime);
+                            event.isAllDay =
+                                event.startTime.getHours() === 0 &&
+                                event.startTime.getMinutes() === 0 &&
+                                event.endTime.getHours() === 23 &&
+                                event.endTime.getMinutes() === 59;
+                        }
+                    }
+                    return event;
+                });
+            };
 
-      // Function to filter events based on date range
-      const filterEventsByDateRange = (events, currentDate) => {
-          return events.filter((event) => {
-              const todayStart = new Date();
-              todayStart.setHours(0, 0, 0, 0);
-              todayStart.setMinutes(0);
-              const todayEnd = new Date();
-              todayEnd.setHours(23, 59, 59, 999);
-              todayEnd.setMinutes(59);
+            // Function to filter events based on date range
+            const filterEventsByDateRange = (events, currentDate) => {
+                return events.filter((event) => {
+                    const todayStart = new Date();
+                    todayStart.setHours(0, 0, 0, 0);
+                    todayStart.setMinutes(0);
+                    const todayEnd = new Date();
+                    todayEnd.setHours(23, 59, 59, 999);
+                    todayEnd.setMinutes(59);
 
-              if (event.isAllDay) {
-                  return event.dateString === formatDate(currentDate);
-              }
+                    if (event.isAllDay) {
+                        return event.dateString === formatDate(currentDate);
+                    }
 
-              return isDateInRange(
-                  currentDate,
-                  event.startTime,
-                  event.endTime,
-              );
-          });
-      };
+                    return isDateInRange(
+                        currentDate,
+                        event.startTime,
+                        event.endTime,
+                    );
+                });
+            };
 
-      // Function to fetch JSON data
-      const fetchEventData = async () => {
-          try {
-              const response = await fetch('dist/events.json');
-              if (!response.ok) {
-                  throw new Error(
-                      'Unable to fetch the event data. Please try again later.',
-                  );
-              }
-              const eventData = await response.json();
-              return eventData;
-          } catch (error) {
-              console.error(`Error: ${error.message}`);
-              return { events: [] };
-          }
-      };
+            // Function to fetch JSON data
+            const fetchEventData = async () => {
+                try {
+                    const response = await fetch('dist/events.json');
+                    if (!response.ok) {
+                        throw new Error(
+                            'Unable to fetch the event data. Please try again later.',
+                        );
+                    }
+                    const eventData = await response.json();
+                    return eventData;
+                } catch (error) {
+                    console.error(`Error: ${error.message}`);
+                    return { events: [] };
+                }
+            };
 
-      // Function to initialize the event display
-      const initEventDisplay = (
-          todayEvents,
-          allDayEvents,
-          pastTimedEvents,
-      ) => {
-          const allDayEventsContainer = document.getElementById(
-              'all-day-events-container'
-          );
-          const timedEventsContainer = document.getElementById(
-              'timed-events-container'
-          );
-          const earlierEventsContainer = document.getElementById(
-              'earlier-events-container'
-          );
-          const userLocalDate = new Date();
+            // Function to initialize the event display
+            const initEventDisplay = (
+                todayEvents,
+                allDayEvents,
+                pastTimedEvents,
+            ) => {
+                const allDayEventsContainer = document.getElementById(
+                    'all-day-events-container',
+                );
+                const timedEventsContainer = document.getElementById(
+                    'timed-events-container',
+                );
+                const earlierEventsContainer = document.getElementById(
+                    'earlier-events-container',
+                );
+                const userLocalDate = new Date();
 
-          document.getElementById('tag-display-date').textContent = `${
-              userLocalDate.getMonth() + 1
-          }/${userLocalDate.getDate()}/${userLocalDate.getFullYear()}`;
+                document.getElementById('tag-display-date').textContent = `${
+                    userLocalDate.getMonth() + 1
+                }/${userLocalDate.getDate()}/${userLocalDate.getFullYear()}`;
 
-          if (allDayEvents.length > 0) {
-              // Display all-day events first
-              allDayEventsContainer.innerHTML = allDayEvents
-                  .map(
-                      (event) => `
+                if (allDayEvents.length > 0) {
+                    // Display all-day events first
+                    allDayEventsContainer.innerHTML = allDayEvents
+                        .map(
+                            (event) => `
       <div class="event-card">
           <div class="event-card__header">
-              <div class="event-card__time">${formatTime(
-                  event.startTime
-              )}</div>
+              <div class="event-card__time">${formatTime(event.startTime)}</div>
           </div>
           <div class="event-card__header">
               <div class="event-card__title">${event.summary}</div>
           </div>
-          <div class="event-card__description">${
-              event.description
-          }</div>
+          <div class="event-card__description">${event.description}</div>
       </div>
-  `
-                  )
-                  .join('');
-          }
+  `,
+                        )
+                        .join('');
+                }
 
-          if (todayEvents.length > 0) {
-              // Display today's timed events
-              timedEventsContainer.innerHTML = todayEvents
-                  .map(
-                      (event) => `
+                if (todayEvents.length > 0) {
+                    // Display today's timed events
+                    timedEventsContainer.innerHTML = todayEvents
+                        .map(
+                            (event) => `
       <div class="event-card">
           <div class="event-card__header">
-              <div class="event-card__time">${formatTime(
-                  event.startTime
-              )}</div>
+              <div class="event-card__time">${formatTime(event.startTime)}</div>
           </div>
           <div class="event-card__header">
               <div class="event-card__title">${event.summary}</div>
           </div>
-          <div class="event-card__description">${
-              event.description
-          }</div>
+          <div class="event-card__description">${event.description}</div>
       </div>
-  `
-                  )
-                  .join('');
-          }
+  `,
+                        )
+                        .join('');
+                }
 
-          if (pastTimedEvents.length > 0) {
-              // Display earlier events
-              earlierEventsContainer.innerHTML = pastTimedEvents
-                  .map(
-                      (event) => `
+                if (pastTimedEvents.length > 0) {
+                    // Display earlier events
+                    earlierEventsContainer.innerHTML = pastTimedEvents
+                        .map(
+                            (event) => `
       <div class="event-card">
           <div class="event-card__header">
-              <div class="event-card__time">${formatTime(
-                  event.startTime
-              )}</div>
+              <div class="event-card__time">${formatTime(event.startTime)}</div>
           </div>
           <div class="event-card__header">
               <div class="event-card__title">${event.summary}</div>
           </div>
-          <div class="event-card__description">${
-              event.description
-          }</div>
+          <div class="event-card__description">${event.description}</div>
       </div>
-  `
-                  )
-                  .join('');
-          } else {
-              earlierEventsContainer.style.display =
-                  'none';
-          }
-      };
+  `,
+                        )
+                        .join('');
+                } else {
+                    earlierEventsContainer.style.display = 'none';
+                }
+            };
 
-      // Function to handle the initialization
-      const init = async () => {
-          const eventData = await fetchEventData();
+            // Function to handle the initialization
+            const init = async () => {
+                const eventData = await fetchEventData();
 
-          if (eventData.events.length === 0) {
-              return;
-          }
+                if (eventData.events.length === 0) {
+                    return;
+                }
 
-          const currentDate = new Date();
+                const currentDate = new Date();
 
-          const adaptedEvents = adaptEvents(eventData.events);
+                const adaptedEvents = adaptEvents(eventData.events);
 
-          const todayEvents = filterEventsByDateRange(
-              adaptedEvents,
-              currentDate
-          );
-          const allDayEvents = adaptedEvents.filter(
-              (event) => event.isAllDay
-          );
-          const pastTimedEvents = todayEvents.filter(
-              (event) => event.endTime < currentDate
-          );
+                const todayEvents = filterEventsByDateRange(
+                    adaptedEvents,
+                    currentDate,
+                );
+                const allDayEvents = adaptedEvents.filter(
+                    (event) => event.isAllDay,
+                );
+                const pastTimedEvents = todayEvents.filter(
+                    (event) => event.endTime < currentDate,
+                );
 
-          initEventDisplay(todayEvents, allDayEvents, pastTimedEvents);
-      };
+                initEventDisplay(todayEvents, allDayEvents, pastTimedEvents);
+            };
 
-      // Ensure the document is fully loaded before initializing
-      window.addEventListener('load', () => {
-          init();
-      });
-    </script>
-  </body>
+            // Ensure the document is fully loaded before initializing
+            window.addEventListener('load', () => {
+                init();
+            });
+        </script>
+    </body>
 </html>
