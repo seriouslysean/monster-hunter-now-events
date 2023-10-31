@@ -55,6 +55,13 @@ Download, Parse and Save ALL New Articles
 
 Article `index.html` and `events.json` are output to `fixtures/{date}_news-{slug}`.
 
+### Website
+
+1. Run `npm run serve`
+2. Go to http://localhost:8080/monster-hunter-now-events/
+
+_Note: This will use the current events.json, so you may need to update it first to see current events._
+
 ## References
 
 - https://monsterhunternow.com/news
