@@ -17,75 +17,51 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:3938451b97f970cd051c6e054ee43e733e521c90
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231120T090000
 DTEND:20231126T160000
 SUMMARY:MHN: Roar of the Desert: Diablos
-DESCRIPTION:Get ready to welcome back Black Diablos! Look forward to time-l
- imited Special Quests over the weekend which will reward you with a spec
- ial Hunter Medal, as well as Diablos and Black Diablos appearing more fr
- equently than usual for a short time. As long as you have completed Chap
- ter 11 and unlocked Diablos hunts, Black Diablos will appear in low numb
- ers in Desert Habitats. During the following times Diablos and Black Dia
- blos will appear more frequently in Desert Habitats for all hunters HR11
-  and above, and monsters in all Habitats will reappear in shorter interv
- als than usual. Black Diablos will temporarily retreat after this event 
- ends on November 26.
+DESCRIPTION:Black Diablos will appear in low numbers in Desert Habitats. Du
+ ring the following times Diablos and Black Diablos will appear more freq
+ uently in Desert Habitats for all hunters HR11 and above, and monsters i
+ n all Habitats will reappear in shorter intervals than usual.
 END:VEVENT
 BEGIN:VEVENT
 UID:573fc046ff3249fbf85adc0c7c526ab4ec11b342
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231124T170000
 DTEND:20231124T200000
 SUMMARY:MHN: Roar of the Desert: Diablos
-DESCRIPTION:Get ready to welcome back Black Diablos! Look forward to time-l
- imited Special Quests over the weekend which will reward you with a spec
- ial Hunter Medal, as well as Diablos and Black Diablos appearing more fr
- equently than usual for a short time. As long as you have completed Chap
- ter 11 and unlocked Diablos hunts, Black Diablos will appear in low numb
- ers in Desert Habitats. During the following times Diablos and Black Dia
- blos will appear more frequently in Desert Habitats for all hunters HR11
-  and above, and monsters in all Habitats will reappear in shorter interv
- als than usual. Black Diablos will temporarily retreat after this event 
- ends on November 26.
+DESCRIPTION:Black Diablos will appear in low numbers in Desert Habitats. Du
+ ring the following times Diablos and Black Diablos will appear more freq
+ uently in Desert Habitats for all hunters HR11 and above, and monsters i
+ n all Habitats will reappear in shorter intervals than usual.
 END:VEVENT
 BEGIN:VEVENT
 UID:87f82776d31c878236d56778cf0d5149f40ea08a
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231125T130000
 DTEND:20231125T160000
 SUMMARY:MHN: Roar of the Desert: Diablos
-DESCRIPTION:Get ready to welcome back Black Diablos! Look forward to time-l
- imited Special Quests over the weekend which will reward you with a spec
- ial Hunter Medal, as well as Diablos and Black Diablos appearing more fr
- equently than usual for a short time. As long as you have completed Chap
- ter 11 and unlocked Diablos hunts, Black Diablos will appear in low numb
- ers in Desert Habitats. During the following times Diablos and Black Dia
- blos will appear more frequently in Desert Habitats for all hunters HR11
-  and above, and monsters in all Habitats will reappear in shorter interv
- als than usual. Black Diablos will temporarily retreat after this event 
- ends on November 26.
+DESCRIPTION:Black Diablos will appear in low numbers in Desert Habitats. Du
+ ring the following times Diablos and Black Diablos will appear more freq
+ uently in Desert Habitats for all hunters HR11 and above, and monsters i
+ n all Habitats will reappear in shorter intervals than usual.
 END:VEVENT
 BEGIN:VEVENT
 UID:eafc59b2fc76d5b7a09418085b7f6a2bf318f4d0
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231126T130000
 DTEND:20231126T160000
 SUMMARY:MHN: Roar of the Desert: Diablos
-DESCRIPTION:Get ready to welcome back Black Diablos! Look forward to time-l
- imited Special Quests over the weekend which will reward you with a spec
- ial Hunter Medal, as well as Diablos and Black Diablos appearing more fr
- equently than usual for a short time. As long as you have completed Chap
- ter 11 and unlocked Diablos hunts, Black Diablos will appear in low numb
- ers in Desert Habitats. During the following times Diablos and Black Dia
- blos will appear more frequently in Desert Habitats for all hunters HR11
-  and above, and monsters in all Habitats will reappear in shorter interv
- als than usual. Black Diablos will temporarily retreat after this event 
- ends on November 26.
+DESCRIPTION:Black Diablos will appear in low numbers in Desert Habitats. Du
+ ring the following times Diablos and Black Diablos will appear more freq
+ uently in Desert Habitats for all hunters HR11 and above, and monsters i
+ n all Habitats will reappear in shorter intervals than usual.
 END:VEVENT
 BEGIN:VEVENT
 UID:ba9e73f0d5cb9c6fd66060e3854de490f796a649
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231117T170000
 DTEND:20231117T200000
 SUMMARY:MHN: Legiana Weekend
@@ -95,7 +71,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:9c1f36f0b14159675612072ec78b62d1018c6c49
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231118T130000
 DTEND:20231118T160000
 SUMMARY:MHN: Legiana Weekend
@@ -105,7 +81,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:7a26ef4fb4f41a710ff7f5c529dd74f3a637b1f2
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231119T130000
 DTEND:20231119T160000
 SUMMARY:MHN: Legiana Weekend
@@ -115,7 +91,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:2950f290d19adfc627472d427952817575633f13
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231110T170000
 DTEND:20231112T160000
 SUMMARY:MHN: Qualily’s Special Quests
@@ -125,7 +101,7 @@ DESCRIPTION:Time-limited event quests will be available for all hunters HR1
 END:VEVENT
 BEGIN:VEVENT
 UID:073d54fa7ba86c6e6b227521d927040f7dd34e92
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231103T170000
 DTEND:20231105T160000
 SUMMARY:MHN: Jyuratodus Weekend
@@ -135,20 +111,28 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
  frequently than usual.
 END:VEVENT
 BEGIN:VEVENT
+UID:6ff170fd766748073c63f15f8ab5faa7711d5183
+DTSTAMP:20231101T150433
+DTSTART:20231028T090000
+DTEND:20231031T235959
+SUMMARY:MHN: Halloween Medal Acquisition Quest
+DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
+ te this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding 
+ a pumpkin-like rock will appear in larger numbers than usual. Slaying Ku
+ lu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Ticket
+ s!
+END:VEVENT
+BEGIN:VEVENT
 UID:b6c13d483cc9cdc7f308c837b365d14688fe4330
-DTSTAMP:20231101T061008
+DTSTAMP:20231101T150433
 DTSTART:20231025
 DTEND:20231101
 SUMMARY:MHN: Halloween Pumpkin Hunt
-DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
- l Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?! H
- alloween Pumpkin Hunt Quests will be distributed. Complete Quests that i
- nvolve gathering special items or slaying certain large monsters to rece
- ive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-
- Head equipment! A Halloween Medal Acquisition Quest will be distributed.
-  Complete this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku h
- olding a pumpkin-like rock will appear in larger numbers than usual. Sla
- ying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin
-  Tickets!
+DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
+ sts that involve gathering special items or slaying certain large monste
+ rs to receive Pumpkin Tickets which can be used to forge and upgrade you
+ r Jack-o’-Head equipment! Look forward to a Halloween-themed field map, 
+ as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… differe
+ nt than usual?!
 END:VEVENT
 END:VCALENDAR
