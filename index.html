@@ -18,8 +18,6 @@
 
             .container {
                 background-color: #f6f4e4;
-                max-width: 800px;
-                margin: 0 auto;
                 padding: 20px;
             }
 
@@ -46,6 +44,8 @@
 
             main {
                 text-align: left;
+                max-width: 800px;
+                margin: 0 auto;
             }
 
             section {
@@ -162,9 +162,13 @@
         </footer>
 
         <script type="text/javascript">
-            // Function to check if a date is within a date range
-            const isDateInRange = (date, startDate, endDate) => {
-                return date >= startDate && date <= endDate;
+            // Function to check if a date is within today's date range
+            const isDateInTodayRange = (date) => {
+                const currentDate = new Date();
+                currentDate.setHours(0, 0, 0, 0);
+                const endDate = new Date(currentDate);
+                endDate.setHours(23, 59, 59, 999);
+                return date >= currentDate && date <= endDate;
             };
 
             // Function to format a date as a time string
@@ -198,45 +202,25 @@
 
             // Function to adapt event objects with required keys
             const adaptEvents = (events) => {
-                return events.map((event) => {
-                    if (event.dates && event.dates.length > 0) {
-                        const firstDate = event.dates[0];
+                return events
+                    .map((event) => {
+                        if (event.dates && event.dates.length > 0) {
+                            const firstDate = event.dates[0];
 
-                        if (firstDate.start && firstDate.end) {
-                            event.startTime = new Date(firstDate.start);
-                            event.endTime = new Date(firstDate.end);
-                            event.dateString = formatDate(event.startTime);
-                            event.isAllDay =
-                                event.startTime.getHours() === 0 &&
-                                event.startTime.getMinutes() === 0 &&
-                                event.endTime.getHours() === 23 &&
-                                event.endTime.getMinutes() === 59;
+                            if (firstDate.start && firstDate.end) {
+                                event.startTime = new Date(firstDate.start);
+                                event.endTime = new Date(firstDate.end);
+                                event.dateString = formatDate(event.startTime);
+                                event.isAllDay =
+                                    event.startTime.getHours() === 0 &&
+                                    event.startTime.getMinutes() === 0 &&
+                                    event.endTime.getHours() === 23 &&
+                                    event.endTime.getMinutes() === 59;
+                            }
                         }
-                    }
-                    return event;
-                });
-            };
-
-            // Function to filter events based on date range
-            const filterEventsByDateRange = (events, currentDate) => {
-                return events.filter((event) => {
-                    const todayStart = new Date();
-                    todayStart.setHours(0, 0, 0, 0);
-                    todayStart.setMinutes(0);
-                    const todayEnd = new Date();
-                    todayEnd.setHours(23, 59, 59, 999);
-                    todayEnd.setMinutes(59);
-
-                    if (event.isAllDay) {
-                        return event.dateString === formatDate(currentDate);
-                    }
-
-                    return isDateInRange(
-                        currentDate,
-                        event.startTime,
-                        event.endTime,
-                    );
-                });
+                        return event;
+                    })
+                    .filter((event) => isDateInTodayRange(event.startTime));
             };
 
             // Function to fetch JSON data
@@ -245,7 +229,7 @@
                     const response = await fetch('dist/events.json');
                     if (!response.ok) {
                         throw new Error(
-                            'Unable to fetch the event data. Please try again later.',
+                            'Unable to fetch the event data. Please try again later.'
                         );
                     }
                     const eventData = await response.json();
@@ -257,19 +241,15 @@
             };
 
             // Function to initialize the event display
-            const initEventDisplay = (
-                todayEvents,
-                allDayEvents,
-                pastTimedEvents,
-            ) => {
+            const initEventDisplay = (events) => {
                 const allDayEventsContainer = document.getElementById(
-                    'all-day-events-container',
+                    'all-day-events-container'
                 );
                 const timedEventsContainer = document.getElementById(
-                    'timed-events-container',
+                    'timed-events-container'
                 );
                 const earlierEventsContainer = document.getElementById(
-                    'earlier-events-container',
+                    'earlier-events-container'
                 );
                 const userLocalDate = new Date();
 
@@ -277,62 +257,51 @@
                     userLocalDate.getMonth() + 1
                 }/${userLocalDate.getDate()}/${userLocalDate.getFullYear()}`;
 
-                if (allDayEvents.length > 0) {
-                    // Display all-day events first
-                    allDayEventsContainer.innerHTML = allDayEvents
-                        .map(
-                            (event) => `
-      <div class="event-card">
-          <div class="event-card__header">
-              <div class="event-card__time">${formatTime(event.startTime)}</div>
-          </div>
-          <div class="event-card__header">
-              <div class="event-card__title">${event.summary}</div>
-          </div>
-          <div class="event-card__description">${event.description}</div>
-      </div>
-  `,
-                        )
-                        .join('');
+                if (events.length === 0) {
+                    // Display a "No Events Found" message
+                    allDayEventsContainer.innerHTML = `
+                        <div class="event-card">
+                            <div class="event-card__header">
+                                <div class="event-card__title">No Events Found</div>
+                            </div>
+                        </div>
+                    `;
+                    return;
                 }
 
-                if (todayEvents.length > 0) {
-                    // Display today's timed events
-                    timedEventsContainer.innerHTML = todayEvents
-                        .map(
-                            (event) => `
-      <div class="event-card">
-          <div class="event-card__header">
-              <div class="event-card__time">${formatTime(event.startTime)}</div>
-          </div>
-          <div class="event-card__header">
-              <div class="event-card__title">${event.summary}</div>
-          </div>
-          <div class="event-card__description">${event.description}</div>
-      </div>
-  `,
-                        )
-                        .join('');
-                }
+                const allDayEvents = events.filter((event) => event.isAllDay);
+                const timedEvents = events.filter(
+                    (event) => !event.isAllDay && event.startTime <= userLocalDate
+                );
+                const pastTimedEvents = timedEvents.filter(
+                    (event) => event.endTime < userLocalDate
+                );
+
+                const eventCards = (event) => `
+                    <div class="event-card">
+                        <div class="event-card__header">
+                            <div class="event-card__time">${formatTime(
+                                event.startTime
+                            )}</div>
+                        </div>
+                        <div class="event-card__header">
+                            <div class="event-card__title">${event.summary}</div>
+                        </div>
+                        <div class="event-card__description">${event.description}</div>
+                    </div>
+                `;
+
+                // Display all-day events
+                allDayEventsContainer.innerHTML = allDayEvents.map(eventCards).join('');
+
+                // Display timed events
+                timedEventsContainer.innerHTML = timedEvents.map(eventCards).join('');
 
                 if (pastTimedEvents.length > 0) {
                     // Display earlier events
-                    earlierEventsContainer.innerHTML = pastTimedEvents
-                        .map(
-                            (event) => `
-      <div class="event-card">
-          <div class="event-card__header">
-              <div class="event-card__time">${formatTime(event.startTime)}</div>
-          </div>
-          <div class="event-card__header">
-              <div class="event-card__title">${event.summary}</div>
-          </div>
-          <div class="event-card__description">${event.description}</div>
-      </div>
-  `,
-                        )
-                        .join('');
+                    earlierEventsContainer.innerHTML = pastTimedEvents.map(eventCards).join('');
                 } else {
+                    // Hide the container if no earlier events
                     earlierEventsContainer.style.display = 'none';
                 }
             };
@@ -340,27 +309,9 @@
             // Function to handle the initialization
             const init = async () => {
                 const eventData = await fetchEventData();
-
-                if (eventData.events.length === 0) {
-                    return;
-                }
-
-                const currentDate = new Date();
-
                 const adaptedEvents = adaptEvents(eventData.events);
 
-                const todayEvents = filterEventsByDateRange(
-                    adaptedEvents,
-                    currentDate,
-                );
-                const allDayEvents = adaptedEvents.filter(
-                    (event) => event.isAllDay,
-                );
-                const pastTimedEvents = todayEvents.filter(
-                    (event) => event.endTime < currentDate,
-                );
-
-                initEventDisplay(todayEvents, allDayEvents, pastTimedEvents);
+                initEventDisplay(adaptedEvents);
             };
 
             // Ensure the document is fully loaded before initializing
