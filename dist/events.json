@@ -1,21 +1,69 @@
 {
     "events": [
         {
-            "summary": "A Muddy Escapade: Join the hunt for Jyuratodus!",
-            "description": "Jyuratodus will appear more frequently in Swamp Habitats. During the event, monsters in all Habitats will reappear in shorter intervals than usual. Jyuratodus will appear more frequently than usual for all hunters HR11 and above.",
+            "summary": "Roar of the Desert: Diablos",
+            "description": "Get ready to welcome back Black Diablos! Look forward to time-limited Special Quests over the weekend which will reward you with a special Hunter Medal, as well as Diablos and Black Diablos appearing more frequently than usual for a short time. As long as you have completed Chapter 11 and unlocked Diablos hunts, Black Diablos will appear in low numbers in Desert Habitats. During the following times Diablos and Black Diablos will appear more frequently in Desert Habitats for all hunters HR11 and above, and monsters in all Habitats will reappear in shorter intervals than usual. Black Diablos will temporarily retreat after this event ends on November 26.",
+            "dates": [
+                {
+                    "start": "2023-11-20T09:00:00",
+                    "end": "2023-11-26T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-24T17:00:00",
+                    "end": "2023-11-24T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-25T13:00:00",
+                    "end": "2023-11-25T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-26T13:00:00",
+                    "end": "2023-11-26T16:00:00",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Legiana Weekend",
+            "description": "Legiana will appear more frequently in Swamp Habitats for all hunters HR11 and above. During the event, monsters in all Habitats will reappear in shorter intervals than usual.",
+            "dates": [
+                {
+                    "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
+                    "end": "2023-11-19T16:00:00",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Qualily’s Special Quests",
+            "description": "Time-limited event quests will be available for all hunters HR11 and above. Complete them to earn items needed for upgrading equipment such as Carpenterbugs and Monster Bone+, as well as Zenny.",
+            "dates": [
+                {
+                    "start": "2023-11-10T17:00:00",
+                    "end": "2023-11-12T16:00:00",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Jyuratodus Weekend",
+            "description": "Jyuratodus will appear more frequently in Swamp Habitats for all hunters HR11 and above. During the event, monsters in all Habitats will reappear in shorter intervals than usual. Jyuratodus will appear more frequently than usual.",
             "dates": [
                 {
                     "start": "2023-11-03T17:00:00",
-                    "end": "2023-11-03T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-04T13:00:00",
-                    "end": "2023-11-04T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-05T13:00:00",
                     "end": "2023-11-05T16:00:00",
                     "allDay": false
                 }
@@ -23,7 +71,7 @@
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment! A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
             "dates": [
                 {
                     "start": "2023-10-25T00:00:00",
@@ -31,29 +79,7 @@
                     "allDay": true
                 }
             ]
-        },
-        {
-            "summary": "Halloween Medal Acquisition Quest",
-            "description": "A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal!",
-            "dates": [
-                {
-                    "start": "2023-10-28T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "Increased Kulu-Ya-Ku Appearance",
-            "description": "Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
-            "dates": [
-                {
-                    "start": "2023-10-28T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ]
         }
     ],
-    "hash": "OMh90/pRFt3XjSBIFrAbv4ZEz5o="
+    "hash": "Kcygkuy51jNJ+nwR/gZ/KUyIFcg="
 }
