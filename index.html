@@ -2,14 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Monster Hunter Events Today</title>
+    <title>Monster Hunter Now: Today's Events</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.">
+    <meta name="keywords" content="nodejs, javascript, calendar, web-scraping, openai, monster-hunter, ics, monster-hunter-now">
+    <meta name="author" content="Seriouslysean">
+
+    <meta property="og:title" content="Monster Hunter Now: Today's Events">
+    <meta property="og:description" content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seriouslysean.github.io/monster-hunter-now-events/">
+    <!-- <meta property="og:image" content="https://example.com/your-image.jpg"> -->
+    <meta property="og:site_name" content="Monster Hunter Now: Today's Events">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:site" content=""> -->
+    <meta name="twitter:title" content="Monster Hunter Now: Today's Events">
+    <meta name="twitter:description" content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.">
+    <!-- <meta name="twitter:image" content=""> -->
+
     <style>
+        :root {
+            --main-bg-color: #333;
+            --text-color: #fff;
+            --container-bg-color: #f6f4e4;
+            --link-color: #4a90e2;
+            --header-text-color: #000;
+            --footer-message-text: #ccc;
+            --footer-message-link: #ccc;
+            --footer-message-link-hover: #fff;
+        }
+
         body {
-            background-color: #333;
+            background-color: var(--main-bg-color);
             font-family: Arial, sans-serif;
             font-size: 16px;
-            color: #222;
+            color: var(--text-color);
             margin: 0;
             padding-bottom: 6em;
             text-align: center;
@@ -17,12 +47,13 @@
         }
 
         .container {
-            background-color: #f6f4e4;
+            background-color: var(--container-bg-color);
             padding: 20px;
         }
 
         .header {
             font-weight: bold;
+            color: var(--header-text-color);
         }
 
         .header__logo {
@@ -54,8 +85,8 @@
 
         .event-card {
             border-radius: 10px;
-            background: #333;
-            color: #f6f4e4;
+            background: var(--main-bg-color);
+            color: var(--container-bg-color);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -72,24 +103,24 @@
         }
 
         .event-card__time {
-            font-size: 18px;
+            font-size: 1.125em;
             font-weight: 400;
             margin-bottom: 10px;
         }
 
         .event-card__title {
-            font-size: 20px; /* Adjusted font size */
+            font-size: 1.25em;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .event-card__description {
-            font-size: 18px;
+            font-size: 1.125em;
         }
 
         footer {
-            background: #333;
-            color: #ccc;
+            background: var(--main-bg-color);
+            color: var(--container-bg-color);
             text-align: center;
             padding: 10px;
         }
@@ -97,16 +128,43 @@
         footer ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         footer ul li {
-            display: inline-block;
-            margin: 0 10px;
+            margin: 0 20px;
         }
 
         footer a {
-            color: #4a90e2;
-            text-decoration: none;
+            color: var(--link-color);
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--footer-message-link-hover);
+        }
+
+        .footer-message {
+            color: var(--footer-message-text);
+            text-align: center;
+            margin-top: 10px;
+            border-top: 1px solid var(--footer-message-link);
+            padding: 10px;
+            font-size: 0.8em;
+            max-width: 400px;
+            margin: 10px auto;
+        }
+
+        .footer-message a {
+            color: var(--footer-message-link);
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        .footer-message a:hover {
+            color: var(--footer-message-link-hover);
         }
 
         .heart {
@@ -141,6 +199,9 @@
             <li><a href="https://github.com/seriouslysean/monster-hunter-now-events" target="_blank">GitHub</a></li>
             <li><a href="dist/events.ics">Calendar Subscription</a></li>
         </ul>
+        <p class="footer-message">
+            If you aren't playing yet, <a href="https://apps.apple.com/us/app/monster-hunter-now/id6445906110" target="_blank">join me</a> and use my referral code for items and zenny, <code>89K5MKCF</code>.
+        </p>
     </footer>
 
     <script type="text/javascript">
