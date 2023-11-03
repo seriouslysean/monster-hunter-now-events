@@ -72,8 +72,9 @@ async function generateEventsJSON() {
     const currentEventsHash = getEventsJSONHash();
     if (currentEventsHash === mergedEventsHash) {
         logger.info('events.json is already up to date');
-        // Exit with error code to stop future jobs from running
-        process.exit(1);
+        // Exit with status code 0 to gracefully allow the workflow to continue
+        // this will prevent a hard error but allow next steps to be skipped
+        process.exit(0);
     }
 
     logger.info('Deduping events.json');
