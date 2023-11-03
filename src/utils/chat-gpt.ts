@@ -69,51 +69,50 @@ export async function getEventsFromHTML(html, debug = false) {
         article.querySelector('#share')?.remove();
         article.querySelector('#next-article')?.remove();
     }
-    const content = article?.textContent.replace(/\n{2,}/g, '\n').trim() ?? '';
+    const content = article.textContent.replace(/\n{2,}/g, '\n').trim() ?? '';
 
     const messages = [
         {
             role: 'system',
             content: `**Event Extraction Guidelines: Monster Hunter Now**
 
-Extract strictly in-game events occurring within the virtual game "Monster Hunter Now". Ensure your extraction adheres to the following criteria:
+Extract events within the "Monster Hunter Now" game environment, emphasizing the time frames and activities that occur within a specific overarching event. Ensure precise extraction using the following guidelines:
 
 1. **Game Environment**:
-- Events MUST ONLY occur inside the "Monster Hunter Now" game environment. Do NOT include any external promotions, in-game shop events, updates, or non-game events.
+    - Extract in-game events within "Monster Hunter Now." Exclude external promotions, in-game shop events, and non-game-related events.
 
-2. **Event Duration**:
-- Every event should have both a start and end time.
-- For all-day events without specific times, set "allDay": true with 00:00:00 as the start and 23:59:59 as the end.
+2. **Time Frames and Activities**:
+    - Focus on the time frames and specific activities within each event. Pay special attention to the sequence of activities and their time-bound nature.
 
-3. **Event Discreteness**:
-- Separate events that have distinct objectives or activities, even if they share the same timeframe.
-- Do NOT combine unrelated activities into a single event.
+3. **Separate Event Components**:
+    - Recognize that an overarching event can contain multiple time-bound activities. Extract and separate these distinct activities within the same overarching event. Ensure that both the overarching event and its time-bound sub-events are properly identified and named differently based on their context.
+        - **Example**: If an event mentions a monster appearing in low numbers for a week, and then more frequently during specific times, these should be extracted as two separate sub-events. The sub-event should not repeat the same title as the main event and should be more related to the context of the in-game event. For instance, it could be named "Monster Appearance Increase."
 
-4. **Event Continuity**:
-- Combine instances of the same event with overlapping details into one, capturing all essential facets.
-- Separate additional intervals or time frames within the event details.
+4. **Capture Start and End Times**:
+    - Ensure that each event component includes both a start and end time, even for all-day events. Use "allDay" with 00:00:00 as the start and 23:59:59 as the end for all-day events.
 
-5. **Avoid Assumptions/Additions**:
-- Extract based solely on the provided content. Do NOT incorporate external information.
+5. **Objective Extraction**:
+    - Extract events based solely on the provided content. Avoid adding external information.
+
+6. **Naming Sub-Events**:
+    - Sub-events within a larger main event should have unique names that are more related to the context of the sub-event itself. Avoid duplicating the name of the main event in sub-events.
 
 **Focus On**:
-- Player-centric quests, missions, and challenges that are time-bound.
-- In-game bonuses, competitions with clear start/end times.
-- Game locations linked with events.
+    - Identifying and distinguishing distinct in-game activities within overarching events.
+    - Properly naming each event based on its unique content.
 
 **Exclude**:
-- Events or promotions not part of the direct in-game experience, like pre-registration rewards, generic game updates, in-game shop promotions, or features without a specific in-game activity timeframe.
-- Vague events without a clear time-bound in-game context.
+    - Events that are not part of the in-game experience, such as promotional content or features without specific in-game activities.
 
-Order dates from the most recent to the oldest. Ensure consecutive dates are sequential.
+Order extracted events from the most recent to the oldest. Ensure consecutive dates are presented sequentially.
 
 If no in-game event meets the criteria, return an empty events array.
 
-Ensure the output is valid JSON.
+Provide the output in valid JSON format.
 
 **Output Format**:
 {
-    events: [{
+    "events": [{
         "summary": "Event Name",
         "description": "Event Details",
         "dates": [
@@ -124,13 +123,14 @@ Ensure the output is valid JSON.
             }
         ],
         "habitat": ["Desert", "Forest", "Swamp", etc],
-        "monsters": ["Rathalos", "Rathian", "Diablos", etc],
-    }],
+        "monsters": ["Monster1", "Monster2", "Monster3", etc]
+    }]
 }`,
         },
         {
             role: 'user',
-            content: 'Identify in-game events from the following content:',
+            content:
+                'Identify in-game events from the following content. Be extremely careful in detecting main events and any sub-events within these main events. Sub-events should have their own start and end times and should be extracted separately, even if they are mentioned within the same paragraph as the main event. For instance, if an event mentions a monster appearing in low numbers for a week, and then more frequently during specific times, these should be extracted as two separate sub-events. Ensure all events are parsed with EXTREME accuracy.',
         },
         {
             role: 'user',
@@ -166,42 +166,43 @@ export async function getDedupedJSON(
     const messages = [
         {
             role: 'system',
-            content: `**Event Consolidation Guide: Monster Hunter Now**
+            content: `Given a JSON object containing events under the "events" key, consolidate them using the following rules:
 
-Given a JSON with events under the "events" key, consolidate them using the following rules:
+1. **Date Priority**:
+    - When merging, prioritize details from events with more recent "timestamp."
 
-1. Date Priority:
-    - Prefer details from newer "timestamp" events when merging.
+2. **Identical Dates**:
+    - Merge events that have the exact same dates. This is the primary trigger for merging events. Other factors such as habitat, monsters, and description should be considered, but the dates must be identical for events to be merged.
 
-2. Distinct Events:
-    - Maintain distinctiveness for events on the same date that relate to different quests, tasks, or primary objectives. They must be kept as separate events, even if their time ranges overlap. Overlapping dates should not automatically merge events; content and context are key.
+3. **Distinct Events**:
+    - Preserve distinctiveness for events that pertain to different quests, tasks, or primary objectives, even if their time ranges overlap. Do not merge events unless their dates are identical. Overlapping dates should not automatically trigger event merging; the content and context are crucial.
 
-3. Uniqueness:
-    - For event titles that match, evaluate their description, habitat, monsters, and dates for potential merging. Merge only if the content is complementary. If their content is distinct, especially in the context of quests or tasks, keep them separate.
+4. **Uniqueness**:
+    - For matching event titles, assess their description, habitat, monsters, and dates for potential merging. Merge only if the dates are identical and the content is complementary. If the content is distinct, particularly in the context of quests or tasks, retain them as separate events.
 
-4. Dates:
-    - For overlapping or consecutive date ranges with matching habitat or monsters, consider merging.
-    - For exact date matches, set "allDay" to true.
-    - When two events have overlapping dates, one being all-day and the other with specific times that encompass the full day, merge them under "allDay": true.
-    - Reduce redundant date entries.
+5. **Dates**:
+    - Minimize redundant date entries.
 
-5. Habitat & Monsters:
-    - If events occur in similar habitats with the same monsters and have overlapping or consecutive dates, consider merging.
+6. **Summaries**:
+    - Create clear summaries without date specifics. For merged events, generate a unified summary.
 
-6. Summaries:
-    - Generate summaries that are clear and without date specifics. For merged events, produce a cohesive summary.
+7. **Description**:
+    - Merge descriptions while avoiding redundancy. For overarching events, incorporate details from more specific events without repetition.
 
-7. Description:
-    - Combine descriptions avoiding redundancy. For overarching events, integrate details from more specific events without being repetitive.
+8. **Cleanup**:
+    - Remove the "habitat," "monster," and "timestamp" fields.
+    - Maintain the order from the original JSON unless merges dictate otherwise.
 
-8. Cleanup:
-    - Remove the habitat, monster, and timestamp fields.
-    - Retain the order from the raw JSON, unless dictated otherwise by merges.
+9. **Overarching Events**:
+    - Retain events marked as all-day, even if there are overlapping timed events. Overarching events that include specific event details should be designated as "allDay": true.
 
-9. Overarching Events:
-    - Preserve events labeled as all-day, even if there are overlapping timed events. Overarching events that encompass specific event details should be marked as "allDay": true.
+10. **Distinct Events Preservation**:
+    - Ensure that distinct events are maintained. Clarify that merging should only occur when the dates are identical and merging enhances clarity, not when it leads to a loss of context or uniqueness.
 
-Output:
+11. **Title Preference**:
+    - When merging events, prefer the title of the most recent event.
+
+**Output**:
 {
     "events": [{
         "summary": "Event Name",
@@ -216,14 +217,17 @@ Output:
     }]
 }
 
-Notes:
-- Prioritize concise and non-redundant summaries.
-- Separate events if their activities, quests, or tasks differ, even when they share the same date.
-- Always ensure events are represented, whether individually or merged, in the output.`,
+**Notes**:
+- Aim for concise and non-redundant summaries.
+- Keep events separate if their activities, quests, or tasks differ, even if they share the same date.
+- Ensure all events are represented in the output, either as individual or merged events.
+- Overarching events and their sub-events should not be merged, even if they share the same monsters, habitat, and dates.
+- The primary trigger for merging events is identical dates. Other factors such as habitat, monsters, and description should be considered, but the dates must be identical for events to be merged.`,
         },
         {
             role: 'user',
-            content: 'Merge these events:',
+            content:
+                'Merge identical in-game events with precision, focusing on identical dates as the primary trigger. Preserve the uniqueness of distinct quests or tasks. Respect the "allDay" property for overlapping events. Aim for concise, non-redundant summaries in the output. Deduplicate with extreme accuracy and attention to detail.',
         },
         {
             role: 'user',

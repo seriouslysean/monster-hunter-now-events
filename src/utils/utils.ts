@@ -22,6 +22,24 @@ export function getHash(str) {
     return crypto.createHash('sha1').update(str).digest('base64');
 }
 
+export function stripTags(input: string, allowed: string = ''): string {
+    const allowedTags: string =
+        (allowed || '')
+            .toLowerCase()
+            .match(/<[a-z][a-z0-9]*>/g)
+            ?.join('') || '';
+
+    const tags: RegExp = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi;
+    const commentsAndPhpTags: RegExp =
+        /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;
+
+    return input
+        .replace(commentsAndPhpTags, '')
+        .replace(tags, ($0: string, $1: string) =>
+            allowedTags.indexOf(`<${$1.toLowerCase()}>`) > -1 ? $0 : '',
+        );
+}
+
 function getFile(filePath) {
     try {
         return readFileSync(filePath, {
