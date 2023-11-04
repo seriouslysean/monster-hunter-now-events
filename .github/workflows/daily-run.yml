@@ -49,15 +49,16 @@ jobs:
         run: npm ci
 
       - name: Generate Feed
+        id: generate_feed
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: ./tools/generate-feed.sh
 
       - name: Validate Generation
         run: |
-          if [ "$CONTINUE_NEXT" != "1" ]; then
+          if [ "${{ steps.generate_feed.outputs.feed_generated }}" == "0" ]; then
             echo "No feed updates required"
-            exit 1
+            exit 0
           fi
 
       - name: Configure Git

@@ -1,19 +1,12 @@
 #!/bin/bash
 
-# Initialize the CONTINUE_NEXT environment variable
-export CONTINUE_NEXT=1
+# Run npm start and capture the exit code
+npm start
+exit_code=$?
 
-# Run the first script
-npm run fetch:all-articles
-
-# Check if the environment variable is set and is 1 (meaning continue to the next script)
-if [ "$CONTINUE_NEXT" -eq "1" ]; then
-    # Run the second script
-    npm run generate:events-json
-fi
-
-# Check if the environment variable is set and is 1 (meaning continue to the next script)
-if [ "$CONTINUE_NEXT" -eq "1" ]; then
-    # Run the third script
-    npm run generate:events-ics
+# Set the state variable based on the exit code
+if [ $exit_code -eq 0 ]; then
+    echo "::set-output name=feed_generated::1"
+else
+    echo "::set-output name=feed_generated::0"
 fi
