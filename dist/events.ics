@@ -17,7 +17,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:5d4a9e8b7deaf696ee50dac67fdefdbab6782d95
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231124T170000
 DTEND:20231124T200000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -29,7 +29,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:c2827ccd6f29093cab4a99bf1b00ea6dfbf03a9d
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231125T130000
 DTEND:20231125T160000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -41,7 +41,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:9d3cc029a31eee2a43690c788bf29101d38bfeb6
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231126T130000
 DTEND:20231126T160000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -53,7 +53,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:ac3493b95203275dbfa0dbd2a05f0651bb20ac60
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231120T090000
 DTEND:20231126T160000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -65,7 +65,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:ba9e73f0d5cb9c6fd66060e3854de490f796a649
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231117T170000
 DTEND:20231117T200000
 SUMMARY:MHN: Legiana Weekend
@@ -75,7 +75,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:9c1f36f0b14159675612072ec78b62d1018c6c49
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231118T130000
 DTEND:20231118T160000
 SUMMARY:MHN: Legiana Weekend
@@ -85,7 +85,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:7a26ef4fb4f41a710ff7f5c529dd74f3a637b1f2
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231119T130000
 DTEND:20231119T160000
 SUMMARY:MHN: Legiana Weekend
@@ -95,7 +95,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:2950f290d19adfc627472d427952817575633f13
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231110T170000
 DTEND:20231112T160000
 SUMMARY:MHN: Qualily’s Special Quests
@@ -105,7 +105,7 @@ DESCRIPTION:Time-limited event quests will be available for all hunters HR1
 END:VEVENT
 BEGIN:VEVENT
 UID:34298f340b725a5b41ecf619db308f827835dc1f
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231103T170000
 DTEND:20231103T200000
 SUMMARY:MHN: Jyuratodus Weekend
@@ -116,7 +116,7 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
 END:VEVENT
 BEGIN:VEVENT
 UID:6165990cf9bf8d095ffff3945453d2662e18f512
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231104T130000
 DTEND:20231104T160000
 SUMMARY:MHN: Jyuratodus Weekend
@@ -127,7 +127,7 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
 END:VEVENT
 BEGIN:VEVENT
 UID:d64457df6f245033972f518df8ba1ced0ae5f58b
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231105T130000
 DTEND:20231105T160000
 SUMMARY:MHN: Jyuratodus Weekend
@@ -137,41 +137,54 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
  frequently than usual for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:6ff170fd766748073c63f15f8ab5faa7711d5183
-DTSTAMP:20231103T093247
+UID:369e3389badd42ec9f3801dbca15343e95ebcb0b
+DTSTAMP:20231104T003256
 DTSTART:20231028T090000
 DTEND:20231031T235959
-SUMMARY:MHN: Halloween Medal Acquisition Quest
+SUMMARY:MHN: Halloween Pumpkin Hunt
 DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
  te this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding 
  a pumpkin-like rock will appear in larger numbers than usual. Slaying Ku
  lu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Ticket
- s!
+ s! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests th
+ at involve gathering special items or slaying certain large monsters to 
+ receive Pumpkin Tickets which can be used to forge and upgrade your Jack
+ -o’-Head equipment! Look forward to a Halloween-themed field map, as wel
+ l as special Halloween-themed equipment! Kulu-Ya-Ku looks… different tha
+ n usual?!
 END:VEVENT
 BEGIN:VEVENT
 UID:e9f41d3bb7136a3b5faf412280ba8d12990c66e8
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231025T090000
 DTEND:20231031T235959
 SUMMARY:MHN: Halloween Pumpkin Hunt
-DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
- sts that involve gathering special items or slaying certain large monste
- rs to receive Pumpkin Tickets which can be used to forge and upgrade you
- r Jack-o’-Head equipment! Look forward to a Halloween-themed field map, 
- as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… differe
- nt than usual?!
+DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
+ te this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding 
+ a pumpkin-like rock will appear in larger numbers than usual. Slaying Ku
+ lu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Ticket
+ s! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests th
+ at involve gathering special items or slaying certain large monsters to 
+ receive Pumpkin Tickets which can be used to forge and upgrade your Jack
+ -o’-Head equipment! Look forward to a Halloween-themed field map, as wel
+ l as special Halloween-themed equipment! Kulu-Ya-Ku looks… different tha
+ n usual?!
 END:VEVENT
 BEGIN:VEVENT
 UID:b6c13d483cc9cdc7f308c837b365d14688fe4330
-DTSTAMP:20231103T093247
+DTSTAMP:20231104T003256
 DTSTART:20231025
 DTEND:20231101
 SUMMARY:MHN: Halloween Pumpkin Hunt
-DESCRIPTION:Halloween Pumpkin Hunt Quests will be distributed. Complete Que
- sts that involve gathering special items or slaying certain large monste
- rs to receive Pumpkin Tickets which can be used to forge and upgrade you
- r Jack-o’-Head equipment! Look forward to a Halloween-themed field map, 
- as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… differe
- nt than usual?!
+DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
+ te this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding 
+ a pumpkin-like rock will appear in larger numbers than usual. Slaying Ku
+ lu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Ticket
+ s! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests th
+ at involve gathering special items or slaying certain large monsters to 
+ receive Pumpkin Tickets which can be used to forge and upgrade your Jack
+ -o’-Head equipment! Look forward to a Halloween-themed field map, as wel
+ l as special Halloween-themed equipment! Kulu-Ya-Ku looks… different tha
+ n usual?!
 END:VEVENT
 END:VCALENDAR
