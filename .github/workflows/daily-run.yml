@@ -52,22 +52,23 @@ jobs:
         id: generate_feed
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: ./tools/generate-feed.sh
-
-      - name: Validate Generation
         run: |
-          if [ "${{ steps.generate_feed.outputs.feed_generated }}" == "0" ]; then
-            echo "No feed updates required"
-            exit 0
+          if npm start; then
+            echo "::set-output name=feed_generated::1"
+          else
+            echo "::set-output name=feed_generated::0"
           fi
 
       - name: Configure Git
+        if: steps.generate_feed.outputs.feed_generated == '1'
         run: |
           git config user.name "MHN Events Workflow"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
 
       - name: Commit
+        if: steps.generate_feed.outputs.feed_generated == '1'
         run: git add . && git commit -m "Update feed $(date +'%Y-%m-%d')"
 
       - name: Publish
+        if: steps.generate_feed.outputs.feed_generated == '1'
         run: git push origin main && git push origin main --tags
