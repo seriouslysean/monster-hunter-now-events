@@ -16,11 +16,11 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:5d4a9e8b7deaf696ee50dac67fdefdbab6782d95
-DTSTAMP:20231104T003256
+UID:017df12fdbe0c6f43cbfd30d8d245d722dba14db
+DTSTAMP:20231107T060820
 DTSTART:20231124T170000
 DTEND:20231124T200000
-SUMMARY:MHN: Diablos Appearance Increase
+SUMMARY:MHN: Roar of the Desert: Diablos & Diablos Appearance Increase
 DESCRIPTION:During the following times Diablos and Black Diablos will appea
  r more frequently in Desert Habitats for all hunters HR11 and above, and
   monsters in all Habitats will reappear in shorter intervals than usual.
@@ -28,11 +28,11 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
   you have completed Chapter 11 and unlocked Diablos hunts.
 END:VEVENT
 BEGIN:VEVENT
-UID:c2827ccd6f29093cab4a99bf1b00ea6dfbf03a9d
-DTSTAMP:20231104T003256
+UID:41dab041760ba964d8aea62871d090c7d83bb87d
+DTSTAMP:20231107T060820
 DTSTART:20231125T130000
 DTEND:20231125T160000
-SUMMARY:MHN: Diablos Appearance Increase
+SUMMARY:MHN: Roar of the Desert: Diablos & Diablos Appearance Increase
 DESCRIPTION:During the following times Diablos and Black Diablos will appea
  r more frequently in Desert Habitats for all hunters HR11 and above, and
   monsters in all Habitats will reappear in shorter intervals than usual.
@@ -40,11 +40,11 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
   you have completed Chapter 11 and unlocked Diablos hunts.
 END:VEVENT
 BEGIN:VEVENT
-UID:9d3cc029a31eee2a43690c788bf29101d38bfeb6
-DTSTAMP:20231104T003256
+UID:ca82c22ec8e9cca0869b812b688ccad4f2cda75b
+DTSTAMP:20231107T060820
 DTSTART:20231126T130000
 DTEND:20231126T160000
-SUMMARY:MHN: Diablos Appearance Increase
+SUMMARY:MHN: Roar of the Desert: Diablos & Diablos Appearance Increase
 DESCRIPTION:During the following times Diablos and Black Diablos will appea
  r more frequently in Desert Habitats for all hunters HR11 and above, and
   monsters in all Habitats will reappear in shorter intervals than usual.
@@ -52,11 +52,11 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
   you have completed Chapter 11 and unlocked Diablos hunts.
 END:VEVENT
 BEGIN:VEVENT
-UID:ac3493b95203275dbfa0dbd2a05f0651bb20ac60
-DTSTAMP:20231104T003256
+UID:3cffefeba3e0ac9928a6b5f47055768e5f1cb8b5
+DTSTAMP:20231107T060820
 DTSTART:20231120T090000
 DTEND:20231126T160000
-SUMMARY:MHN: Diablos Appearance Increase
+SUMMARY:MHN: Roar of the Desert: Diablos & Diablos Appearance Increase
 DESCRIPTION:During the following times Diablos and Black Diablos will appea
  r more frequently in Desert Habitats for all hunters HR11 and above, and
   monsters in all Habitats will reappear in shorter intervals than usual.
@@ -65,7 +65,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:ba9e73f0d5cb9c6fd66060e3854de490f796a649
-DTSTAMP:20231104T003256
+DTSTAMP:20231107T060820
 DTSTART:20231117T170000
 DTEND:20231117T200000
 SUMMARY:MHN: Legiana Weekend
@@ -75,7 +75,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:9c1f36f0b14159675612072ec78b62d1018c6c49
-DTSTAMP:20231104T003256
+DTSTAMP:20231107T060820
 DTSTART:20231118T130000
 DTEND:20231118T160000
 SUMMARY:MHN: Legiana Weekend
@@ -85,7 +85,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:7a26ef4fb4f41a710ff7f5c529dd74f3a637b1f2
-DTSTAMP:20231104T003256
+DTSTAMP:20231107T060820
 DTSTART:20231119T130000
 DTEND:20231119T160000
 SUMMARY:MHN: Legiana Weekend
@@ -95,96 +95,95 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:2950f290d19adfc627472d427952817575633f13
-DTSTAMP:20231104T003256
+DTSTAMP:20231107T060820
 DTSTART:20231110T170000
 DTEND:20231112T160000
 SUMMARY:MHN: Qualily’s Special Quests
-DESCRIPTION:Time-limited event quests will be available for all hunters HR1
- 1 and above. Complete them to earn items needed for upgrading equipment 
- such as Carpenterbugs and Monster Bone+, as well as Zenny.
+DESCRIPTION:Time-limited Special Quests rewarding Carpenterbugs, Monster Bo
+ ne+, and more, will be distributed. Complete quests by visiting gatherin
+ g points and slaying monsters to receive rewards. Event Quests will auto
+ matically become available to all hunters HR 11 and above in the Special
+  Quests tab in-game. Some quests will require that you slay Great Girros
+  to complete them. You’ll need to have completed Chapter 2 in the main s
+ tory in order to encounter it. Some quests will require that you join Gr
+ oup hunts to complete them. Time-limited event quests will be available 
+ for all hunters HR11 and above. Complete them to earn items needed for u
+ pgrading equipment such as Carpenterbugs and Monster Bone+, as well as Z
+ enny.
 END:VEVENT
 BEGIN:VEVENT
-UID:34298f340b725a5b41ecf619db308f827835dc1f
-DTSTAMP:20231104T003256
+UID:7f0e3854adc50b1eb8be90eac7759df0470810cf
+DTSTAMP:20231107T060820
 DTSTART:20231103T170000
 DTEND:20231103T200000
-SUMMARY:MHN: Jyuratodus Weekend
+SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus! & Jyuratodus W
+ eekend
 DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
  l hunters HR11 and above. During the event, monsters in all Habitats wil
  l reappear in shorter intervals than usual. Jyuratodus will appear more 
  frequently than usual for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:6165990cf9bf8d095ffff3945453d2662e18f512
-DTSTAMP:20231104T003256
+UID:c7d26f5e2e321e742d2333294461d83b99600747
+DTSTAMP:20231107T060820
 DTSTART:20231104T130000
 DTEND:20231104T160000
-SUMMARY:MHN: Jyuratodus Weekend
+SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus! & Jyuratodus W
+ eekend
 DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
  l hunters HR11 and above. During the event, monsters in all Habitats wil
  l reappear in shorter intervals than usual. Jyuratodus will appear more 
  frequently than usual for all hunters HR11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:d64457df6f245033972f518df8ba1ced0ae5f58b
-DTSTAMP:20231104T003256
+UID:6cdeb0d33e96df249d55b23d42ffdc78b9bf8424
+DTSTAMP:20231107T060820
 DTSTART:20231105T130000
 DTEND:20231105T160000
-SUMMARY:MHN: Jyuratodus Weekend
+SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus! & Jyuratodus W
+ eekend
 DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
  l hunters HR11 and above. During the event, monsters in all Habitats wil
  l reappear in shorter intervals than usual. Jyuratodus will appear more 
  frequently than usual for all hunters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
-UID:369e3389badd42ec9f3801dbca15343e95ebcb0b
-DTSTAMP:20231104T003256
-DTSTART:20231028T090000
-DTEND:20231031T235959
-SUMMARY:MHN: Halloween Pumpkin Hunt
-DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
- te this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding 
- a pumpkin-like rock will appear in larger numbers than usual. Slaying Ku
- lu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Ticket
- s! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests th
- at involve gathering special items or slaying certain large monsters to 
- receive Pumpkin Tickets which can be used to forge and upgrade your Jack
- -o’-Head equipment! Look forward to a Halloween-themed field map, as wel
- l as special Halloween-themed equipment! Kulu-Ya-Ku looks… different tha
- n usual?!
-END:VEVENT
-BEGIN:VEVENT
-UID:e9f41d3bb7136a3b5faf412280ba8d12990c66e8
-DTSTAMP:20231104T003256
-DTSTART:20231025T090000
-DTEND:20231031T235959
-SUMMARY:MHN: Halloween Pumpkin Hunt
-DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
- te this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding 
- a pumpkin-like rock will appear in larger numbers than usual. Slaying Ku
- lu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Ticket
- s! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests th
- at involve gathering special items or slaying certain large monsters to 
- receive Pumpkin Tickets which can be used to forge and upgrade your Jack
- -o’-Head equipment! Look forward to a Halloween-themed field map, as wel
- l as special Halloween-themed equipment! Kulu-Ya-Ku looks… different tha
- n usual?!
 END:VEVENT
 BEGIN:VEVENT
 UID:b6c13d483cc9cdc7f308c837b365d14688fe4330
-DTSTAMP:20231104T003256
+DTSTAMP:20231107T060820
 DTSTART:20231025
 DTEND:20231101
 SUMMARY:MHN: Halloween Pumpkin Hunt
+DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
+ l Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?! H
+ alloween Pumpkin Hunt Quests will be distributed. Complete Quests that i
+ nvolve gathering special items or slaying certain large monsters to rece
+ ive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-
+ Head equipment!
+END:VEVENT
+BEGIN:VEVENT
+UID:e9f41d3bb7136a3b5faf412280ba8d12990c66e8
+DTSTAMP:20231107T060820
+DTSTART:20231025T090000
+DTEND:20231031T235959
+SUMMARY:MHN: Halloween Pumpkin Hunt
+DESCRIPTION:Look forward to a Halloween-themed field map, as well as specia
+ l Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?! H
+ alloween Pumpkin Hunt Quests will be distributed. Complete Quests that i
+ nvolve gathering special items or slaying certain large monsters to rece
+ ive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-
+ Head equipment!
+END:VEVENT
+BEGIN:VEVENT
+UID:799f8eda8f86a034e962c1ec851f2296894c490a
+DTSTAMP:20231107T060820
+DTSTART:20231028T090000
+DTEND:20231031T235959
+SUMMARY:MHN: Halloween Medal Acquisition Quest & Increased Kulu-Ya-Ku Appea
+ rance
 DESCRIPTION:A Halloween Medal Acquisition Quest will be distributed. Comple
  te this to receive the Halloween Pumpkin Hunt Medal! Kulu-Ya-Ku holding 
  a pumpkin-like rock will appear in larger numbers than usual. Slaying Ku
  lu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Ticket
- s! Halloween Pumpkin Hunt Quests will be distributed. Complete Quests th
- at involve gathering special items or slaying certain large monsters to 
- receive Pumpkin Tickets which can be used to forge and upgrade your Jack
- -o’-Head equipment! Look forward to a Halloween-themed field map, as wel
- l as special Halloween-themed equipment! Kulu-Ya-Ku looks… different tha
- n usual?!
+ s!
 END:VEVENT
 END:VCALENDAR
