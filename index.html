@@ -1,373 +1,520 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Monster Hunter Now: Today's Events</title>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Monster Hunter Now: Today's Events</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.">
-    <meta name="keywords" content="nodejs, javascript, calendar, web-scraping, openai, monster-hunter, ics, monster-hunter-now">
-    <meta name="author" content="Seriouslysean">
+        <meta
+            name="description"
+            content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription."
+        />
+        <meta
+            name="keywords"
+            content="nodejs, javascript, calendar, web-scraping, openai, monster-hunter, ics, monster-hunter-now"
+        />
+        <meta name="author" content="Seriouslysean" />
 
-    <meta property="og:title" content="Monster Hunter Now: Today's Events">
-    <meta property="og:description" content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seriouslysean.github.io/monster-hunter-now-events/">
-    <!-- <meta property="og:image" content="https://example.com/your-image.jpg"> -->
-    <meta property="og:site_name" content="Monster Hunter Now: Today's Events">
+        <meta
+            property="og:title"
+            content="Monster Hunter Now: Today's Events"
+        />
+        <meta
+            property="og:description"
+            content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://seriouslysean.github.io/monster-hunter-now-events/"
+        />
+        <!-- <meta property="og:image" content="https://example.com/your-image.jpg"> -->
+        <meta
+            property="og:site_name"
+            content="Monster Hunter Now: Today's Events"
+        />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- <meta name="twitter:site" content=""> -->
-    <meta name="twitter:title" content="Monster Hunter Now: Today's Events">
-    <meta name="twitter:description" content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription.">
-    <!-- <meta name="twitter:image" content=""> -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- <meta name="twitter:site" content=""> -->
+        <meta
+            name="twitter:title"
+            content="Monster Hunter Now: Today's Events"
+        />
+        <meta
+            name="twitter:description"
+            content="A tool that auto-generates calendar events for Monster Hunter Now by scraping web news articles, processing them with AI, and creating a convenient calendar subscription."
+        />
+        <!-- <meta name="twitter:image" content=""> -->
 
-    <style>
-        :root {
-            --main-bg-color: #333;
-            --text-color: #fff;
-            --container-bg-color: #f6f4e4;
-            --link-color: #4a90e2;
-            --header-text-color: #000;
-            --footer-message-text: #ccc;
-            --footer-message-link: #ccc;
-            --footer-message-link-hover: #fff;
-        }
-
-        body {
-            background-color: var(--main-bg-color);
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            color: var(--text-color);
-            margin: 0;
-            padding-bottom: 6em;
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        .container {
-            background-color: var(--container-bg-color);
-            padding: 20px;
-        }
-
-        .header {
-            font-weight: bold;
-            color: var(--header-text-color);
-        }
-
-        .header__logo {
-            max-width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .header__date {
-            font-size: 1.75em;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .header__heading {
-            font-size: 1.5em;
-            font-weight: 600;
-            margin-top: 0;
-        }
-
-        main {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section {
-            margin: 20px 0;
-        }
-
-        .event-card {
-            border-radius: 10px;
-            background: var(--main-bg-color);
-            color: var(--container-bg-color);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-        }
-
-        .event-card__header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .event-card__time {
-            font-size: 1.125em;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-
-        .event-card__title {
-            font-size: 1.25em;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .event-card__description {
-            font-size: 1.125em;
-        }
-
-        footer {
-            background: var(--main-bg-color);
-            color: var(--container-bg-color);
-            text-align: center;
-            padding: 10px;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        footer ul li {
-            margin: 0 20px;
-        }
-
-        footer a {
-            color: var(--link-color);
-            text-decoration: underline;
-            transition: color 0.2s;
-        }
-
-        footer a:hover {
-            color: var(--footer-message-link-hover);
-        }
-
-        .footer-message {
-            color: var(--footer-message-text);
-            text-align: center;
-            margin-top: 10px;
-            border-top: 1px solid var(--footer-message-link);
-            padding: 10px;
-            font-size: 0.8em;
-            max-width: 400px;
-            margin: 10px auto;
-        }
-
-        .footer-message a {
-            color: var(--footer-message-link);
-            text-decoration: underline;
-            transition: color 0.2s;
-        }
-
-        .footer-message a:hover {
-            color: var(--footer-message-link-hover);
-        }
-
-        .heart {
-            color: #bb0000;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <header class="header">
-            <img src="docs/assets/monster-hunter-now-logo.png" alt="Monster Hunter Now Logo" class="header__logo" />
-            <div class="header__date" id="tag-display-date"></div>
-            <h1 class="header__heading">Monster Hunter Now Events</h1>
-        </header>
-        <main>
-            <section id="all-day-events-container">
-                <!-- All Day Events -->
-            </section>
-            <section id="timed-events-container">
-                <!-- Timed Events -->
-            </section>
-            <section id="earlier-events-container">
-                <!-- Earlier Events -->
-            </section>
-        </main>
-    </div>
-
-    <footer>
-        <ul>
-            <li>Made with <span class="heart">&hearts;</span> by Sean</li>
-            <li><a href="https://github.com/seriouslysean/monster-hunter-now-events" target="_blank">GitHub</a></li>
-            <li><a href="dist/events.ics">Calendar Subscription</a></li>
-        </ul>
-        <p class="footer-message">
-            If you aren't playing yet, <a href="https://apps.apple.com/us/app/monster-hunter-now/id6445906110" target="_blank">join me</a> and use my referral code for items and zenny, <code>89K5MKCF</code>.
-        </p>
-    </footer>
-
-    <script type="text/javascript">
-        // Function to format a date as a date string
-        function formatDate(date) {
-            return date.toLocaleDateString();
-        }
-
-        // Function to check if a date is within today's date range
-        const isDateInTodayRange = (event, currentDate) => {
-            if (event.startTime && event.endTime) {
-                return event.startTime <= currentDate && event.endTime >= currentDate;
+        <style>
+            :root {
+                --main-bg-color: #333;
+                --text-color: #fff;
+                --container-bg-color: #f6f4e4;
+                --link-color: #4a90e2;
+                --header-text-color: #000;
+                --footer-message-text: #ccc;
+                --footer-message-link: #ccc;
+                --footer-message-link-hover: #fff;
             }
-            return false;
-        };
 
-        // Function to format a date as a time string
-        const formatTime = (date) => {
-            if (date.getHours() === 0 && date.getMinutes() === 0) {
-                return 'All Day';
-            } else if (date.getHours() === 0) {
-                return `Ends at ${date.toLocaleTimeString([], {
-                    hour: 'numeric',
-                    minute: '2-digit',
-                })}`;
-            } else if (date.getMinutes() === 0) {
-                return `Starts at ${date.toLocaleTimeString([], {
-                    hour: 'numeric',
-                })}`;
-            } else {
-                return `${date.toLocaleTimeString([], {
-                    hour: 'numeric',
-                    minute: '2-digit',
-                })} - ${date.toLocaleTimeString([], {
-                    hour: 'numeric',
-                    minute: '2-digit',
-                })}`;
+            body {
+                background-color: var(--main-bg-color);
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                color: var(--text-color);
+                margin: 0;
+                padding-bottom: 6em;
+                text-align: center;
+                overflow-x: hidden;
             }
-        };
 
-        // Function to adapt event objects with required keys
-        const adaptEvents = (events, currentDate) => {
-            return events.reduce((adaptedEvents, event) => {
-                if (event.dates && event.dates.length > 0) {
-                    event.dates.forEach((dateObj) => {
+            .container {
+                background-color: var(--container-bg-color);
+                padding: 20px;
+            }
+
+            .header {
+                font-weight: bold;
+                color: var(--header-text-color);
+            }
+
+            .header__logo {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .header__date {
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            .header__heading {
+                font-size: 1.5em;
+                font-weight: 600;
+                margin-top: 0;
+            }
+
+            main {
+                text-align: left;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .events {
+                margin: 20px 0;
+            }
+
+            .events__heading {
+                color: var(--header-text-color);
+                font-size: 1.5em;
+                font-weight: 600;
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .event-card {
+                border-radius: 10px;
+                background: var(--main-bg-color);
+                color: var(--container-bg-color);
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+                margin: 20px 0;
+            }
+
+            .event-card__header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .event-card__time {
+                font-size: 1.125em;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+
+            .event-card__title {
+                font-size: 1.25em;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .event-card__description {
+                font-size: 1.125em;
+            }
+
+            .footer {
+                background: var(--main-bg-color);
+                color: var(--container-bg-color);
+                text-align: center;
+                padding: 10px;
+            }
+
+            .footer ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media (min-width: 600px) {
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+
+            .footer ul li {
+                margin: 0;
+                margin-bottom: 10px;
+
+                @media (min-width: 600px) {
+                    margin: 0 20px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .footer a {
+                color: var(--link-color);
+                text-decoration: underline;
+                transition: color 0.2s;
+            }
+
+            .footer a:hover {
+                color: var(--footer-message-link-hover);
+            }
+
+            .footer__message {
+                color: var(--footer-message-text);
+                text-align: center;
+                margin-top: 10px;
+                border-top: 1px solid var(--footer-message-link);
+                padding: 10px;
+                font-size: 0.8em;
+                max-width: 400px;
+                margin: 10px auto;
+            }
+
+            .footer__message a {
+                color: var(--footer-message-link);
+                text-decoration: underline;
+                transition: color 0.2s;
+            }
+
+            .footer__message a:hover {
+                color: var(--footer-message-link-hover);
+            }
+
+            .heart {
+                color: #bb0000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <img
+                    src="docs/assets/monster-hunter-now-logo.png"
+                    alt="Monster Hunter Now Logo"
+                    class="header__logo"
+                />
+                <h1 class="header__heading">Today's Events</h1>
+                <div class="header__date" id="date-today">
+                    <!-- Today's Date-->
+                </div>
+            </header>
+            <main>
+                <section class="events" id="events-all-day">
+                    <!-- All Day Events -->
+                </section>
+                <section class="events" id="events-timed">
+                    <!-- Timed Events -->
+                </section>
+                <section class="events" id="events-expired">
+                    <h2 class="events__heading">Expired Events</h2>
+                    <div class="events-expired__list">
+                        <!-- Expired Events will be added here -->
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <ul>
+                <li>Made with <span class="heart">&hearts;</span> by Sean</li>
+                <li>
+                    <a
+                        href="https://github.com/seriouslysean/monster-hunter-now-events"
+                        target="_blank"
+                        >GitHub</a
+                    >
+                </li>
+                <li><a href="dist/events.ics">Calendar Subscription</a></li>
+            </ul>
+            <p class="footer__message">
+                If you aren't playing yet,
+                <a
+                    href="https://apps.apple.com/us/app/monster-hunter-now/id6445906110"
+                    target="_blank"
+                    >join me</a
+                >
+                and use this referral code for free items and zenny,
+                <code>89K5MKCF</code>.
+            </p>
+        </footer>
+
+        <script type="text/javascript">
+            // Function to format a date as a date string
+            function formatDate(date) {
+                return date.toLocaleDateString();
+            }
+
+            // Function to format a date as a time string
+            const formatTime = (date) => {
+                if (date.getHours() === 0 && date.getMinutes() === 0) {
+                    return 'All Day';
+                } else if (date.getHours() === 0) {
+                    return `Ends at ${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                    })}`;
+                } else if (date.getMinutes() === 0) {
+                    return `Starts at ${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                    })}`;
+                } else {
+                    return `${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                    })} - ${date.toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                    })}`;
+                }
+            };
+
+            function occursToday(startDate, endDate, currentDate) {
+                const start = new Date(startDate);
+                const end = new Date(endDate);
+                const current = new Date(currentDate);
+
+                // Extract day, month, and year components of the dates
+                const startDay = start.getDate();
+                const startMonth = start.getMonth();
+                const startYear = start.getFullYear();
+
+                const endDay = end.getDate();
+                const endMonth = end.getMonth();
+                const endYear = end.getFullYear();
+
+                const currentDay = current.getDate();
+                const currentMonth = current.getMonth();
+                const currentYear = current.getFullYear();
+
+                // Check if the current date falls within the range, considering day, month, and year
+                return (
+                  (currentYear === startYear && currentMonth === startMonth && currentDay >= startDay) &&
+                  (currentYear === endYear && currentMonth === endMonth && currentDay <= endDay)
+                );
+              }
+
+              const adaptEvents = (events, currentDate) => {
+                return events.reduce((adaptedData, event) => {
+                    const eventDates = event.dates.filter(dateObj => {
                         const eventDate = new Date(dateObj.start);
-                        const eventEndDate = new Date(dateObj.end);
-
-                        if (
-                            eventDate.toDateString() === currentDate.toDateString() ||
-                            (currentDate >= eventDate && currentDate <= eventEndDate)
-                        ) {
-                            const { dates, ...adaptedEvent } = event; // Remove the dates array
-                            adaptedEvent.startTime = eventDate;
-                            adaptedEvent.endTime = eventEndDate;
-                            adaptedEvents.push(adaptedEvent);
-                        }
+                        return eventDate.toDateString() === currentDate.toDateString();
                     });
+
+                    if (eventDates.length > 0) {
+                        const eventDate = new Date(eventDates[0].start);
+                        const eventEndDate = new Date(eventDates[0].end);
+
+                        // Check if it's an all-day event
+                        const isAllDay = (
+                            eventDate.getHours() === 0 &&
+                            eventDate.getMinutes() === 0 &&
+                            eventEndDate.getHours() === 23 &&
+                            eventEndDate.getMinutes() === 59
+                        );
+
+                        const adaptedEvent = {
+                            ...event,
+                            startTime: eventDate,
+                            endTime: eventEndDate,
+                        };
+
+                        if (isAllDay) {
+                            adaptedData.allDay.push(adaptedEvent);
+                        } else if (eventEndDate >= currentDate) {
+                            adaptedData.timed.push(adaptedEvent);
+                        } else {
+                            adaptedData.expired.push(adaptedEvent);
+                        }
+                    }
+
+                    return adaptedData;
+                }, {
+                    allDay: [],
+                    timed: [],
+                    expired: [],
+                });
+            };
+
+            // Function to fetch JSON data
+            const fetchEventData = async () => {
+                try {
+                    const response = await fetch('dist/events.json');
+                    if (!response.ok) {
+                        throw new Error(
+                            'Unable to fetch the event data. Please try again later.',
+                        );
+                    }
+                    const eventData = await response.json();
+                    return eventData;
+                } catch (error) {
+                    console.error(`Error: ${error.message}`);
+                    return { events: [] };
                 }
-                return adaptedEvents;
-            }, []);
-        };
+            };
 
-        // Function to fetch JSON data
-        const fetchEventData = async () => {
-            try {
-                const response = await fetch('dist/events.json');
-                if (!response.ok) {
-                    throw new Error(
-                        'Unable to fetch the event data. Please try again later.'
-                    );
+            const eventCards = (event) => {
+                let timeStr = '';
+                if (event.startTime && event.endTime) {
+                    if (
+                        event.startTime.getHours() === 0 &&
+                        event.startTime.getMinutes() === 0
+                    ) {
+                        timeStr = 'All Day';
+                    } else {
+                        const startTimeStr = event.startTime.toLocaleTimeString(
+                            [],
+                            {
+                                hour: 'numeric',
+                                minute: '2-digit',
+                            },
+                        );
+                        const endTimeStr = event.endTime.toLocaleTimeString(
+                            [],
+                            {
+                                hour: 'numeric',
+                                minute: '2-digit',
+                            },
+                        );
+                        timeStr = `From ${startTimeStr.replace(
+                            /^0/,
+                            '',
+                        )} to ${endTimeStr.replace(/^0/, '')}`;
+                    }
                 }
-                const eventData = await response.json();
-                return eventData;
-            } catch (error) {
-                console.error(`Error: ${error.message}`);
-                return { events: [] };
-            }
-        };
 
-        // Function to initialize the event display
-        const initEventDisplay = (events, currentDate) => {
-            const allDayEventsContainer = document.getElementById('all-day-events-container');
-            const timedEventsContainer = document.getElementById('timed-events-container');
-            const earlierEventsContainer = document.getElementById('earlier-events-container');
+                return `
+            <div class="event-card">
+                <div class="event-card__header">
+                    <div class="event-card__time">${timeStr}</div>
+                </div>
+                <div class="event-card__header">
+                    <div class="event-card__title">${event.summary}</div>
+                </div>
+                <div class="event-card__description">${event.description}</div>
+            </div>
+            `;
+            };
 
-            // Update the header date display
-            document.getElementById('tag-display-date').textContent = formatDate(currentDate);
+            // Function to initialize the event display
+            const initEventDisplay = (events, currentDate) => {
+                const allDayEventsContainer =
+                    document.getElementById('events-all-day');
+                const timedEventsContainer =
+                    document.getElementById('events-timed');
+                const expiredEventsHeading = document.querySelector(
+                    '#events-expired > h2',
+                );
+                const expiredEventsContainer = document.querySelector(
+                    '#events-expired > div',
+                );
 
-            if (events.length === 0) {
-                // Display a "No Events Found" message
-                allDayEventsContainer.innerHTML = `
+                // Update the header date display
+                document.getElementById('date-today').textContent =
+                    formatDate(currentDate);
+
+                if (events.allDay.length === 0 && events.timed.length === 0) {
+                    // Display a "No Events Found" message
+                    allDayEventsContainer.innerHTML = `
                     <div class="event-card">
                         <div class="event-card__header">
-                            <div class="event-card__title">No Events Found</div>
+                            <div class="event-card__title">No Current Events</div>
                         </div>
                     </div>
                 `;
-                return;
-            }
+                }
 
-            const allDayEvents = events.filter((event) => event.isAllDay);
-            const timedEvents = events.filter((event) => !event.isAllDay);
+                // Display all-day events
+                if (events.allDay.length > 0) {
+                    allDayEventsContainer.innerHTML = events.allDay
+                        .map(eventCards)
+                        .join('');
+                }
 
-            // Clear the containers before rendering
-            allDayEventsContainer.innerHTML = '';
-            timedEventsContainer.innerHTML = '';
-            earlierEventsContainer.innerHTML = '';
+                // Display timed events
+                if (events.timed.length > 0) {
+                    timedEventsContainer.innerHTML = events.timed
+                        .map(eventCards)
+                        .join('');
+                }
 
-            const eventCards = (event) => `
-                <div class="event-card">
-                    <div class="event-card__header">
-                        <div class="event-card__time">${formatTime(event.startTime)}</div>
-                    </div>
-                    <div class="event-card__header">
-                        <div class="event-card__title">${event.summary}</div>
-                    </div>
-                    <div class="event-card__description">${event.description}</div>
-                </div>
-            `;
+                // Display earlier events
+                if (events.expired.length > 0) {
+                    expiredEventsContainer.innerHTML = events.expired
+                        .map(eventCards)
+                        .join('');
+                } else {
+                    // Hide the "Expired Events" section if no earlier events
+                    expiredEventsHeading.style.display = 'none';
+                    expiredEventsContainer.style.display = 'none';
+                }
+            };
 
-            // Display all-day events
-            if (allDayEvents.length > 0) {
-                allDayEventsContainer.innerHTML = allDayEvents.map(eventCards).join('');
-            }
+            // Function to handle the initialization
+            const init = async () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const seedDate = urlParams.get('date');
+                let currentDate;
 
-            // Display timed events
-            if (timedEvents.length > 0) {
-                timedEventsContainer.innerHTML = timedEvents.map(eventCards).join('');
-            }
+                if (seedDate) {
+                    const [datePart, timePart = '00:00:00'] =
+                        seedDate.split('T');
+                    const [year, month, day] = datePart.split('-');
+                    const [hour = '00', minute = '00', second = '00'] =
+                        timePart.split(':');
+                    currentDate = new Date(
+                        `${year}-${month}-${day}T${hour}:${minute}:${second}`,
+                    );
+                } else {
+                    currentDate = new Date();
+                }
 
-            // Display earlier events
-            const pastTimedEvents = timedEvents.filter((event) => event.endTime < currentDate);
-            if (pastTimedEvents.length > 0) {
-                earlierEventsContainer.innerHTML = pastTimedEvents.map(eventCards).join('');
-            } else {
-                // Hide the container if no earlier events
-                earlierEventsContainer.style.display = 'none';
-            }
-        };
+                if (!isNaN(currentDate)) {
+                    const eventData = await fetchEventData();
+                    const adaptedEvents = adaptEvents(
+                        eventData.events,
+                        currentDate,
+                    );
 
-        // Function to handle the initialization
-        const init = async () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const seedDate = urlParams.get('date');
-            let currentDate;
+                    initEventDisplay(adaptedEvents, currentDate);
+                } else {
+                    console.error('Invalid date provided.');
+                }
+            };
 
-            // Use a date query param like 2023-10-31 to seed the current date for testing
-            // Keep in mind that events older than 2 weeks are stripped from the event feed
-            if (seedDate) {
-                const [year, month, day] = seedDate.split('-');
-                currentDate = new Date(year, month - 1, day);
-            } else {
-                currentDate = new Date();
-            }
-
-            const eventData = await fetchEventData();
-            const adaptedEvents = adaptEvents(eventData.events, currentDate);
-
-            initEventDisplay(adaptedEvents, currentDate);
-        };
-
-        // Ensure the document is fully loaded before initializing
-        window.addEventListener('load', () => {
-            init();
-        });
-    </script>
-</body>
+            // Ensure the document is fully loaded before initializing
+            window.addEventListener('load', init);
+        </script>
+    </body>
 </html>
