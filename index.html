@@ -326,39 +326,46 @@
               }
 
               const adaptEvents = (events, currentDate) => {
-                return events.reduce((result, event) => {
-                  const { allDay, timed, expired } = result;
-                  const today = new Date(currentDate);
+                return events.reduce((adaptedData, event) => {
+                    const eventDates = event.dates.filter(dateObj => {
+                        const eventDate = new Date(dateObj.start);
+                        return eventDate.toDateString() === currentDate.toDateString();
+                    });
 
-                  // Flag to keep track of whether the event has already been categorized
-                  let eventCategorized = false;
+                    if (eventDates.length > 0) {
+                        const eventDate = new Date(eventDates[0].start);
+                        const eventEndDate = new Date(eventDates[0].end);
 
-                  for (const date of event.dates) {
-                    if (occursToday(date.start, date.end, currentDate) && !eventCategorized) {
-                      if (date.allDay) {
-                        allDay.push({ ...event, startTime: new Date(date.start), endTime: new Date(date.end) });
-                      } else {
-                        timed.push({ ...event, startTime: new Date(date.start), endTime: new Date(date.end) });
-                      }
+                        // Check if it's an all-day event
+                        const isAllDay = (
+                            eventDate.getHours() === 0 &&
+                            eventDate.getMinutes() === 0 &&
+                            eventEndDate.getHours() === 23 &&
+                            eventEndDate.getMinutes() === 59
+                        );
 
-                      // Set the flag to true to avoid categorizing the event multiple times
-                      eventCategorized = true;
+                        const adaptedEvent = {
+                            ...event,
+                            startTime: eventDate,
+                            endTime: eventEndDate,
+                        };
+
+                        if (isAllDay) {
+                            adaptedData.allDay.push(adaptedEvent);
+                        } else if (eventEndDate >= currentDate) {
+                            adaptedData.timed.push(adaptedEvent);
+                        } else {
+                            adaptedData.expired.push(adaptedEvent);
+                        }
                     }
-                  }
 
-                  // Check if the event is expired (current date time is after the event's end time)
-                  const currentTime = today.getTime();
-                  if (eventCategorized && currentTime > timed[timed.length - 1].endTime.getTime()) {
-                    expired.push(timed.pop());
-                  }
-
-                  return result;
+                    return adaptedData;
                 }, {
-                  allDay: [],
-                  timed: [],
-                  expired: [],
+                    allDay: [],
+                    timed: [],
+                    expired: [],
                 });
-              };
+            };
 
             // Function to fetch JSON data
             const fetchEventData = async () => {

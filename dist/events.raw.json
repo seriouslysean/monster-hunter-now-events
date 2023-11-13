@@ -76,6 +76,22 @@
             "timestamp": 1698804000000
         },
         {
+            "summary": "Qualily's Special Quests",
+            "description": "Time-limited Special Quests rewarding Carpenterbugs, Monster Bone+, and more, will be distributed. Complete quests by visiting gathering points and slaying monsters to receive rewards. Event Quests will automatically become available to all hunters HR 11 and above in the Special Quests tab in-game. Some quests will require that you slay Great Girros to complete them. You’ll need to have completed Chapter 2 in the main story in order to encounter it. Slaying monsters as part of a group hunt is also eligible for clearing the quests.",
+            "dates": [
+                {
+                    "start": "2023-11-10T17:00:00",
+                    "end": "2023-11-12T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Great Girros"
+            ],
+            "timestamp": 1699322400000
+        },
+        {
             "summary": "Qualily’s Special Quests",
             "description": "Time-limited event quests will be available for all hunters HR11 and above. Complete them to earn items needed for upgrading equipment such as Carpenterbugs and Monster Bone+, as well as Zenny.",
             "dates": [
@@ -160,8 +176,8 @@
             "timestamp": 1697594400000
         },
         {
-            "summary": "Increased Kulu-Ya-Ku Appearance",
-            "description": "Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
+            "summary": "Kulu-Ya-Ku Pumpkin Appearance",
+            "description": "Between Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 2023, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
             "dates": [
                 {
                     "start": "2023-10-28T09:00:00",
@@ -191,7 +207,7 @@
         },
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Kulu-Ya-Ku looks… different than usual?!",
+            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
             "dates": [
                 {
                     "start": "2023-10-25T00:00:00",
