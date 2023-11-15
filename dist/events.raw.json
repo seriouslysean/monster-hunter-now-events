@@ -48,6 +48,91 @@
             "timestamp": 1698804000000
         },
         {
+            "summary": "A chill wind approaches: Join the hunt for Legiana!",
+            "description": "As temperatures drop in swamp habitats, increasing numbers of Legiana coming to prey on Raphinos have been spotted. It looks like we can expect more to come! Veiled in frigid air, this monster is capable of a devastating onslaught of attacks. Fire- and poison-element attacks are its weaknesses, so gather your equipment and get ready to investigate!",
+            "dates": [
+                {
+                    "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
+                    "end": "2023-11-19T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Swamp"
+            ],
+            "monsters": [
+                "Legiana",
+                "Raphinos"
+            ],
+            "timestamp": 1699956000000
+        },
+        {
+            "summary": "Increased Monster Reappearance",
+            "description": "During the event, monsters in all habitats will reappear in shorter intervals than usual.",
+            "dates": [
+                {
+                    "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
+                    "end": "2023-11-19T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "All"
+            ],
+            "monsters": [
+                "All"
+            ],
+            "timestamp": 1699956000000
+        },
+        {
+            "summary": "Legiana Appearance Increase",
+            "description": "During the event, Legiana will appear more frequently than usual for all hunters HR11 and above.",
+            "dates": [
+                {
+                    "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
+                    "end": "2023-11-19T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Swamp"
+            ],
+            "monsters": [
+                "Legiana"
+            ],
+            "timestamp": 1699956000000
+        },
+        {
             "summary": "Legiana Weekend",
             "description": "Legiana will appear more frequently in Swamp Habitats for all hunters HR11 and above. During the event, monsters in all Habitats will reappear in shorter intervals than usual.",
             "dates": [
@@ -160,66 +245,6 @@
                 "Jyuratodus"
             ],
             "timestamp": 1698397200000
-        },
-        {
-            "summary": "Halloween Medal Acquisition Quest",
-            "description": "A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal!",
-            "dates": [
-                {
-                    "start": "2023-10-28T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [],
-            "timestamp": 1697594400000
-        },
-        {
-            "summary": "Kulu-Ya-Ku Pumpkin Appearance",
-            "description": "Between Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 2023, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
-            "dates": [
-                {
-                    "start": "2023-10-28T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Kulu-Ya-Ku"
-            ],
-            "timestamp": 1697594400000
-        },
-        {
-            "summary": "Halloween Pumpkin Hunt",
-            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment!",
-            "dates": [
-                {
-                    "start": "2023-10-25T09:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [],
-            "timestamp": 1697594400000
-        },
-        {
-            "summary": "Halloween Pumpkin Hunt",
-            "description": "Look forward to a Halloween-themed field map, as well as special Halloween-themed equipment! Oh, and Kulu-Ya-Ku looks… different than usual?!",
-            "dates": [
-                {
-                    "start": "2023-10-25T00:00:00",
-                    "end": "2023-10-31T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Kulu-Ya-Ku"
-            ],
-            "timestamp": 1696212000000
         }
     ]
 }

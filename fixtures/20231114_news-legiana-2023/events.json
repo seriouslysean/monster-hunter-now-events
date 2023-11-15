@@ -1,0 +1,90 @@
+{
+    "events": [
+        {
+            "summary": "A chill wind approaches: Join the hunt for Legiana!",
+            "description": "As temperatures drop in swamp habitats, increasing numbers of Legiana coming to prey on Raphinos have been spotted. It looks like we can expect more to come! Veiled in frigid air, this monster is capable of a devastating onslaught of attacks. Fire- and poison-element attacks are its weaknesses, so gather your equipment and get ready to investigate!",
+            "dates": [
+                {
+                    "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
+                    "end": "2023-11-19T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Swamp"
+            ],
+            "monsters": [
+                "Legiana",
+                "Raphinos"
+            ]
+        },
+        {
+            "summary": "Increased Monster Reappearance",
+            "description": "During the event, monsters in all habitats will reappear in shorter intervals than usual.",
+            "dates": [
+                {
+                    "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
+                    "end": "2023-11-19T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "All"
+            ],
+            "monsters": [
+                "All"
+            ]
+        },
+        {
+            "summary": "Legiana Appearance Increase",
+            "description": "During the event, Legiana will appear more frequently than usual for all hunters HR11 and above.",
+            "dates": [
+                {
+                    "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
+                    "end": "2023-11-19T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Swamp"
+            ],
+            "monsters": [
+                "Legiana"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1699956000000,
+        "url": "https://monsterhunternow.com/news/legiana-2023"
+    }
+}
