@@ -166,44 +166,57 @@ export async function getDedupedJSON(
     const messages = [
         {
             role: 'system',
-            content: `Please deduplicate the provided JSON data as follows:
+            content: `Given a JSON object containing events under the "events" key, consolidate them using the following rules:
 
-1. **Identical Summaries**: Merge events with identical summaries into one event. Use the data from the newer event based on the Unix timestamp in the "timestamp" field, and retain only the dates from the newer event.
+1. **Identical Events**:
+    - Merge events with identical summaries, descriptions, and date ranges, prioritizing the most recent event, especially if it provides more detailed timing information.
 
-2. **Incredibly Similar Events**: Merge events with incredibly similar summaries, descriptions, and dates. Use the data from the newer event based on the timestamp.
+2. **Main and Sub-Events**:
+    - Do not merge main events with their sub-events. Sub-events should remain distinct even if they occur within the date range of a main event.
 
-3. **Redundant Date Entries**: Deduplicate events, minimizing redundant date entries in the resulting dates array. Maintain the order from the original JSON unless merges dictate otherwise.
+3. **Overlapping Dates**:
+    - Events with overlapping dates but different goals, quests, or in-game activities should not be merged. Each event should be preserved as distinct.
 
-4. **Distinct Events**: Keep events separate if their activities, quests, or tasks differ, even if they share the same date. Do not merge overarching events and their sub-events, even if they share the same monsters, habitat, and dates.
+4. **Non-Merging Scenarios**:
+    - If an event spans a length of time and there are smaller events during that larger event involving the same or similar themes, these should not be merged.
 
-5. **Concise Summaries and Descriptions**: When merging events, create concise and non-redundant summaries and descriptions. Larger events across a date range should have a broader, more generic name for the event, while events within that range should be more specific.
+5. **Title Preference**:
+    - When merging events, use the title of the most recent event unless the earlier event's title provides essential context that would be lost otherwise.
 
-6. **Include All Unique Events**: Ensure that all unique events, even those that do not meet the merging criteria, are included in the output without being merged.
+6. **Content Consideration**:
+    - When merging events, consider the content carefully. If a newer event entry provides additional clarity or details that were not present in the earlier entry, prioritize the newer information.
 
-7. **Remove Unnecessary Keys**: After the merge process is complete, remove the keys "habitat," "monsters," and "timestamp" from events in the final JSON.
+7. **Cleanup**:
+    - Remove redundant fields and ensure logical ordering of events, maintaining the original order unless merges dictate otherwise.
 
-The output should be in valid JSON format.
+Only return valid JSON without backticks, suitable for direct use with JSON.parse. If no events meet the criteria, return an empty events array.
 
 **Output**:
 {
-    "events": [
-        {
-            "summary": "Event Name",
-            "description": "Description",
-            "dates": [
-                {
-                    "start": "YYYY-MM-DDTHH:mm:ss",
-                    "end": "YYYY-MM-DDTHH:mm:ss",
-                    "allDay": true/false
-                }
-            ]
-        }
-    ]
-}`,
+    "events": [{
+        "summary": "Event Name",
+        "description": "Description",
+        "dates": [
+            {
+                "start": "YYYY-MM-DDTHH:mm:ss",
+                "end": "YYYY-MM-DDTHH:mm:ss",
+                "allDay": true/false
+            }
+        ]
+    }]
+}
+
+**Notes**:
+- Aim for concise and non-redundant summaries.
+- Keep events separate if their activities, quests, or tasks differ, even if they share the same date.
+- Ensure all events are represented in the output, either as individual or merged events.
+- Overarching events and their sub-events should not be merged, even if they share the same monsters, habitat, and dates.
+- The primary trigger for merging events is identical dates. Other factors such as habitat, monsters, and description should be considered, but the dates must be identical for events to be merged.`,
         },
         {
             role: 'user',
-            content: `Please deduplicate the provided JSON data. Merge events based on their summaries, giving priority to identical summaries. Use the newer event's data based on the Unix timestamp and retain only the dates from the newer event when merging. Keep distinct events separate. Ensure the output is in the correct JSON format and is precise.`,
+            content:
+                'Merge events with precision, focusing on identical dates as the primary trigger. Preserve the uniqueness of distinct quests or tasks. Respect the "allDay" property for overlapping events. Aim for concise, non-redundant summaries in the output. Deduplicate with extreme accuracy and attention to detail, considering the most recent content for clarity.',
         },
         {
             role: 'user',

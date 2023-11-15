@@ -17,7 +17,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:5d4a9e8b7deaf696ee50dac67fdefdbab6782d95
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231124T170000
 DTEND:20231124T200000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -27,7 +27,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:c2827ccd6f29093cab4a99bf1b00ea6dfbf03a9d
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231125T130000
 DTEND:20231125T160000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -37,7 +37,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:9d3cc029a31eee2a43690c788bf29101d38bfeb6
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231126T130000
 DTEND:20231126T160000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -47,7 +47,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:3938451b97f970cd051c6e054ee43e733e521c90
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231120T090000
 DTEND:20231126T160000
 SUMMARY:MHN: Roar of the Desert: Diablos
@@ -55,98 +55,8 @@ DESCRIPTION:Black Diablos will appear in low numbers in Desert Habitats. As
   long as you have completed Chapter 11 and unlocked Diablos hunts.
 END:VEVENT
 BEGIN:VEVENT
-UID:ddeeb6d9a43e6fc3c607db801d25845e70607f9c
-DTSTAMP:20231115T061019
-DTSTART:20231117T170000
-DTEND:20231117T200000
-SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana!
-DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
- egiana coming to prey on Raphinos have been spotted. It looks like we ca
- n expect more to come! Veiled in frigid air, this monster is capable of 
- a devastating onslaught of attacks. Fire- and poison-element attacks are
-  its weaknesses, so gather your equipment and get ready to investigate!
-END:VEVENT
-BEGIN:VEVENT
-UID:0174770cee368dc4cf86eb6cf83b6a7f2d79ca2e
-DTSTAMP:20231115T061019
-DTSTART:20231118T130000
-DTEND:20231118T160000
-SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana!
-DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
- egiana coming to prey on Raphinos have been spotted. It looks like we ca
- n expect more to come! Veiled in frigid air, this monster is capable of 
- a devastating onslaught of attacks. Fire- and poison-element attacks are
-  its weaknesses, so gather your equipment and get ready to investigate!
-END:VEVENT
-BEGIN:VEVENT
-UID:e5a2975788b0a67612c05ad2853ddc24322dc473
-DTSTAMP:20231115T061019
-DTSTART:20231119T130000
-DTEND:20231119T160000
-SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana!
-DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
- egiana coming to prey on Raphinos have been spotted. It looks like we ca
- n expect more to come! Veiled in frigid air, this monster is capable of 
- a devastating onslaught of attacks. Fire- and poison-element attacks are
-  its weaknesses, so gather your equipment and get ready to investigate!
-END:VEVENT
-BEGIN:VEVENT
-UID:40de11d428c88e5a1497df8a3df6d26bf8eddfa1
-DTSTAMP:20231115T061019
-DTSTART:20231117T170000
-DTEND:20231117T200000
-SUMMARY:MHN: Increased Monster Reappearance
-DESCRIPTION:During the event, monsters in all habitats will reappear in sho
- rter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:ef7a6edfe825cb053efae3de84dc98aaafd9810c
-DTSTAMP:20231115T061019
-DTSTART:20231118T130000
-DTEND:20231118T160000
-SUMMARY:MHN: Increased Monster Reappearance
-DESCRIPTION:During the event, monsters in all habitats will reappear in sho
- rter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:d98eecc572d56813f432e6dd64f1afbba34d2352
-DTSTAMP:20231115T061019
-DTSTART:20231119T130000
-DTEND:20231119T160000
-SUMMARY:MHN: Increased Monster Reappearance
-DESCRIPTION:During the event, monsters in all habitats will reappear in sho
- rter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:dcf5e871020fd4b37e04da1503f204a1908167a6
-DTSTAMP:20231115T061019
-DTSTART:20231117T170000
-DTEND:20231117T200000
-SUMMARY:MHN: Legiana Appearance Increase
-DESCRIPTION:During the event, Legiana will appear more frequently than usua
- l for all hunters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
-UID:845e827ceb408728ea08afcdadc47b2ca114ceb5
-DTSTAMP:20231115T061019
-DTSTART:20231118T130000
-DTEND:20231118T160000
-SUMMARY:MHN: Legiana Appearance Increase
-DESCRIPTION:During the event, Legiana will appear more frequently than usua
- l for all hunters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
-UID:a6679547c7ea92e897577e574d29f8191fc3709f
-DTSTAMP:20231115T061019
-DTSTART:20231119T130000
-DTEND:20231119T160000
-SUMMARY:MHN: Legiana Appearance Increase
-DESCRIPTION:During the event, Legiana will appear more frequently than usua
- l for all hunters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
 UID:ba9e73f0d5cb9c6fd66060e3854de490f796a649
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231117T170000
 DTEND:20231117T200000
 SUMMARY:MHN: Legiana Weekend
@@ -156,7 +66,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:9c1f36f0b14159675612072ec78b62d1018c6c49
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231118T130000
 DTEND:20231118T160000
 SUMMARY:MHN: Legiana Weekend
@@ -166,7 +76,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:7a26ef4fb4f41a710ff7f5c529dd74f3a637b1f2
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231119T130000
 DTEND:20231119T160000
 SUMMARY:MHN: Legiana Weekend
@@ -176,7 +86,7 @@ DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
 END:VEVENT
 BEGIN:VEVENT
 UID:c8bfc735182916f8b71b429c15c657cb4824691d
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231110T170000
 DTEND:20231112T160000
 SUMMARY:MHN: Qualily's Special Quests
@@ -190,38 +100,8 @@ DESCRIPTION:Time-limited Special Quests rewarding Carpenterbugs, Monster Bo
  is also eligible for clearing the quests.
 END:VEVENT
 BEGIN:VEVENT
-UID:34298f340b725a5b41ecf619db308f827835dc1f
-DTSTAMP:20231115T061019
-DTSTART:20231103T170000
-DTEND:20231103T200000
-SUMMARY:MHN: Jyuratodus Weekend
-DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
- l hunters HR11 and above. During the event, monsters in all Habitats wil
- l reappear in shorter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:6165990cf9bf8d095ffff3945453d2662e18f512
-DTSTAMP:20231115T061019
-DTSTART:20231104T130000
-DTEND:20231104T160000
-SUMMARY:MHN: Jyuratodus Weekend
-DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
- l hunters HR11 and above. During the event, monsters in all Habitats wil
- l reappear in shorter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:d64457df6f245033972f518df8ba1ced0ae5f58b
-DTSTAMP:20231115T061019
-DTSTART:20231105T130000
-DTEND:20231105T160000
-SUMMARY:MHN: Jyuratodus Weekend
-DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats for al
- l hunters HR11 and above. During the event, monsters in all Habitats wil
- l reappear in shorter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
 UID:444d6e9da0b31986bd989ff5138226dcb3a2550d
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231103T170000
 DTEND:20231103T200000
 SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
@@ -232,7 +112,7 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
 END:VEVENT
 BEGIN:VEVENT
 UID:731fb511c0b151ceaa05f24d1c4ceea80bc836c3
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231104T130000
 DTEND:20231104T160000
 SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
@@ -243,7 +123,7 @@ DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
 END:VEVENT
 BEGIN:VEVENT
 UID:8a93aa2024bbae376eba586c57319ca81afe099a
-DTSTAMP:20231115T061019
+DTSTAMP:20231115T122239
 DTSTART:20231105T130000
 DTEND:20231105T160000
 SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
