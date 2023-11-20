@@ -1,6 +1,38 @@
 {
     "events": [
         {
+            "summary": "Qualily's Special Quests",
+            "description": "Qualily has been busy continuing her investigation into the anomalies and she needs your help again! She’s back with more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards this time will include Carpenterbugs, Monster Bone+, and other materials such as Dragonite Ore! Ready your equipment and prepare to investigate! Some quests will require that you slay Great Girros to complete them. You’ll need to have completed Chapter 2 in the main story in order to encounter it. Slaying monsters as part of a group hunt is also eligible for clearing the quests.",
+            "dates": [
+                {
+                    "start": "2023-11-10T17:00:00",
+                    "end": "2023-12-06T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "monsters": [
+                "Tobi-Kadachi",
+                "Great Girros"
+            ]
+        },
+        {
+            "summary": "Roar of the Desert: Diablos",
+            "description": "Black Diablos will appear in low numbers in Desert Habitats. As long as you have completed Chapter 11 and unlocked Diablos hunts.",
+            "dates": [
+                {
+                    "start": "2023-11-20T09:00:00",
+                    "end": "2023-11-26T16:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Black Diablos"
+            ]
+        },
+        {
             "summary": "Diablos Appearance Increase",
             "description": "During the following times Diablos and Black Diablos will appear more frequently in Desert Habitats for all hunters HR11 and above, and monsters in all Habitats will reappear in shorter intervals than usual.",
             "dates": [
@@ -29,38 +61,11 @@
             ]
         },
         {
-            "summary": "Roar of the Desert: Diablos",
-            "description": "Black Diablos will appear in low numbers in Desert Habitats. As long as you have completed Chapter 11 and unlocked Diablos hunts.",
-            "dates": [
-                {
-                    "start": "2023-11-20T09:00:00",
-                    "end": "2023-11-26T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Desert"
-            ],
-            "monsters": [
-                "Black Diablos"
-            ]
-        },
-        {
             "summary": "Legiana Weekend",
-            "description": "Legiana will appear more frequently in Swamp Habitats for all hunters HR11 and above. During the event, monsters in all Habitats will reappear in shorter intervals than usual.",
+            "description": "As temperatures drop in swamp habitats, increasing numbers of Legiana coming to prey on Raphinos have been spotted. It looks like we can expect more to come! Veiled in frigid air, this monster is capable of a devastating onslaught of attacks. Fire- and poison-element attacks are its weaknesses, so gather your equipment and get ready to investigate! During the event, Legiana will appear more frequently than usual for all hunters HR11 and above. During the event, monsters in all Habitats will reappear in shorter intervals than usual.",
             "dates": [
                 {
                     "start": "2023-11-17T17:00:00",
-                    "end": "2023-11-17T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-18T13:00:00",
-                    "end": "2023-11-18T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-19T13:00:00",
                     "end": "2023-11-19T16:00:00",
                     "allDay": false
                 }
@@ -69,51 +74,10 @@
                 "Swamp"
             ],
             "monsters": [
-                "Legiana"
-            ]
-        },
-        {
-            "summary": "Qualily's Special Quests",
-            "description": "Time-limited Special Quests rewarding Carpenterbugs, Monster Bone+, and more, will be distributed. Complete quests by visiting gathering points and slaying monsters to receive rewards. Event Quests will automatically become available to all hunters HR 11 and above in the Special Quests tab in-game. Some quests will require that you slay Great Girros to complete them. You’ll need to have completed Chapter 2 in the main story in order to encounter it. Slaying monsters as part of a group hunt is also eligible for clearing the quests.",
-            "dates": [
-                {
-                    "start": "2023-11-10T17:00:00",
-                    "end": "2023-11-12T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Great Girros"
-            ]
-        },
-        {
-            "summary": "A Muddy Escapade: Join the hunt for Jyuratodus!",
-            "description": "Jyuratodus will appear more frequently in Swamp Habitats. During the event, monsters in all Habitats will reappear in shorter intervals than usual. Jyuratodus will appear more frequently than usual for all hunters HR11 and above.",
-            "dates": [
-                {
-                    "start": "2023-11-03T17:00:00",
-                    "end": "2023-11-03T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-04T13:00:00",
-                    "end": "2023-11-04T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-05T13:00:00",
-                    "end": "2023-11-05T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Swamp"
-            ],
-            "monsters": [
-                "Jyuratodus"
+                "Legiana",
+                "Raphinos"
             ]
         }
     ],
-    "hash": "qkcJdp+c8T9QKd2uJ4nR6zIjejc="
+    "hash": "Pn8/+mtu6n3VZb27PMQSXcAQqEM="
 }

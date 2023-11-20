@@ -1,6 +1,22 @@
 {
     "events": [
         {
+            "summary": "Qualily's Special Quests",
+            "description": "Qualily has been busy continuing her investigation into the anomalies and she needs your help again! She’s back with more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards this time will include Carpenterbugs, Monster Bone+, and other materials such as Dragonite Ore! Ready your equipment and prepare to investigate!",
+            "dates": [
+                {
+                    "start": "2023-12-01T17:00:00",
+                    "end": "2023-12-06T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Tobi-Kadachi"
+            ],
+            "timestamp": 1700445600000
+        },
+        {
             "summary": "Diablos Appearance Increase",
             "description": "During the following times Diablos and Black Diablos will appear more frequently in Desert Habitats for all hunters HR11 and above, and monsters in all Habitats will reappear in shorter intervals than usual.",
             "dates": [
@@ -189,62 +205,6 @@
             "habitat": [],
             "monsters": [],
             "timestamp": 1698804000000
-        },
-        {
-            "summary": "Jyuratodus Weekend",
-            "description": "Jyuratodus will appear more frequently in Swamp Habitats for all hunters HR11 and above. During the event, monsters in all Habitats will reappear in shorter intervals than usual.",
-            "dates": [
-                {
-                    "start": "2023-11-03T17:00:00",
-                    "end": "2023-11-03T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-04T13:00:00",
-                    "end": "2023-11-04T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-05T13:00:00",
-                    "end": "2023-11-05T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Swamp"
-            ],
-            "monsters": [
-                "Jyuratodus"
-            ],
-            "timestamp": 1698804000000
-        },
-        {
-            "summary": "A Muddy Escapade: Join the hunt for Jyuratodus!",
-            "description": "Jyuratodus will appear more frequently in Swamp Habitats. During the event, monsters in all Habitats will reappear in shorter intervals than usual. Jyuratodus will appear more frequently than usual for all hunters HR11 and above.",
-            "dates": [
-                {
-                    "start": "2023-11-03T17:00:00",
-                    "end": "2023-11-03T20:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-04T13:00:00",
-                    "end": "2023-11-04T16:00:00",
-                    "allDay": false
-                },
-                {
-                    "start": "2023-11-05T13:00:00",
-                    "end": "2023-11-05T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [
-                "Swamp"
-            ],
-            "monsters": [
-                "Jyuratodus"
-            ],
-            "timestamp": 1698397200000
         }
     ]
 }

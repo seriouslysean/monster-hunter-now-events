@@ -16,8 +16,34 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
+UID:d9ade4567145534d20212b8afdae67dccb6b6447
+DTSTAMP:20231120T060747
+DTSTART:20231110T170000
+DTEND:20231206T235959
+SUMMARY:MHN: Qualily's Special Quests
+DESCRIPTION:Qualily has been busy continuing her investigation into the ano
+ malies and she needs your help again! She’s back with more investigation
+  requests for you—10 of them in total. Can she count on you to help slay
+  monsters and investigate gathering points? Rewards this time will inclu
+ de Carpenterbugs, Monster Bone+, and other materials such as Dragonite O
+ re! Ready your equipment and prepare to investigate! Some quests will re
+ quire that you slay Great Girros to complete them. You’ll need to have c
+ ompleted Chapter 2 in the main story in order to encounter it. Slaying m
+ onsters as part of a group hunt is also eligible for clearing the quests
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:3938451b97f970cd051c6e054ee43e733e521c90
+DTSTAMP:20231120T060747
+DTSTART:20231120T090000
+DTEND:20231126T160000
+SUMMARY:MHN: Roar of the Desert: Diablos
+DESCRIPTION:Black Diablos will appear in low numbers in Desert Habitats. As
+  long as you have completed Chapter 11 and unlocked Diablos hunts.
+END:VEVENT
+BEGIN:VEVENT
 UID:5d4a9e8b7deaf696ee50dac67fdefdbab6782d95
-DTSTAMP:20231115T122239
+DTSTAMP:20231120T060747
 DTSTART:20231124T170000
 DTEND:20231124T200000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -27,7 +53,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:c2827ccd6f29093cab4a99bf1b00ea6dfbf03a9d
-DTSTAMP:20231115T122239
+DTSTAMP:20231120T060747
 DTSTART:20231125T130000
 DTEND:20231125T160000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -37,7 +63,7 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
 END:VEVENT
 BEGIN:VEVENT
 UID:9d3cc029a31eee2a43690c788bf29101d38bfeb6
-DTSTAMP:20231115T122239
+DTSTAMP:20231120T060747
 DTSTART:20231126T130000
 DTEND:20231126T160000
 SUMMARY:MHN: Diablos Appearance Increase
@@ -46,90 +72,18 @@ DESCRIPTION:During the following times Diablos and Black Diablos will appea
   monsters in all Habitats will reappear in shorter intervals than usual.
 END:VEVENT
 BEGIN:VEVENT
-UID:3938451b97f970cd051c6e054ee43e733e521c90
-DTSTAMP:20231115T122239
-DTSTART:20231120T090000
-DTEND:20231126T160000
-SUMMARY:MHN: Roar of the Desert: Diablos
-DESCRIPTION:Black Diablos will appear in low numbers in Desert Habitats. As
-  long as you have completed Chapter 11 and unlocked Diablos hunts.
-END:VEVENT
-BEGIN:VEVENT
-UID:ba9e73f0d5cb9c6fd66060e3854de490f796a649
-DTSTAMP:20231115T122239
+UID:fbc837f08336b4b19c6e98f79af736a7f07a973d
+DTSTAMP:20231120T060747
 DTSTART:20231117T170000
-DTEND:20231117T200000
-SUMMARY:MHN: Legiana Weekend
-DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
- unters HR11 and above. During the event, monsters in all Habitats will r
- eappear in shorter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:9c1f36f0b14159675612072ec78b62d1018c6c49
-DTSTAMP:20231115T122239
-DTSTART:20231118T130000
-DTEND:20231118T160000
-SUMMARY:MHN: Legiana Weekend
-DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
- unters HR11 and above. During the event, monsters in all Habitats will r
- eappear in shorter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:7a26ef4fb4f41a710ff7f5c529dd74f3a637b1f2
-DTSTAMP:20231115T122239
-DTSTART:20231119T130000
 DTEND:20231119T160000
 SUMMARY:MHN: Legiana Weekend
-DESCRIPTION:Legiana will appear more frequently in Swamp Habitats for all h
- unters HR11 and above. During the event, monsters in all Habitats will r
- eappear in shorter intervals than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:c8bfc735182916f8b71b429c15c657cb4824691d
-DTSTAMP:20231115T122239
-DTSTART:20231110T170000
-DTEND:20231112T160000
-SUMMARY:MHN: Qualily's Special Quests
-DESCRIPTION:Time-limited Special Quests rewarding Carpenterbugs, Monster Bo
- ne+, and more, will be distributed. Complete quests by visiting gatherin
- g points and slaying monsters to receive rewards. Event Quests will auto
- matically become available to all hunters HR 11 and above in the Special
-  Quests tab in-game. Some quests will require that you slay Great Girros
-  to complete them. You’ll need to have completed Chapter 2 in the main s
- tory in order to encounter it. Slaying monsters as part of a group hunt 
- is also eligible for clearing the quests.
-END:VEVENT
-BEGIN:VEVENT
-UID:444d6e9da0b31986bd989ff5138226dcb3a2550d
-DTSTAMP:20231115T122239
-DTSTART:20231103T170000
-DTEND:20231103T200000
-SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
-DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
- g the event, monsters in all Habitats will reappear in shorter intervals
-  than usual. Jyuratodus will appear more frequently than usual for all h
- unters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
-UID:731fb511c0b151ceaa05f24d1c4ceea80bc836c3
-DTSTAMP:20231115T122239
-DTSTART:20231104T130000
-DTEND:20231104T160000
-SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
-DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
- g the event, monsters in all Habitats will reappear in shorter intervals
-  than usual. Jyuratodus will appear more frequently than usual for all h
- unters HR11 and above.
-END:VEVENT
-BEGIN:VEVENT
-UID:8a93aa2024bbae376eba586c57319ca81afe099a
-DTSTAMP:20231115T122239
-DTSTART:20231105T130000
-DTEND:20231105T160000
-SUMMARY:MHN: A Muddy Escapade: Join the hunt for Jyuratodus!
-DESCRIPTION:Jyuratodus will appear more frequently in Swamp Habitats. Durin
- g the event, monsters in all Habitats will reappear in shorter intervals
-  than usual. Jyuratodus will appear more frequently than usual for all h
- unters HR11 and above.
+DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
+ egiana coming to prey on Raphinos have been spotted. It looks like we ca
+ n expect more to come! Veiled in frigid air, this monster is capable of 
+ a devastating onslaught of attacks. Fire- and poison-element attacks are
+  its weaknesses, so gather your equipment and get ready to investigate! 
+ During the event, Legiana will appear more frequently than usual for all
+  hunters HR11 and above. During the event, monsters in all Habitats will
+  reappear in shorter intervals than usual.
 END:VEVENT
 END:VCALENDAR
