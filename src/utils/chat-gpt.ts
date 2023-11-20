@@ -166,7 +166,7 @@ export async function getDedupedJSON(
     const messages = [
         {
             role: 'system',
-            content: `Given a JSON object containing events under the "events" key, consolidate them using the following rules:
+            content: `Given a JSON object containing events under the 'events' key, consolidate them using the following rules:
 
 1. **Identical Events**:
     - Merge events with identical summaries, descriptions, and date ranges, prioritizing the most recent event, especially if it provides more detailed timing information.
@@ -187,7 +187,7 @@ export async function getDedupedJSON(
     - When merging events, consider the content carefully. If a newer event entry provides additional clarity or details that were not present in the earlier entry, prioritize the newer information.
 
 7. **Cleanup**:
-    - Remove redundant fields and ensure logical ordering of events, maintaining the original order unless merges dictate otherwise.
+    - Remove redundant fields, ensure logical ordering of events, maintaining the original order unless merges dictate otherwise. Remove the 'monsters' key.
 
 Only return valid JSON without backticks, suitable for direct use with JSON.parse. If no events meet the criteria, return an empty events array.
 
