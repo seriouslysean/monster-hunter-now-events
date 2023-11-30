@@ -76,7 +76,7 @@ export async function getEventsFromHTML(html, debug = false) {
             role: 'system',
             content: `**Event Extraction Guidelines: Monster Hunter Now**
 
-Extract events within the "Monster Hunter Now" game environment, emphasizing the time frames and activities that occur within a specific overarching event. Ensure precise extraction using the following guidelines:
+Extract in-game events within the "Monster Hunter Now" game environment, emphasizing the time frames and activities that occur within a specific overarching event. Ensure precise extraction using the following guidelines:
 
 1. **Game Environment**:
     - Extract in-game events within "Monster Hunter Now." Exclude external promotions, in-game shop events, and non-game-related events.
@@ -86,7 +86,6 @@ Extract events within the "Monster Hunter Now" game environment, emphasizing the
 
 3. **Separate Event Components**:
     - Recognize that an overarching event can contain multiple time-bound activities. Extract and separate these distinct activities within the same overarching event. Ensure that both the overarching event and its time-bound sub-events are properly identified and named differently based on their context.
-        - **Example**: If an event mentions a monster appearing in low numbers for a week, and then more frequently during specific times, these should be extracted as two separate sub-events. The sub-event should not repeat the same title as the main event and should be more related to the context of the in-game event. For instance, it could be named "Monster Appearance Increase."
 
 4. **Capture Start and End Times**:
     - Ensure that each event component includes both a start and end time, even for all-day events. Use "allDay" with 00:00:00 as the start and 23:59:59 as the end for all-day events.
@@ -97,6 +96,12 @@ Extract events within the "Monster Hunter Now" game environment, emphasizing the
 6. **Naming Sub-Events**:
     - Sub-events within a larger main event should have unique names that are more related to the context of the sub-event itself. Avoid duplicating the name of the main event in sub-events.
 
+7. **Interactive Player Experience**:
+    - Extract only those events that offer an interactive experience for the player, such as limited-time quests, challenges, or battles. Exclude game updates, announcements, and new feature additions that do not provide a specific in-game activity or quest for players to engage with during a defined period.
+
+8. **Clarify Inclusions and Exclusions**:
+    - Use examples to illustrate what to include and what to exclude. Include events where players can engage in time-bound activities and exclude updates or announcements without specific player engagement activities.
+
 **Focus On**:
     - Identifying and distinguishing distinct in-game activities within overarching events.
     - Properly naming each event based on its unique content.
@@ -106,9 +111,7 @@ Extract events within the "Monster Hunter Now" game environment, emphasizing the
 
 Order extracted events from the most recent to the oldest. Ensure consecutive dates are presented sequentially.
 
-If no in-game event meets the criteria, return an empty events array.
-
-Provide the output in valid JSON format.
+Return only valid JSON without backticks, suitable for direct use with JSON.parse. If no events meet the criteria, return an empty events array.
 
 **Output Format**:
 {
@@ -129,8 +132,12 @@ Provide the output in valid JSON format.
         },
         {
             role: 'user',
-            content:
-                'Identify in-game events from the following content. Be extremely careful in detecting main events and any sub-events within these main events. Sub-events should have their own start and end times and should be extracted separately, even if they are mentioned within the same paragraph as the main event. For instance, if an event mentions a monster appearing in low numbers for a week, and then more frequently during specific times, these should be extracted as two separate sub-events. Ensure all events are parsed with EXTREME accuracy.',
+            content: `When identifying in-game events, please keep the following key points in mind:
+- **Active Participation**: Only include events that offer active player participation (e.g., quests, challenges, battles).
+- **Time-Bound**: Events must have specific start and end times; exclude ongoing game updates or feature announcements.
+- **Separate Sub-Events**: Extract sub-events with their own time frames separately, even if they are part of a larger event.
+- **Exclude Non-Interactive Content**: Do not include game updates or new feature additions that lack specific player engagement activities.
+- **Return Only Valid JSON**: Return only valid JSON without backticks, suitable for direct use with JSON.parse. If no events meet the criteria, return an empty events array.`,
         },
         {
             role: 'user',
@@ -189,7 +196,7 @@ export async function getDedupedJSON(
 7. **Cleanup**:
     - Remove redundant fields, ensure logical ordering of events, maintaining the original order unless merges dictate otherwise. Remove the 'monsters' key.
 
-Only return valid JSON without backticks, suitable for direct use with JSON.parse. If no events meet the criteria, return an empty events array.
+Return only valid JSON without backticks, suitable for direct use with JSON.parse. If no events meet the criteria, return an empty events array.
 
 **Output**:
 {
@@ -215,8 +222,12 @@ Only return valid JSON without backticks, suitable for direct use with JSON.pars
         },
         {
             role: 'user',
-            content:
-                'Merge events with precision, focusing on identical dates as the primary trigger. Preserve the uniqueness of distinct quests or tasks. Respect the "allDay" property for overlapping events. Aim for concise, non-redundant summaries in the output. Deduplicate with extreme accuracy and attention to detail, considering the most recent content for clarity.',
+            content: `As a reminder:
+- Merge events with precision, focusing on identical dates as the primary trigger.
+- Preserve the uniqueness of distinct quests or tasks. Respect the "allDay" property for overlapping events.
+- Aim for concise, non-redundant summaries in the output.
+- Deduplicate with extreme accuracy and attention to detail, considering the most recent content for clarity.
+- Return only valid JSON without backticks, suitable for direct use with JSON.parse. If no events meet the criteria, return an empty events array.`,
         },
         {
             role: 'user',
