@@ -1,6 +1,72 @@
 {
     "events": [
         {
+            "summary": "A Happy Hunting New Year",
+            "description": "Get ready to welcome back Pink Rathian and Black Diablos! You can also look forward to event-exclusive equipment and quests rewarding lots of Zenny.",
+            "dates": [
+                {
+                    "start": "2023-12-23T09:00:00",
+                    "end": "2024-01-08T23:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Pink Rathian",
+                "Black Diablos"
+            ],
+            "timestamp": 1701313200000
+        },
+        {
+            "summary": "Zinogre’s Onslaught",
+            "description": "While Zinogre will not appear on the field, you’ll be able to hunt it through a new means that will be introduced with the coming update.",
+            "dates": [
+                {
+                    "start": "2023-12-15T00:00:00",
+                    "end": "2023-12-17T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Zinogre"
+            ],
+            "timestamp": 1701313200000
+        },
+        {
+            "summary": "Fulminations in the Frost",
+            "description": "Our first major update since launch. In this update, you can look forward to two new weapon types and four new monsters! We’ve even got some other new elements and adjustments lined up.",
+            "dates": [
+                {
+                    "start": "2023-12-07T00:00:00",
+                    "end": "2023-12-07T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Radobaan",
+                "Banbaro",
+                "Barioth",
+                "Zinogre"
+            ],
+            "timestamp": 1701313200000
+        },
+        {
+            "summary": "Qualily’s Special Quests",
+            "description": "Look out for more time-limited Event Quests rewarding materials needed for upgrading equipment, such as Carpenterbugs and Monster Bones, as well as gatherable materials like Dragonite Ore, and Zenny! Event Quests will be available for an extended period this time.",
+            "dates": [
+                {
+                    "start": "2023-12-01T17:00:00",
+                    "end": "2023-12-06T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1701313200000
+        },
+        {
             "summary": "Qualily's Special Quests",
             "description": "Qualily has been busy continuing her investigation into the anomalies and she needs your help again! She’s back with more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards this time will include Carpenterbugs, Monster Bone+, and other materials such as Dragonite Ore! Ready your equipment and prepare to investigate!",
             "dates": [
@@ -259,36 +325,6 @@
             "monsters": [
                 "Legiana"
             ],
-            "timestamp": 1698804000000
-        },
-        {
-            "summary": "Qualily's Special Quests",
-            "description": "Time-limited Special Quests rewarding Carpenterbugs, Monster Bone+, and more, will be distributed. Complete quests by visiting gathering points and slaying monsters to receive rewards. Event Quests will automatically become available to all hunters HR 11 and above in the Special Quests tab in-game. Some quests will require that you slay Great Girros to complete them. You’ll need to have completed Chapter 2 in the main story in order to encounter it. Slaying monsters as part of a group hunt is also eligible for clearing the quests.",
-            "dates": [
-                {
-                    "start": "2023-11-10T17:00:00",
-                    "end": "2023-11-12T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Great Girros"
-            ],
-            "timestamp": 1699322400000
-        },
-        {
-            "summary": "Qualily’s Special Quests",
-            "description": "Time-limited event quests will be available for all hunters HR11 and above. Complete them to earn items needed for upgrading equipment such as Carpenterbugs and Monster Bone+, as well as Zenny.",
-            "dates": [
-                {
-                    "start": "2023-11-10T17:00:00",
-                    "end": "2023-11-12T16:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [],
             "timestamp": 1698804000000
         }
     ]
