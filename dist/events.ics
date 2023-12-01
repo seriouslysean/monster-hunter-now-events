@@ -17,7 +17,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:dbae9f63189317e6eb7fc37b4997afae4764ba72
-DTSTAMP:20231130T123023
+DTSTAMP:20231201T060744
 DTSTART:20231223T090000
 DTEND:20240108T230000
 SUMMARY:MHN: A Happy Hunting New Year
@@ -26,7 +26,7 @@ DESCRIPTION:Event featuring the return of Pink Rathian and Black Diablos, e
 END:VEVENT
 BEGIN:VEVENT
 UID:bdc84475f5bafb8111ba022548288ff7f3b33e7d
-DTSTAMP:20231130T123023
+DTSTAMP:20231201T060744
 DTSTART:20231215
 DTEND:20231218
 SUMMARY:MHN: Zinogre's Onslaught
@@ -35,7 +35,7 @@ DESCRIPTION:Hunt Zinogre through a new means introduced with the coming upd
 END:VEVENT
 BEGIN:VEVENT
 UID:41a7209e26bd7829d1debc13d0499174d35c84a1
-DTSTAMP:20231130T123023
+DTSTAMP:20231201T060744
 DTSTART:20231201T170000
 DTEND:20231206T235959
 SUMMARY:MHN: Qualily's Special Quests
@@ -47,32 +47,59 @@ DESCRIPTION:Qualily has been busy continuing her investigation into the ano
  re! Ready your equipment and prepare to investigate!
 END:VEVENT
 BEGIN:VEVENT
-UID:994825797f05952c95a1221a8c8e64d9a875995d
-DTSTAMP:20231130T123023
+UID:655ade3fa49402bf492c7690bfddcb5d04f5f323
+DTSTAMP:20231201T060744
+DTSTART:20231201
+DTEND:20240101
+SUMMARY:MHN: Major Game Update: Fulminations in the Frost
+DESCRIPTION:This major update will bring new weapon types and monsters, and
+  adjustments to the game balance of existing monsters and weapon types. 
+ Changes to existing weapon types include Sword & Shield, Great Sword, Ha
+ mmer, Bow, Light Bowgun, and Long Sword. Changes to monsters include all
+  large monsters. Other changes include adjustments to the formula for ca
+ lculating the rate of increase in damage when skills are stacked, evasio
+ n time after heavy damage, invincibility window after reviving, proximit
+ y-based attacks, and increased rewards for Daily Quests.
+END:VEVENT
+BEGIN:VEVENT
+UID:db134c478d516ccff7aa1594a65d43d386af786c
+DTSTAMP:20231201T060744
+DTSTART:20231124T170000
+DTEND:20231126T160000
+SUMMARY:MHN: Diablos and Black Diablos Appearance Boost & Time-limited Even
+ t Quests
+DESCRIPTION:Diablos and Black Diablos appearance rates will be boosted. Mon
+ sters in all habitats will reappear in shorter intervals than usual. Tim
+ e-limited Event Quests will be added. Complete these quests to receive t
+ he Roars of the Desert Medal.
+END:VEVENT
+BEGIN:VEVENT
+UID:7c4e538587ea6be3f4becfb50e0a2fa4940216eb
+DTSTAMP:20231201T060744
 DTSTART:20231120T090000
 DTEND:20231126T160000
-SUMMARY:MHN: Roars of the Desert: Diablos
+SUMMARY:MHN: Roars of the Desert: Diablos & Black Diablos Appearance
 DESCRIPTION:Increase in Diablos activity in desert habitats with reported s
  ightings of Black Diablos. Exclusive Packs with Special Carving Knives w
  ill be available to aid in hunts. Hunters can add a Hunter Medal to thei
- r collection by completing weekend-exclusive Event Quests. During the fo
- llowing times Diablos and Black Diablos will appear more frequently in D
- esert Habitats for all hunters HR11 and above, and monsters in all Habit
- ats will reappear in shorter intervals than usual.
+ r collection by completing weekend-exclusive Event Quests. Black Diablos
+  will appear in low numbers in Desert Habitats. As long as you have comp
+ leted Chapter 11 and unlocked Diablos hunts.
 END:VEVENT
 BEGIN:VEVENT
-UID:fbc837f08336b4b19c6e98f79af736a7f07a973d
-DTSTAMP:20231130T123023
+UID:084d6835fd72740b0b8f356dd7bb4804a89c46b8
+DTSTAMP:20231201T060744
 DTSTART:20231117T170000
 DTEND:20231119T160000
-SUMMARY:MHN: Legiana Weekend
+SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana! & Increase
+ d Monster Reappearance & Legiana Appearance Increase
 DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
  egiana coming to prey on Raphinos have been spotted. It looks like we ca
  n expect more to come! Veiled in frigid air, this monster is capable of 
  a devastating onslaught of attacks. Fire- and poison-element attacks are
   its weaknesses, so gather your equipment and get ready to investigate! 
- Legiana will appear more frequently in Swamp Habitats for all hunters HR
- 11 and above. During the event, monsters in all Habitats will reappear i
- n shorter intervals than usual.
+ During the event, monsters in all habitats will reappear in shorter inte
+ rvals than usual. Legiana will appear more frequently than usual for all
+  hunters HR11 and above.
 END:VEVENT
 END:VCALENDAR
