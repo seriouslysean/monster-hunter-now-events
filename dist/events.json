@@ -23,6 +23,17 @@
             ]
         },
         {
+            "summary": "The Game Awards Celebration Event",
+            "description": "A limited-time in-game event to celebrate Monster Hunter Now's nomination for Best Mobile Game at The Game Awards. More details to be announced.",
+            "dates": [
+                {
+                    "start": "2023-12-07T16:30:00",
+                    "end": "2023-12-11T00:00:00",
+                    "allDay": false
+                }
+            ]
+        },
+        {
             "summary": "Qualily's Special Quests",
             "description": "Qualily has been busy continuing her investigation into the anomalies and she needs your help again! She’s back with more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards this time will include Carpenterbugs, Monster Bone+, and other materials such as Dragonite Ore! Ready your equipment and prepare to investigate!",
             "dates": [
@@ -45,8 +56,29 @@
             ]
         },
         {
-            "summary": "Diablos and Black Diablos Appearance Boost & Time-limited Event Quests",
-            "description": "Diablos and Black Diablos appearance rates will be boosted. Monsters in all habitats will reappear in shorter intervals than usual. Time-limited Event Quests will be added. Complete these quests to receive the Roars of the Desert Medal.",
+            "summary": "Diablos and Black Diablos Appearance Boost",
+            "description": "Diablos and Black Diablos appearance rates will be boosted. Monsters in all habitats will reappear in shorter intervals than usual.",
+            "dates": [
+                {
+                    "start": "2023-11-24T17:00:00",
+                    "end": "2023-11-24T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-25T13:00:00",
+                    "end": "2023-11-25T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-26T13:00:00",
+                    "end": "2023-11-26T16:00:00",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Time-limited Event Quests",
+            "description": "Time-limited Event Quests will be added. Complete these quests to receive the Roars of the Desert Medal.",
             "dates": [
                 {
                     "start": "2023-11-24T17:00:00",
@@ -56,8 +88,8 @@
             ]
         },
         {
-            "summary": "Roars of the Desert: Diablos & Black Diablos Appearance",
-            "description": "Increase in Diablos activity in desert habitats with reported sightings of Black Diablos. Exclusive Packs with Special Carving Knives will be available to aid in hunts. Hunters can add a Hunter Medal to their collection by completing weekend-exclusive Event Quests. Black Diablos will appear in low numbers in Desert Habitats. As long as you have completed Chapter 11 and unlocked Diablos hunts.",
+            "summary": "Roars of the Desert: Diablos",
+            "description": "Increase in Diablos activity in desert habitats with reported sightings of Black Diablos. Exclusive Packs with Special Carving Knives will be available to aid in hunts. Hunters can add a Hunter Medal to their collection by completing weekend-exclusive Event Quests.",
             "dates": [
                 {
                     "start": "2023-11-20T09:00:00",
@@ -67,16 +99,26 @@
             ]
         },
         {
-            "summary": "A chill wind approaches: Join the hunt for Legiana! & Increased Monster Reappearance & Legiana Appearance Increase",
-            "description": "As temperatures drop in swamp habitats, increasing numbers of Legiana coming to prey on Raphinos have been spotted. It looks like we can expect more to come! Veiled in frigid air, this monster is capable of a devastating onslaught of attacks. Fire- and poison-element attacks are its weaknesses, so gather your equipment and get ready to investigate! During the event, monsters in all habitats will reappear in shorter intervals than usual. Legiana will appear more frequently than usual for all hunters HR11 and above.",
+            "summary": "A chill wind approaches: Join the hunt for Legiana!",
+            "description": "As temperatures drop in swamp habitats, increasing numbers of Legiana coming to prey on Raphinos have been spotted. It looks like we can expect more to come! Veiled in frigid air, this monster is capable of a devastating onslaught of attacks. Fire- and poison-element attacks are its weaknesses, so gather your equipment and get ready to investigate!",
             "dates": [
                 {
                     "start": "2023-11-17T17:00:00",
+                    "end": "2023-11-17T20:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-18T13:00:00",
+                    "end": "2023-11-18T16:00:00",
+                    "allDay": false
+                },
+                {
+                    "start": "2023-11-19T13:00:00",
                     "end": "2023-11-19T16:00:00",
                     "allDay": false
                 }
             ]
         }
     ],
-    "hash": "xaHU1HVy5ojIc96Zvze22NLhFhg="
+    "hash": "/OJk5Q/FFP9RFPqql1pNsr4H9jo="
 }

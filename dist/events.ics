@@ -17,7 +17,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:dbae9f63189317e6eb7fc37b4997afae4764ba72
-DTSTAMP:20231201T060744
+DTSTAMP:20231202T060726
 DTSTART:20231223T090000
 DTEND:20240108T230000
 SUMMARY:MHN: A Happy Hunting New Year
@@ -26,7 +26,7 @@ DESCRIPTION:Event featuring the return of Pink Rathian and Black Diablos, e
 END:VEVENT
 BEGIN:VEVENT
 UID:bdc84475f5bafb8111ba022548288ff7f3b33e7d
-DTSTAMP:20231201T060744
+DTSTAMP:20231202T060726
 DTSTART:20231215
 DTEND:20231218
 SUMMARY:MHN: Zinogre's Onslaught
@@ -34,8 +34,18 @@ DESCRIPTION:Hunt Zinogre through a new means introduced with the coming upd
  ate.
 END:VEVENT
 BEGIN:VEVENT
+UID:168edc1098b65725745ea58574c1590d7c2ce921
+DTSTAMP:20231202T060726
+DTSTART:20231207T163000
+DTEND:20231211T000000
+SUMMARY:MHN: The Game Awards Celebration Event
+DESCRIPTION:A limited-time in-game event to celebrate Monster Hunter Now's 
+ nomination for Best Mobile Game at The Game Awards. More details to be a
+ nnounced.
+END:VEVENT
+BEGIN:VEVENT
 UID:41a7209e26bd7829d1debc13d0499174d35c84a1
-DTSTAMP:20231201T060744
+DTSTAMP:20231202T060726
 DTSTART:20231201T170000
 DTEND:20231206T235959
 SUMMARY:MHN: Qualily's Special Quests
@@ -48,7 +58,7 @@ DESCRIPTION:Qualily has been busy continuing her investigation into the ano
 END:VEVENT
 BEGIN:VEVENT
 UID:655ade3fa49402bf492c7690bfddcb5d04f5f323
-DTSTAMP:20231201T060744
+DTSTAMP:20231202T060726
 DTSTART:20231201
 DTEND:20240101
 SUMMARY:MHN: Major Game Update: Fulminations in the Frost
@@ -62,44 +72,86 @@ DESCRIPTION:This major update will bring new weapon types and monsters, and
  y-based attacks, and increased rewards for Daily Quests.
 END:VEVENT
 BEGIN:VEVENT
-UID:db134c478d516ccff7aa1594a65d43d386af786c
-DTSTAMP:20231201T060744
+UID:f66247d41fbcecee307461a0a22298e7a2789374
+DTSTAMP:20231202T060726
 DTSTART:20231124T170000
-DTEND:20231126T160000
-SUMMARY:MHN: Diablos and Black Diablos Appearance Boost & Time-limited Even
- t Quests
+DTEND:20231124T200000
+SUMMARY:MHN: Diablos and Black Diablos Appearance Boost
 DESCRIPTION:Diablos and Black Diablos appearance rates will be boosted. Mon
- sters in all habitats will reappear in shorter intervals than usual. Tim
- e-limited Event Quests will be added. Complete these quests to receive t
- he Roars of the Desert Medal.
+ sters in all habitats will reappear in shorter intervals than usual.
 END:VEVENT
 BEGIN:VEVENT
-UID:7c4e538587ea6be3f4becfb50e0a2fa4940216eb
-DTSTAMP:20231201T060744
+UID:179a3e2be7b5745880a1f92b528ee7f5d4cdcf7a
+DTSTAMP:20231202T060726
+DTSTART:20231125T130000
+DTEND:20231125T160000
+SUMMARY:MHN: Diablos and Black Diablos Appearance Boost
+DESCRIPTION:Diablos and Black Diablos appearance rates will be boosted. Mon
+ sters in all habitats will reappear in shorter intervals than usual.
+END:VEVENT
+BEGIN:VEVENT
+UID:78ab59a9bbb572a7c4eff03a2d08527e6fc13d1a
+DTSTAMP:20231202T060726
+DTSTART:20231126T130000
+DTEND:20231126T160000
+SUMMARY:MHN: Diablos and Black Diablos Appearance Boost
+DESCRIPTION:Diablos and Black Diablos appearance rates will be boosted. Mon
+ sters in all habitats will reappear in shorter intervals than usual.
+END:VEVENT
+BEGIN:VEVENT
+UID:a2b93c758bf1c59f06dc2211ba95f57697e63eb5
+DTSTAMP:20231202T060726
+DTSTART:20231124T170000
+DTEND:20231126T160000
+SUMMARY:MHN: Time-limited Event Quests
+DESCRIPTION:Time-limited Event Quests will be added. Complete these quests 
+ to receive the Roars of the Desert Medal.
+END:VEVENT
+BEGIN:VEVENT
+UID:994825797f05952c95a1221a8c8e64d9a875995d
+DTSTAMP:20231202T060726
 DTSTART:20231120T090000
 DTEND:20231126T160000
-SUMMARY:MHN: Roars of the Desert: Diablos & Black Diablos Appearance
+SUMMARY:MHN: Roars of the Desert: Diablos
 DESCRIPTION:Increase in Diablos activity in desert habitats with reported s
  ightings of Black Diablos. Exclusive Packs with Special Carving Knives w
  ill be available to aid in hunts. Hunters can add a Hunter Medal to thei
- r collection by completing weekend-exclusive Event Quests. Black Diablos
-  will appear in low numbers in Desert Habitats. As long as you have comp
- leted Chapter 11 and unlocked Diablos hunts.
+ r collection by completing weekend-exclusive Event Quests.
 END:VEVENT
 BEGIN:VEVENT
-UID:084d6835fd72740b0b8f356dd7bb4804a89c46b8
-DTSTAMP:20231201T060744
+UID:ddeeb6d9a43e6fc3c607db801d25845e70607f9c
+DTSTAMP:20231202T060726
 DTSTART:20231117T170000
-DTEND:20231119T160000
-SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana! & Increase
- d Monster Reappearance & Legiana Appearance Increase
+DTEND:20231117T200000
+SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana!
 DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
  egiana coming to prey on Raphinos have been spotted. It looks like we ca
  n expect more to come! Veiled in frigid air, this monster is capable of 
  a devastating onslaught of attacks. Fire- and poison-element attacks are
-  its weaknesses, so gather your equipment and get ready to investigate! 
- During the event, monsters in all habitats will reappear in shorter inte
- rvals than usual. Legiana will appear more frequently than usual for all
-  hunters HR11 and above.
+  its weaknesses, so gather your equipment and get ready to investigate!
+END:VEVENT
+BEGIN:VEVENT
+UID:0174770cee368dc4cf86eb6cf83b6a7f2d79ca2e
+DTSTAMP:20231202T060726
+DTSTART:20231118T130000
+DTEND:20231118T160000
+SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana!
+DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
+ egiana coming to prey on Raphinos have been spotted. It looks like we ca
+ n expect more to come! Veiled in frigid air, this monster is capable of 
+ a devastating onslaught of attacks. Fire- and poison-element attacks are
+  its weaknesses, so gather your equipment and get ready to investigate!
+END:VEVENT
+BEGIN:VEVENT
+UID:e5a2975788b0a67612c05ad2853ddc24322dc473
+DTSTAMP:20231202T060726
+DTSTART:20231119T130000
+DTEND:20231119T160000
+SUMMARY:MHN: A chill wind approaches: Join the hunt for Legiana!
+DESCRIPTION:As temperatures drop in swamp habitats, increasing numbers of L
+ egiana coming to prey on Raphinos have been spotted. It looks like we ca
+ n expect more to come! Veiled in frigid air, this monster is capable of 
+ a devastating onslaught of attacks. Fire- and poison-element attacks are
+  its weaknesses, so gather your equipment and get ready to investigate!
 END:VEVENT
 END:VCALENDAR

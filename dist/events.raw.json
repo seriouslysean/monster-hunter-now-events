@@ -34,6 +34,20 @@
             "timestamp": 1701313200000
         },
         {
+            "summary": "The Game Awards Celebration Event",
+            "description": "A limited-time in-game event to celebrate Monster Hunter Now's nomination for Best Mobile Game at The Game Awards. More details to be announced.",
+            "dates": [
+                {
+                    "start": "2023-12-07T16:30:00",
+                    "end": "2023-12-11T00:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1701453600000
+        },
+        {
             "summary": "Qualily's Special Quests",
             "description": "Time-limited Event Quests rewarding materials needed for upgrading equipment, such as Carpenterbugs and Monster Bones, as well as gatherable materials like Dragonite Ore, and Zenny.",
             "dates": [
