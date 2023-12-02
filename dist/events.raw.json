@@ -78,26 +78,6 @@
             "timestamp": 1700445600000
         },
         {
-            "summary": "Major Game Update: Fulminations in the Frost",
-            "description": "This major update will bring new weapon types and monsters, and adjustments to the game balance of existing monsters and weapon types. Changes to existing weapon types include Sword & Shield, Great Sword, Hammer, Bow, Light Bowgun, and Long Sword. Changes to monsters include all large monsters. Other changes include adjustments to the formula for calculating the rate of increase in damage when skills are stacked, evasion time after heavy damage, invincibility window after reviving, proximity-based attacks, and increased rewards for Daily Quests.",
-            "dates": [
-                {
-                    "start": "2023-12-01T00:00:00",
-                    "end": "2023-12-31T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [
-                "Desert",
-                "Forest",
-                "Swamp"
-            ],
-            "monsters": [
-                "New Monsters"
-            ],
-            "timestamp": 1701399600000
-        },
-        {
             "summary": "Diablos and Black Diablos Appearance Boost",
             "description": "Diablos and Black Diablos appearance rates will be boosted. Monsters in all habitats will reappear in shorter intervals than usual.",
             "dates": [
