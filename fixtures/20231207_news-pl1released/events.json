@@ -1,0 +1,71 @@
+{
+    "events": [
+        {
+            "summary": "Fulminations in the Frost",
+            "description": "Major update introducing two new weapon types (Dual Blades and Lances), four new large monsters (Radobaan, Banbaro, Barioth, and Zinogre), a new sleep element, and a new hunting experience called Hunt-a-thons. The habitats have been updated with a winter theme and two new small monsters (Wulg and Cortos) have been added.",
+            "dates": [
+                {
+                    "start": "2023-12-15T00:00:00",
+                    "end": "2023-12-15T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Forest",
+                "Desert",
+                "Swamp"
+            ],
+            "monsters": [
+                "Radobaan",
+                "Banbaro",
+                "Barioth",
+                "Zinogre"
+            ]
+        },
+        {
+            "summary": "Zinogre's Onslaught",
+            "description": "Zinogre will be the guaranteed fifth monster in all Hunt-a-thons. Completing exclusive Event Quests during this time will reward you with a new Hunter Medal. Zinogre will still appear in Hunt-a-thons after December 17, but at its usual rate.",
+            "dates": [
+                {
+                    "start": "2023-12-15T12:15:00",
+                    "end": "2023-12-17T22:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest",
+                "Desert",
+                "Swamp"
+            ],
+            "monsters": [
+                "Zinogre"
+            ]
+        },
+        {
+            "summary": "Hunt-a-thons",
+            "description": "New hunting experience where some gathering points turn into Hunt-a-thon Points, allowing you to hunt five large monsters in succession. Large monsters that you encounter in Hunt-a-thons are stronger than those that usually appear in the field.",
+            "dates": [
+                {
+                    "start": "2023-12-15T00:00:00",
+                    "end": "2023-12-15T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Forest",
+                "Desert",
+                "Swamp"
+            ],
+            "monsters": [
+                "Radobaan",
+                "Banbaro",
+                "Barioth",
+                "Zinogre"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1701909000000,
+        "url": "https://monsterhunternow.com/news/pl1released"
+    }
+}

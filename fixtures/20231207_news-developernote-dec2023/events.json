@@ -1,0 +1,83 @@
+{
+    "events": [
+        {
+            "summary": "Fulminations in the Frost",
+            "description": "Major update introducing new monsters, weapon types, and Hunt-a-thons. The field will be lightly snow-covered to match the monsters that will be appearing.",
+            "dates": [
+                {
+                    "start": "2023-12-01T00:00:00",
+                    "end": "2024-03-01T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Snow"
+            ],
+            "monsters": [
+                "Radobaan",
+                "Banbaro",
+                "Barioth",
+                "Zinogre",
+                "Wulg",
+                "Cortos"
+            ]
+        },
+        {
+            "summary": "Hunt-a-thons",
+            "description": "New way to play in which multiple monsters can be hunted in succession. Zinogre will be exclusive to Hunt-a-thons.",
+            "dates": [
+                {
+                    "start": "2023-12-01T00:00:00",
+                    "end": "2024-03-01T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Various"
+            ],
+            "monsters": [
+                "Zinogre"
+            ]
+        },
+        {
+            "summary": "Winter Monster Hunt",
+            "description": "Barioth, Wulg, and Cortos will only be around while there is snow on the field and they will stop appearing with the arrival of spring.",
+            "dates": [
+                {
+                    "start": "2023-12-01T00:00:00",
+                    "end": "2024-03-01T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Snow"
+            ],
+            "monsters": [
+                "Barioth",
+                "Wulg",
+                "Cortos"
+            ]
+        },
+        {
+            "summary": "New Year Events",
+            "description": "Events planned all through the New Year and into January and February.",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-02-28T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Various"
+            ],
+            "monsters": [
+                "Various"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1701919800000,
+        "url": "https://monsterhunternow.com/news/developernote-dec2023"
+    }
+}
