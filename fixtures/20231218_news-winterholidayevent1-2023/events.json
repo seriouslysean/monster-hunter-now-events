@@ -1,0 +1,76 @@
+{
+    "events": [
+        {
+            "summary": "A Happy Hunting New Year - Pink Rathian Appearance",
+            "description": "Pink Rathian is making a comeback! All hunters HR 11 and above will be able to encounter it in forest habitats.",
+            "dates": [
+                {
+                    "start": "2023-12-23T09:00:00",
+                    "end": "2023-12-31T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Pink Rathian"
+            ]
+        },
+        {
+            "summary": "A Happy Hunting New Year - Black Diablos Appearance",
+            "description": "Black Diablos is making a comeback! All hunters HR 11 and above will be able to encounter it in desert habitats.",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Black Diablos"
+            ]
+        },
+        {
+            "summary": "A Happy Hunting New Year - Boosted Zinogre Appearance",
+            "description": "The appearance rate of Zinogre as the fifth monster at Hunt-a-thon Points will be boosted for all hunters HR 11 and above.",
+            "dates": [
+                {
+                    "start": "2023-12-23T09:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "All"
+            ],
+            "monsters": [
+                "Zinogre"
+            ]
+        },
+        {
+            "summary": "A Happy Hunting New Year - More Monsters Everywhere",
+            "description": "Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
+            "dates": [
+                {
+                    "start": "2023-12-23T13:00:00",
+                    "end": "2024-01-08T18:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "All"
+            ],
+            "monsters": [
+                "All"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1702868400000,
+        "url": "https://monsterhunternow.com/news/winterholidayevent1-2023"
+    }
+}

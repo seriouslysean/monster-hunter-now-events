@@ -17,7 +17,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:d30b2c0f03a5a069dfa5aa6532f59fefbcd39e32
-DTSTAMP:20231207T060930
+DTSTAMP:20231218T060850
 DTSTART:20240101
 DTEND:20240229
 SUMMARY:MHN: New Year Events
@@ -25,17 +25,44 @@ DESCRIPTION:Events planned all through the New Year and into January and Fe
  bruary.
 END:VEVENT
 BEGIN:VEVENT
-UID:dbae9f63189317e6eb7fc37b4997afae4764ba72
-DTSTAMP:20231207T060930
+UID:88165629dc81385d113a6a08cd4cd8d9b683fbb6
+DTSTAMP:20231218T060850
+DTSTART:20240101T000000
+DTEND:20240108T235959
+SUMMARY:MHN: A Happy Hunting New Year - Black Diablos Appearance
+DESCRIPTION:Black Diablos is making a comeback! All hunters HR 11 and above
+  will be able to encounter it in desert habitats.
+END:VEVENT
+BEGIN:VEVENT
+UID:6369e95b534ed0117315a4f09a246150b4bc7c75
+DTSTAMP:20231218T060850
+DTSTART:20231223T130000
+DTEND:20240108T180000
+SUMMARY:MHN: A Happy Hunting New Year - More Monsters Everywhere
+DESCRIPTION:Monsters in all habitats will reappear in shorter intervals and
+  in higher numbers than usual.
+END:VEVENT
+BEGIN:VEVENT
+UID:a49980abf14015ce3daa95fe95ff99ed7ed221ba
+DTSTAMP:20231218T060850
 DTSTART:20231223T090000
-DTEND:20240108T230000
-SUMMARY:MHN: A Happy Hunting New Year
-DESCRIPTION:Event featuring the return of Pink Rathian and Black Diablos, e
- vent-exclusive equipment, and quests rewarding lots of Zenny.
+DTEND:20231231T235959
+SUMMARY:MHN: A Happy Hunting New Year - Pink Rathian Appearance
+DESCRIPTION:Pink Rathian is making a comeback! All hunters HR 11 and above 
+ will be able to encounter it in forest habitats.
+END:VEVENT
+BEGIN:VEVENT
+UID:c1ff64be4db2421ca6bb5d6588017e1d6c3b27f7
+DTSTAMP:20231218T060850
+DTSTART:20231223T090000
+DTEND:20240108T235959
+SUMMARY:MHN: A Happy Hunting New Year - Boosted Zinogre Appearance
+DESCRIPTION:The appearance rate of Zinogre as the fifth monster at Hunt-a-t
+ hon Points will be boosted for all hunters HR 11 and above.
 END:VEVENT
 BEGIN:VEVENT
 UID:9dcbf59f0965331869fca87e55c618bd9b5f367a
-DTSTAMP:20231207T060930
+DTSTAMP:20231218T060850
 DTSTART:20231215T121500
 DTEND:20231217T220000
 SUMMARY:MHN: Zinogre's Onslaught
@@ -45,23 +72,20 @@ DESCRIPTION:Zinogre will be the guaranteed fifth monster in all Hunt-a-thon
  ecember 17, but at its usual rate.
 END:VEVENT
 BEGIN:VEVENT
-UID:27d1ddb2bd461722311d03ba2764417dc7bf0099
-DTSTAMP:20231207T060930
+UID:27f4826b0ebb62c5c51ca585cb172660bb1caac1
+DTSTAMP:20231218T060850
 DTSTART:20231215
 DTEND:20231216
-SUMMARY:MHN: Fulminations in the Frost & Hunt-a-thons
+SUMMARY:MHN: Fulminations in the Frost
 DESCRIPTION:Major update introducing two new weapon types (Dual Blades and 
  Lances), four new large monsters (Radobaan, Banbaro, Barioth, and Zinogr
  e), a new sleep element, and a new hunting experience called Hunt-a-thon
  s. The habitats have been updated with a winter theme and two new small 
- monsters (Wulg and Cortos) have been added. New hunting experience where
-  some gathering points turn into Hunt-a-thon Points, allowing you to hun
- t five large monsters in succession. Large monsters that you encounter i
- n Hunt-a-thons are stronger than those that usually appear in the field.
+ monsters (Wulg and Cortos) have been added.
 END:VEVENT
 BEGIN:VEVENT
 UID:168edc1098b65725745ea58574c1590d7c2ce921
-DTSTAMP:20231207T060930
+DTSTAMP:20231218T060850
 DTSTART:20231207T163000
 DTEND:20231211T000000
 SUMMARY:MHN: The Game Awards Celebration Event
@@ -71,7 +95,7 @@ DESCRIPTION:A limited-time in-game event to celebrate Monster Hunter Now's
 END:VEVENT
 BEGIN:VEVENT
 UID:41a7209e26bd7829d1debc13d0499174d35c84a1
-DTSTAMP:20231207T060930
+DTSTAMP:20231218T060850
 DTSTART:20231201T170000
 DTEND:20231206T235959
 SUMMARY:MHN: Qualily's Special Quests
@@ -83,64 +107,13 @@ DESCRIPTION:Qualily has been busy continuing her investigation into the ano
  re! Ready your equipment and prepare to investigate!
 END:VEVENT
 BEGIN:VEVENT
-UID:ae35581092b888c70653f5aeec415d3941b46d69
-DTSTAMP:20231207T060930
+UID:a02b979ea9c73ac9237317c0557176beac434b07
+DTSTAMP:20231218T060850
 DTSTART:20231201
 DTEND:20240302
-SUMMARY:MHN: Fulminations in the Frost, Hunt-a-thons & Winter Monster Hunt
+SUMMARY:MHN: Fulminations in the Frost
 DESCRIPTION:Major update introducing new monsters, weapon types, and Hunt-a
  -thons. The field will be lightly snow-covered to match the monsters tha
- t will be appearing. New way to play in which multiple monsters can be h
- unted in succession. Zinogre will be exclusive to Hunt-a-thons. Barioth,
-  Wulg, and Cortos will only be around while there is snow on the field a
- nd they will stop appearing with the arrival of spring.
-END:VEVENT
-BEGIN:VEVENT
-UID:3ecba9101020c35e9072dbb8cef4257ff50af40d
-DTSTAMP:20231207T060930
-DTSTART:20231124T170000
-DTEND:20231124T200000
-SUMMARY:MHN: Diablos and Black Diablos Appearance Boost & Time-limited Even
- t Quests
-DESCRIPTION:Diablos and Black Diablos appearance rates will be boosted. Mon
- sters in all habitats will reappear in shorter intervals than usual. Tim
- e-limited Event Quests will be added. Complete these quests to receive t
- he Roars of the Desert Medal.
-END:VEVENT
-BEGIN:VEVENT
-UID:cbd31e45171f0270c2955ea12000a7616781cd4d
-DTSTAMP:20231207T060930
-DTSTART:20231125T130000
-DTEND:20231125T160000
-SUMMARY:MHN: Diablos and Black Diablos Appearance Boost & Time-limited Even
- t Quests
-DESCRIPTION:Diablos and Black Diablos appearance rates will be boosted. Mon
- sters in all habitats will reappear in shorter intervals than usual. Tim
- e-limited Event Quests will be added. Complete these quests to receive t
- he Roars of the Desert Medal.
-END:VEVENT
-BEGIN:VEVENT
-UID:4528754ffb2f8a926ff0db515cd5bcd4672ac998
-DTSTAMP:20231207T060930
-DTSTART:20231126T130000
-DTEND:20231126T160000
-SUMMARY:MHN: Diablos and Black Diablos Appearance Boost & Time-limited Even
- t Quests
-DESCRIPTION:Diablos and Black Diablos appearance rates will be boosted. Mon
- sters in all habitats will reappear in shorter intervals than usual. Tim
- e-limited Event Quests will be added. Complete these quests to receive t
- he Roars of the Desert Medal.
-END:VEVENT
-BEGIN:VEVENT
-UID:fbf197dd291e9f9285585cefd154fdc03e390f6c
-DTSTAMP:20231207T060930
-DTSTART:20231120T090000
-DTEND:20231126T160000
-SUMMARY:MHN: Roar of the Desert: Diablos & Black Diablos Appearance
-DESCRIPTION:Increase in Diablos activity in desert habitats with reported s
- ightings of Black Diablos. Exclusive Packs with Special Carving Knives w
- ill be available to aid in hunts. Hunters can add a Hunter Medal to thei
- r collection by completing weekend-exclusive Event Quests. Black Diablos
-  will appear in low numbers in desert habitats.
+ t will be appearing.
 END:VEVENT
 END:VCALENDAR
