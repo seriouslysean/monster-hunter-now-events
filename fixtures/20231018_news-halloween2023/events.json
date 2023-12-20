@@ -2,7 +2,7 @@
     "events": [
         {
             "summary": "Halloween Pumpkin Hunt",
-            "description": "Halloween Pumpkin Hunt Quests will be distributed. Complete Quests that involve gathering special items or slaying certain large monsters to receive Pumpkin Tickets which can be used to forge and upgrade your Jack-o’-Head equipment!",
+            "description": "Complete Quests to gather special items or slay certain large monsters to receive Pumpkin Tickets for forging and upgrading Jack-o’-Head equipment.",
             "dates": [
                 {
                     "start": "2023-10-25T09:00:00",
@@ -15,7 +15,7 @@
         },
         {
             "summary": "Halloween Medal Acquisition Quest",
-            "description": "A Halloween Medal Acquisition Quest will be distributed. Complete this to receive the Halloween Pumpkin Hunt Medal!",
+            "description": "Complete the quest to receive the Halloween Pumpkin Hunt Medal.",
             "dates": [
                 {
                     "start": "2023-10-28T09:00:00",
@@ -27,8 +27,8 @@
             "monsters": []
         },
         {
-            "summary": "Kulu-Ya-Ku Pumpkin Appearance",
-            "description": "Between Saturday, October 28, 2023, 9:00 a.m. and Tuesday, October 31, 2023, 11:59 p.m., Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers than usual. Slaying Kulu-Ya-Ku holding a pumpkin-like rock will reward you with Pumpkin Tickets!",
+            "summary": "Increased Kulu-Ya-Ku Encounters",
+            "description": "Kulu-Ya-Ku holding a pumpkin-like rock will appear in larger numbers. Slaying them will reward Pumpkin Tickets.",
             "dates": [
                 {
                     "start": "2023-10-28T09:00:00",

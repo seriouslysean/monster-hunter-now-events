@@ -1,8 +1,8 @@
 {
     "events": [
         {
-            "summary": "A Happy Hunting New Year - Black Diablos Appearance",
-            "description": "Black Diablos is making a comeback! All hunters HR 11 and above will be able to encounter it in desert habitats.",
+            "summary": "A Happy Hunting New Year - Black Diablos Comeback",
+            "description": "Black Diablos will be appearing in desert habitats for hunters HR 11 and above.",
             "dates": [
                 {
                     "start": "2024-01-01T00:00:00",
@@ -19,25 +19,7 @@
             "timestamp": 1702868400000
         },
         {
-            "summary": "New Year Events",
-            "description": "Events planned all through the New Year and into January and February.",
-            "dates": [
-                {
-                    "start": "2024-01-01T00:00:00",
-                    "end": "2024-02-28T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [
-                "Various"
-            ],
-            "monsters": [
-                "Various"
-            ],
-            "timestamp": 1701919800000
-        },
-        {
-            "summary": "A Happy Hunting New Year - More Monsters Everywhere",
+            "summary": "A Happy Hunting New Year - Increased Monster Activity",
             "description": "Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
             "dates": [
                 {
@@ -50,13 +32,13 @@
                 "All"
             ],
             "monsters": [
-                "All"
+                "Various"
             ],
             "timestamp": 1702868400000
         },
         {
-            "summary": "A Happy Hunting New Year - Pink Rathian Appearance",
-            "description": "Pink Rathian is making a comeback! All hunters HR 11 and above will be able to encounter it in forest habitats.",
+            "summary": "A Happy Hunting New Year - Pink Rathian Comeback",
+            "description": "Pink Rathian will be appearing in forest habitats for hunters HR 11 and above.",
             "dates": [
                 {
                     "start": "2023-12-23T09:00:00",
@@ -73,8 +55,8 @@
             "timestamp": 1702868400000
         },
         {
-            "summary": "A Happy Hunting New Year - Boosted Zinogre Appearance",
-            "description": "The appearance rate of Zinogre as the fifth monster at Hunt-a-thon Points will be boosted for all hunters HR 11 and above.",
+            "summary": "A Happy Hunting New Year - Zinogre Appearance Boost",
+            "description": "The appearance rate of Zinogre will be boosted at Hunt-a-thon Points for all hunters HR 11 and above.",
             "dates": [
                 {
                     "start": "2023-12-23T09:00:00",
@@ -83,7 +65,7 @@
                 }
             ],
             "habitat": [
-                "All"
+                "Various"
             ],
             "monsters": [
                 "Zinogre"
@@ -92,11 +74,11 @@
         },
         {
             "summary": "A Happy Hunting New Year",
-            "description": "Event featuring the return of Pink Rathian and Black Diablos, event-exclusive equipment, and quests rewarding lots of Zenny.",
+            "description": "Event featuring the return of Pink Rathian and Black Diablos, with event-exclusive equipment and quests rewarding lots of Zenny.",
             "dates": [
                 {
                     "start": "2023-12-23T09:00:00",
-                    "end": "2024-01-08T23:00:00",
+                    "end": "2024-01-08T23:59:59",
                     "allDay": false
                 }
             ],
@@ -109,7 +91,7 @@
         },
         {
             "summary": "Zinogre's Onslaught",
-            "description": "Zinogre will be the guaranteed fifth monster in all Hunt-a-thons. Completing exclusive Event Quests during this time will reward you with a new Hunter Medal. Zinogre will still appear in Hunt-a-thons after December 17, but at its usual rate.",
+            "description": "During this event, Zinogre's appearance rates in Hunt-a-thons will be boosted, and hunters can complete exclusive Event Quests to receive a new Hunter Medal.",
             "dates": [
                 {
                     "start": "2023-12-15T12:15:00",
@@ -117,42 +99,29 @@
                     "allDay": false
                 }
             ],
-            "habitat": [
-                "Forest",
-                "Desert",
-                "Swamp"
-            ],
+            "habitat": [],
             "monsters": [
                 "Zinogre"
             ],
             "timestamp": 1701909000000
         },
         {
-            "summary": "Fulminations in the Frost",
-            "description": "Major update introducing two new weapon types (Dual Blades and Lances), four new large monsters (Radobaan, Banbaro, Barioth, and Zinogre), a new sleep element, and a new hunting experience called Hunt-a-thons. The habitats have been updated with a winter theme and two new small monsters (Wulg and Cortos) have been added.",
+            "summary": "Hunt-a-thons Launch",
+            "description": "Launch of Hunt-a-thons, a new hunting experience where some gathering points turn into Hunt-a-thon Points, allowing hunters to hunt five large monsters in succession.",
             "dates": [
                 {
-                    "start": "2023-12-15T00:00:00",
+                    "start": "2023-12-15T09:15:00",
                     "end": "2023-12-15T23:59:59",
-                    "allDay": true
+                    "allDay": false
                 }
             ],
-            "habitat": [
-                "Forest",
-                "Desert",
-                "Swamp"
-            ],
-            "monsters": [
-                "Radobaan",
-                "Banbaro",
-                "Barioth",
-                "Zinogre"
-            ],
+            "habitat": [],
+            "monsters": [],
             "timestamp": 1701909000000
         },
         {
-            "summary": "Hunt-a-thons",
-            "description": "New hunting experience where some gathering points turn into Hunt-a-thon Points, allowing you to hunt five large monsters in succession. Large monsters that you encounter in Hunt-a-thons are stronger than those that usually appear in the field.",
+            "summary": "Fulminations in the Frost Major Update",
+            "description": "Introduction of two new weapon types (Dual Blades and Lances), four new large monsters (Radobaan, Banbaro, Barioth, and Zinogre), a new sleep element for weapons, rebalancing of existing weapon types and monsters, and a snowy field change for winter habitats.",
             "dates": [
                 {
                     "start": "2023-12-15T00:00:00",
@@ -191,11 +160,42 @@
         },
         {
             "summary": "The Game Awards Celebration Event",
-            "description": "A limited-time in-game event to celebrate Monster Hunter Now's nomination for Best Mobile Game at The Game Awards. More details to be announced.",
+            "description": "Limited-time in-game event to celebrate Monster Hunter Now's nomination for Best Mobile Game during The Game Awards.",
             "dates": [
                 {
                     "start": "2023-12-07T16:30:00",
                     "end": "2023-12-11T00:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1701453600000
+        },
+        {
+            "summary": "Double Materials for 1-2★ Monsters",
+            "description": "All hunters will receive double the materials for slaying 1-2★ monsters.",
+            "dates": [
+                {
+                    "start": "2023-12-07T00:00:00",
+                    "end": "2023-12-11T00:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "1★ Monsters",
+                "2★ Monsters"
+            ],
+            "timestamp": 1701453600000
+        },
+        {
+            "summary": "New Hunters Welcome Pack",
+            "description": "New hunters will receive free 5 Potions and 5000 Zenny, claimable from the in-game shop.",
+            "dates": [
+                {
+                    "start": "2023-12-07T00:00:00",
+                    "end": "2024-01-08T00:00:00",
                     "allDay": false
                 }
             ],
@@ -218,8 +218,8 @@
             "timestamp": 1701313200000
         },
         {
-            "summary": "Qualily's Special Quests",
-            "description": "Qualily has been busy continuing her investigation into the anomalies and she needs your help again! She’s back with more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards this time will include Carpenterbugs, Monster Bone+, and other materials such as Dragonite Ore! Ready your equipment and prepare to investigate!",
+            "summary": "Qualily's Special Quests Continuation",
+            "description": "Complete 10 time-limited Special Quests by visiting gathering points and slaying monsters, including Tobi-Kadachi, to receive rewards such as Carpenterbugs, Monster Bone+, and Dragonite Ore.",
             "dates": [
                 {
                     "start": "2023-12-01T17:00:00",
@@ -232,67 +232,6 @@
                 "Tobi-Kadachi"
             ],
             "timestamp": 1700445600000
-        },
-        {
-            "summary": "Fulminations in the Frost",
-            "description": "Major update introducing new monsters, weapon types, and Hunt-a-thons. The field will be lightly snow-covered to match the monsters that will be appearing.",
-            "dates": [
-                {
-                    "start": "2023-12-01T00:00:00",
-                    "end": "2024-03-01T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [
-                "Snow"
-            ],
-            "monsters": [
-                "Radobaan",
-                "Banbaro",
-                "Barioth",
-                "Zinogre",
-                "Wulg",
-                "Cortos"
-            ],
-            "timestamp": 1701919800000
-        },
-        {
-            "summary": "Hunt-a-thons",
-            "description": "New way to play in which multiple monsters can be hunted in succession. Zinogre will be exclusive to Hunt-a-thons.",
-            "dates": [
-                {
-                    "start": "2023-12-01T00:00:00",
-                    "end": "2024-03-01T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [
-                "Various"
-            ],
-            "monsters": [
-                "Zinogre"
-            ],
-            "timestamp": 1701919800000
-        },
-        {
-            "summary": "Winter Monster Hunt",
-            "description": "Barioth, Wulg, and Cortos will only be around while there is snow on the field and they will stop appearing with the arrival of spring.",
-            "dates": [
-                {
-                    "start": "2023-12-01T00:00:00",
-                    "end": "2024-03-01T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [
-                "Snow"
-            ],
-            "monsters": [
-                "Barioth",
-                "Wulg",
-                "Cortos"
-            ],
-            "timestamp": 1701919800000
         }
     ]
 }

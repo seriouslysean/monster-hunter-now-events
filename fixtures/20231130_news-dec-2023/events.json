@@ -30,11 +30,11 @@
         },
         {
             "summary": "A Happy Hunting New Year",
-            "description": "Event featuring the return of Pink Rathian and Black Diablos, event-exclusive equipment, and quests rewarding lots of Zenny.",
+            "description": "Event featuring the return of Pink Rathian and Black Diablos, with event-exclusive equipment and quests rewarding lots of Zenny.",
             "dates": [
                 {
                     "start": "2023-12-23T09:00:00",
-                    "end": "2024-01-08T23:00:00",
+                    "end": "2024-01-08T23:59:59",
                     "allDay": false
                 }
             ],

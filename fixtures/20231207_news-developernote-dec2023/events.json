@@ -1,17 +1,17 @@
 {
     "events": [
         {
-            "summary": "Fulminations in the Frost",
-            "description": "Major update introducing new monsters, weapon types, and Hunt-a-thons. The field will be lightly snow-covered to match the monsters that will be appearing.",
+            "summary": "Fulminations in the Frost Update",
+            "description": "Introduction of new monsters, weapon types, and the Hunt-a-thon event. Snow-covered field to match the wintery theme.",
             "dates": [
                 {
-                    "start": "2023-12-01T00:00:00",
-                    "end": "2024-03-01T23:59:59",
+                    "start": "2022-12-01T00:00:00",
+                    "end": "2023-03-01T23:59:59",
                     "allDay": true
                 }
             ],
             "habitat": [
-                "Snow"
+                "Various"
             ],
             "monsters": [
                 "Radobaan",
@@ -23,12 +23,12 @@
             ]
         },
         {
-            "summary": "Hunt-a-thons",
-            "description": "New way to play in which multiple monsters can be hunted in succession. Zinogre will be exclusive to Hunt-a-thons.",
+            "summary": "Hunt-a-thons Introduction",
+            "description": "A new gameplay feature where multiple monsters can be hunted in succession, with Zinogre being exclusive to this event.",
             "dates": [
                 {
-                    "start": "2023-12-01T00:00:00",
-                    "end": "2024-03-01T23:59:59",
+                    "start": "2022-12-01T00:00:00",
+                    "end": "2023-03-01T23:59:59",
                     "allDay": true
                 }
             ],
@@ -40,40 +40,19 @@
             ]
         },
         {
-            "summary": "Winter Monster Hunt",
-            "description": "Barioth, Wulg, and Cortos will only be around while there is snow on the field and they will stop appearing with the arrival of spring.",
+            "summary": "Item Box Expansion Update",
+            "description": "An update to expand the Item Box capacity further.",
             "dates": [
                 {
-                    "start": "2023-12-01T00:00:00",
-                    "end": "2024-03-01T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [
-                "Snow"
-            ],
-            "monsters": [
-                "Barioth",
-                "Wulg",
-                "Cortos"
-            ]
-        },
-        {
-            "summary": "New Year Events",
-            "description": "Events planned all through the New Year and into January and February.",
-            "dates": [
-                {
-                    "start": "2024-01-01T00:00:00",
-                    "end": "2024-02-28T23:59:59",
+                    "start": "2022-12-15T00:00:00",
+                    "end": "2022-12-15T23:59:59",
                     "allDay": true
                 }
             ],
             "habitat": [
                 "Various"
             ],
-            "monsters": [
-                "Various"
-            ]
+            "monsters": []
         }
     ],
     "meta": {

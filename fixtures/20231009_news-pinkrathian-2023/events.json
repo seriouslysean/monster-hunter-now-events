@@ -1,8 +1,8 @@
 {
     "events": [
         {
-            "summary": "A cherry-colored season: Investigate a new subspecies!",
-            "description": "From Monday, October 9, at 9:00 a.m. until Sunday, October 15, at 4:00 p.m., Pink Rathian will appear in low numbers in Forest Habitats. Pink Rathian will appear as long as you have unlocked Rathian hunts (by completing Chapter 9).",
+            "summary": "Cherry-Colored Rathian Investigation",
+            "description": "Hunters are tasked to investigate the appearance of a new subspecies, the Pink Rathian, in Forest Habitats. This event includes hunting both Rathian and its cherry-colored counterpart.",
             "dates": [
                 {
                     "start": "2023-10-09T09:00:00",
@@ -14,12 +14,13 @@
                 "Forest"
             ],
             "monsters": [
-                "Pink Rathian"
+                "Pink Rathian",
+                "Rathian"
             ]
         },
         {
-            "summary": "Increased Rathian and Pink Rathian Appearance",
-            "description": "While appearance rates are boosted between Friday, October 13, and Sunday, October 15, in Forest Habitats, Rathian will appear more frequently than usual and Pink Rathian will also be easier to find. Rathian and Pink Rathian will appear in Forest Habitats for all hunters HR11 and above.",
+            "summary": "Rathian Species Increased Appearance Rate",
+            "description": "During this time frame, both Rathian and Pink Rathian will appear more frequently in Forest Habitats, providing hunters with more opportunities to engage with these monsters.",
             "dates": [
                 {
                     "start": "2023-10-13T17:00:00",
@@ -41,8 +42,8 @@
                 "Forest"
             ],
             "monsters": [
-                "Rathian",
-                "Pink Rathian"
+                "Pink Rathian",
+                "Rathian"
             ]
         }
     ],

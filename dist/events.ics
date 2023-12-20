@@ -16,104 +16,116 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:d30b2c0f03a5a069dfa5aa6532f59fefbcd39e32
-DTSTAMP:20231218T060850
-DTSTART:20240101
-DTEND:20240229
-SUMMARY:MHN: New Year Events
-DESCRIPTION:Events planned all through the New Year and into January and Fe
- bruary.
-END:VEVENT
-BEGIN:VEVENT
-UID:88165629dc81385d113a6a08cd4cd8d9b683fbb6
-DTSTAMP:20231218T060850
+UID:7ede3b27af991a579dfc61c5ad8d88808e74b35a
+DTSTAMP:20231220T135030
 DTSTART:20240101T000000
 DTEND:20240108T235959
-SUMMARY:MHN: A Happy Hunting New Year - Black Diablos Appearance
-DESCRIPTION:Black Diablos is making a comeback! All hunters HR 11 and above
-  will be able to encounter it in desert habitats.
+SUMMARY:MHN: A Happy Hunting New Year - Black Diablos Comeback
+DESCRIPTION:Black Diablos will be appearing in desert habitats for hunters 
+ HR 11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:6369e95b534ed0117315a4f09a246150b4bc7c75
-DTSTAMP:20231218T060850
+UID:69f692a7c925c655ffa055481930cba7c0ca8782
+DTSTAMP:20231220T135030
 DTSTART:20231223T130000
 DTEND:20240108T180000
-SUMMARY:MHN: A Happy Hunting New Year - More Monsters Everywhere
+SUMMARY:MHN: A Happy Hunting New Year - Increased Monster Activity
 DESCRIPTION:Monsters in all habitats will reappear in shorter intervals and
   in higher numbers than usual.
 END:VEVENT
 BEGIN:VEVENT
-UID:a49980abf14015ce3daa95fe95ff99ed7ed221ba
-DTSTAMP:20231218T060850
+UID:0bb250fe4cb736f7a5505a976ffefaf7fce3d426
+DTSTAMP:20231220T135030
 DTSTART:20231223T090000
 DTEND:20231231T235959
-SUMMARY:MHN: A Happy Hunting New Year - Pink Rathian Appearance
-DESCRIPTION:Pink Rathian is making a comeback! All hunters HR 11 and above 
- will be able to encounter it in forest habitats.
+SUMMARY:MHN: A Happy Hunting New Year - Pink Rathian Comeback
+DESCRIPTION:Pink Rathian will be appearing in forest habitats for hunters H
+ R 11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:c1ff64be4db2421ca6bb5d6588017e1d6c3b27f7
-DTSTAMP:20231218T060850
+UID:1b7e6001a2ce71bf92c2cef5257289fa6bc1d364
+DTSTAMP:20231220T135030
 DTSTART:20231223T090000
 DTEND:20240108T235959
-SUMMARY:MHN: A Happy Hunting New Year - Boosted Zinogre Appearance
-DESCRIPTION:The appearance rate of Zinogre as the fifth monster at Hunt-a-t
- hon Points will be boosted for all hunters HR 11 and above.
+SUMMARY:MHN: A Happy Hunting New Year - Zinogre Appearance Boost
+DESCRIPTION:The appearance rate of Zinogre will be boosted at Hunt-a-thon P
+ oints for all hunters HR 11 and above.
+END:VEVENT
+BEGIN:VEVENT
+UID:0272e2cfd81824891e893ad984db106d7afc7d5a
+DTSTAMP:20231220T135030
+DTSTART:20231223T090000
+DTEND:20240108T235959
+SUMMARY:MHN: A Happy Hunting New Year
+DESCRIPTION:Event featuring the return of Pink Rathian and Black Diablos, w
+ ith event-exclusive equipment and quests rewarding lots of Zenny.
 END:VEVENT
 BEGIN:VEVENT
 UID:9dcbf59f0965331869fca87e55c618bd9b5f367a
-DTSTAMP:20231218T060850
+DTSTAMP:20231220T135030
 DTSTART:20231215T121500
 DTEND:20231217T220000
 SUMMARY:MHN: Zinogre's Onslaught
-DESCRIPTION:Zinogre will be the guaranteed fifth monster in all Hunt-a-thon
- s. Completing exclusive Event Quests during this time will reward you wi
- th a new Hunter Medal. Zinogre will still appear in Hunt-a-thons after D
- ecember 17, but at its usual rate.
+DESCRIPTION:During this event, Zinogre's appearance rates in Hunt-a-thons w
+ ill be boosted, and hunters can complete exclusive Event Quests to recei
+ ve a new Hunter Medal.
 END:VEVENT
 BEGIN:VEVENT
-UID:27f4826b0ebb62c5c51ca585cb172660bb1caac1
-DTSTAMP:20231218T060850
+UID:e06ad47a4482c704a02cd3540a4b2ce7267443df
+DTSTAMP:20231220T135030
+DTSTART:20231215T091500
+DTEND:20231215T235959
+SUMMARY:MHN: Hunt-a-thons Launch
+DESCRIPTION:Launch of Hunt-a-thons, a new hunting experience where some gat
+ hering points turn into Hunt-a-thon Points, allowing hunters to hunt fiv
+ e large monsters in succession.
+END:VEVENT
+BEGIN:VEVENT
+UID:52f53e76144df9a1f013e108fb5d021367e21583
+DTSTAMP:20231220T135030
 DTSTART:20231215
 DTEND:20231216
-SUMMARY:MHN: Fulminations in the Frost
-DESCRIPTION:Major update introducing two new weapon types (Dual Blades and 
- Lances), four new large monsters (Radobaan, Banbaro, Barioth, and Zinogr
- e), a new sleep element, and a new hunting experience called Hunt-a-thon
- s. The habitats have been updated with a winter theme and two new small 
- monsters (Wulg and Cortos) have been added.
+SUMMARY:MHN: Fulminations in the Frost Major Update
+DESCRIPTION:Introduction of two new weapon types (Dual Blades and Lances), 
+ four new large monsters (Radobaan, Banbaro, Barioth, and Zinogre), a new
+  sleep element for weapons, rebalancing of existing weapon types and mon
+ sters, and a snowy field change for winter habitats.
 END:VEVENT
 BEGIN:VEVENT
 UID:168edc1098b65725745ea58574c1590d7c2ce921
-DTSTAMP:20231218T060850
+DTSTAMP:20231220T135030
 DTSTART:20231207T163000
 DTEND:20231211T000000
 SUMMARY:MHN: The Game Awards Celebration Event
-DESCRIPTION:A limited-time in-game event to celebrate Monster Hunter Now's 
- nomination for Best Mobile Game at The Game Awards. More details to be a
- nnounced.
+DESCRIPTION:Limited-time in-game event to celebrate Monster Hunter Now's no
+ mination for Best Mobile Game during The Game Awards.
+END:VEVENT
+BEGIN:VEVENT
+UID:92806d888bac205a58cd3aadf46eedfeb20509d7
+DTSTAMP:20231220T135030
+DTSTART:20231207T000000
+DTEND:20231211T000000
+SUMMARY:MHN: Double Materials for 1-2★ Monsters
+DESCRIPTION:All hunters will receive double the materials for slaying 1-2★ 
+ monsters.
+END:VEVENT
+BEGIN:VEVENT
+UID:a92333ed8896cc47d23251679f3fc40d1a8139e3
+DTSTAMP:20231220T135030
+DTSTART:20231207T000000
+DTEND:20240108T000000
+SUMMARY:MHN: New Hunters Welcome Pack
+DESCRIPTION:New hunters will receive free 5 Potions and 5000 Zenny, claimab
+ le from the in-game shop.
 END:VEVENT
 BEGIN:VEVENT
 UID:41a7209e26bd7829d1debc13d0499174d35c84a1
-DTSTAMP:20231218T060850
+DTSTAMP:20231220T135030
 DTSTART:20231201T170000
 DTEND:20231206T235959
 SUMMARY:MHN: Qualily's Special Quests
-DESCRIPTION:Qualily has been busy continuing her investigation into the ano
- malies and she needs your help again! She’s back with more investigation
-  requests for you—10 of them in total. Can she count on you to help slay
-  monsters and investigate gathering points? Rewards this time will inclu
- de Carpenterbugs, Monster Bone+, and other materials such as Dragonite O
- re! Ready your equipment and prepare to investigate!
-END:VEVENT
-BEGIN:VEVENT
-UID:a02b979ea9c73ac9237317c0557176beac434b07
-DTSTAMP:20231218T060850
-DTSTART:20231201
-DTEND:20240302
-SUMMARY:MHN: Fulminations in the Frost
-DESCRIPTION:Major update introducing new monsters, weapon types, and Hunt-a
- -thons. The field will be lightly snow-covered to match the monsters tha
- t will be appearing.
+DESCRIPTION:Time-limited Event Quests rewarding materials needed for upgrad
+ ing equipment, such as Carpenterbugs and Monster Bones, as well as gathe
+ rable materials like Dragonite Ore, and Zenny.
 END:VEVENT
 END:VCALENDAR

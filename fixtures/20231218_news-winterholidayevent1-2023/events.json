@@ -1,8 +1,8 @@
 {
     "events": [
         {
-            "summary": "A Happy Hunting New Year - Pink Rathian Appearance",
-            "description": "Pink Rathian is making a comeback! All hunters HR 11 and above will be able to encounter it in forest habitats.",
+            "summary": "A Happy Hunting New Year - Pink Rathian Comeback",
+            "description": "Pink Rathian will be appearing in forest habitats for hunters HR 11 and above.",
             "dates": [
                 {
                     "start": "2023-12-23T09:00:00",
@@ -18,8 +18,8 @@
             ]
         },
         {
-            "summary": "A Happy Hunting New Year - Black Diablos Appearance",
-            "description": "Black Diablos is making a comeback! All hunters HR 11 and above will be able to encounter it in desert habitats.",
+            "summary": "A Happy Hunting New Year - Black Diablos Comeback",
+            "description": "Black Diablos will be appearing in desert habitats for hunters HR 11 and above.",
             "dates": [
                 {
                     "start": "2024-01-01T00:00:00",
@@ -35,8 +35,8 @@
             ]
         },
         {
-            "summary": "A Happy Hunting New Year - Boosted Zinogre Appearance",
-            "description": "The appearance rate of Zinogre as the fifth monster at Hunt-a-thon Points will be boosted for all hunters HR 11 and above.",
+            "summary": "A Happy Hunting New Year - Zinogre Appearance Boost",
+            "description": "The appearance rate of Zinogre will be boosted at Hunt-a-thon Points for all hunters HR 11 and above.",
             "dates": [
                 {
                     "start": "2023-12-23T09:00:00",
@@ -45,14 +45,14 @@
                 }
             ],
             "habitat": [
-                "All"
+                "Various"
             ],
             "monsters": [
                 "Zinogre"
             ]
         },
         {
-            "summary": "A Happy Hunting New Year - More Monsters Everywhere",
+            "summary": "A Happy Hunting New Year - Increased Monster Activity",
             "description": "Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
             "dates": [
                 {
@@ -65,7 +65,7 @@
                 "All"
             ],
             "monsters": [
-                "All"
+                "Various"
             ]
         }
     ],
