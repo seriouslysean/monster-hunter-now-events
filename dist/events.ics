@@ -16,17 +16,19 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:7ede3b27af991a579dfc61c5ad8d88808e74b35a
-DTSTAMP:20231220T135030
-DTSTART:20240101T000000
-DTEND:20240108T235959
-SUMMARY:MHN: A Happy Hunting New Year - Black Diablos Comeback
-DESCRIPTION:Black Diablos will be appearing in desert habitats for hunters 
- HR 11 and above.
+UID:6698a6c90ebdc312bf4d23f6ee4ffac833b69240
+DTSTAMP:20231221T060907
+DTSTART:20231223
+DTEND:20240109
+SUMMARY:MHN: A Happy Hunting New Year
+DESCRIPTION:Year-end event with special campaigns for rookie hunters, inclu
+ ding Rookie Hunter Gifts and quests for obtaining grade 3 weapons. Event
+  featuring the return of Pink Rathian and Black Diablos, with event-excl
+ usive equipment and quests rewarding lots of Zenny.
 END:VEVENT
 BEGIN:VEVENT
 UID:69f692a7c925c655ffa055481930cba7c0ca8782
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231223T130000
 DTEND:20240108T180000
 SUMMARY:MHN: A Happy Hunting New Year - Increased Monster Activity
@@ -34,8 +36,19 @@ DESCRIPTION:Monsters in all habitats will reappear in shorter intervals and
   in higher numbers than usual.
 END:VEVENT
 BEGIN:VEVENT
+UID:be98bffac37214e23d7dd1464efb0098954ce799
+DTSTAMP:20231221T060907
+DTSTART:20231223T090000
+DTEND:20240108T235959
+SUMMARY:MHN: Grade 3 Weapon Quests
+DESCRIPTION:Quests rewarding 2024 Weapon Tickets, which will allow you to f
+ orge grade 3 weapons. There are six levels of quests, some of which incl
+ ude getting to a certain hunter rank or slaying a monster of a certain s
+ trength.
+END:VEVENT
+BEGIN:VEVENT
 UID:0bb250fe4cb736f7a5505a976ffefaf7fce3d426
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231223T090000
 DTEND:20231231T235959
 SUMMARY:MHN: A Happy Hunting New Year - Pink Rathian Comeback
@@ -44,7 +57,7 @@ DESCRIPTION:Pink Rathian will be appearing in forest habitats for hunters H
 END:VEVENT
 BEGIN:VEVENT
 UID:1b7e6001a2ce71bf92c2cef5257289fa6bc1d364
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231223T090000
 DTEND:20240108T235959
 SUMMARY:MHN: A Happy Hunting New Year - Zinogre Appearance Boost
@@ -52,27 +65,28 @@ DESCRIPTION:The appearance rate of Zinogre will be boosted at Hunt-a-thon P
  oints for all hunters HR 11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:0272e2cfd81824891e893ad984db106d7afc7d5a
-DTSTAMP:20231220T135030
-DTSTART:20231223T090000
+UID:7ede3b27af991a579dfc61c5ad8d88808e74b35a
+DTSTAMP:20231221T060907
+DTSTART:20240101T000000
 DTEND:20240108T235959
-SUMMARY:MHN: A Happy Hunting New Year
-DESCRIPTION:Event featuring the return of Pink Rathian and Black Diablos, w
- ith event-exclusive equipment and quests rewarding lots of Zenny.
+SUMMARY:MHN: A Happy Hunting New Year - Black Diablos Comeback
+DESCRIPTION:Black Diablos will be appearing in desert habitats for hunters 
+ HR 11 and above.
 END:VEVENT
 BEGIN:VEVENT
-UID:9dcbf59f0965331869fca87e55c618bd9b5f367a
-DTSTAMP:20231220T135030
-DTSTART:20231215T121500
-DTEND:20231217T220000
+UID:bdc84475f5bafb8111ba022548288ff7f3b33e7d
+DTSTAMP:20231221T060907
+DTSTART:20231215
+DTEND:20231218
 SUMMARY:MHN: Zinogre's Onslaught
 DESCRIPTION:During this event, Zinogre's appearance rates in Hunt-a-thons w
  ill be boosted, and hunters can complete exclusive Event Quests to recei
- ve a new Hunter Medal.
+ ve a new Hunter Medal. Hunt Zinogre through a new means introduced with 
+ the coming update.
 END:VEVENT
 BEGIN:VEVENT
 UID:e06ad47a4482c704a02cd3540a4b2ce7267443df
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231215T091500
 DTEND:20231215T235959
 SUMMARY:MHN: Hunt-a-thons Launch
@@ -82,7 +96,7 @@ DESCRIPTION:Launch of Hunt-a-thons, a new hunting experience where some gat
 END:VEVENT
 BEGIN:VEVENT
 UID:52f53e76144df9a1f013e108fb5d021367e21583
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231215
 DTEND:20231216
 SUMMARY:MHN: Fulminations in the Frost Major Update
@@ -92,8 +106,17 @@ DESCRIPTION:Introduction of two new weapon types (Dual Blades and Lances),
  sters, and a snowy field change for winter habitats.
 END:VEVENT
 BEGIN:VEVENT
+UID:8095ec3b643b383346f244a5a720a238033110ca
+DTSTAMP:20231221T060907
+DTSTART:20231208T093000
+DTEND:20240108T170000
+SUMMARY:MHN: Rookie Hunter Gifts
+DESCRIPTION:Handing out 5 Potions and 5,000 Zenny to all new hunters who jo
+ in Monster Hunter Now.
+END:VEVENT
+BEGIN:VEVENT
 UID:168edc1098b65725745ea58574c1590d7c2ce921
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231207T163000
 DTEND:20231211T000000
 SUMMARY:MHN: The Game Awards Celebration Event
@@ -102,7 +125,7 @@ DESCRIPTION:Limited-time in-game event to celebrate Monster Hunter Now's no
 END:VEVENT
 BEGIN:VEVENT
 UID:92806d888bac205a58cd3aadf46eedfeb20509d7
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231207T000000
 DTEND:20231211T000000
 SUMMARY:MHN: Double Materials for 1-2★ Monsters
@@ -111,21 +134,11 @@ DESCRIPTION:All hunters will receive double the materials for slaying 1-2★
 END:VEVENT
 BEGIN:VEVENT
 UID:a92333ed8896cc47d23251679f3fc40d1a8139e3
-DTSTAMP:20231220T135030
+DTSTAMP:20231221T060907
 DTSTART:20231207T000000
 DTEND:20240108T000000
 SUMMARY:MHN: New Hunters Welcome Pack
 DESCRIPTION:New hunters will receive free 5 Potions and 5000 Zenny, claimab
  le from the in-game shop.
-END:VEVENT
-BEGIN:VEVENT
-UID:41a7209e26bd7829d1debc13d0499174d35c84a1
-DTSTAMP:20231220T135030
-DTSTART:20231201T170000
-DTEND:20231206T235959
-SUMMARY:MHN: Qualily's Special Quests
-DESCRIPTION:Time-limited Event Quests rewarding materials needed for upgrad
- ing equipment, such as Carpenterbugs and Monster Bones, as well as gathe
- rable materials like Dragonite Ore, and Zenny.
 END:VEVENT
 END:VCALENDAR

@@ -37,6 +37,20 @@
             "timestamp": 1702868400000
         },
         {
+            "summary": "Grade 3 Weapon Quests",
+            "description": "Quests rewarding 2024 Weapon Tickets, which will allow you to forge grade 3 weapons. There are six levels of quests, some of which include getting to a certain hunter rank or slaying a monster of a certain strength.",
+            "dates": [
+                {
+                    "start": "2023-12-23T09:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1703113200000
+        },
+        {
             "summary": "A Happy Hunting New Year - Pink Rathian Comeback",
             "description": "Pink Rathian will be appearing in forest habitats for hunters HR 11 and above.",
             "dates": [
@@ -88,6 +102,20 @@
                 "Black Diablos"
             ],
             "timestamp": 1701313200000
+        },
+        {
+            "summary": "A Happy Hunting New Year",
+            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons.",
+            "dates": [
+                {
+                    "start": "2023-12-23T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1703113200000
         },
         {
             "summary": "Zinogre's Onslaught",
@@ -159,6 +187,20 @@
             "timestamp": 1701313200000
         },
         {
+            "summary": "Rookie Hunter Gifts",
+            "description": "Handing out 5 Potions and 5,000 Zenny to all new hunters who join Monster Hunter Now.",
+            "dates": [
+                {
+                    "start": "2023-12-08T09:30:00",
+                    "end": "2024-01-08T17:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1703113200000
+        },
+        {
             "summary": "The Game Awards Celebration Event",
             "description": "Limited-time in-game event to celebrate Monster Hunter Now's nomination for Best Mobile Game during The Game Awards.",
             "dates": [
@@ -202,36 +244,6 @@
             "habitat": [],
             "monsters": [],
             "timestamp": 1701453600000
-        },
-        {
-            "summary": "Qualily's Special Quests",
-            "description": "Time-limited Event Quests rewarding materials needed for upgrading equipment, such as Carpenterbugs and Monster Bones, as well as gatherable materials like Dragonite Ore, and Zenny.",
-            "dates": [
-                {
-                    "start": "2023-12-01T17:00:00",
-                    "end": "2023-12-06T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [],
-            "timestamp": 1701313200000
-        },
-        {
-            "summary": "Qualily's Special Quests Continuation",
-            "description": "Complete 10 time-limited Special Quests by visiting gathering points and slaying monsters, including Tobi-Kadachi, to receive rewards such as Carpenterbugs, Monster Bone+, and Dragonite Ore.",
-            "dates": [
-                {
-                    "start": "2023-12-01T17:00:00",
-                    "end": "2023-12-06T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Tobi-Kadachi"
-            ],
-            "timestamp": 1700445600000
         }
     ]
 }

@@ -1,0 +1,47 @@
+{
+    "events": [
+        {
+            "summary": "A Happy Hunting New Year",
+            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons.",
+            "dates": [
+                {
+                    "start": "2023-12-23T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        },
+        {
+            "summary": "Rookie Hunter Gifts",
+            "description": "Handing out 5 Potions and 5,000 Zenny to all new hunters who join Monster Hunter Now.",
+            "dates": [
+                {
+                    "start": "2023-12-08T09:30:00",
+                    "end": "2024-01-08T17:00:00",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        },
+        {
+            "summary": "Grade 3 Weapon Quests",
+            "description": "Quests rewarding 2024 Weapon Tickets, which will allow you to forge grade 3 weapons. There are six levels of quests, some of which include getting to a certain hunter rank or slaying a monster of a certain strength.",
+            "dates": [
+                {
+                    "start": "2023-12-23T09:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        }
+    ],
+    "meta": {
+        "timestamp": 1703113200000,
+        "url": "https://monsterhunternow.com/news/winterholidayevent2-2023"
+    }
+}
