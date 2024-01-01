@@ -1,6 +1,56 @@
 {
     "events": [
         {
+            "summary": "A Happy Hunting New Year",
+            "description": "As part of our ongoing event, A Happy Hunting New Year, we’re starting 2024 with a bang, with Black Diablos appearing in desert habitats, as well as Event Quests rewarding exclusive equipment, Zenny, and a hunter medal!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Black Diablos"
+            ],
+            "timestamp": 1704063600000
+        },
+        {
+            "summary": "New Year Quests",
+            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, you’ll find new quests rewarding New Year-exclusive equipment and Zenny, as well as a hunter medal. Complete quests that require you to collect Palisnow or slay monsters to get your new equipment and other materials!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1704063600000
+        },
+        {
+            "summary": "Black Diablos Appearance",
+            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, Black Diablos will appear in desert habitats!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Black Diablos"
+            ],
+            "timestamp": 1704063600000
+        },
+        {
             "summary": "A Happy Hunting New Year - Black Diablos Comeback",
             "description": "Black Diablos will be appearing in desert habitats for hunters HR 11 and above.",
             "dates": [
@@ -118,75 +168,6 @@
             "timestamp": 1703113200000
         },
         {
-            "summary": "Zinogre's Onslaught",
-            "description": "During this event, Zinogre's appearance rates in Hunt-a-thons will be boosted, and hunters can complete exclusive Event Quests to receive a new Hunter Medal.",
-            "dates": [
-                {
-                    "start": "2023-12-15T12:15:00",
-                    "end": "2023-12-17T22:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Zinogre"
-            ],
-            "timestamp": 1701909000000
-        },
-        {
-            "summary": "Hunt-a-thons Launch",
-            "description": "Launch of Hunt-a-thons, a new hunting experience where some gathering points turn into Hunt-a-thon Points, allowing hunters to hunt five large monsters in succession.",
-            "dates": [
-                {
-                    "start": "2023-12-15T09:15:00",
-                    "end": "2023-12-15T23:59:59",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [],
-            "timestamp": 1701909000000
-        },
-        {
-            "summary": "Fulminations in the Frost Major Update",
-            "description": "Introduction of two new weapon types (Dual Blades and Lances), four new large monsters (Radobaan, Banbaro, Barioth, and Zinogre), a new sleep element for weapons, rebalancing of existing weapon types and monsters, and a snowy field change for winter habitats.",
-            "dates": [
-                {
-                    "start": "2023-12-15T00:00:00",
-                    "end": "2023-12-15T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [
-                "Forest",
-                "Desert",
-                "Swamp"
-            ],
-            "monsters": [
-                "Radobaan",
-                "Banbaro",
-                "Barioth",
-                "Zinogre"
-            ],
-            "timestamp": 1701909000000
-        },
-        {
-            "summary": "Zinogre's Onslaught",
-            "description": "Hunt Zinogre through a new means introduced with the coming update.",
-            "dates": [
-                {
-                    "start": "2023-12-15T00:00:00",
-                    "end": "2023-12-17T23:59:59",
-                    "allDay": true
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "Zinogre"
-            ],
-            "timestamp": 1701313200000
-        },
-        {
             "summary": "Rookie Hunter Gifts",
             "description": "Handing out 5 Potions and 5,000 Zenny to all new hunters who join Monster Hunter Now.",
             "dates": [
@@ -199,37 +180,6 @@
             "habitat": [],
             "monsters": [],
             "timestamp": 1703113200000
-        },
-        {
-            "summary": "The Game Awards Celebration Event",
-            "description": "Limited-time in-game event to celebrate Monster Hunter Now's nomination for Best Mobile Game during The Game Awards.",
-            "dates": [
-                {
-                    "start": "2023-12-07T16:30:00",
-                    "end": "2023-12-11T00:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [],
-            "timestamp": 1701453600000
-        },
-        {
-            "summary": "Double Materials for 1-2★ Monsters",
-            "description": "All hunters will receive double the materials for slaying 1-2★ monsters.",
-            "dates": [
-                {
-                    "start": "2023-12-07T00:00:00",
-                    "end": "2023-12-11T00:00:00",
-                    "allDay": false
-                }
-            ],
-            "habitat": [],
-            "monsters": [
-                "1★ Monsters",
-                "2★ Monsters"
-            ],
-            "timestamp": 1701453600000
         },
         {
             "summary": "New Hunters Welcome Pack",

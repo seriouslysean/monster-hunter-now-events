@@ -2,23 +2,39 @@
     "events": [
         {
             "summary": "A Happy Hunting New Year",
-            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons. Event featuring the return of Pink Rathian and Black Diablos, with event-exclusive equipment and quests rewarding lots of Zenny.",
+            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons. Event featuring the return of Pink Rathian and Black Diablos, with event-exclusive equipment and quests rewarding lots of Zenny. Black Diablos will be appearing in desert habitats for hunters HR 11 and above. Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
             "dates": [
                 {
                     "start": "2023-12-23T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                },
+                {
+                    "start": "2023-12-23T09:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "New Year Quests",
+            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, you’ll find new quests rewarding New Year-exclusive equipment and Zenny, as well as a hunter medal. Complete quests that require you to collect Palisnow or slay monsters to get your new equipment and other materials!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
                     "end": "2024-01-08T23:59:59",
                     "allDay": true
                 }
             ]
         },
         {
-            "summary": "A Happy Hunting New Year - Increased Monster Activity",
-            "description": "Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
+            "summary": "Black Diablos Appearance",
+            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, Black Diablos will appear in desert habitats!",
             "dates": [
                 {
-                    "start": "2023-12-23T13:00:00",
-                    "end": "2024-01-08T18:00:00",
-                    "allDay": false
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
                 }
             ]
         },
@@ -56,93 +72,16 @@
             ]
         },
         {
-            "summary": "A Happy Hunting New Year - Black Diablos Comeback",
-            "description": "Black Diablos will be appearing in desert habitats for hunters HR 11 and above.",
-            "dates": [
-                {
-                    "start": "2024-01-01T00:00:00",
-                    "end": "2024-01-08T23:59:59",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "Zinogre's Onslaught",
-            "description": "During this event, Zinogre's appearance rates in Hunt-a-thons will be boosted, and hunters can complete exclusive Event Quests to receive a new Hunter Medal. Hunt Zinogre through a new means introduced with the coming update.",
-            "dates": [
-                {
-                    "start": "2023-12-15T00:00:00",
-                    "end": "2023-12-17T23:59:59",
-                    "allDay": true
-                }
-            ]
-        },
-        {
-            "summary": "Hunt-a-thons Launch",
-            "description": "Launch of Hunt-a-thons, a new hunting experience where some gathering points turn into Hunt-a-thon Points, allowing hunters to hunt five large monsters in succession.",
-            "dates": [
-                {
-                    "start": "2023-12-15T09:15:00",
-                    "end": "2023-12-15T23:59:59",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "Fulminations in the Frost Major Update",
-            "description": "Introduction of two new weapon types (Dual Blades and Lances), four new large monsters (Radobaan, Banbaro, Barioth, and Zinogre), a new sleep element for weapons, rebalancing of existing weapon types and monsters, and a snowy field change for winter habitats.",
-            "dates": [
-                {
-                    "start": "2023-12-15T00:00:00",
-                    "end": "2023-12-15T23:59:59",
-                    "allDay": true
-                }
-            ]
-        },
-        {
             "summary": "Rookie Hunter Gifts",
-            "description": "Handing out 5 Potions and 5,000 Zenny to all new hunters who join Monster Hunter Now.",
+            "description": "Handing out 5 Potions and 5,000 Zenny to all new hunters who join Monster Hunter Now. New hunters will receive free 5 Potions and 5000 Zenny, claimable from the in-game shop.",
             "dates": [
                 {
-                    "start": "2023-12-08T09:30:00",
+                    "start": "2023-12-07T00:00:00",
                     "end": "2024-01-08T17:00:00",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "The Game Awards Celebration Event",
-            "description": "Limited-time in-game event to celebrate Monster Hunter Now's nomination for Best Mobile Game during The Game Awards.",
-            "dates": [
-                {
-                    "start": "2023-12-07T16:30:00",
-                    "end": "2023-12-11T00:00:00",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "Double Materials for 1-2★ Monsters",
-            "description": "All hunters will receive double the materials for slaying 1-2★ monsters.",
-            "dates": [
-                {
-                    "start": "2023-12-07T00:00:00",
-                    "end": "2023-12-11T00:00:00",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "New Hunters Welcome Pack",
-            "description": "New hunters will receive free 5 Potions and 5000 Zenny, claimable from the in-game shop.",
-            "dates": [
-                {
-                    "start": "2023-12-07T00:00:00",
-                    "end": "2024-01-08T00:00:00",
                     "allDay": false
                 }
             ]
         }
     ],
-    "hash": "cEUP39MexaJAZTKL0i4StAfyX70="
+    "hash": "F1h+0Vrt+ROMRzUlsDM/REjX/iw="
 }

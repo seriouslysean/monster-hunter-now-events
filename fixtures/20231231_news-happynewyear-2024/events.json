@@ -1,0 +1,55 @@
+{
+    "events": [
+        {
+            "summary": "A Happy Hunting New Year",
+            "description": "As part of our ongoing event, A Happy Hunting New Year, we’re starting 2024 with a bang, with Black Diablos appearing in desert habitats, as well as Event Quests rewarding exclusive equipment, Zenny, and a hunter medal!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Black Diablos"
+            ]
+        },
+        {
+            "summary": "New Year Quests",
+            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, you’ll find new quests rewarding New Year-exclusive equipment and Zenny, as well as a hunter medal. Complete quests that require you to collect Palisnow or slay monsters to get your new equipment and other materials!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        },
+        {
+            "summary": "Black Diablos Appearance",
+            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, Black Diablos will appear in desert habitats!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
+                }
+            ],
+            "habitat": [
+                "Desert"
+            ],
+            "monsters": [
+                "Black Diablos"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1704063600000,
+        "url": "https://monsterhunternow.com/news/happynewyear-2024"
+    }
+}
