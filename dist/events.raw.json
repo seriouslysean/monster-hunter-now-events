@@ -1,6 +1,64 @@
 {
     "events": [
         {
+            "summary": "Banbaro & Radobaan Week",
+            "description": "During the event, all hunters HR 11 and above will be able to encounter Banbaro in swamp habitats and Radobaan in desert habitats more frequently than usual.",
+            "dates": [
+                {
+                    "start": "2024-01-22T09:00:00",
+                    "end": "2024-01-28T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Swamp",
+                "Desert"
+            ],
+            "monsters": [
+                "Banbaro",
+                "Radobaan"
+            ],
+            "timestamp": 1704164400000
+        },
+        {
+            "summary": "Descent of the Azure King",
+            "description": "Get ready to welcome Azure Rathalos in its very first appearance! We’ll also have time-limited Special Quests rewarding a hunter medal and appearance rates of Rathalos and Azure Rathalos will be boosted over the weekend.",
+            "dates": [
+                {
+                    "start": "2024-01-15T09:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                },
+                {
+                    "start": "2024-01-19T17:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathalos",
+                "Azure Rathalos"
+            ],
+            "timestamp": 1704164400000
+        },
+        {
+            "summary": "Qualily’s Special Quests",
+            "description": "All hunters HR 11 or above will have the chance to complete time-limited event quests to obtain items that can be used to upgrade your equipment, such as Dragonite Ore and Carpenterbugs, as well as items like Monster Bone+ and Zenny.",
+            "dates": [
+                {
+                    "start": "2024-01-12T17:00:00",
+                    "end": "2024-01-18T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1704164400000
+        },
+        {
             "summary": "A Happy Hunting New Year",
             "description": "As part of our ongoing event, A Happy Hunting New Year, we’re starting 2024 with a bang, with Black Diablos appearing in desert habitats, as well as Event Quests rewarding exclusive equipment, Zenny, and a hunter medal!",
             "dates": [

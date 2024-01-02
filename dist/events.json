@@ -1,18 +1,51 @@
 {
     "events": [
         {
-            "summary": "A Happy Hunting New Year",
-            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons. Event featuring the return of Pink Rathian and Black Diablos, with event-exclusive equipment and quests rewarding lots of Zenny. Black Diablos will be appearing in desert habitats for hunters HR 11 and above. Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
+            "summary": "Banbaro & Radobaan Week",
+            "description": "During the event, all hunters HR 11 and above will be able to encounter Banbaro in swamp habitats and Radobaan in desert habitats more frequently than usual.",
             "dates": [
                 {
-                    "start": "2023-12-23T00:00:00",
-                    "end": "2024-01-08T23:59:59",
-                    "allDay": true
+                    "start": "2024-01-22T09:00:00",
+                    "end": "2024-01-28T23:59:59",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Descent of the Azure King",
+            "description": "Get ready to welcome Azure Rathalos in its very first appearance! We’ll also have time-limited Special Quests rewarding a hunter medal and appearance rates of Rathalos and Azure Rathalos will be boosted over the weekend.",
+            "dates": [
+                {
+                    "start": "2024-01-15T09:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
                 },
                 {
-                    "start": "2023-12-23T09:00:00",
-                    "end": "2024-01-08T23:59:59",
+                    "start": "2024-01-19T17:00:00",
+                    "end": "2024-01-21T23:59:59",
                     "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "Qualily’s Special Quests",
+            "description": "All hunters HR 11 or above will have the chance to complete time-limited event quests to obtain items that can be used to upgrade your equipment, such as Dragonite Ore and Carpenterbugs, as well as items like Monster Bone+ and Zenny.",
+            "dates": [
+                {
+                    "start": "2024-01-12T17:00:00",
+                    "end": "2024-01-18T23:59:59",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "A Happy Hunting New Year",
+            "description": "As part of our ongoing event, A Happy Hunting New Year, we’re starting 2024 with a bang, with Black Diablos appearing in desert habitats, as well as Event Quests rewarding exclusive equipment, Zenny, and a hunter medal!",
+            "dates": [
+                {
+                    "start": "2024-01-01T00:00:00",
+                    "end": "2024-01-08T23:59:59",
+                    "allDay": true
                 }
             ]
         },
@@ -28,13 +61,13 @@
             ]
         },
         {
-            "summary": "Black Diablos Appearance",
-            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, Black Diablos will appear in desert habitats!",
+            "summary": "A Happy Hunting New Year - Increased Monster Activity",
+            "description": "Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
             "dates": [
                 {
-                    "start": "2024-01-01T00:00:00",
-                    "end": "2024-01-08T23:59:59",
-                    "allDay": true
+                    "start": "2023-12-23T13:00:00",
+                    "end": "2024-01-08T18:00:00",
+                    "allDay": false
                 }
             ]
         },
@@ -50,38 +83,38 @@
             ]
         },
         {
-            "summary": "A Happy Hunting New Year - Pink Rathian Comeback",
-            "description": "Pink Rathian will be appearing in forest habitats for hunters HR 11 and above.",
+            "summary": "A Happy Hunting New Year",
+            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons.",
             "dates": [
                 {
-                    "start": "2023-12-23T09:00:00",
-                    "end": "2023-12-31T23:59:59",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "A Happy Hunting New Year - Zinogre Appearance Boost",
-            "description": "The appearance rate of Zinogre will be boosted at Hunt-a-thon Points for all hunters HR 11 and above.",
-            "dates": [
-                {
-                    "start": "2023-12-23T09:00:00",
+                    "start": "2023-12-23T00:00:00",
                     "end": "2024-01-08T23:59:59",
-                    "allDay": false
+                    "allDay": true
                 }
             ]
         },
         {
             "summary": "Rookie Hunter Gifts",
-            "description": "Handing out 5 Potions and 5,000 Zenny to all new hunters who join Monster Hunter Now. New hunters will receive free 5 Potions and 5000 Zenny, claimable from the in-game shop.",
+            "description": "Handing out 5 Potions and 5,000 Zenny to all new hunters who join Monster Hunter Now.",
+            "dates": [
+                {
+                    "start": "2023-12-08T09:30:00",
+                    "end": "2024-01-08T17:00:00",
+                    "allDay": false
+                }
+            ]
+        },
+        {
+            "summary": "New Hunters Welcome Pack",
+            "description": "New hunters will receive free 5 Potions and 5000 Zenny, claimable from the in-game shop.",
             "dates": [
                 {
                     "start": "2023-12-07T00:00:00",
-                    "end": "2024-01-08T17:00:00",
+                    "end": "2024-01-08T00:00:00",
                     "allDay": false
                 }
             ]
         }
     ],
-    "hash": "F1h+0Vrt+ROMRzUlsDM/REjX/iw="
+    "hash": "/9mzK6wAzXNarORkVWJXypf/fFA="
 }

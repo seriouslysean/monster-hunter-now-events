@@ -1,0 +1,63 @@
+{
+    "events": [
+        {
+            "summary": "Qualily’s Special Quests",
+            "description": "All hunters HR 11 or above will have the chance to complete time-limited event quests to obtain items that can be used to upgrade your equipment, such as Dragonite Ore and Carpenterbugs, as well as items like Monster Bone+ and Zenny.",
+            "dates": [
+                {
+                    "start": "2024-01-12T17:00:00",
+                    "end": "2024-01-18T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        },
+        {
+            "summary": "Descent of the Azure King",
+            "description": "Get ready to welcome Azure Rathalos in its very first appearance! We’ll also have time-limited Special Quests rewarding a hunter medal and appearance rates of Rathalos and Azure Rathalos will be boosted over the weekend.",
+            "dates": [
+                {
+                    "start": "2024-01-15T09:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                },
+                {
+                    "start": "2024-01-19T17:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathalos",
+                "Azure Rathalos"
+            ]
+        },
+        {
+            "summary": "Banbaro & Radobaan Week",
+            "description": "During the event, all hunters HR 11 and above will be able to encounter Banbaro in swamp habitats and Radobaan in desert habitats more frequently than usual.",
+            "dates": [
+                {
+                    "start": "2024-01-22T09:00:00",
+                    "end": "2024-01-28T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Swamp",
+                "Desert"
+            ],
+            "monsters": [
+                "Banbaro",
+                "Radobaan"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1704164400000,
+        "url": "https://monsterhunternow.com/news/jan-2024"
+    }
+}
