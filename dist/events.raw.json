@@ -21,6 +21,63 @@
             "timestamp": 1704164400000
         },
         {
+            "summary": "Rathalos and Azure Rathalos Appearance Boost",
+            "description": "Rathalos and Azure Rathalos appearance rates will be boosted, appearing more frequently in forest habitats.",
+            "dates": [
+                {
+                    "start": "2024-01-19T17:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathalos",
+                "Azure Rathalos"
+            ],
+            "timestamp": 1704675600000
+        },
+        {
+            "summary": "Descent of the Azure King Event Quests",
+            "description": "Time-limited Event Quests will be added. Complete these quests to receive the Descent of the Azure King Medal.",
+            "dates": [
+                {
+                    "start": "2024-01-19T17:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathalos",
+                "Azure Rathalos"
+            ],
+            "timestamp": 1704675600000
+        },
+        {
+            "summary": "Descent of the Azure King",
+            "description": "Hunt the Azure Rathalos, a blue-colored subspecies of Rathalos with greater mobility and fierce aerial attacks. Complete Event Quests to add a Hunter Medal to your collection.",
+            "dates": [
+                {
+                    "start": "2024-01-15T09:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest"
+            ],
+            "monsters": [
+                "Rathalos",
+                "Azure Rathalos"
+            ],
+            "timestamp": 1704675600000
+        },
+        {
             "summary": "Descent of the Azure King",
             "description": "Get ready to welcome Azure Rathalos in its very first appearance! We’ll also have time-limited Special Quests rewarding a hunter medal and appearance rates of Rathalos and Azure Rathalos will be boosted over the weekend.",
             "dates": [

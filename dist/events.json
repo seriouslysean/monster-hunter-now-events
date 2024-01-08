@@ -50,17 +50,6 @@
             ]
         },
         {
-            "summary": "New Year Quests",
-            "description": "Between Monday, January 1, 2024, at 0:00 a.m. and Monday, January 8, 2024, at midnight, you’ll find new quests rewarding New Year-exclusive equipment and Zenny, as well as a hunter medal. Complete quests that require you to collect Palisnow or slay monsters to get your new equipment and other materials!",
-            "dates": [
-                {
-                    "start": "2024-01-01T00:00:00",
-                    "end": "2024-01-08T23:59:59",
-                    "allDay": true
-                }
-            ]
-        },
-        {
             "summary": "A Happy Hunting New Year - Increased Monster Activity",
             "description": "Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
             "dates": [
@@ -103,18 +92,7 @@
                     "allDay": false
                 }
             ]
-        },
-        {
-            "summary": "New Hunters Welcome Pack",
-            "description": "New hunters will receive free 5 Potions and 5000 Zenny, claimable from the in-game shop.",
-            "dates": [
-                {
-                    "start": "2023-12-07T00:00:00",
-                    "end": "2024-01-08T00:00:00",
-                    "allDay": false
-                }
-            ]
         }
     ],
-    "hash": "/9mzK6wAzXNarORkVWJXypf/fFA="
+    "hash": "Fa2qWmCmo33SJEr4L5Q7RkyDOec="
 }
