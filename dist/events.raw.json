@@ -102,6 +102,22 @@
             "timestamp": 1704164400000
         },
         {
+            "summary": "Qualily's Special Quests",
+            "description": "Qualily is continuing her investigation into the anomalies and she needs your help once again! She’s got more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards will once again include Carpenterbugs, Earth Crystals, and other materials such as Dragonite Ore. Ready your equipment and prepare to investigate!",
+            "dates": [
+                {
+                    "start": "2024-01-12T17:00:00",
+                    "end": "2024-01-18T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Tobi-Kadachi"
+            ],
+            "timestamp": 1704727639125
+        },
+        {
             "summary": "Qualily’s Special Quests",
             "description": "All hunters HR 11 or above will have the chance to complete time-limited event quests to obtain items that can be used to upgrade your equipment, such as Dragonite Ore and Carpenterbugs, as well as items like Monster Bone+ and Zenny.",
             "dates": [

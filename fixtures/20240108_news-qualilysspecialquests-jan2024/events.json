@@ -1,0 +1,23 @@
+{
+    "events": [
+        {
+            "summary": "Qualily's Special Quests",
+            "description": "Qualily is continuing her investigation into the anomalies and she needs your help once again! She’s got more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards will once again include Carpenterbugs, Earth Crystals, and other materials such as Dragonite Ore. Ready your equipment and prepare to investigate!",
+            "dates": [
+                {
+                    "start": "2024-01-12T17:00:00",
+                    "end": "2024-01-18T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Tobi-Kadachi"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1704727639125,
+        "url": "https://monsterhunternow.com/news/qualilysspecialquests-jan2024"
+    }
+}
