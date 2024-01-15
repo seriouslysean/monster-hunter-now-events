@@ -1,7 +1,7 @@
 {
     "events": [
         {
-            "summary": "Banbaro & Radobaan Week",
+            "summary": "Hunt for Banbaro and Radobaan",
             "description": "During the event, all hunters HR 11 and above will be able to encounter Banbaro in swamp habitats and Radobaan in desert habitats more frequently than usual.",
             "dates": [
                 {
@@ -12,11 +12,16 @@
             ]
         },
         {
-            "summary": "Descent of the Azure King & Rathalos and Azure Rathalos Appearance Boost",
+            "summary": "Descent of the Azure King",
             "description": "Get ready to welcome Azure Rathalos in its very first appearance! We’ll also have time-limited Special Quests rewarding a hunter medal and appearance rates of Rathalos and Azure Rathalos will be boosted over the weekend.",
             "dates": [
                 {
                     "start": "2024-01-15T09:00:00",
+                    "end": "2024-01-21T23:59:59",
+                    "allDay": false
+                },
+                {
+                    "start": "2024-01-19T17:00:00",
                     "end": "2024-01-21T23:59:59",
                     "allDay": false
                 }
@@ -67,13 +72,13 @@
             ]
         },
         {
-            "summary": "A Happy Hunting New Year - Pink Rathian Comeback & Zinogre Appearance Boost",
-            "description": "Event featuring the return of Pink Rathian and Black Diablos, with event-exclusive equipment and quests rewarding lots of Zenny. The appearance rate of Zinogre will be boosted at Hunt-a-thon Points for all hunters HR 11 and above.",
+            "summary": "A Happy Hunting New Year",
+            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons.",
             "dates": [
                 {
-                    "start": "2023-12-23T09:00:00",
+                    "start": "2023-12-23T00:00:00",
                     "end": "2024-01-08T23:59:59",
-                    "allDay": false
+                    "allDay": true
                 }
             ]
         },
@@ -89,5 +94,5 @@
             ]
         }
     ],
-    "hash": "+tF8mrnQtbfcnBOM3+RSlsa1q00="
+    "hash": "bPNIB1iFkNzaqpghsU0h42uwvtU="
 }

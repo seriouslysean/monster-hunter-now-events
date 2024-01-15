@@ -16,22 +16,32 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:b3ce6611dd9ce912fac52902dc553ede63c6434c
-DTSTAMP:20240109T060847
+UID:9954c1273de24e8fe8613349ad3568dc97dc2ce6
+DTSTAMP:20240115T060839
 DTSTART:20240122T090000
 DTEND:20240128T235959
-SUMMARY:MHN: Banbaro & Radobaan Week
+SUMMARY:MHN: Hunt for Banbaro and Radobaan
 DESCRIPTION:During the event, all hunters HR 11 and above will be able to e
  ncounter Banbaro in swamp habitats and Radobaan in desert habitats more 
  frequently than usual.
 END:VEVENT
 BEGIN:VEVENT
-UID:d334342210f749f1f94a45575bcf8fe8496eee67
-DTSTAMP:20240109T060847
+UID:6829155267a349c18d11264f78f53353a7c26202
+DTSTAMP:20240115T060839
 DTSTART:20240115T090000
 DTEND:20240121T235959
-SUMMARY:MHN: Descent of the Azure King & Rathalos and Azure Rathalos Appear
- ance Boost
+SUMMARY:MHN: Descent of the Azure King
+DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
+ e! We’ll also have time-limited Special Quests rewarding a hunter medal 
+ and appearance rates of Rathalos and Azure Rathalos will be boosted over
+  the weekend.
+END:VEVENT
+BEGIN:VEVENT
+UID:4838d8629e23cfeb01f6ffe3055e8a65e3f9ae49
+DTSTAMP:20240115T060839
+DTSTART:20240119T170000
+DTEND:20240121T235959
+SUMMARY:MHN: Descent of the Azure King
 DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
  e! We’ll also have time-limited Special Quests rewarding a hunter medal 
  and appearance rates of Rathalos and Azure Rathalos will be boosted over
@@ -39,7 +49,7 @@ DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
 END:VEVENT
 BEGIN:VEVENT
 UID:e78ce25e2f2d508f9d62546fd5619b4557a0720f
-DTSTAMP:20240109T060847
+DTSTAMP:20240115T060839
 DTSTART:20240112T170000
 DTEND:20240118T235959
 SUMMARY:MHN: Qualily's Special Quests
@@ -52,7 +62,7 @@ DESCRIPTION:Qualily is continuing her investigation into the anomalies and
 END:VEVENT
 BEGIN:VEVENT
 UID:76aecf4565863112ad941108c2c33a084719e644
-DTSTAMP:20240109T060847
+DTSTAMP:20240115T060839
 DTSTART:20240101
 DTEND:20240109
 SUMMARY:MHN: A Happy Hunting New Year
@@ -63,7 +73,7 @@ DESCRIPTION:As part of our ongoing event, A Happy Hunting New Year, we’re s
 END:VEVENT
 BEGIN:VEVENT
 UID:69f692a7c925c655ffa055481930cba7c0ca8782
-DTSTAMP:20240109T060847
+DTSTAMP:20240115T060839
 DTSTART:20231223T130000
 DTEND:20240108T180000
 SUMMARY:MHN: A Happy Hunting New Year - Increased Monster Activity
@@ -72,7 +82,7 @@ DESCRIPTION:Monsters in all habitats will reappear in shorter intervals and
 END:VEVENT
 BEGIN:VEVENT
 UID:be98bffac37214e23d7dd1464efb0098954ce799
-DTSTAMP:20240109T060847
+DTSTAMP:20240115T060839
 DTSTART:20231223T090000
 DTEND:20240108T235959
 SUMMARY:MHN: Grade 3 Weapon Quests
@@ -82,20 +92,17 @@ DESCRIPTION:Quests rewarding 2024 Weapon Tickets, which will allow you to f
  trength.
 END:VEVENT
 BEGIN:VEVENT
-UID:9d6c6831fe26968d7b3fecd93920c9bb9d58da70
-DTSTAMP:20240109T060847
-DTSTART:20231223T090000
-DTEND:20240108T235959
-SUMMARY:MHN: A Happy Hunting New Year - Pink Rathian Comeback & Zinogre App
- earance Boost
-DESCRIPTION:Event featuring the return of Pink Rathian and Black Diablos, w
- ith event-exclusive equipment and quests rewarding lots of Zenny. The ap
- pearance rate of Zinogre will be boosted at Hunt-a-thon Points for all h
- unters HR 11 and above.
+UID:6698a6c90ebdc312bf4d23f6ee4ffac833b69240
+DTSTAMP:20240115T060839
+DTSTART:20231223
+DTEND:20240109
+SUMMARY:MHN: A Happy Hunting New Year
+DESCRIPTION:Year-end event with special campaigns for rookie hunters, inclu
+ ding Rookie Hunter Gifts and quests for obtaining grade 3 weapons.
 END:VEVENT
 BEGIN:VEVENT
 UID:a92333ed8896cc47d23251679f3fc40d1a8139e3
-DTSTAMP:20240109T060847
+DTSTAMP:20240115T060839
 DTSTART:20231207T000000
 DTEND:20240108T000000
 SUMMARY:MHN: New Hunters Welcome Pack
