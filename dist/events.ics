@@ -16,8 +16,26 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
+UID:dbf14c93bb9eac1fc1ade46c3c07723a653266bf
+DTSTAMP:20240123T060853
+DTSTART:20240201T090000
+DTEND:20240215T235959
+SUMMARY:MHN: Lucky Lunar New Year
+DESCRIPTION:Celebrate the Lunar New Year with exclusive event quests, hunti
+ ng Pink Rathian, gathering Fortune Lanterns, and grabbing event-exclusiv
+ e equipment. For pro hunters to test their skills. The quests are hard, 
+ some requiring you to slay 6★ or higher monsters. Themed quests around g
+ athering Fortune Lanterns, event-specific items that come in white, red,
+  and gold. Themed quests around Hunt-a-thons and hunting specific monste
+ rs, including Pink Rathian. Pink Rathian will be appearing on the field 
+ and in Hunt-a-thons during the event. Slay a Pink Rathian to receive bon
+ us rewards. Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fa
+ ns, and Dragon Dance Mask using the tickets you gather from event quests
+  and Pink Rathian hunts.
+END:VEVENT
+BEGIN:VEVENT
 UID:9954c1273de24e8fe8613349ad3568dc97dc2ce6
-DTSTAMP:20240115T060839
+DTSTAMP:20240123T060853
 DTSTART:20240122T090000
 DTEND:20240128T235959
 SUMMARY:MHN: Hunt for Banbaro and Radobaan
@@ -27,29 +45,39 @@ DESCRIPTION:During the event, all hunters HR 11 and above will be able to e
 END:VEVENT
 BEGIN:VEVENT
 UID:6829155267a349c18d11264f78f53353a7c26202
-DTSTAMP:20240115T060839
+DTSTAMP:20240123T060853
 DTSTART:20240115T090000
 DTEND:20240121T235959
 SUMMARY:MHN: Descent of the Azure King
 DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
  e! We’ll also have time-limited Special Quests rewarding a hunter medal 
  and appearance rates of Rathalos and Azure Rathalos will be boosted over
-  the weekend.
+  the weekend. Rathalos and Azure Rathalos appearance rates will be boost
+ ed, appearing more frequently in forest habitats. Time-limited Event Que
+ sts will be added. Complete these quests to receive the Descent of the A
+ zure King Medal. Hunt the Azure Rathalos, a blue-colored subspecies of R
+ athalos with greater mobility and fierce aerial attacks. Complete Event 
+ Quests to add a Hunter Medal to your collection.
 END:VEVENT
 BEGIN:VEVENT
 UID:4838d8629e23cfeb01f6ffe3055e8a65e3f9ae49
-DTSTAMP:20240115T060839
+DTSTAMP:20240123T060853
 DTSTART:20240119T170000
 DTEND:20240121T235959
 SUMMARY:MHN: Descent of the Azure King
 DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
  e! We’ll also have time-limited Special Quests rewarding a hunter medal 
  and appearance rates of Rathalos and Azure Rathalos will be boosted over
-  the weekend.
+  the weekend. Rathalos and Azure Rathalos appearance rates will be boost
+ ed, appearing more frequently in forest habitats. Time-limited Event Que
+ sts will be added. Complete these quests to receive the Descent of the A
+ zure King Medal. Hunt the Azure Rathalos, a blue-colored subspecies of R
+ athalos with greater mobility and fierce aerial attacks. Complete Event 
+ Quests to add a Hunter Medal to your collection.
 END:VEVENT
 BEGIN:VEVENT
 UID:e78ce25e2f2d508f9d62546fd5619b4557a0720f
-DTSTAMP:20240115T060839
+DTSTAMP:20240123T060853
 DTSTART:20240112T170000
 DTEND:20240118T235959
 SUMMARY:MHN: Qualily's Special Quests
@@ -58,55 +86,9 @@ DESCRIPTION:Qualily is continuing her investigation into the anomalies and
  r you—10 of them in total. Can she count on you to help slay monsters an
  d investigate gathering points? Rewards will once again include Carpente
  rbugs, Earth Crystals, and other materials such as Dragonite Ore. Ready 
- your equipment and prepare to investigate!
-END:VEVENT
-BEGIN:VEVENT
-UID:76aecf4565863112ad941108c2c33a084719e644
-DTSTAMP:20240115T060839
-DTSTART:20240101
-DTEND:20240109
-SUMMARY:MHN: A Happy Hunting New Year
-DESCRIPTION:As part of our ongoing event, A Happy Hunting New Year, we’re s
- tarting 2024 with a bang, with Black Diablos appearing in desert habitat
- s, as well as Event Quests rewarding exclusive equipment, Zenny, and a h
- unter medal!
-END:VEVENT
-BEGIN:VEVENT
-UID:69f692a7c925c655ffa055481930cba7c0ca8782
-DTSTAMP:20240115T060839
-DTSTART:20231223T130000
-DTEND:20240108T180000
-SUMMARY:MHN: A Happy Hunting New Year - Increased Monster Activity
-DESCRIPTION:Monsters in all habitats will reappear in shorter intervals and
-  in higher numbers than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:be98bffac37214e23d7dd1464efb0098954ce799
-DTSTAMP:20240115T060839
-DTSTART:20231223T090000
-DTEND:20240108T235959
-SUMMARY:MHN: Grade 3 Weapon Quests
-DESCRIPTION:Quests rewarding 2024 Weapon Tickets, which will allow you to f
- orge grade 3 weapons. There are six levels of quests, some of which incl
- ude getting to a certain hunter rank or slaying a monster of a certain s
- trength.
-END:VEVENT
-BEGIN:VEVENT
-UID:6698a6c90ebdc312bf4d23f6ee4ffac833b69240
-DTSTAMP:20240115T060839
-DTSTART:20231223
-DTEND:20240109
-SUMMARY:MHN: A Happy Hunting New Year
-DESCRIPTION:Year-end event with special campaigns for rookie hunters, inclu
- ding Rookie Hunter Gifts and quests for obtaining grade 3 weapons.
-END:VEVENT
-BEGIN:VEVENT
-UID:a92333ed8896cc47d23251679f3fc40d1a8139e3
-DTSTAMP:20240115T060839
-DTSTART:20231207T000000
-DTEND:20240108T000000
-SUMMARY:MHN: New Hunters Welcome Pack
-DESCRIPTION:New hunters will receive free 5 Potions and 5000 Zenny, claimab
- le from the in-game shop.
+ your equipment and prepare to investigate! All hunters HR 11 or above wi
+ ll have the chance to complete time-limited event quests to obtain items
+  that can be used to upgrade your equipment, such as Dragonite Ore and C
+ arpenterbugs, as well as items like Monster Bone+ and Zenny.
 END:VEVENT
 END:VCALENDAR

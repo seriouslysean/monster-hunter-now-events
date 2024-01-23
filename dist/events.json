@@ -1,6 +1,17 @@
 {
     "events": [
         {
+            "summary": "Lucky Lunar New Year",
+            "description": "Celebrate the Lunar New Year with exclusive event quests, hunting Pink Rathian, gathering Fortune Lanterns, and grabbing event-exclusive equipment. For pro hunters to test their skills. The quests are hard, some requiring you to slay 6★ or higher monsters. Themed quests around gathering Fortune Lanterns, event-specific items that come in white, red, and gold. Themed quests around Hunt-a-thons and hunting specific monsters, including Pink Rathian. Pink Rathian will be appearing on the field and in Hunt-a-thons during the event. Slay a Pink Rathian to receive bonus rewards. Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fans, and Dragon Dance Mask using the tickets you gather from event quests and Pink Rathian hunts.",
+            "dates": [
+                {
+                    "start": "2024-02-01T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ]
+        },
+        {
             "summary": "Hunt for Banbaro and Radobaan",
             "description": "During the event, all hunters HR 11 and above will be able to encounter Banbaro in swamp habitats and Radobaan in desert habitats more frequently than usual.",
             "dates": [
@@ -13,7 +24,7 @@
         },
         {
             "summary": "Descent of the Azure King",
-            "description": "Get ready to welcome Azure Rathalos in its very first appearance! We’ll also have time-limited Special Quests rewarding a hunter medal and appearance rates of Rathalos and Azure Rathalos will be boosted over the weekend.",
+            "description": "Get ready to welcome Azure Rathalos in its very first appearance! We’ll also have time-limited Special Quests rewarding a hunter medal and appearance rates of Rathalos and Azure Rathalos will be boosted over the weekend. Rathalos and Azure Rathalos appearance rates will be boosted, appearing more frequently in forest habitats. Time-limited Event Quests will be added. Complete these quests to receive the Descent of the Azure King Medal. Hunt the Azure Rathalos, a blue-colored subspecies of Rathalos with greater mobility and fierce aerial attacks. Complete Event Quests to add a Hunter Medal to your collection.",
             "dates": [
                 {
                     "start": "2024-01-15T09:00:00",
@@ -29,7 +40,7 @@
         },
         {
             "summary": "Qualily's Special Quests",
-            "description": "Qualily is continuing her investigation into the anomalies and she needs your help once again! She’s got more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards will once again include Carpenterbugs, Earth Crystals, and other materials such as Dragonite Ore. Ready your equipment and prepare to investigate!",
+            "description": "Qualily is continuing her investigation into the anomalies and she needs your help once again! She’s got more investigation requests for you—10 of them in total. Can she count on you to help slay monsters and investigate gathering points? Rewards will once again include Carpenterbugs, Earth Crystals, and other materials such as Dragonite Ore. Ready your equipment and prepare to investigate! All hunters HR 11 or above will have the chance to complete time-limited event quests to obtain items that can be used to upgrade your equipment, such as Dragonite Ore and Carpenterbugs, as well as items like Monster Bone+ and Zenny.",
             "dates": [
                 {
                     "start": "2024-01-12T17:00:00",
@@ -37,62 +48,7 @@
                     "allDay": false
                 }
             ]
-        },
-        {
-            "summary": "A Happy Hunting New Year",
-            "description": "As part of our ongoing event, A Happy Hunting New Year, we’re starting 2024 with a bang, with Black Diablos appearing in desert habitats, as well as Event Quests rewarding exclusive equipment, Zenny, and a hunter medal!",
-            "dates": [
-                {
-                    "start": "2024-01-01T00:00:00",
-                    "end": "2024-01-08T23:59:59",
-                    "allDay": true
-                }
-            ]
-        },
-        {
-            "summary": "A Happy Hunting New Year - Increased Monster Activity",
-            "description": "Monsters in all habitats will reappear in shorter intervals and in higher numbers than usual.",
-            "dates": [
-                {
-                    "start": "2023-12-23T13:00:00",
-                    "end": "2024-01-08T18:00:00",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "Grade 3 Weapon Quests",
-            "description": "Quests rewarding 2024 Weapon Tickets, which will allow you to forge grade 3 weapons. There are six levels of quests, some of which include getting to a certain hunter rank or slaying a monster of a certain strength.",
-            "dates": [
-                {
-                    "start": "2023-12-23T09:00:00",
-                    "end": "2024-01-08T23:59:59",
-                    "allDay": false
-                }
-            ]
-        },
-        {
-            "summary": "A Happy Hunting New Year",
-            "description": "Year-end event with special campaigns for rookie hunters, including Rookie Hunter Gifts and quests for obtaining grade 3 weapons.",
-            "dates": [
-                {
-                    "start": "2023-12-23T00:00:00",
-                    "end": "2024-01-08T23:59:59",
-                    "allDay": true
-                }
-            ]
-        },
-        {
-            "summary": "New Hunters Welcome Pack",
-            "description": "New hunters will receive free 5 Potions and 5000 Zenny, claimable from the in-game shop.",
-            "dates": [
-                {
-                    "start": "2023-12-07T00:00:00",
-                    "end": "2024-01-08T00:00:00",
-                    "allDay": false
-                }
-            ]
         }
     ],
-    "hash": "bPNIB1iFkNzaqpghsU0h42uwvtU="
+    "hash": "5rfh8MmKWo+aQFrenDTClgTES70="
 }

@@ -1,0 +1,112 @@
+{
+    "events": [
+        {
+            "summary": "Lucky Lunar New Year",
+            "description": "Celebrate the Lunar New Year with exclusive event quests, hunting Pink Rathian, gathering Fortune Lanterns, and grabbing event-exclusive equipment.",
+            "dates": [
+                {
+                    "start": "2024-02-01T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Field",
+                "Hunt-a-thon Points"
+            ],
+            "monsters": [
+                "Pink Rathian"
+            ]
+        },
+        {
+            "summary": "Lucky Lunar New Year (Fortune Gathering)",
+            "description": "Themed quests around gathering Fortune Lanterns, event-specific items that come in white, red, and gold.",
+            "dates": [
+                {
+                    "start": "2024-02-01T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Field"
+            ],
+            "monsters": []
+        },
+        {
+            "summary": "Lucky Lunar New Year (Hunt-a-thon)",
+            "description": "Themed quests around Hunt-a-thons and hunting specific monsters, including Pink Rathian.",
+            "dates": [
+                {
+                    "start": "2024-02-01T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Field",
+                "Hunt-a-thon Points"
+            ],
+            "monsters": [
+                "Pink Rathian"
+            ]
+        },
+        {
+            "summary": "Lucky Lunar New Year (Challenge)",
+            "description": "For pro hunters to test their skills. The quests are hard, some requiring you to slay 6★ or higher monsters.",
+            "dates": [
+                {
+                    "start": "2024-02-07T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Field"
+            ],
+            "monsters": [
+                "6★ or higher monsters"
+            ]
+        },
+        {
+            "summary": "Hunt Pink Rathian",
+            "description": "Pink Rathian will be appearing on the field and in Hunt-a-thons during the event. Slay a Pink Rathian to receive bonus rewards.",
+            "dates": [
+                {
+                    "start": "2024-02-01T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Field",
+                "Hunt-a-thon Points"
+            ],
+            "monsters": [
+                "Pink Rathian"
+            ]
+        },
+        {
+            "summary": "Forge Exclusive Equipment",
+            "description": "Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fans, and Dragon Dance Mask using the tickets you gather from event quests and Pink Rathian hunts.",
+            "dates": [
+                {
+                    "start": "2024-02-01T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Field",
+                "Hunt-a-thon Points"
+            ],
+            "monsters": [
+                "Pink Rathian"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1705921200000,
+        "url": "https://monsterhunternow.com/news/lunarnewyear2024"
+    }
+}
