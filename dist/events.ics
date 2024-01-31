@@ -16,8 +16,26 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
+UID:349d1c43c9d58a17bc8619331fd0f099443c068a
+DTSTAMP:20240131T060757
+DTSTART:20240223T090000
+DTEND:20240303T235959
+SUMMARY:MHN: Hunt-a-thon Event
+DESCRIPTION:Stay tuned for an event themed around Hunt-a-thons!
+END:VEVENT
+BEGIN:VEVENT
+UID:b4a9dc4fbfe42e7e62b9a3d9872bea805b50feda
+DTSTAMP:20240131T060757
+DTSTART:20240216T090000
+DTEND:20240222T235959
+SUMMARY:MHN: Barioth and Legiana Week
+DESCRIPTION:During these times, hunters who have completed the prologue can
+  find boosted rates of Barioth in forest habitats and Legiana in swamp h
+ abitats!
+END:VEVENT
+BEGIN:VEVENT
 UID:dbf14c93bb9eac1fc1ade46c3c07723a653266bf
-DTSTAMP:20240123T060853
+DTSTAMP:20240131T060757
 DTSTART:20240201T090000
 DTEND:20240215T235959
 SUMMARY:MHN: Lucky Lunar New Year
@@ -34,61 +52,45 @@ DESCRIPTION:Celebrate the Lunar New Year with exclusive event quests, hunti
   and Pink Rathian hunts.
 END:VEVENT
 BEGIN:VEVENT
-UID:9954c1273de24e8fe8613349ad3568dc97dc2ce6
-DTSTAMP:20240123T060853
+UID:b3ce6611dd9ce912fac52902dc553ede63c6434c
+DTSTAMP:20240131T060757
 DTSTART:20240122T090000
 DTEND:20240128T235959
-SUMMARY:MHN: Hunt for Banbaro and Radobaan
+SUMMARY:MHN: Banbaro & Radobaan Week
 DESCRIPTION:During the event, all hunters HR 11 and above will be able to e
  ncounter Banbaro in swamp habitats and Radobaan in desert habitats more 
  frequently than usual.
 END:VEVENT
 BEGIN:VEVENT
 UID:6829155267a349c18d11264f78f53353a7c26202
-DTSTAMP:20240123T060853
+DTSTAMP:20240131T060757
 DTSTART:20240115T090000
 DTEND:20240121T235959
 SUMMARY:MHN: Descent of the Azure King
 DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
  e! We’ll also have time-limited Special Quests rewarding a hunter medal 
  and appearance rates of Rathalos and Azure Rathalos will be boosted over
-  the weekend. Rathalos and Azure Rathalos appearance rates will be boost
- ed, appearing more frequently in forest habitats. Time-limited Event Que
- sts will be added. Complete these quests to receive the Descent of the A
- zure King Medal. Hunt the Azure Rathalos, a blue-colored subspecies of R
- athalos with greater mobility and fierce aerial attacks. Complete Event 
- Quests to add a Hunter Medal to your collection.
+  the weekend. Hunt the Azure Rathalos, a blue-colored subspecies of Rath
+ alos with greater mobility and fierce aerial attacks. Complete Event Que
+ sts to add a Hunter Medal to your collection. Rathalos and Azure Rathalo
+ s appearance rates will be boosted, appearing more frequently in forest 
+ habitats. Time-limited Event Quests will be added. Complete these quests
+  to receive the Descent of the Azure King Medal.
 END:VEVENT
 BEGIN:VEVENT
-UID:4838d8629e23cfeb01f6ffe3055e8a65e3f9ae49
-DTSTAMP:20240123T060853
-DTSTART:20240119T170000
-DTEND:20240121T235959
-SUMMARY:MHN: Descent of the Azure King
-DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
- e! We’ll also have time-limited Special Quests rewarding a hunter medal 
- and appearance rates of Rathalos and Azure Rathalos will be boosted over
-  the weekend. Rathalos and Azure Rathalos appearance rates will be boost
- ed, appearing more frequently in forest habitats. Time-limited Event Que
- sts will be added. Complete these quests to receive the Descent of the A
- zure King Medal. Hunt the Azure Rathalos, a blue-colored subspecies of R
- athalos with greater mobility and fierce aerial attacks. Complete Event 
- Quests to add a Hunter Medal to your collection.
-END:VEVENT
-BEGIN:VEVENT
-UID:e78ce25e2f2d508f9d62546fd5619b4557a0720f
-DTSTAMP:20240123T060853
+UID:4c60ec43d58777942fd2fc775503f45f2568afe2
+DTSTAMP:20240131T060757
 DTSTART:20240112T170000
 DTEND:20240118T235959
-SUMMARY:MHN: Qualily's Special Quests
-DESCRIPTION:Qualily is continuing her investigation into the anomalies and 
- she needs your help once again! She’s got more investigation requests fo
- r you—10 of them in total. Can she count on you to help slay monsters an
- d investigate gathering points? Rewards will once again include Carpente
- rbugs, Earth Crystals, and other materials such as Dragonite Ore. Ready 
- your equipment and prepare to investigate! All hunters HR 11 or above wi
- ll have the chance to complete time-limited event quests to obtain items
-  that can be used to upgrade your equipment, such as Dragonite Ore and C
- arpenterbugs, as well as items like Monster Bone+ and Zenny.
+SUMMARY:MHN: Qualily’s Special Quests
+DESCRIPTION:All hunters HR 11 or above will have the chance to complete tim
+ e-limited event quests to obtain items that can be used to upgrade your 
+ equipment, such as Dragonite Ore and Carpenterbugs, as well as items lik
+ e Monster Bone+ and Zenny. Qualily is continuing her investigation into 
+ the anomalies and she needs your help once again! She’s got more investi
+ gation requests for you—10 of them in total. Can she count on you to hel
+ p slay monsters and investigate gathering points? Rewards will once agai
+ n include Carpenterbugs, Earth Crystals, and other materials such as Dra
+ gonite Ore. Ready your equipment and prepare to investigate!
 END:VEVENT
 END:VCALENDAR

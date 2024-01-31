@@ -1,0 +1,53 @@
+{
+    "events": [
+        {
+            "summary": "Lucky Lunar New Year",
+            "description": "Different regions celebrate the Lunar New Year in different ways, and we’re going to have some decorations and events of our own to celebrate it right here in Monster Hunter Now! Look out for event quests rewarding rare materials, as well as exclusive new equipment, and more!",
+            "dates": [
+                {
+                    "start": "2024-02-01T09:00:00",
+                    "end": "2024-02-15T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        },
+        {
+            "summary": "Barioth and Legiana Week",
+            "description": "During these times, hunters who have completed the prologue can find boosted rates of Barioth in forest habitats and Legiana in swamp habitats!",
+            "dates": [
+                {
+                    "start": "2024-02-16T09:00:00",
+                    "end": "2024-02-22T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest",
+                "Swamp"
+            ],
+            "monsters": [
+                "Barioth",
+                "Legiana"
+            ]
+        },
+        {
+            "summary": "Hunt-a-thon Event",
+            "description": "Stay tuned for an event themed around Hunt-a-thons!",
+            "dates": [
+                {
+                    "start": "2024-02-23T09:00:00",
+                    "end": "2024-03-03T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        }
+    ],
+    "meta": {
+        "timestamp": 1706670000000,
+        "url": "https://monsterhunternow.com/news/feb-2024"
+    }
+}
