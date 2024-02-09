@@ -1,0 +1,27 @@
+{
+    "events": [
+        {
+            "summary": "Winter Hunt for Barioth and Legiana",
+            "description": "During the winter season, Barioth are amassing in forest habitats and Legiana are chasing after hordes of Raphinos in swamp habitats. Hunters who have completed the prologue will be able to encounter Barioth and Legiana more frequently than usual.",
+            "dates": [
+                {
+                    "start": "2024-02-16T09:00:00",
+                    "end": "2024-02-22T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Forest",
+                "Swamp"
+            ],
+            "monsters": [
+                "Barioth",
+                "Legiana"
+            ]
+        }
+    ],
+    "meta": {
+        "timestamp": 1707447600000,
+        "url": "https://monsterhunternow.com/news/bariothlegianaweek-feb2024"
+    }
+}

@@ -17,80 +17,53 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:349d1c43c9d58a17bc8619331fd0f099443c068a
-DTSTAMP:20240131T060757
+DTSTAMP:20240209T060658
 DTSTART:20240223T090000
 DTEND:20240303T235959
 SUMMARY:MHN: Hunt-a-thon Event
 DESCRIPTION:Stay tuned for an event themed around Hunt-a-thons!
 END:VEVENT
 BEGIN:VEVENT
-UID:b4a9dc4fbfe42e7e62b9a3d9872bea805b50feda
-DTSTAMP:20240131T060757
+UID:ab0262f3273c7a76a6a1e60530b8313b0eb91025
+DTSTAMP:20240209T060658
 DTSTART:20240216T090000
 DTEND:20240222T235959
-SUMMARY:MHN: Barioth and Legiana Week
-DESCRIPTION:During these times, hunters who have completed the prologue can
-  find boosted rates of Barioth in forest habitats and Legiana in swamp h
- abitats!
+SUMMARY:MHN: Winter Hunt for Barioth and Legiana
+DESCRIPTION:During the winter season, Barioth are amassing in forest habita
+ ts and Legiana are chasing after hordes of Raphinos in swamp habitats. H
+ unters who have completed the prologue will be able to encounter Barioth
+  and Legiana more frequently than usual.
 END:VEVENT
 BEGIN:VEVENT
 UID:dbf14c93bb9eac1fc1ade46c3c07723a653266bf
-DTSTAMP:20240131T060757
+DTSTAMP:20240209T060658
 DTSTART:20240201T090000
 DTEND:20240215T235959
 SUMMARY:MHN: Lucky Lunar New Year
 DESCRIPTION:Celebrate the Lunar New Year with exclusive event quests, hunti
  ng Pink Rathian, gathering Fortune Lanterns, and grabbing event-exclusiv
- e equipment. For pro hunters to test their skills. The quests are hard, 
- some requiring you to slay 6★ or higher monsters. Themed quests around g
- athering Fortune Lanterns, event-specific items that come in white, red,
-  and gold. Themed quests around Hunt-a-thons and hunting specific monste
- rs, including Pink Rathian. Pink Rathian will be appearing on the field 
- and in Hunt-a-thons during the event. Slay a Pink Rathian to receive bon
- us rewards. Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fa
- ns, and Dragon Dance Mask using the tickets you gather from event quests
-  and Pink Rathian hunts.
+ e equipment. Different regions celebrate the Lunar New Year in different
+  ways, and we’re going to have some decorations and events of our own to
+  celebrate it right here in Monster Hunter Now! Look out for event quest
+ s rewarding rare materials, as well as exclusive new equipment, and more
+ ! For pro hunters to test their skills. The quests are hard, some requir
+ ing you to slay 6★ or higher monsters. Themed quests around gathering Fo
+ rtune Lanterns, event-specific items that come in white, red, and gold. 
+ Themed quests around Hunt-a-thons and hunting specific monsters, includi
+ ng Pink Rathian. Pink Rathian will be appearing on the field and in Hunt
+ -a-thons during the event. Slay a Pink Rathian to receive bonus rewards.
+  Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fans, and Dra
+ gon Dance Mask using the tickets you gather from event quests and Pink R
+ athian hunts.
 END:VEVENT
 BEGIN:VEVENT
-UID:b3ce6611dd9ce912fac52902dc553ede63c6434c
-DTSTAMP:20240131T060757
+UID:9954c1273de24e8fe8613349ad3568dc97dc2ce6
+DTSTAMP:20240209T060658
 DTSTART:20240122T090000
 DTEND:20240128T235959
-SUMMARY:MHN: Banbaro & Radobaan Week
+SUMMARY:MHN: Hunt for Banbaro and Radobaan
 DESCRIPTION:During the event, all hunters HR 11 and above will be able to e
  ncounter Banbaro in swamp habitats and Radobaan in desert habitats more 
  frequently than usual.
-END:VEVENT
-BEGIN:VEVENT
-UID:6829155267a349c18d11264f78f53353a7c26202
-DTSTAMP:20240131T060757
-DTSTART:20240115T090000
-DTEND:20240121T235959
-SUMMARY:MHN: Descent of the Azure King
-DESCRIPTION:Get ready to welcome Azure Rathalos in its very first appearanc
- e! We’ll also have time-limited Special Quests rewarding a hunter medal 
- and appearance rates of Rathalos and Azure Rathalos will be boosted over
-  the weekend. Hunt the Azure Rathalos, a blue-colored subspecies of Rath
- alos with greater mobility and fierce aerial attacks. Complete Event Que
- sts to add a Hunter Medal to your collection. Rathalos and Azure Rathalo
- s appearance rates will be boosted, appearing more frequently in forest 
- habitats. Time-limited Event Quests will be added. Complete these quests
-  to receive the Descent of the Azure King Medal.
-END:VEVENT
-BEGIN:VEVENT
-UID:4c60ec43d58777942fd2fc775503f45f2568afe2
-DTSTAMP:20240131T060757
-DTSTART:20240112T170000
-DTEND:20240118T235959
-SUMMARY:MHN: Qualily’s Special Quests
-DESCRIPTION:All hunters HR 11 or above will have the chance to complete tim
- e-limited event quests to obtain items that can be used to upgrade your 
- equipment, such as Dragonite Ore and Carpenterbugs, as well as items lik
- e Monster Bone+ and Zenny. Qualily is continuing her investigation into 
- the anomalies and she needs your help once again! She’s got more investi
- gation requests for you—10 of them in total. Can she count on you to hel
- p slay monsters and investigate gathering points? Rewards will once agai
- n include Carpenterbugs, Earth Crystals, and other materials such as Dra
- gonite Ore. Ready your equipment and prepare to investigate!
 END:VEVENT
 END:VCALENDAR
