@@ -1,0 +1,21 @@
+{
+    "events": [
+        {
+            "summary": "Qualily's Hunt-a-thon Quests",
+            "description": "During the event, hunters will receive event quests themed around Hunt-a-thons. There will be a total of 9 quests in 2 stages, and completing them all will grant you a total of up to 5 Hunt-a-thon Tickets. You’ll also be able to stock up on materials. Rewards include Hunt-a-thon Tickets, materials, and Zenny.",
+            "dates": [
+                {
+                    "start": "2024-02-23T09:00:00",
+                    "end": "2024-03-03T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": []
+        }
+    ],
+    "meta": {
+        "timestamp": 1708052400000,
+        "url": "https://monsterhunternow.com/news/qualilyshuntathon-feb2024"
+    }
+}

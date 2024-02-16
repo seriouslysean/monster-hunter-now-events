@@ -16,16 +16,20 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:349d1c43c9d58a17bc8619331fd0f099443c068a
-DTSTAMP:20240209T060658
+UID:0a8f96387e250b0d23f16c6f9b142e7ac7fa38d4
+DTSTAMP:20240216T060648
 DTSTART:20240223T090000
 DTEND:20240303T235959
-SUMMARY:MHN: Hunt-a-thon Event
-DESCRIPTION:Stay tuned for an event themed around Hunt-a-thons!
+SUMMARY:MHN: Qualily's Hunt-a-thon Quests
+DESCRIPTION:During the event, hunters will receive event quests themed arou
+ nd Hunt-a-thons. There will be a total of 9 quests in 2 stages, and comp
+ leting them all will grant you a total of up to 5 Hunt-a-thon Tickets. Y
+ ou’ll also be able to stock up on materials. Rewards include Hunt-a-thon
+  Tickets, materials, and Zenny.
 END:VEVENT
 BEGIN:VEVENT
 UID:ab0262f3273c7a76a6a1e60530b8313b0eb91025
-DTSTAMP:20240209T060658
+DTSTAMP:20240216T060648
 DTSTART:20240216T090000
 DTEND:20240222T235959
 SUMMARY:MHN: Winter Hunt for Barioth and Legiana
@@ -36,7 +40,7 @@ DESCRIPTION:During the winter season, Barioth are amassing in forest habita
 END:VEVENT
 BEGIN:VEVENT
 UID:dbf14c93bb9eac1fc1ade46c3c07723a653266bf
-DTSTAMP:20240209T060658
+DTSTAMP:20240216T060648
 DTSTART:20240201T090000
 DTEND:20240215T235959
 SUMMARY:MHN: Lucky Lunar New Year
@@ -55,15 +59,5 @@ DESCRIPTION:Celebrate the Lunar New Year with exclusive event quests, hunti
   Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fans, and Dra
  gon Dance Mask using the tickets you gather from event quests and Pink R
  athian hunts.
-END:VEVENT
-BEGIN:VEVENT
-UID:9954c1273de24e8fe8613349ad3568dc97dc2ce6
-DTSTAMP:20240209T060658
-DTSTART:20240122T090000
-DTEND:20240128T235959
-SUMMARY:MHN: Hunt for Banbaro and Radobaan
-DESCRIPTION:During the event, all hunters HR 11 and above will be able to e
- ncounter Banbaro in swamp habitats and Radobaan in desert habitats more 
- frequently than usual.
 END:VEVENT
 END:VCALENDAR
