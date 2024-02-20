@@ -1,6 +1,129 @@
 {
     "events": [
         {
+            "summary": "New Subspecies Appearance",
+            "description": "A new subspecies will make its first appearance during this event.",
+            "dates": [
+                {
+                    "start": "2024-03-25T09:00:00",
+                    "end": "2024-04-07T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1708390800000
+        },
+        {
+            "summary": "Monster Hunter Now Celebration 2024 Part 2",
+            "description": "Celebrate the release of the major update: The Vernal Invader. More events to commemorate the half-anniversary of Monster Hunter Now.",
+            "dates": [
+                {
+                    "start": "2024-03-14T00:00:00",
+                    "end": "2024-03-24T14:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1708390800000
+        },
+        {
+            "summary": "Monster Hunter Now Celebration 2024 Part 1",
+            "description": "An event commemorating the 20th anniversary of the Monster Hunter series with exclusive event quests and guaranteed encounters with Zinogre in Hunt-a-thons. Increased numbers of Black Diablos, Pink Rathian, Azure Rathalos, and Barioth.",
+            "dates": [
+                {
+                    "start": "2024-03-04T09:00:00",
+                    "end": "2024-03-24T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Desert",
+                "Swamp",
+                "Forest"
+            ],
+            "monsters": [
+                "Zinogre",
+                "Black Diablos",
+                "Pink Rathian",
+                "Azure Rathalos",
+                "Barioth"
+            ],
+            "timestamp": 1708390800000
+        },
+        {
+            "summary": "Monster Hunter 20th Anniversary Quest",
+            "description": "Event quests themed around the 20th anniversary of the Monster Hunter series. Rewards include Zenny, materials, and an event-exclusive hunter medal.",
+            "dates": [
+                {
+                    "start": "2024-03-04T09:00:00",
+                    "end": "2024-03-24T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [],
+            "timestamp": 1708390800000
+        },
+        {
+            "summary": "Guaranteed Zinogre at Hunt-a-thon Points",
+            "description": "Guaranteed appearances of Zinogre at Hunt-a-thon Points.",
+            "dates": [
+                {
+                    "start": "2024-03-04T09:00:00",
+                    "end": "2024-03-13T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [],
+            "monsters": [
+                "Zinogre"
+            ],
+            "timestamp": 1708390800000
+        },
+        {
+            "summary": "Increased Subspecies Monsters and Barioth",
+            "description": "Increased numbers of Black Diablos, Pink Rathian, Azure Rathalos, and Barioth in specific habitats. Barioth will disappear from the field on March 14th.",
+            "dates": [
+                {
+                    "start": "2024-03-04T09:00:00",
+                    "end": "2024-03-13T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Desert",
+                "Swamp",
+                "Forest"
+            ],
+            "monsters": [
+                "Black Diablos",
+                "Pink Rathian",
+                "Azure Rathalos",
+                "Barioth"
+            ],
+            "timestamp": 1708390800000
+        },
+        {
+            "summary": "Increased Monster Appearances",
+            "description": "Monsters in all habitats will reappear after 1 hour and monsters will be appearing in more places on the field.",
+            "dates": [
+                {
+                    "start": "2024-03-04T09:00:00",
+                    "end": "2024-03-13T23:59:59",
+                    "allDay": false
+                }
+            ],
+            "habitat": [
+                "Desert",
+                "Swamp",
+                "Forest"
+            ],
+            "monsters": [],
+            "timestamp": 1708390800000
+        },
+        {
             "summary": "Qualily's Hunt-a-thon Quests",
             "description": "During the event, hunters will receive event quests themed around Hunt-a-thons. There will be a total of 9 quests in 2 stages, and completing them all will grant you a total of up to 5 Hunt-a-thon Tickets. You’ll also be able to stock up on materials. Rewards include Hunt-a-thon Tickets, materials, and Zenny.",
             "dates": [

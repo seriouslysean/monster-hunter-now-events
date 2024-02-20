@@ -16,8 +16,74 @@ COLOR:255:179:25
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
+UID:2973f9c52651fb901f7a5d2858e6c766c9084df2
+DTSTAMP:20240220T060824
+DTSTART:20240325T090000
+DTEND:20240407T235959
+SUMMARY:MHN: New Subspecies Appearance
+DESCRIPTION:A new subspecies will make its first appearance during this eve
+ nt.
+END:VEVENT
+BEGIN:VEVENT
+UID:5126a60b64b0547e2d0029134add754eef0c9ca0
+DTSTAMP:20240220T060824
+DTSTART:20240314T000000
+DTEND:20240324T145959
+SUMMARY:MHN: Monster Hunter Now Celebration 2024 Part 2
+DESCRIPTION:Celebrate the release of the major update: The Vernal Invader. 
+ More events to commemorate the half-anniversary of Monster Hunter Now.
+END:VEVENT
+BEGIN:VEVENT
+UID:b57880e349b0fc8fe98010ede17a47b393ba5bae
+DTSTAMP:20240220T060824
+DTSTART:20240304T090000
+DTEND:20240324T235959
+SUMMARY:MHN: Monster Hunter Now Celebration 2024 Part 1
+DESCRIPTION:An event commemorating the 20th anniversary of the Monster Hunt
+ er series with exclusive event quests and guaranteed encounters with Zin
+ ogre in Hunt-a-thons. Increased numbers of Black Diablos, Pink Rathian, 
+ Azure Rathalos, and Barioth.
+END:VEVENT
+BEGIN:VEVENT
+UID:769a6e9c0af862847b7bcf095e2358cf2c4ff46f
+DTSTAMP:20240220T060824
+DTSTART:20240304T090000
+DTEND:20240324T235959
+SUMMARY:MHN: Monster Hunter 20th Anniversary Quest
+DESCRIPTION:Event quests themed around the 20th anniversary of the Monster 
+ Hunter series. Rewards include Zenny, materials, and an event-exclusive 
+ hunter medal.
+END:VEVENT
+BEGIN:VEVENT
+UID:6bf7118b72c156d6f93154487dfaf6fe0565c127
+DTSTAMP:20240220T060824
+DTSTART:20240304T090000
+DTEND:20240313T235959
+SUMMARY:MHN: Guaranteed Zinogre at Hunt-a-thon Points
+DESCRIPTION:Guaranteed appearances of Zinogre at Hunt-a-thon Points.
+END:VEVENT
+BEGIN:VEVENT
+UID:bccb1c181367594fa1f5f5a71703cab4c14edd1c
+DTSTAMP:20240220T060824
+DTSTART:20240304T090000
+DTEND:20240313T235959
+SUMMARY:MHN: Increased Subspecies Monsters and Barioth
+DESCRIPTION:Increased numbers of Black Diablos, Pink Rathian, Azure Rathalo
+ s, and Barioth in specific habitats. Barioth will disappear from the fie
+ ld on March 14th.
+END:VEVENT
+BEGIN:VEVENT
+UID:7d9cd5ed160b78f5b6af6485f461310926611fdb
+DTSTAMP:20240220T060824
+DTSTART:20240304T090000
+DTEND:20240313T235959
+SUMMARY:MHN: Increased Monster Appearances
+DESCRIPTION:Monsters in all habitats will reappear after 1 hour and monster
+ s will be appearing in more places on the field.
+END:VEVENT
+BEGIN:VEVENT
 UID:0a8f96387e250b0d23f16c6f9b142e7ac7fa38d4
-DTSTAMP:20240216T060648
+DTSTAMP:20240220T060824
 DTSTART:20240223T090000
 DTEND:20240303T235959
 SUMMARY:MHN: Qualily's Hunt-a-thon Quests
@@ -28,8 +94,16 @@ DESCRIPTION:During the event, hunters will receive event quests themed arou
   Tickets, materials, and Zenny.
 END:VEVENT
 BEGIN:VEVENT
+UID:349d1c43c9d58a17bc8619331fd0f099443c068a
+DTSTAMP:20240220T060824
+DTSTART:20240223T090000
+DTEND:20240303T235959
+SUMMARY:MHN: Hunt-a-thon Event
+DESCRIPTION:Stay tuned for an event themed around Hunt-a-thons!
+END:VEVENT
+BEGIN:VEVENT
 UID:ab0262f3273c7a76a6a1e60530b8313b0eb91025
-DTSTAMP:20240216T060648
+DTSTAMP:20240220T060824
 DTSTART:20240216T090000
 DTEND:20240222T235959
 SUMMARY:MHN: Winter Hunt for Barioth and Legiana
@@ -40,24 +114,20 @@ DESCRIPTION:During the winter season, Barioth are amassing in forest habita
 END:VEVENT
 BEGIN:VEVENT
 UID:dbf14c93bb9eac1fc1ade46c3c07723a653266bf
-DTSTAMP:20240216T060648
+DTSTAMP:20240220T060824
 DTSTART:20240201T090000
 DTEND:20240215T235959
 SUMMARY:MHN: Lucky Lunar New Year
 DESCRIPTION:Celebrate the Lunar New Year with exclusive event quests, hunti
  ng Pink Rathian, gathering Fortune Lanterns, and grabbing event-exclusiv
- e equipment. Different regions celebrate the Lunar New Year in different
-  ways, and we’re going to have some decorations and events of our own to
-  celebrate it right here in Monster Hunter Now! Look out for event quest
- s rewarding rare materials, as well as exclusive new equipment, and more
- ! For pro hunters to test their skills. The quests are hard, some requir
- ing you to slay 6★ or higher monsters. Themed quests around gathering Fo
- rtune Lanterns, event-specific items that come in white, red, and gold. 
- Themed quests around Hunt-a-thons and hunting specific monsters, includi
- ng Pink Rathian. Pink Rathian will be appearing on the field and in Hunt
- -a-thons during the event. Slay a Pink Rathian to receive bonus rewards.
-  Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fans, and Dra
- gon Dance Mask using the tickets you gather from event quests and Pink R
- athian hunts.
+ e equipment. For pro hunters to test their skills. The quests are hard, 
+ some requiring you to slay 6★ or higher monsters. Themed quests around g
+ athering Fortune Lanterns, event-specific items that come in white, red,
+  and gold. Themed quests around Hunt-a-thons and hunting specific monste
+ rs, including Pink Rathian. Pink Rathian will be appearing on the field 
+ and in Hunt-a-thons during the event. Slay a Pink Rathian to receive bon
+ us rewards. Forge and upgrade the Lucky Dragon Hammer, Fortune Dragon Fa
+ ns, and Dragon Dance Mask using the tickets you gather from event quests
+  and Pink Rathian hunts.
 END:VEVENT
 END:VCALENDAR
