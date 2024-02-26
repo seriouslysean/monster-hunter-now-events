@@ -1,3 +1,7 @@
+⚠️ The actions are currently turned off, so the calendar will no longer update. Feel free to clone and set it up if you'd like access again!
+
+<hr>
+
 <p align="center">
   <img
     src="./assets/monster-hunter-now-logo.png"
